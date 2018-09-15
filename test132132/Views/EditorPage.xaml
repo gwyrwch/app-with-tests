@@ -24,11 +24,11 @@
                     HorizontalOptions="Center"
                 />
             </StackLayout>
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="40">
-                <Label Text="for question"/>
-                <Switch x:Name="TimemodeSwitch" Rotation="270"/>
-                <Label Text="for full test"/>
-            </StackLayout>
+            <Picker
+                x:Name="TimeModePicker"
+                Title="Choose time mode for the test"
+                HeightRequest="30"
+            />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
