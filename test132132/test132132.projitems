@@ -50,6 +50,7 @@
       <DependentUpon>EditorPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Common\TimeCountdownPicker.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\Mappers.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml" />
