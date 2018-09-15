@@ -1,0 +1,18 @@
+﻿<Properties StartupConfiguration="{CA902BA1-6A7B-477B-9556-C8A8D456E2C7}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="test132132/Views/EditorPage.xaml">
+    <Files>
+      <File FileName="test132132/Views/EditorPage.xaml.cs" Line="4" Column="20" />
+      <File FileName="test132132/Views/EditorPage.xaml" Line="23" Column="26" />
+      <File FileName="test132132/Models/Test.cs" Line="24" Column="17" />
+      <File FileName="test132132/Views/MainPage.cs" Line="33" Column="40" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.test132132.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.B26F0905-A809-4AF0-A82A-4B3B95FA2539" automaticSigning="False" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.test132132 FirstBuild="True" />
+</Properties>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="test132132.EditorPage" xmlns:local="clr-namespace:test132132.Common" Title="Editor">
+    <ContentPage.Content>
+        <StackLayout Spacing="20" Padding="0,200,0,0">
+            <StackLayout Spacing="0">
+                <Entry 
+                    x:Name="TitleEntry" 
+                    Placeholder="Enter the title of the test"
+                    Keyboard="Text"
+                    HeightRequest="30"
+                />
+                <Picker
+                    x:Name="SubjectPicker" 
+                    Title="Choose subject"
+                    HeightRequest="30"
+                />
+           </StackLayout>
+           <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="20">
+               <Label Text="Time limit for test:" HorizontalOptions="Center"/>
+               <local:TimeCountdownPicker 
+                    x:Name="Kek"
+                    SelectedTime="{Binding Countdown}" 
+                    WidthRequest="85"
+                    HorizontalOptions="Center"
+                />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="40">
+                <Label Text="for question"/>
+                <Switch x:Name="TimemodeSwitch" Rotation="270"/>
+                <Label Text="for full test"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

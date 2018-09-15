@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="test132132.SubjectsPage" Title="Choose subject">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="SubjectsListView" ItemSelected="OnItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="5" Orientation="Horizontal">
+                                <Label Text="{Binding}" TextColor="Teal" FontSize="20" Style="{DynamicResource ListItemTextStyle}"/>
+                                <Label Text="Tests :" TextColor="Gray" FontSize="13" VerticalOptions="EndAndExpand"></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+ 
