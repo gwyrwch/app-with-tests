@@ -51,6 +51,9 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Common\TimeCountdownPicker.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\Mappers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\QTypeSelectionPage.xaml.cs">
+      <DependentUpon>QTypeSelectionPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml" />
@@ -67,6 +70,10 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\EditorPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\QTypeSelectionPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

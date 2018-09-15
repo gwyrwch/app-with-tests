@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="test132132.QTypeSelectionPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem 
+            Text="Next" 
+            Clicked="QEditPage_Clicked"
+        />      
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center">
+            <Button
+                x:Name="MultipleChoiceButton"
+                Text="Multiple choice question"
+                BackgroundColor="White"
+                BorderRadius="6"
+                BorderWidth="0.6"
+                BorderColor="Silver"
+                TextColor="#8e8e93"
+                FontSize="Medium"
+                Clicked="MultipleChoiceQ_Clicked"
+            />
+            <Button
+                x:Name="MatchingButton"
+                Text="Matching question"
+                BackgroundColor="White"
+                BorderRadius="6"
+                BorderWidth="0.6"
+                BorderColor="Silver"
+                TextColor="#8e8e93"
+                FontSize="Medium"
+                Clicked="MatchingQ_Clicked"
+            />
+            <Button
+                x:Name="OpenQuestionButton"
+                Text="Open question"
+                BackgroundColor="White"
+                BorderRadius="6"
+                BorderWidth="0.6"
+                BorderColor="Silver"
+                TextColor="#8e8e93"
+                FontSize="Medium"
+                Clicked="OpenQ_Clicked"
+            />
+            <!--http://0xrgb.com/-->
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

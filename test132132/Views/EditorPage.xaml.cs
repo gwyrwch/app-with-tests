@@ -14,5 +14,10 @@ namespace test132132
             SubjectPicker.ItemsSource = App.Subjects;
             TimeModePicker.ItemsSource = Common.Mappers.AvaliableTimeModes();
         }
+
+        private async void AddQuestion_Clicked(object sender, EventArgs e) 
+        {
+            await Navigation.PushAsync(new QTypeSelectionPage());
+        }
     }
 }

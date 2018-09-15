@@ -14,14 +14,15 @@
                     Title="Choose subject"
                     HeightRequest="30"
                 />
-           </StackLayout>
-           <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="20">
-               <Label Text="Time limit for test:" HorizontalOptions="Center"/>
-               <local:TimeCountdownPicker 
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Spacing="20" Padding="8,0,0,0">
+                <Label Text="Time limit for test:" FontSize="Medium" TextColor="Silver"/>
+                <local:TimeCountdownPicker 
                     x:Name="Kek"
                     SelectedTime="{Binding Countdown}" 
                     WidthRequest="85"
                     HorizontalOptions="Center"
+                    TextColor="#5591FF"
                 />
             </StackLayout>
             <Picker
@@ -29,6 +30,15 @@
                 Title="Choose time mode for the test"
                 HeightRequest="30"
             />
+            <Button 
+                Text="New question"
+                BackgroundColor="White"
+                BorderRadius="10"
+                BorderWidth="1"
+                BorderColor="#5591FF"
+                Margin="10"
+                Clicked="AddQuestion_Clicked"
+           />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
