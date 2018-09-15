@@ -14,9 +14,9 @@ namespace test132132
         {
             InitializeComponent();
             nextPage = null;
-           // multipleChoicePage = new MultipleChoiceQEditPage();
-            //matchingPage = new MatchingQEditPage();
-            //openPage = new OpenQEditPage();
+            multipleChoicePage = new MultipleChoiceQEditPage();
+            matchingPage = new MatchingQEditPage();
+            openPage = new OpenQEditPage();
         }
 
         async void QEditPage_Clicked(object sender, EventArgs e)

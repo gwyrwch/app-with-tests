@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="test132132.MultipleChoiceQEditPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Save" Clicked="Save_Clicked" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Spacing="20" VerticalOptions="Center" Padding="15">
+            <Entry 
+                Placeholder="Your question here"
+                FontSize="Medium"
+            />
+            <Picker
+               x:Name="AmountOfVariansPicker"
+               Title="Select the number of variants"
+               SelectedIndexChanged="AmountSelected" 
+            />
+            <ListView x:Name="VariantsListView" ItemsSource="{Binding Variants}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout
+                                Padding="5"
+                                Orientation="Horizontal"
+                            >
+                                <!--ItemSelected="OnItemSelected"-->
+                                <Entry Text="{Binding Answer, Mode=TwoWay}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

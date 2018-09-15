@@ -38,7 +38,7 @@ namespace test132132
                     subjectsPage.Icon = "tab_feed.png";
                     editorPage.Icon = "tab_about.png";
 
-                    editorPage.BackgroundColor = Color.Cyan;
+                    //editorPage.BackgroundColor = Color.Cyan;
 
                     break;
                 default:
