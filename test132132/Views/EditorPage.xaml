@@ -39,6 +39,16 @@
                 Margin="10"
                 Clicked="AddQuestion_Clicked"
            />
+           <TableView Intent="Data" >
+                <TableSection Title="Your questions">
+                    <ViewCell>
+                        <StackLayout >
+                            <Label Text="blabla"/>
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+                
+           </TableView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -6,7 +6,14 @@
     <ContentPage.Content>
         <StackLayout Spacing="20" VerticalOptions="Center" Padding="15">
             <Entry 
+                x:Name="QuestionText"
                 Placeholder="Your question here"
+                FontSize="Medium"
+            />
+             <Entry 
+                x:Name="Points"
+                Placeholder="Points for your question"
+                x:DataType="x:Int32"
                 FontSize="Medium"
             />
             <Picker
@@ -18,17 +25,16 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout
-                                Padding="5"
-                                Orientation="Horizontal"
-                            >
+                            <StackLayout Padding="5" Orientation="Horizontal">
                                 <!--ItemSelected="OnItemSelected"-->
-                                <Entry Text="{Binding Answer, Mode=TwoWay}"/>
+                                <Entry Text="{Binding Answer, Mode=TwoWay}" WidthRequest="270" HorizontalOptions="StartAndExpand" />
+                                <Switch IsToggled="{Binding IsTrue, Mode=TwoWay}"/>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

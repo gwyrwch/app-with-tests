@@ -125,6 +125,7 @@
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="TimeCountdownPickerRenderer.cs" />
+    <Compile Include="ColoredTableViewRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Entitlements.plist" />

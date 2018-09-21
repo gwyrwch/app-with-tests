@@ -18,7 +18,8 @@ namespace test132132.ViewModels.Editor
             Variants = new ObservableCollection<Models.Variant>();
         }
 
-        public void SetListLength(int length) {
+        public void SetListLength(int length) 
+        {
             while (Variants.Count > length)
             {
                 Variants.RemoveAt(Variants.Count - 1);
@@ -29,6 +30,10 @@ namespace test132132.ViewModels.Editor
                 Variants.Add(new Models.Variant("", false));
             }
 
+            SaveAll();
+        }
+        public void SaveAll() 
+        {
             PropertyChanged.Invoke(this, new PropertyChangedEventArgs("Variants"));
         }
     }

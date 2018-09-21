@@ -64,6 +64,7 @@
       <DependentUpon>OpenQEditPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Editor\MultipleChoiceQViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\ColoredTableView.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml" />

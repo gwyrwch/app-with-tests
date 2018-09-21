@@ -9,14 +9,14 @@ namespace test132132.Models
     {
         public string Title { get; }
         public string Subject { get; }
-        public TimeSpan TimeLimit { get; }
-        public TimeMode Mode { get; }
+        public TimeSpan? TimeLimit { get; }
+        public TimeMode? Mode { get; }
 
         public Test(
-            string title,
-            string subject,
-            TimeSpan timeLimit,
-            TimeMode mode
+            string title = null,
+            string subject = null,
+            TimeSpan? timeLimit = null,
+            TimeMode? mode = null
         )
         {
             Title = title;

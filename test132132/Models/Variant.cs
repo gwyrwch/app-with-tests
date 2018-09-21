@@ -7,11 +7,12 @@
             Answer = answer;
             IsTrue = istrue;
         }
-        public bool IsTrue { get; set; }
-
-        public string Answer { get;
-            set;        
+        public bool IsTrue { 
+            get; 
+            set; 
         }
+
+        public string Answer { get; set; }
 
         public override string ToString()
         {

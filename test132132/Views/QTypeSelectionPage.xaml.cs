@@ -19,7 +19,7 @@ namespace test132132
             openPage = new OpenQEditPage();
         }
 
-        async void QEditPage_Clicked(object sender, EventArgs e)
+        async void QEditPage_Clicked(object sender, EventArgs e) //next clicked 
         {
             if (nextPage == null) {
                 await DisplayAlert("Try again.", "Please, select the type.", "Ok");
@@ -28,7 +28,7 @@ namespace test132132
             await Navigation.PushAsync(nextPage);
         }
 
-        void RecolorButtons(Button selectedButton) {
+        void RecolorButtons(Button selectedButton) { //chaange the color of the selected
             MultipleChoiceButton.TextColor = 
             MatchingButton.TextColor       = 
             OpenQuestionButton.TextColor   = 
