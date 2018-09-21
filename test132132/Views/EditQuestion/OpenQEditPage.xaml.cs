@@ -1,4 +1,5 @@
 ﻿using System;
+
 using System.Collections.Generic;
 
 using Xamarin.Forms;
@@ -18,7 +19,6 @@ namespace test132132
                 QuestionText.Text,
                 int.Parse(Points.Text),
                 QuestionAnswer.Text
-
             );
             MessagingCenter.Send(this, "CreateNewOpenQuestion", question);
             await Navigation.PopToRootAsync();

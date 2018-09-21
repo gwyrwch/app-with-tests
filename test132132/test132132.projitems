@@ -65,6 +65,7 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Editor\MultipleChoiceQViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\ColoredTableView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\IntegerEntryTrigger.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml" />

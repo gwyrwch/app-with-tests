@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="test132132.OpenQEditPage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="test132132.OpenQEditPage" xmlns:helpers="clr-namespace:test132132.Common">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Delete" Clicked="Delete_Clicked"/>
         <ToolbarItem Text="Save" Clicked="Save_Clicked"/>
@@ -28,13 +28,18 @@
                 Text="Points:"
                 FontSize="18"
             />
-            <Entry
+            <Entry 
                 x:Name="Points"
-                Placeholder="Points for your question"
-                x:DataType="x:Int32"
-                FontSize="Medium"
                 Keyboard="Numeric"
-            />
+                Placeholder="Points for your question"
+                FontSize="Small"
+            >
+                <Entry.Triggers>
+                    <EventTrigger Event="TextChanged">
+                        <helpers:IntegerEntryTrigger />
+                    </EventTrigger>
+                </Entry.Triggers>
+            </Entry>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
