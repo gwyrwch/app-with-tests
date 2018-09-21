@@ -15,7 +15,13 @@ namespace test132132
             SubjectPicker.ItemsSource = App.Subjects;
             TimeModePicker.ItemsSource = Common.Mappers.AvaliableTimeModes();
             MessagingCenter.Subscribe<MultipleChoiceQEditPage, Models.MultipleChoiceQuestion>(
-                this, "CreateNewQuestion", (obj, question) =>
+                this, "CreateNewMulChoiceQuestion", (obj, question) =>
+                {
+                    test.Add(question);
+                }
+            );
+            MessagingCenter.Subscribe<OpenQEditPage, Models.OpenQuestion>(
+                this, "CreateNewOpenQuestion", (obj, question) =>
                 {
                     test.Add(question);
                 }

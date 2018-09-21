@@ -14,12 +14,19 @@ namespace test132132
 
         async void Save_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new QTypeSelectionPage());
+            Models.OpenQuestion question = new Models.OpenQuestion(
+                QuestionText.Text,
+                int.Parse(Points.Text),
+                QuestionAnswer.Text
+
+            );
+            MessagingCenter.Send(this, "CreateNewOpenQuestion", question);
+            await Navigation.PopToRootAsync();
         }
 
         async void Delete_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new QTypeSelectionPage());
+            await Navigation.PushAsync(new QTypeSelectionPage()); // todo
         }
 
     }

@@ -6,10 +6,35 @@
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout Spacing="20" VerticalOptions="Center" Padding="15">
-            <Label Text="Question: " FontSize="18" />
-            <Entry Placeholder="Your question here" FontSize="Small" />
-            <Label Text="Answer:" FontSize="18"/>
-            <Entry Placeholder="Your answer here" FontSize="Small" />
+            <Label 
+                Text="Question: " 
+                FontSize="18" 
+            />
+            <Entry 
+                x:Name="QuestionText" 
+                Placeholder="Your question here" 
+                FontSize="Small"
+            />
+            <Label 
+                Text="Answer:" 
+                FontSize="18"
+            />
+            <Entry 
+                x:Name="QuestionAnswer" 
+                Placeholder="Your answer here" 
+                FontSize="Small" 
+            />
+            <Label
+                Text="Points:"
+                FontSize="18"
+            />
+            <Entry
+                x:Name="Points"
+                Placeholder="Points for your question"
+                x:DataType="x:Int32"
+                FontSize="Medium"
+                Keyboard="Numeric"
+            />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

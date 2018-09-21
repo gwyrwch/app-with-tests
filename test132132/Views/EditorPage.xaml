@@ -39,16 +39,23 @@
                 Margin="10"
                 Clicked="AddQuestion_Clicked"
            />
-           <TableView Intent="Data" >
-                <TableSection Title="Your questions">
-                    <ViewCell>
-                        <StackLayout >
-                            <Label Text="blabla"/>
-                        </StackLayout>
-                    </ViewCell>
-                </TableSection>
-                
-           </TableView>
+            <StackLayout Padding="0,0,0,0">
+               <local:ColoredTableView 
+                    Intent="Data" 
+                    SeparatorColor="Silver" 
+                    x:Name="AddedQuestions"
+               >
+                    <TableSection 
+                        Title="Your questions"
+                    >
+                      <!--  <ViewCell>
+                            <StackLayout Padding="15,0,0,0" Orientation="Horizontal" VerticalOptions="Center">
+                                <Label Text="{Binding text}"/>
+                            </StackLayout>
+                        </ViewCell>-->
+                    </TableSection>
+               </local:ColoredTableView>
+           </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -32,7 +32,7 @@ namespace test132132
                 int.Parse(Points.Text),
                 viewModel.Variants.ToList()
             );
-            MessagingCenter.Send(this, "CreateNewQuestion", question);
+            MessagingCenter.Send(this, "CreateNewMulChoiceQuestion", question);
             await Navigation.PopToRootAsync();
         }
 
