@@ -7,7 +7,7 @@ namespace test132132.Models
     {
         public MatchingQuestion(
             string text,
-            int points,
+            int? points,
             List<string> lefts,
             List<string> rights,
             List<int> relation
@@ -39,6 +39,11 @@ namespace test132132.Models
                 );
             }
             return _out;
+        }
+
+        public override void Validate()
+        {
+
         }
     }
 }

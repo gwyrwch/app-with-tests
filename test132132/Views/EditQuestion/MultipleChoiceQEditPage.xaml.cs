@@ -29,16 +29,31 @@ namespace test132132
             viewModel.SaveAll();
             Models.MultipleChoiceQuestion question = new Models.MultipleChoiceQuestion(
                 QuestionText.Text, 
-                int.Parse(Points.Text),
+                Common.MyInt.Parse(Points.Text),
                 viewModel.Variants.ToList()
             );
-            MessagingCenter.Send(this, "CreateNewMulChoiceQuestion", question);
+
+            try
+            {
+                question.Validate();
+            }
+            catch (Exception exc)
+            {
+                await DisplayAlert("Question is invalid", exc.Message, "Ok");
+                return;
+            }
+
+            MessagingCenter.Send(
+                (ContentPage)this, 
+                "CreateNewQuestion", 
+                (Models.Question)question
+            );
             await Navigation.PopToRootAsync();
         }
 
         async void Delete_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new QTypeSelectionPage()); //todo
+            await Navigation.PopToRootAsync(); //todo
         }
     }
 }

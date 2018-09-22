@@ -2,7 +2,7 @@
 {
     public class Variant
     {
-        public Variant(string answer, bool istrue)
+        public Variant(string answer, bool istrue = false) // done false
         {
             Answer = answer;
             IsTrue = istrue;
@@ -18,5 +18,6 @@
         {
             return Answer;
         }
+
     }
 }

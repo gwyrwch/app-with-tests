@@ -17,10 +17,22 @@ namespace test132132
         {
             Models.OpenQuestion question = new Models.OpenQuestion(
                 QuestionText.Text,
-                int.Parse(Points.Text),
+                Common.MyInt.Parse(Points.Text),
                 QuestionAnswer.Text
             );
-            MessagingCenter.Send(this, "CreateNewOpenQuestion", question);
+
+            try {
+                question.Validate();
+            } catch (Exception exc) {
+                await DisplayAlert("Question is invalid", exc.Message, "Ok");
+                return;
+            }
+
+            MessagingCenter.Send(
+                (ContentPage)this,
+                "CreateNewQuestion", 
+                (Models.Question)question
+            );
             await Navigation.PopToRootAsync();
         }
 

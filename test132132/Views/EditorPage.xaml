@@ -18,7 +18,7 @@
             <StackLayout Orientation="Horizontal" Spacing="20" Padding="8,0,0,0">
                 <Label Text="Time limit for test:" FontSize="Medium" TextColor="Silver"/>
                 <local:TimeCountdownPicker 
-                    x:Name="Kek"
+                    x:Name="TimeLimitPicker"
                     SelectedTime="{Binding Countdown}" 
                     WidthRequest="85"
                     HorizontalOptions="Center"

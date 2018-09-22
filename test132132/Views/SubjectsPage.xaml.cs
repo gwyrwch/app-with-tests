@@ -11,18 +11,18 @@ namespace test132132
         public SubjectsPage()
         {
             InitializeComponent();
-            SubjectsListView.ItemsSource = App.Subjects;
+            //SubjectsListView.ItemsSource = App.Subjects;
         }
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
-            var item = args.SelectedItem as string;
-            if (item == null)
-                return;
+            //var item = args.SelectedItem as string;
+            //if (item == null)
+              //  return;
 
             await Navigation.PushAsync(new AboutPage());
 
-            SubjectsListView.SelectedItem = null;
+           // SubjectsListView.SelectedItem = null;
         }
     }
 

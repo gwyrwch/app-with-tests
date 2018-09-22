@@ -2,3 +2,6 @@
 packages/
 iOS/bin/
 iOS/obj/
+.DS_Store
+iOS/.DS_Store
+iOS/Resources/.DS_Store

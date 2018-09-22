@@ -7,10 +7,10 @@ namespace test132132.Models
 
     public class Test : Collection<Question>
     {
-        public string Title { get; }
-        public string Subject { get; }
-        public TimeSpan? TimeLimit { get; }
-        public TimeMode? Mode { get; }
+        public string Title { get; set; }
+        public string Subject { get; set; }
+        public TimeSpan? TimeLimit { get; set; }
+        public TimeMode? Mode { get; set; }
 
         public Test(
             string title = null,
@@ -37,7 +37,8 @@ namespace test132132.Models
             base.RemoveItem(index);
         }
 
-        public List<Question> SearchByType(Type type) {
+        public List<Question> SearchByType(Type type)
+        {
             List<Question> list = new List<Question>();
 
             for (int i = 0; i < Count; i++)
@@ -46,5 +47,16 @@ namespace test132132.Models
 
             return list;
         }
+
+        //public void Validate()
+        //{
+        //    if (
+        //        string.IsNullOrEmpty(Title) ||
+        //        string.IsNullOrEmpty(Subject) ||
+        //        Mode == null ||
+        //        TimeLimit == null
+        //    )
+        //        throw new NullReferenceException("Error! There are empty fields.");
+        //}
     }
 }

@@ -2,19 +2,74 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="test132132.SubjectsPage" Title="Choose subject">
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="SubjectsListView" ItemSelected="OnItemSelected">
+            <TableView x:Name="SubjectsTableView" 
+                       Intent="Data"
+            >
+                <TableRoot>
+                     <TableSection Title="Programming">  
+                        <ViewCell>  
+                            <StackLayout Orientation="Horizontal" Padding="13,0">  
+                                <Label Text="Date" VerticalOptions="Center"/>  
+                            </StackLayout>  
+                        </ViewCell>  
+                    </TableSection> 
+                    <TableSection Title="School">
+                        <ViewCell>
+                            <StackLayout 
+                                VerticalOptions="Center" 
+                                HorizontalOptions="Center" 
+                                Padding="5" 
+                                Orientation="Horizontal"
+                            >
+                                <Label 
+                                    Text="kek"
+                                    TextColor="#007aff" 
+                                    FontSize="20"
+                                />
+                                <Label 
+                                    Text="Tests :" 
+                                    TextColor="Gray" 
+                                    FontSize="13" 
+                                    VerticalOptions="EndAndExpand"
+                                />
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </StackLayout>
+        <!--<StackLayout>
+            <ListView 
+                x:Name="SubjectsListView" 
+                ItemSelected="OnItemSelected"
+            >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="5" Orientation="Horizontal">
-                                <Label Text="{Binding}" TextColor="Teal" FontSize="20" Style="{DynamicResource ListItemTextStyle}"/>
-                                <Label Text="Tests :" TextColor="Gray" FontSize="13" VerticalOptions="EndAndExpand"></Label>
+                            <StackLayout 
+                                VerticalOptions="Center" 
+                                HorizontalOptions="Center" 
+                                Padding="5" 
+                                Orientation="Horizontal"
+                            >
+                                <Label 
+                                    Text="{Binding}"
+                                    TextColor="#007aff" 
+                                    FontSize="20" 
+                                    Style="{DynamicResource ListItemTextStyle}"
+                                />
+                                <Label 
+                                    Text="Tests :" 
+                                    TextColor="Gray" 
+                                    FontSize="13" 
+                                    VerticalOptions="EndAndExpand"
+                                />
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-        </StackLayout>
+        </StackLayout>-->
     </ContentPage.Content>
 </ContentPage>
  

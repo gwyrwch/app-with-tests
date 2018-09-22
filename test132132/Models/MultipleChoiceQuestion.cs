@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace test132132.Models
 {
@@ -6,7 +8,7 @@ namespace test132132.Models
     {
         public MultipleChoiceQuestion(
             string text,
-            int points,
+            int? points,
             List<Variant> variants
         ) : base(text, points)
         {
@@ -21,6 +23,22 @@ namespace test132132.Models
                 _out += Variants[i] + "\t";
 
             return string.Join("\n", Text, _out);
+        }
+
+        public override void Validate()
+        {
+            if (
+                string.IsNullOrWhiteSpace(Text) ||
+                Points == null ||
+                Variants.Any(var => string.IsNullOrWhiteSpace(var.Answer))
+            )
+                throw new NullReferenceException("Error! There are empty fields.");
+
+            if (
+                Variants.All(var => var.IsTrue == false) ||
+                Variants.All(var => var.IsTrue == true)
+            )
+                throw new Exception("All answers can not be either correct or incorrect");
         }
     }
 }

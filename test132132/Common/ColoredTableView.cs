@@ -17,10 +17,6 @@ namespace test132132.Common
                 SetValue(SeparatorColorProperty, value);
             }
         }
-        public ColoredTableView()
-        {
-            //InitializeComponent();
-        }
     }
 }
 

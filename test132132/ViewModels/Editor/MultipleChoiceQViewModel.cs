@@ -6,10 +6,7 @@ namespace test132132.ViewModels.Editor
 {
     public class MultipleChoiceQViewModel : INotifyPropertyChanged
     {
-        public ObservableCollection<Models.Variant> Variants { 
-            get;
-            set;
-        }
+        public ObservableCollection<Models.Variant> Variants { get; set;}
 
         public event PropertyChangedEventHandler PropertyChanged;
 
