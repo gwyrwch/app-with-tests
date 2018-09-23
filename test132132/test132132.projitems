@@ -75,6 +75,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Converters\QuestionConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UnitTests\Editor\TestSchemas.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UnitTests\InitUnitTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Editor\MatchingQViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\LineEntry.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml" />
