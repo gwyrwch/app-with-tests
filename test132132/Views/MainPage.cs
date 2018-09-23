@@ -1,7 +1,10 @@
 ﻿using System;
+using System.IO;
 
 using Xamarin.Forms;
 using test132132.Views;
+using System.Collections.ObjectModel;
+using Newtonsoft.Json;
 
 namespace test132132
 {
@@ -9,7 +12,16 @@ namespace test132132
     {
         public MainPage()
         {
-            Page itemsPage, aboutPage = null, subjectsPage = null, editorPage = null;
+            UnitTests.InitUnitTests.Run();
+
+
+            if (!File.Exists(App.UserTestsPath))
+                File.WriteAllText(App.UserTestsPath, "[]");
+
+            // run tests
+
+
+            Page itemsPage,  subjectsPage = null, editorPage = null;
 
             switch (Device.RuntimePlatform)
             {
@@ -18,50 +30,23 @@ namespace test132132
                     {
                         Title = ""
                     };
-
-                    aboutPage = new NavigationPage(new AboutPage())
-                    {
-                        Title = "About"
-                    };
-
                     subjectsPage = new NavigationPage(new SubjectsPage())
                     {
                         Title = "Tests"
                     };
-                    editorPage = new NavigationPage(new EditorPage())
+                    editorPage = new NavigationPage(new EditorTestsPage())
                     {
                         Title = "Editor"
                     };
 
                     itemsPage.Icon = "tab_feed.png";
-                    aboutPage.Icon = "tab_about.png";
                     subjectsPage.Icon = "tab_feed.png";
                     editorPage.Icon = "tab_about.png";
-
-                    editorPage.BackgroundColor = Color.Cyan;
-
-                    break;
-                default:
-                    itemsPage = new ItemsPage()
-                    {
-                        Title = "Browse"
-                    };
-
-                    aboutPage = new AboutPage()
-                    {
-                        Title = "About"
-                    };
-
-                    subjectsPage = new SubjectsPage();
                     break;
             }
 
-            //Children.Add(itemsPage);
             Children.Add(subjectsPage);
             Children.Add(editorPage);
-            //Children.Add(aboutPage);
-            //Children.Add(new ItemsPage());
-            //Children.Add(new SubjectsPage());
 
             Title = Children[0].Title;
         }

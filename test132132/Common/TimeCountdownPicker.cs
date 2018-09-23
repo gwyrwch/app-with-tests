@@ -6,7 +6,14 @@ namespace test132132.Common
     public class TimeCountdownPicker : Picker
     {
         public static readonly BindableProperty SelectedTimeProperty =
-            BindableProperty.Create(nameof(SelectedTime), typeof(TimeSpan), typeof(TimeCountdownPicker), defaultValue: TimeSpan.Zero, defaultBindingMode: BindingMode.TwoWay, propertyChanged: OnSelectedTimePropertyPropertyChanged);
+            BindableProperty.Create(
+                nameof(SelectedTime), 
+                typeof(TimeSpan), 
+                typeof(TimeCountdownPicker), 
+                defaultValue: TimeSpan.Zero, 
+                defaultBindingMode: BindingMode.TwoWay, 
+                propertyChanged: OnSelectedTimePropertyPropertyChanged
+            );
 
         public TimeCountdownPicker()
         {
@@ -22,7 +29,11 @@ namespace test132132.Common
             set { SetValue(SelectedTimeProperty, value); }
         }
 
-        private static void OnSelectedTimePropertyPropertyChanged(BindableObject bindable, object value, object newValue)
+        private static void OnSelectedTimePropertyPropertyChanged(
+            BindableObject bindable, 
+            object value, 
+            object newValue
+        )
         {
             var picker = (TimeCountdownPicker)bindable;
             // Update value

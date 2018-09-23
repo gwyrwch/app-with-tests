@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="test132132.MultipleChoiceQEditPage" xmlns:helpers="clr-namespace:test132132.Common">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Save" Clicked="Save_Clicked" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Spacing="20" VerticalOptions="Center" Padding="15">
+            <Entry 
+                x:Name="QuestionText"
+                Placeholder="Your question here"
+                FontSize="Medium"
+            />
+            <Entry 
+                x:Name="Points"
+                Keyboard="Numeric"
+                Placeholder="Points for your question"
+                FontSize="Medium"
+            >
+                <Entry.Triggers>
+                    <EventTrigger Event="TextChanged">
+                        <helpers:IntegerEntryTrigger />
+                    </EventTrigger>
+                </Entry.Triggers>
+            </Entry>
+            <Picker
+               x:Name="AmountOfVariansPicker"
+               Title="Select the number of variants"
+               SelectedIndexChanged="AmountSelected" 
+            />
+            <ListView 
+                x:Name="VariantsListView" 
+                ItemsSource="{Binding Variants}" 
+                SeparatorColor="Transparent"
+                ItemSelected="OnItemSelected"
+            >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="5" Orientation="Horizontal">
+                                <Entry 
+                                    Text="{Binding Answer, Mode=TwoWay}" 
+                                    WidthRequest="270" 
+                                    HorizontalOptions="StartAndExpand" 
+                                />
+                                <Switch IsToggled="{Binding IsTrue, Mode=TwoWay}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

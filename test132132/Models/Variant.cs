@@ -2,17 +2,22 @@
 {
     public class Variant
     {
-        public Variant(string answer, bool istrue)
+        public Variant(string answer, bool istrue = false) // done false
         {
             Answer = answer;
             IsTrue = istrue;
         }
-        public bool IsTrue { get; }
-        public string Answer { get; }
+        public bool IsTrue { 
+            get; 
+            set; 
+        }
+
+        public string Answer { get; set; }
 
         public override string ToString()
         {
             return Answer;
         }
+
     }
 }

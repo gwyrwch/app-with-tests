@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace test132132.Models
 {
@@ -7,12 +8,13 @@ namespace test132132.Models
     {
         public MatchingQuestion(
             string text,
-            int points,
+            int? points,
             List<string> lefts,
             List<string> rights,
-            List<int> relation
+            List<int?> relation
         ) : base(text, points)
         {
+            QType = 2;
             Lefts = lefts;
             Rights = rights;
             Relation = relation;
@@ -20,7 +22,7 @@ namespace test132132.Models
 
         public List<string> Lefts { get; }
         public List<string> Rights { get; }
-        public List<int> Relation { get; }
+        public List<int?> Relation { get; }
 
         public override string ToString()
         {
@@ -34,11 +36,22 @@ namespace test132132.Models
                     "    ",
                     (i + 1).ToString(),
                     ". ",
-                    Rights[Relation[i] - 1],
+                    Rights[(int)(Relation[i] - 1)],
                     "\n"
                 );
             }
             return _out;
+        }
+
+        public override void Validate()
+        {
+            base.Validate();
+
+            if(Lefts.Any(l => string.IsNullOrWhiteSpace(l)) ||
+               Rights.Any(r => string.IsNullOrWhiteSpace(r)) ||
+               Relation.Any(digit => !digit.HasValue)
+            )
+               throw new NullReferenceException("Error! There are empty fields.");
         }
     }
 }
