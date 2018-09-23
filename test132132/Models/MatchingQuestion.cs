@@ -13,6 +13,7 @@ namespace test132132.Models
             List<int> relation
         ) : base(text, points)
         {
+            QType = 2;
             Lefts = lefts;
             Rights = rights;
             Relation = relation;
@@ -43,7 +44,7 @@ namespace test132132.Models
 
         public override void Validate()
         {
-
+            base.Validate();
         }
     }
 }

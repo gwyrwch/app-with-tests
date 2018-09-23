@@ -6,6 +6,7 @@ namespace test132132.Models
     {
         public OpenQuestion(string text, int? points, string answer) : base(text, points)
         {
+            QType = 3;
             Answer = answer;
         }
         public string Answer { get; }
@@ -16,11 +17,8 @@ namespace test132132.Models
         }
 
         public override void Validate() {
-            if (
-                string.IsNullOrEmpty(Text) ||
-                Points == null ||
-                string.IsNullOrEmpty(Answer) 
-               ) 
+            base.Validate();
+            if (string.IsNullOrEmpty(Answer)) 
                 throw new NullReferenceException("Error! There are empty fields."); 
         }
     }

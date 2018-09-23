@@ -8,8 +8,6 @@ namespace test132132
     public partial class EditorPage : ContentPage
     {
         Models.Test test = new Models.Test();
-       // Models.Test test;
-        bool testCreated = false;
 
         public EditorPage()
         {
@@ -21,52 +19,71 @@ namespace test132132
                 this, "CreateNewQuestion", (obj, question) =>
                 {
                     test.Add(question);
+
+                    StackLayout layout = new StackLayout { // manually adding question to table
+                        Orientation = StackOrientation.Horizontal,
+                        Padding = new Thickness(15, 15, 0, 15)
+                    };
+                    layout.Children.Add(
+                        new Label { 
+                            Text = string.Join(
+                                "",
+                                AddedQuestions.Root.Count.ToString(),
+                                "."
+                            ),
+                            TextColor = Color.FromHex("#007aff")
+                        }
+                    );
+                    layout.Children.Add(
+                        new Label { 
+                            Text = question.Text, 
+                            TextColor = Color.FromHex("#8e8e93")
+                        }
+                    );
+                    AddedQuestions.Root.First().Add( // Root.First() -> first table section
+                        new ViewCell {
+                            View = layout
+                        }
+                    );
                 }
             );
-
         }
 
-        async void AddQuestion_Clicked(object sender, EventArgs e) 
-        {
-            //if(!testCreated) {
-            //    test.TimeLimit = (TimeSpan?)TimeLimitPicker.SelectedItem;
-            //    test.Mode = (Models.TimeMode?)TimeModePicker.SelectedItem;
+        void Validate() {
+            if (
+                string.IsNullOrWhiteSpace(TitleEntry.Text) ||
+                SubjectPicker.SelectedIndex == -1 ||
+                TimeLimitPicker.SelectedIndex == -1 ||
+                TimeModePicker.SelectedIndex == -1
+            )
+                throw new NullReferenceException("Error! There are empty fields.");
+        }
 
-            //    testCreated = true;
-            //}
-
-            try {
-                if (
-                    string.IsNullOrWhiteSpace(TitleEntry.Text) ||
-                    SubjectPicker.SelectedIndex == -1 ||
-                    TimeLimitPicker.SelectedIndex == -1 ||
-                    TimeModePicker.SelectedIndex == -1
-                ){
-                    throw new NullReferenceException("Error! There are empty fields.");
-                }
+        async void Save_Clicked(object sender, EventArgs e) {
+            try
+            {
+                Validate();
             }
-            catch(Exception exc)
+            catch (Exception exc)
             {
                 await DisplayAlert("Data is invalid", exc.Message, "Ok");
                 return;
             }
 
-            if(!testCreated) 
-            {
-                test.Title = TitleEntry.Text;
-                test.Subject = SubjectPicker.SelectedItem.ToString();
-                test.TimeLimit = TimeLimitPicker.SelectedTime;
-                test.Mode = Models.TimeMode.limitForQuestion; //todo
-                //test.Mode = (Models.TimeMode)TimeModePicker.SelectedItem; todo
+            test.Title = TitleEntry.Text;
+            test.Subject = SubjectPicker.SelectedItem.ToString();
+            test.TimeLimit = TimeLimitPicker.SelectedTime;
+            test.Mode = (Models.TimeMode)TimeModePicker.SelectedIndex;
 
-                TitleEntry.IsEnabled = false;
-                SubjectPicker.IsEnabled = false;
-                TimeLimitPicker.IsEnabled = false;
-                TimeModePicker.IsEnabled = false;
+            MessagingCenter.Send( // todo
+                this, "CreateNewTest", test
+            );
 
-                testCreated = true;
-            }
+            await Navigation.PopToRootAsync();
+        }
 
+        async void AddQuestion_Clicked(object sender, EventArgs e) 
+        {
             await Navigation.PushAsync(new QTypeSelectionPage());
         }
     }

@@ -48,7 +48,13 @@ namespace test132132
                 "CreateNewQuestion", 
                 (Models.Question)question
             );
-            await Navigation.PopToRootAsync();
+            Device.BeginInvokeOnMainThread(async () => await Navigation.PopAsync());
+            Device.BeginInvokeOnMainThread(async () => await Navigation.PopAsync());
+        }
+
+        void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
+        {
+            VariantsListView.SelectedItem = null;
         }
 
         async void Delete_Clicked(object sender, EventArgs e)

@@ -12,6 +12,7 @@ namespace test132132.Models
             List<Variant> variants
         ) : base(text, points)
         {
+            QType = 1;
             Variants = variants;
         }
         public List<Variant> Variants { get; }
@@ -27,11 +28,8 @@ namespace test132132.Models
 
         public override void Validate()
         {
-            if (
-                string.IsNullOrWhiteSpace(Text) ||
-                Points == null ||
-                Variants.Any(var => string.IsNullOrWhiteSpace(var.Answer))
-            )
+            base.Validate();
+            if (Variants.Any(var => string.IsNullOrWhiteSpace(var.Answer)))
                 throw new NullReferenceException("Error! There are empty fields.");
 
             if (

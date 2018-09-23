@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="test132132.Views.EditorTestsPage" Title="Your tests">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" Clicked="Add_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView 
+                x:Name="UserTestsListView" 
+                ItemsSource="{Binding UserTests}" 
+                SeparatorColor="Transparent"
+                ItemSelected="OnItemSelected"
+            >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="5" Orientation="Horizontal">
+                                <Label 
+                                    Text="{Binding Title}" 
+                                    WidthRequest="270" 
+                                    HorizontalOptions="StartAndExpand" 
+                                />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

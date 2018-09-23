@@ -1,61 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="test132132.EditorPage" xmlns:local="clr-namespace:test132132.Common" Title="Editor">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Save" Clicked="Save_Clicked" />
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout Spacing="20" Padding="0,200,0,0">
-            <StackLayout Spacing="0">
-                <Entry 
-                    x:Name="TitleEntry" 
-                    Placeholder="Enter the title of the test"
-                    Keyboard="Text"
-                    HeightRequest="30"
-                />
+        <ScrollView>
+            <StackLayout Spacing="20" Padding="0,200,0,0">
+                <StackLayout Spacing="0">
+                    <Entry 
+                        x:Name="TitleEntry" 
+                        Placeholder="Enter the title of the test"
+                        Keyboard="Text"
+                        HeightRequest="30"
+                    />
+                    <Picker
+                        x:Name="SubjectPicker" 
+                        Title="Choose subject"
+                        HeightRequest="30"
+                    />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="20" Padding="8,0,0,0">
+                    <Label Text="Time limit for test:" FontSize="Medium" TextColor="Silver"/>
+                    <local:TimeCountdownPicker 
+                        x:Name="TimeLimitPicker"
+                        SelectedTime="{Binding Countdown}" 
+                        WidthRequest="85"
+                        HorizontalOptions="Center"
+                        TextColor="#007aff"
+                    />
+                </StackLayout>
                 <Picker
-                    x:Name="SubjectPicker" 
-                    Title="Choose subject"
+                    x:Name="TimeModePicker"
+                    Title="Choose time mode for the test"
                     HeightRequest="30"
                 />
+                <Button 
+                    Text="New question"
+                    BackgroundColor="White"
+                    BorderRadius="10"
+                    BorderWidth="1"
+                    BorderColor="#007aff"
+                    Margin="10"
+                    TextColor="#007aff"
+                    Clicked="AddQuestion_Clicked"
+               />
+                <StackLayout Padding="0,0,0,0">
+                   <local:ColoredTableView 
+                        Intent="Data" 
+                        SeparatorColor="Silver" 
+                        x:Name="AddedQuestions"
+                   >
+                        <TableSection Title="Your questions"/>
+                   </local:ColoredTableView>
+               </StackLayout>
             </StackLayout>
-            <StackLayout Orientation="Horizontal" Spacing="20" Padding="8,0,0,0">
-                <Label Text="Time limit for test:" FontSize="Medium" TextColor="Silver"/>
-                <local:TimeCountdownPicker 
-                    x:Name="TimeLimitPicker"
-                    SelectedTime="{Binding Countdown}" 
-                    WidthRequest="85"
-                    HorizontalOptions="Center"
-                    TextColor="#5591FF"
-                />
-            </StackLayout>
-            <Picker
-                x:Name="TimeModePicker"
-                Title="Choose time mode for the test"
-                HeightRequest="30"
-            />
-            <Button 
-                Text="New question"
-                BackgroundColor="White"
-                BorderRadius="10"
-                BorderWidth="1"
-                BorderColor="#5591FF"
-                Margin="10"
-                Clicked="AddQuestion_Clicked"
-           />
-            <StackLayout Padding="0,0,0,0">
-               <local:ColoredTableView 
-                    Intent="Data" 
-                    SeparatorColor="Silver" 
-                    x:Name="AddedQuestions"
-               >
-                    <TableSection 
-                        Title="Your questions"
-                    >
-                      <!--  <ViewCell>
-                            <StackLayout Padding="15,0,0,0" Orientation="Horizontal" VerticalOptions="Center">
-                                <Label Text="{Binding text}"/>
-                            </StackLayout>
-                        </ViewCell>-->
-                    </TableSection>
-               </local:ColoredTableView>
-           </StackLayout>
-        </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

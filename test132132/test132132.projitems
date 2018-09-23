@@ -67,6 +67,14 @@
     <Compile Include="$(MSBuildThisFileDirectory)Common\ColoredTableView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\IntegerEntryTrigger.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\MyInt.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\EditorTestsPage.xaml.cs">
+      <DependentUpon>EditorTestsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Editor\EditorTestsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\TestConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\QuestionConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UnitTests\Editor\TestSchemas.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UnitTests\InitUnitTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml" />
@@ -102,10 +110,17 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\EditorTestsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Common\" />
     <Folder Include="$(MSBuildThisFileDirectory)Views\EditQuestion\" />
     <Folder Include="$(MSBuildThisFileDirectory)ViewModels\Editor\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Converters\" />
+    <Folder Include="$(MSBuildThisFileDirectory)UnitTests\" />
+    <Folder Include="$(MSBuildThisFileDirectory)UnitTests\Editor\" />
   </ItemGroup>
 </Project>

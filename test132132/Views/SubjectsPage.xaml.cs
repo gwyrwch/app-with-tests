@@ -12,10 +12,13 @@ namespace test132132
         {
             InitializeComponent();
             //SubjectsListView.ItemsSource = App.Subjects;
+            //SubjectsTableView.Resources = App.Subjects;
+
         }
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
+            // todo
             //var item = args.SelectedItem as string;
             //if (item == null)
               //  return;

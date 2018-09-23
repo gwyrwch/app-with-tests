@@ -15,6 +15,8 @@ namespace test132132.iOS
             base.OnElementChanged(e);
             if (Control == null)
                 return;
+            if (Element == null)
+                return;
 
             var tableView = Control as UITableView;
             var coloredTableView = Element as ColoredTableView;

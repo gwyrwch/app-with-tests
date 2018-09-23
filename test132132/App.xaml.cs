@@ -15,6 +15,8 @@ namespace test132132
             "Maths"
         };
 
+        public static string UserTestsPath = "./user_tests.json";
+
         public App()
         {
             InitializeComponent();

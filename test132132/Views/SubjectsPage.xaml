@@ -2,33 +2,43 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="test132132.SubjectsPage" Title="Choose subject">
     <ContentPage.Content>
         <StackLayout>
-            <TableView x:Name="SubjectsTableView" 
-                       Intent="Data"
+            <TableView
+                x:Name="SubjectsTableView" 
+                Intent="Data"
             >
                 <TableRoot>
                      <TableSection Title="Programming">  
                         <ViewCell>  
-                            <StackLayout Orientation="Horizontal" Padding="13,0">  
-                                <Label Text="Date" VerticalOptions="Center"/>  
-                            </StackLayout>  
-                        </ViewCell>  
-                    </TableSection> 
-                    <TableSection Title="School">
-                        <ViewCell>
-                            <StackLayout 
-                                VerticalOptions="Center" 
-                                HorizontalOptions="Center" 
-                                Padding="5" 
-                                Orientation="Horizontal"
-                            >
+                            <StackLayout Orientation="Horizontal" Padding="15,15,0,15">  
                                 <Label 
-                                    Text="kek"
+                                    Text="123"
                                     TextColor="#007aff" 
                                     FontSize="20"
                                 />
                                 <Label 
                                     Text="Tests :" 
-                                    TextColor="Gray" 
+                                    TextColor="#8e8e93" 
+                                    FontSize="13" 
+                                    VerticalOptions="EndAndExpand"
+                                />
+                            </StackLayout>  
+                        </ViewCell>  
+                    </TableSection> <!--Tapped:-->
+                    <TableSection Title="School">
+                        <ViewCell>
+                            <StackLayout 
+                                HorizontalOptions="StartAndExpand" 
+                                Padding="15,0,0,15" 
+                                Orientation="Horizontal"
+                            >
+                                <Label 
+                                    Text="123"
+                                    TextColor="#007aff" 
+                                    FontSize="20"
+                                />
+                                <Label 
+                                    Text="Tests :" 
+                                    TextColor="#8e8e93" 
                                     FontSize="13" 
                                     VerticalOptions="EndAndExpand"
                                 />

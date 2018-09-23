@@ -19,9 +19,10 @@ namespace test132132
             //viewModel.SetListLength(length);
         }
 
-        async void Save_Clicked(object sender, EventArgs e)
+        void Save_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PopToRootAsync(); //todo
+            Device.BeginInvokeOnMainThread(async () => await Navigation.PopAsync());
+            Device.BeginInvokeOnMainThread(async () => await Navigation.PopAsync()); //todo
         }
 
         async void Delete_Clicked(object sender, EventArgs e)

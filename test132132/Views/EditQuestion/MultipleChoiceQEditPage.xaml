@@ -27,13 +27,21 @@
                Title="Select the number of variants"
                SelectedIndexChanged="AmountSelected" 
             />
-            <ListView x:Name="VariantsListView" ItemsSource="{Binding Variants}">
+            <ListView 
+                x:Name="VariantsListView" 
+                ItemsSource="{Binding Variants}" 
+                SeparatorColor="Transparent"
+                ItemSelected="OnItemSelected"
+            >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout Padding="5" Orientation="Horizontal">
-                                <!--ItemSelected="OnItemSelected"-->
-                                <Entry Text="{Binding Answer, Mode=TwoWay}" WidthRequest="270" HorizontalOptions="StartAndExpand" />
+                                <Entry 
+                                    Text="{Binding Answer, Mode=TwoWay}" 
+                                    WidthRequest="270" 
+                                    HorizontalOptions="StartAndExpand" 
+                                />
                                 <Switch IsToggled="{Binding IsTrue, Mode=TwoWay}"/>
                             </StackLayout>
                         </ViewCell>
