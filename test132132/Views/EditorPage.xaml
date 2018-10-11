@@ -48,7 +48,7 @@
                    <local:ColoredTableView 
                         Intent="Data" 
                         SeparatorColor="Silver" 
-                        x:Name="AddedQuestions"
+                        x:Name="AddedQuestionsTableView"
                    >
                         <TableSection Title="Your questions"/>
                    </local:ColoredTableView>

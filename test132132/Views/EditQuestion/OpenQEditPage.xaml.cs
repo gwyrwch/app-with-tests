@@ -16,21 +16,24 @@ namespace test132132
         async void Save_Clicked(object sender, EventArgs e)
         {
             Models.OpenQuestion question = new Models.OpenQuestion(
-                QuestionText.Text,
-                Common.MyInt.Parse(Points.Text),
-                QuestionAnswer.Text
+                QuestionTextEntry.Text,
+                Common.MyInt.Parse(PointsEntry.Text),
+                QuestionAnswerEntry.Text
             );
 
-            try {
+            try
+            {
                 question.Validate();
-            } catch (Exception exc) {
+            }
+            catch (Exception exc)
+            {
                 await DisplayAlert("Question is invalid", exc.Message, "Ok");
                 return;
             }
 
             MessagingCenter.Send(
                 (ContentPage)this,
-                "CreateNewQuestion", 
+                "CreateNewQuestion",
                 (Models.Question)question
             );
             Device.BeginInvokeOnMainThread(async () => await Navigation.PopAsync());

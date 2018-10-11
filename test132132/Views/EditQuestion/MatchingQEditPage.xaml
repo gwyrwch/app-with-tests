@@ -83,17 +83,28 @@
                                 <StackLayout Padding="0,0,0,20" Orientation="Horizontal">
                                     <Label Text="1. "/>
                                     <helpers:LineEntry
-                                        Text="{Binding Path=.,Mode=TwoWay}"
+                                        Text="{Binding , Mode=TwoWay}" 
                                         WidthRequest="130"
                                         HorizontalOptions="FillAndExpand"
                                         BorderColor="Silver"
-                                    />
+                                    /> <!--fixme binding doesnt work--> 
                                 </StackLayout>
                             </ViewCell>
                         </DataTemplate>                        
                     </ListView.ItemTemplate>
                 </ListView>
             </StackLayout>
+            <Button 
+                Text="Shuffle"
+                BackgroundColor="White"
+                BorderRadius="10"
+                BorderWidth="1"
+                BorderColor="#007aff"
+                Margin="10"
+                TextColor="#007aff"
+                VerticalOptions="CenterAndExpand"
+                Clicked="OnShuffle_Clicked"
+           />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

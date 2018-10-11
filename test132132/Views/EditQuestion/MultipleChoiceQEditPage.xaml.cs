@@ -16,10 +16,10 @@ namespace test132132
             InitializeComponent();
             AmountOfVariansPicker.ItemsSource = Enumerable.Range(1, 10).ToList();
             BindingContext = viewModel = new ViewModels.Editor.MultipleChoiceQViewModel();
-
         }
 
-        void AmountSelected (object sender, EventArgs e) {
+        void AmountSelected(object sender, EventArgs e)
+        {
             int length = (int)AmountOfVariansPicker.SelectedItem;
             viewModel.SetListLength(length);
         }
@@ -28,8 +28,8 @@ namespace test132132
         {
             viewModel.SaveAll();
             Models.MultipleChoiceQuestion question = new Models.MultipleChoiceQuestion(
-                QuestionText.Text, 
-                Common.MyInt.Parse(Points.Text),
+                QuestionTextEntry.Text,
+                Common.MyInt.Parse(PointsEntry.Text),
                 viewModel.Variants.ToList()
             );
 
@@ -44,8 +44,8 @@ namespace test132132
             }
 
             MessagingCenter.Send(
-                (ContentPage)this, 
-                "CreateNewQuestion", 
+                (ContentPage)this,
+                "CreateNewQuestion",
                 (Models.Question)question
             );
             Device.BeginInvokeOnMainThread(async () => await Navigation.PopAsync());

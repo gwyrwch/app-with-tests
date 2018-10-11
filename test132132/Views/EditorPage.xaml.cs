@@ -20,28 +20,32 @@ namespace test132132
                 {
                     test.Add(question);
 
-                    StackLayout layout = new StackLayout { // manually adding question to table
+                    StackLayout layout = new StackLayout
+                    { // manually adding question to table
                         Orientation = StackOrientation.Horizontal,
                         Padding = new Thickness(15, 15, 0, 15)
                     };
                     layout.Children.Add(
-                        new Label { 
+                        new Label
+                        {
                             Text = string.Join(
                                 "",
-                                AddedQuestions.Root.Count.ToString(),
+                                AddedQuestionsTableView.Root.Count.ToString(),
                                 "."
                             ),
                             TextColor = Color.FromHex("#007aff")
                         }
                     );
                     layout.Children.Add(
-                        new Label { 
-                            Text = question.Text, 
+                        new Label
+                        {
+                            Text = question.Text,
                             TextColor = Color.FromHex("#8e8e93")
                         }
                     );
-                    AddedQuestions.Root.First().Add( // Root.First() -> first table section
-                        new ViewCell {
+                    AddedQuestionsTableView.Root.First().Add( // Root.First() -> first table section
+                        new ViewCell
+                        {
                             View = layout
                         }
                     );
@@ -49,7 +53,8 @@ namespace test132132
             );
         }
 
-        void Validate() {
+        void Validate()
+        {
             if (
                 string.IsNullOrWhiteSpace(TitleEntry.Text) ||
                 SubjectPicker.SelectedIndex == -1 ||
@@ -59,7 +64,8 @@ namespace test132132
                 throw new NullReferenceException("Error! There are empty fields.");
         }
 
-        async void Save_Clicked(object sender, EventArgs e) {
+        async void Save_Clicked(object sender, EventArgs e)
+        {
             try
             {
                 Validate();
@@ -82,7 +88,7 @@ namespace test132132
             await Navigation.PopToRootAsync();
         }
 
-        async void AddQuestion_Clicked(object sender, EventArgs e) 
+        async void AddQuestion_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new QTypeSelectionPage());
         }

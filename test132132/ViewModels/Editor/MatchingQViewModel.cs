@@ -2,6 +2,7 @@
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
+using test132132.Common.Algorithm;
 
 namespace test132132.ViewModels.Editor
 {
@@ -16,7 +17,8 @@ namespace test132132.ViewModels.Editor
         public MatchingQViewModel()
         {
             Lefts = new ObservableCollection<string>();
-            Rights = new ObservableCollection<string>();          
+            Rights = new ObservableCollection<string>();
+            Relation = new ObservableCollection<int?>();
         }
 
         public void SetListLength(int length)
@@ -25,26 +27,37 @@ namespace test132132.ViewModels.Editor
             {
                 Rights.RemoveAt(Lefts.Count - 1);
                 Lefts.RemoveAt(Lefts.Count - 1);
+                Relation.RemoveAt(Lefts.Count - 1);
             }
 
             while (Lefts.Count < length)
             {
                 Lefts.Add("");
                 Rights.Add("");
+                Relation.Add(Relation.Count);
             }
 
-            SaveRights();
-            SaveLefts();
+            Save("Rights");
+            Save("Lefts");
         }
 
-        public void SaveLefts()
+        public void Save(string arg)
         {
-            PropertyChanged.Invoke(this, new PropertyChangedEventArgs("Lefts"));
+            PropertyChanged.Invoke(this, new PropertyChangedEventArgs(arg));
         }
 
-        public void SaveRights()
+        public void Shuffle()
         {
-            PropertyChanged.Invoke(this, new PropertyChangedEventArgs("Rights")); //?
+            Save("Rights");
+            Save("Lefts");
+            long seed = DateTime.UtcNow.Ticks;
+            Rights.Shuffle(
+                new Random((int)seed)
+            );
+            Relation.Shuffle(
+                new Random((int)seed)
+            );
+            Save("Rights");
         }
     }
 }
