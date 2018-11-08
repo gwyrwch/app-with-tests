@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="test132132.ProfilePage" xmlns:local="clr-namespace:test132132" Title="Profile">
+    <MasterDetailPage.Master>
+        <ContentPage Title="kek">
+            <StackLayout Spacing="0" Orientation="Vertical">
+                <TableView
+                    x:Name="MasterPages" 
+                    Intent="Menu"
+                >
+                    <TableRoot>
+                         <TableSection Title="Choices">  
+                            <ViewCell>
+                                <Button Text="My Profile" Clicked="Profile_Clicked"/>
+                            </ViewCell>
+                            <ViewCell>
+                                <Button Text="Settings" Clicked="Settings_Clicked"/>
+                            </ViewCell>
+                         </TableSection>
+                    </TableRoot>
+                </TableView>
+               <!-- <Button>
+                    x:Name="ProfileButton"
+                    Text="My Profile"
+                    BackgroundColor="White"
+                    BorderRadius="6"
+                    BorderWidth="0.6"
+                    BorderColor="Silver"
+                    TextColor="#8e8e93"
+                    FontSize="Medium"
+                    Clicked="MultipleChoiceQ_Clicked"
+                </Button>-->
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    
+    <MasterDetailPage.Detail>
+        <ContentPage BackgroundColor="White">
+            <Label
+                Text="This is the Details" 
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+            />
+        </ContentPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

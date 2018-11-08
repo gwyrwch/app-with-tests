@@ -9,21 +9,21 @@ namespace test132132
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-        public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>() ?? new MockDataStore();
+        //public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>() ?? new MockDataStore();
 
-        bool isBusy = false;
-        public bool IsBusy
-        {
-            get { return isBusy; }
-            set { SetProperty(ref isBusy, value); }
-        }
+        //bool isBusy = false;
+        //public bool IsBusy
+        //{
+        //    get { return isBusy; }
+        //    set { SetProperty(ref isBusy, value); }
+        //}
 
-        string title = string.Empty;
-        public string Title
-        {
-            get { return title; }
-            set { SetProperty(ref title, value); }
-        }
+        //string title = string.Empty;
+        //public string Title
+        //{
+        //    get { return title; }
+        //    set { SetProperty(ref title, value); }
+        //}
 
         protected bool SetProperty<T>(ref T backingStore, T value,
             [CallerMemberName]string propertyName = "",

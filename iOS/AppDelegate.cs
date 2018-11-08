@@ -13,9 +13,10 @@ namespace test132132.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+
+            UIApplication.SharedApplication.SetStatusBarStyle(UIStatusBarStyle.BlackOpaque, false);
+            UIApplication.SharedApplication.StatusBarStyle = UIStatusBarStyle.BlackOpaque;
             LoadApplication(new App());
-
-
 
             return base.FinishedLaunching(app, options);
         }

@@ -10,11 +10,11 @@ namespace test132132
         ViewModels.Editor.MatchingQViewModel viewModel;
         public MatchingQEditPage()
         {
+            BindingContext = viewModel = new ViewModels.Editor.MatchingQViewModel();
+
             InitializeComponent();
-            shuffled = false;
 
             NumberOfAnswersPicker.ItemsSource = Enumerable.Range(1, 10).ToList();
-            BindingContext = viewModel = new ViewModels.Editor.MatchingQViewModel();
         }
 
         void AmountSelected(object sender, EventArgs e)
@@ -35,20 +35,17 @@ namespace test132132
 
         public async void Save_Clicked(object sender, EventArgs e)
         {
-            if (!shuffled) {
+            if (!viewModel.Shuffled) {
                 bool responce = await DisplayAlert("You forgot to shuffle answers", "", "Ok", "Cancel");
                 if (responce == false)
                     return;
             }
 
-            viewModel.Save("Lefts");
-            viewModel.Save("Rights");
-
             Models.MatchingQuestion question = new Models.MatchingQuestion(
                 QuestionTextEntry.Text,
                 Common.MyInt.Parse(PointsEntry.Text),
-                viewModel.Lefts.ToList(),
-                viewModel.Rights.ToList(),
+                viewModel.LeftsAsList(),
+                viewModel.RightsAsList(),
                 viewModel.Relation.ToList()
             );
 
@@ -75,11 +72,9 @@ namespace test132132
             await Navigation.PushAsync(new QTypeSelectionPage()); // todo
         }
 
-        bool shuffled;
-
         async void OnShuffle_Clicked(object sender, EventArgs e) 
         {
-            if (!shuffled) {
+            if (!viewModel.Shuffled) {
                 bool responce = await DisplayAlert(
                     "Are you sure you want to freeze answers and start shuffling?",
                     "This option is unrecoverable",
@@ -87,10 +82,10 @@ namespace test132132
                 );
                 if (responce)
                 {
-                    shuffled = true;
+                    viewModel.Shuffled = true;
                     //LeftsListView.InputTransparent = true;
                     //RightsListView.InputTransparent = true;
-                    //NumberOfAnswersPicker.InputTransparent = true;
+                    NumberOfAnswersPicker.InputTransparent = true;
                 }
                 else return;
             }

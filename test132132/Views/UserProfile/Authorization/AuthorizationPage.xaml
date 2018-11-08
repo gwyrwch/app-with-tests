@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="test132132.Views.UserProfile.Authorization.AuthorizationPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#f9f9f9" Padding="3, 120, 3, 0" Spacing="10"> 
+            <StackLayout Spacing="80">
+                <Image Source="GreyBlue.png"
+                       WidthRequest="50"
+                       HeightRequest="150"
+                       VerticalOptions="Center"
+                    /> 
+                <Button Clicked="SignUp_Clicked"
+                        Text="Sign Up"
+                        BackgroundColor="#ecf0f0"
+                        BorderRadius="15"
+                        BorderWidth="1"
+                        BorderColor="#8e8e93"
+                        TextColor="#8e8e93"
+                        VerticalOptions="End"
+                />    
+            </StackLayout>
+            
+            <StackLayout VerticalOptions="Start" Padding="0, 40, 0, 0">
+                <Label Text="Already have an account?"
+                    HorizontalOptions="Center"
+                    TextColor="#8e8e93"
+                    VerticalOptions="Center"
+                /> 
+                <Button Clicked="LogIn_Clicked" 
+                        Text="Log In"
+                        BackgroundColor="#8e8e93"
+                        BorderRadius="15"
+                        BorderWidth="2"
+                        BorderColor="White"
+                        TextColor="White"
+                        VerticalOptions="Center"
+                />                
+            </StackLayout> 
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

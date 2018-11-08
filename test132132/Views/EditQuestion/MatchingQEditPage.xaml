@@ -61,7 +61,7 @@
                                 <StackLayout Padding="0,0,0,20" Orientation="Horizontal">
                                     <Label Text="suka"/>
                                     <helpers:LineEntry
-                                        Text="{Binding Path=., Mode=TwoWay}"
+                                        Text="{Binding Text, Mode=TwoWay}"
                                         WidthRequest="130"
                                         HorizontalOptions="FillAndExpand" 
                                         BorderColor="Silver"
@@ -83,11 +83,11 @@
                                 <StackLayout Padding="0,0,0,20" Orientation="Horizontal">
                                     <Label Text="1. "/>
                                     <helpers:LineEntry
-                                        Text="{Binding , Mode=TwoWay}" 
+                                        Text="{Binding Text, Mode=TwoWay}" 
                                         WidthRequest="130"
                                         HorizontalOptions="FillAndExpand"
-                                        BorderColor="Silver"
-                                    /> <!--fixme binding doesnt work--> 
+                                        BorderColor="Silver"  
+                                    />
                                 </StackLayout>
                             </ViewCell>
                         </DataTemplate>                        

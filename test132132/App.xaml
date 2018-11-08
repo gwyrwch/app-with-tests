@@ -10,8 +10,8 @@
             <Color x:Key="MediumGrayTextColor">#4d4d4d</Color>
             <Color x:Key="LightTextColor">#999999</Color>
             <Style TargetType="NavigationPage">
-                <Setter Property="BarBackgroundColor" Value="{StaticResource Primary}" />
-                <Setter Property="BarTextColor" Value="White" />
+                <Setter Property="BarBackgroundColor" Value="#ecf0f1" />
+                <Setter Property="BarTextColor" Value="#8e8e93" />
             </Style>
         </ResourceDictionary>
     </Application.Resources>

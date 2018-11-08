@@ -120,6 +120,12 @@
     <BundleResource Include="Resources\xamarin_logo.png" />
     <BundleResource Include="Resources\xamarin_logo%402x.png" />
     <BundleResource Include="Resources\xamarin_logo%403x.png" />
+    <BundleResource Include="Resources\grey.png" />
+    <BundleResource Include="Resources\blue.png" />
+    <BundleResource Include="Resources\red.png" />
+    <BundleResource Include="Resources\blue1.png" />
+    <BundleResource Include="Resources\lightblue.png" />
+    <BundleResource Include="Resources\GreyBlue.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDelegate.cs" />

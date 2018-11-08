@@ -26,7 +26,6 @@ namespace test132132
 
         public async void Save_Clicked(object sender, EventArgs e)
         {
-            viewModel.SaveAll();
             Models.MultipleChoiceQuestion question = new Models.MultipleChoiceQuestion(
                 QuestionTextEntry.Text,
                 Common.MyInt.Parse(PointsEntry.Text),

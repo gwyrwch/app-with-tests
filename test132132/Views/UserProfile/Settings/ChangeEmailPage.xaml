@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="test132132.Views.UserProfile.Settings.ChangeEmailPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Done" Clicked="Done_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout x:Name="ChangeEmailLayout">
+            <TableView Intent="Settings" BackgroundColor="#eff0f5">
+            <TableRoot>                 
+                 <TableSection Title="Account" >  
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" 
+                                     BackgroundColor="#ffff" 
+                                     Padding="30,0,5,0"
+                        >
+                            <Label  VerticalOptions="Center"
+                                    Text="Current"
+                                    TextColor="#007aff"
+                                    HorizontalOptions="Start"
+                                    WidthRequest="100"
+                            />
+                            <Label Text="{Binding Email, Mode=TwoWay}"
+                                   TextColor="#8e8e93"
+                                   HorizontalOptions="CenterAndExpand"
+                                   Margin="10"
+                            />
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" 
+                                     BackgroundColor="#ffff" 
+                                     Padding="30,0,0,0"
+                        >
+                            <Label  VerticalOptions="Center"
+                                    Text="New Email"                                    
+                                    TextColor="#007aff"
+                                    HorizontalOptions="Start"
+                                    WidthRequest="100"
+                            />
+                            <Entry x:Name="newEmailEntry"
+                                   HorizontalOptions="FillAndExpand"
+                                   PlaceholderColor="Silver"
+                                   HorizontalTextAlignment="Center"
+                                   Placeholder="hello@world.com"
+                                   
+                            />
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>            
+        </TableView>    
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

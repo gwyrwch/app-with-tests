@@ -4,11 +4,9 @@ using System.ComponentModel;
 
 namespace test132132.ViewModels.Editor
 {
-    public class MultipleChoiceQViewModel : INotifyPropertyChanged
+    public class MultipleChoiceQViewModel : BaseViewModel
     {
         public ObservableCollection<Models.Variant> Variants { get; set;}
-
-        public event PropertyChangedEventHandler PropertyChanged;
 
         public MultipleChoiceQViewModel()
         {
@@ -26,12 +24,6 @@ namespace test132132.ViewModels.Editor
             {
                 Variants.Add(new Models.Variant("", false));
             }
-
-            SaveAll();
-        }
-        public void SaveAll() 
-        {
-            PropertyChanged.Invoke(this, new PropertyChangedEventArgs("Variants"));
         }
     }
 }

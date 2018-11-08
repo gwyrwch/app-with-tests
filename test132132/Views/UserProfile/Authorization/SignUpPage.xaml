@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="test132132.Views.UserProfile.Authorization.SignUpPage" Title="Sign Up">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#fcfcfc" Spacing="30">
+            <StackLayout Orientation="Horizontal" Padding="10, 20, 0, 0" Spacing="15">
+                <Button Text="PHOTO"
+                        TextColor="#5ac8fa"
+                        BackgroundColor="White"
+                        BorderRadius="40"
+                        BorderColor="#5ac8fa"
+                        BorderWidth="1"
+                        WidthRequest="80"
+                        HeightRequest="80"
+                        />
+                <StackLayout HorizontalOptions="FillAndExpand" 
+                             Spacing="0" 
+                             VerticalOptions="Center"
+                             >   
+                    <Entry Placeholder="Your name"
+                           BackgroundColor="White"
+                            
+                           />
+                    <Entry Placeholder="Your surname"
+                           BackgroundColor="White"                       
+                           />
+                </StackLayout>            
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Date of birth:"
+                       TextColor="#8e8e93"
+                       />
+                <DatePicker x:Name="BirthdayPicker"
+                        TextColor="#8e8e93"
+                        WidthRequest="400"
+                        HorizontalOptions="Center"
+                        />
+            </StackLayout>
+            <StackLayout Spacing="5">                
+                <Label Text="Username:"
+                       TextColor="#8e8e93"
+                       />
+                <Entry Placeholder="guest"/>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Email:"
+                       TextColor="#8e8e93"
+                       />
+                <Entry Placeholder="hello@gmail.com"/>
+            </StackLayout> 
+            <StackLayout>
+                <Label Text="Education:"
+                       TextColor="#8e8e93"
+                       />
+                <Entry Placeholder="BSUIR"/>
+            </StackLayout>
+            <Button Text="Sign Up"
+                    TextColor="#5ac8fa"
+                    BackgroundColor="White"
+                    Margin="5"
+                    BorderColor="#5ac8fa"
+                    BorderWidth="1"
+                    BorderRadius="20"
+                    WidthRequest="80"
+                    />
+        </StackLayout>    
+    </ContentPage.Content>
+</ContentPage>

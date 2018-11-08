@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="test132132.Views.UserProfile.SettingsPage"
+             xmlns:local="clr-namespace:test132132.Views.UserProfile"
+             >
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:EmailConverter x:Key="EmailConvert"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout x:Name="SettingsLayout">
+        <TableView Intent="Settings" BackgroundColor="#eff0f5">
+            <TableRoot>                 
+                 <TableSection Title="Account" >  
+                    <ViewCell Tapped="Email_Tapped">
+                        <StackLayout Orientation="Horizontal" 
+                                     BackgroundColor="#ffff" 
+                                     Padding="30,0,5,0"
+                        >
+                            <Label  VerticalOptions="Center"
+                                    Text="Email"
+                                    TextColor="#007aff"
+                                    HorizontalOptions="Start"
+                            />
+                            <Label x:Name="EmailLabel"
+                                   Text="{Binding Email, Converter={StaticResource EmailConvert}, Mode=TwoWay}"
+                                   TextColor="Silver"
+                                   HorizontalOptions="EndAndExpand"
+                                   Margin="10"
+                            />
+                            <Label Text=">"
+                                   TextColor="#007aff"
+                                   HorizontalOptions="End"
+                                   VerticalOptions="Center"
+                            />
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" 
+                                     BackgroundColor="#ffff"
+                                     Padding="30,0,5,0"
+                        >
+                            <Label  VerticalOptions="Center" 
+                                    Text="Password"
+                                    TextColor="#007aff"
+                                    HorizontalOptions="Start" 
+                            />
+                            <Label Text=">"
+                                   TextColor="#007aff"
+                                   HorizontalOptions="EndAndExpand"
+                                   VerticalOptions="Center"
+                            />
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell x:Name="userNameViewCell" Tapped="UserName_Tapped">                      
+                        <StackLayout Orientation="Horizontal" 
+                                     BackgroundColor="#ffff"
+                                     Padding="30,0,5,0"
+                        >
+                            <Label  VerticalOptions="Center" 
+                                    Text="Username"
+                                    TextColor="#007aff"
+                                    HorizontalOptions="Start"                                    
+                            />
+                            <Label x:Name="UserNameLabel"
+                                   Text="{Binding UserName, StringFormat='@{0}', Mode=TwoWay}"
+                                   TextColor="Silver"
+                                   HorizontalOptions="EndAndExpand"
+                                   Margin="10"
+                            />
+                            <Label Text=">"
+                                   TextColor="#007aff"
+                                   HorizontalOptions="End"
+                                   VerticalOptions="Center"
+                            />
+                        </StackLayout>
+                    </ViewCell>                    
+                 </TableSection>
+                 <TableSection Title="Appearence">
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" 
+                                     BackgroundColor="#ffff"
+                                     Padding="0,0,0,0"
+                        >
+                            <Button Padding="30, 20, 60, 20" 
+                                    Text="LightMode"
+                                    TextColor="#007aff"
+                                    HorizontalOptions="StartAndExpand"
+                            />
+                            <Button Padding="60, 20, 30,20" 
+                                    Text="DarkMode"
+                                    TextColor="#007aff"
+                                    HorizontalOptions="EndAndExpand"
+                            />                                 
+                        </StackLayout>  
+                    </ViewCell>                    
+                 </TableSection>
+                 <TableSection Title="General">
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" 
+                                     BackgroundColor="#ffff"
+                                     Padding="30,0,5,0"
+                        >
+                            <Label VerticalOptions="Center" 
+                                    Text="Language"
+                                    TextColor="#007aff"
+                                    HorizontalOptions="Start" 
+                            />
+                            <Label Text=">"
+                                   TextColor="#007aff"
+                                   HorizontalOptions="EndAndExpand"
+                                   VerticalOptions="Center"
+                            />
+                        </StackLayout>            
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" 
+                                     BackgroundColor="#ffff"
+                                     Padding="30,0,5,0"
+                        >
+                            <Label VerticalOptions="Center" 
+                                    Text="About"
+                                    TextColor="#007aff"
+                                    HorizontalOptions="Start" 
+                            />
+                            <Label Text=">"
+                                   TextColor="#007aff"
+                                   HorizontalOptions="EndAndExpand"
+                                   VerticalOptions="Center"
+                            />
+                        </StackLayout>            
+                    </ViewCell>
+                    <ViewCell Tapped="Support_Tapped">
+                        <StackLayout Orientation="Horizontal" 
+                                     BackgroundColor="#ffff"
+                                     Padding="30,0,5,0"
+                        >
+                            <Label VerticalOptions="Center" 
+                                    Text="Ask a question"
+                                    TextColor="#007aff"
+                                    HorizontalOptions="Start" 
+                            />
+                            <Label Text=">"
+                                   TextColor="#007aff"
+                                   HorizontalOptions="EndAndExpand"
+                                   VerticalOptions="Center"
+                            />
+                        </StackLayout>            
+                    </ViewCell>                    
+                 </TableSection>
+                 <TableSection>
+                    <ViewCell>   
+                        <Button Text="Log Out"
+                               TextColor="#ff3b30"
+                               BackgroundColor="#ffff"
+                               HorizontalOptions="FillAndExpand"
+                               VerticalOptions="FillAndExpand"
+                        />
+                    </ViewCell>
+                 </TableSection>
+            </TableRoot>            
+        </TableView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

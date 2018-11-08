@@ -7,79 +7,83 @@
                 Intent="Data"
             >
                 <TableRoot>
-                     <TableSection Title="Programming">  
+                     <TableSection x:Name="CSharpTableSection" Title="C#">  
                         <ViewCell>  
-                            <StackLayout Orientation="Horizontal" Padding="15,15,0,15">  
-                                <Label 
-                                    Text="123"
-                                    TextColor="#007aff" 
-                                    FontSize="20"
-                                />
-                                <Label 
-                                    Text="Tests :" 
-                                    TextColor="#8e8e93" 
-                                    FontSize="13" 
-                                    VerticalOptions="EndAndExpand"
-                                />
-                            </StackLayout>  
+                            <StackLayout 
+                                HorizontalOptions="StartAndExpand" 
+                                Padding="20,0,0,0" 
+                                Orientation="Horizontal"
+                                Spacing="50"
+                            >
+                                <StackLayout>
+                                    <Label Text="Test #1"
+                                           TextColor="#007aff"
+                                          
+                                    />
+                                    <Label Text="Xamarin.Forms and Collections"
+                                           TextColor="Silver"
+                                           FontSize="Micro"
+                                           WidthRequest="180"
+                                    />
+                                </StackLayout>
+                                <StackLayout HorizontalOptions="EndAndExpand">
+                                    <Label 
+                                        Text="Questions : 10"
+                                        TextColor="#8e8e93" 
+                                        FontSize="15"
+                                        HorizontalOptions="End"
+                                    />
+                                    <Label 
+                                        Text="time: 30 min" 
+                                        TextColor="#4cd964" 
+                                        FontSize="13" 
+                                        VerticalOptions="EndAndExpand"
+                                        HorizontalOptions="End"
+                                    />
+                                </StackLayout>
+                            </StackLayout> 
                         </ViewCell>  
                     </TableSection> <!--Tapped:-->
-                    <TableSection Title="School">
+                    <TableSection Title="C++">
                         <ViewCell>
                             <StackLayout 
                                 HorizontalOptions="StartAndExpand" 
-                                Padding="15,0,0,15" 
+                                Padding="20,0,0,0" 
                                 Orientation="Horizontal"
+                                Spacing="50"
                             >
-                                <Label 
-                                    Text="123"
-                                    TextColor="#007aff" 
-                                    FontSize="20"
-                                />
-                                <Label 
-                                    Text="Tests :" 
-                                    TextColor="#8e8e93" 
-                                    FontSize="13" 
-                                    VerticalOptions="EndAndExpand"
-                                />
+                                <StackLayout HorizontalOptions="FillAndExpand">
+                                    <Label Text="Test #1"
+                                           TextColor="#007aff"
+                                          
+                                    />
+                                    <Label Text="Data structures"
+                                           TextColor="Silver"
+                                           FontSize="Micro"
+                                           WidthRequest="180"
+                                    />
+                                </StackLayout>
+                                <StackLayout HorizontalOptions="EndAndExpand">
+                                    <Label 
+                                        Text="Questions : 10"
+                                        TextColor="#8e8e93" 
+                                        FontSize="15"
+                                        HorizontalOptions="End"
+                                    />
+                                    <Label 
+                                        Text="time: 30 min" 
+                                        TextColor="#4cd964" 
+                                        FontSize="13" 
+                                        VerticalOptions="EndAndExpand"
+                                        HorizontalOptions="End"
+                                    />
+                                </StackLayout>
                             </StackLayout>
                         </ViewCell>
                     </TableSection>
                 </TableRoot>
             </TableView>
         </StackLayout>
-        <!--<StackLayout>
-            <ListView 
-                x:Name="SubjectsListView" 
-                ItemSelected="OnItemSelected"
-            >
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <StackLayout 
-                                VerticalOptions="Center" 
-                                HorizontalOptions="Center" 
-                                Padding="5" 
-                                Orientation="Horizontal"
-                            >
-                                <Label 
-                                    Text="{Binding}"
-                                    TextColor="#007aff" 
-                                    FontSize="20" 
-                                    Style="{DynamicResource ListItemTextStyle}"
-                                />
-                                <Label 
-                                    Text="Tests :" 
-                                    TextColor="Gray" 
-                                    FontSize="13" 
-                                    VerticalOptions="EndAndExpand"
-                                />
-                            </StackLayout>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-        </StackLayout>-->
     </ContentPage.Content>
 </ContentPage>
  
