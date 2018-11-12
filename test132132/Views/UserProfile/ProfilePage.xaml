@@ -34,12 +34,17 @@
     </MasterDetailPage.Master>
     
     <MasterDetailPage.Detail>
-        <ContentPage BackgroundColor="White">
-            <Label
-                Text="This is the Details" 
-                HorizontalOptions="Center"
-                VerticalOptions="Center"
-            />
+        <ContentPage BackgroundColor="White" Padding="15,5,5,5">
+            <StackLayout Spacing="0">
+                <Label Text="Swipe right to see menu"
+                       TextColor="#8e8e93"
+                       FontSize="Micro"
+                       HorizontalOptions="Center"
+                       />
+                <Image Source="welcomeProfile.png" 
+                       VerticalOptions="CenterAndExpand"
+                       />                
+            </StackLayout>            
         </ContentPage>
     </MasterDetailPage.Detail>
 </MasterDetailPage>

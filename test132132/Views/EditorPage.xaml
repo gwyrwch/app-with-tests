@@ -5,7 +5,12 @@
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout Spacing="20" Padding="0,200,0,0">
+            <StackLayout Spacing="20" Padding="0,80,0,0">
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="0, 0, 0, 50">
+                    <Image Source="Editor.png"
+                           WidthRequest="220"
+                           />
+                </StackLayout>
                 <StackLayout Spacing="0">
                     <Entry 
                         x:Name="TitleEntry" 

@@ -51,20 +51,19 @@ namespace test132132
 
 
                     itemsPage.Icon = "tab_feed.png";
-                    subjectsPage.Icon = "tab_feed.png";
+                    subjectsPage.Icon = "listIcon.png";
                     editorPage.Icon = "tab_about.png";
-                    profilePage.Icon = "tab_about.png";
+                    profilePage.Icon = "profileIcon.png";
                     break;
             }
 
-            Children.Add(profilePage);
+            Children.Add(authPage);
             Children.Add(editorPage);
             Children.Add(subjectsPage);
-            Children.Add(authPage);
+           // Children.Add(authPage);
 
             Title = Children[0].Title;
-            //BarBackgroundColor = Color.FromHex("#8e8e93");
-            BarTextColor = Color.Gray;
+           
 
         }
 

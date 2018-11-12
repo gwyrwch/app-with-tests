@@ -11,5 +11,10 @@ namespace test132132.Views.UserProfile.Authorization
         {
             InitializeComponent();
         }
+
+        async void LogIn_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ProfilePage());
+        }
     }
 }

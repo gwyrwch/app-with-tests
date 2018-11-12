@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 using Xamarin.Forms;
 
+using ImageCircle.Forms.Plugin.iOS;
+
+
 namespace test132132.Views.UserProfile
 {
     public partial class UserInformationPage : ContentPage
