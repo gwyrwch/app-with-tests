@@ -137,6 +137,7 @@
     <BundleResource Include="Resources\Melnick.jpg" />
     <BundleResource Include="Resources\tempIcon.jpeg" />
     <BundleResource Include="Resources\tempTests.json" />
+    <BundleResource Include="Resources\DarkThemeEditor.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDelegate.cs" />
