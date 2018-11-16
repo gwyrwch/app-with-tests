@@ -77,6 +77,44 @@
     <Compile Include="$(MSBuildThisFileDirectory)UnitTests\InitUnitTests.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Editor\MatchingQViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\LineEntry.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\Algorithm.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\UserProfile\ProfilePage.xaml.cs">
+      <DependentUpon>ProfilePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\User.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\UserStatistics.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\User\UserProfileViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\UserProfile\UserInformationPage.xaml.cs">
+      <DependentUpon>UserInformationPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\UserProfile\SettingsPage.xaml.cs">
+      <DependentUpon>SettingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\UserProfile\Settings\ChangeEmailPage.xaml.cs">
+      <DependentUpon>ChangeEmailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\User\EmailChangeViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MyBaseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\UserProfile\Settings\ChangeUserNamePage.xaml.cs">
+      <DependentUpon>ChangeUserNamePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\UserProfile\Settings\SupportPage.xaml.cs">
+      <DependentUpon>SupportPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Tests\SubjectsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\UserProfile\Authorization\SignUpPage.xaml.cs">
+      <DependentUpon>SignUpPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\UserProfile\Authorization\AuthorizationPage.xaml.cs">
+      <DependentUpon>AuthorizationPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\User\AuthrizationViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\UserProfile\Authorization\LogInPage.xaml.cs">
+      <DependentUpon>LogInPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Common\IPicturePicker.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\UserBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\TestPreview.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml" />
@@ -116,6 +154,42 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\UserProfile\ProfilePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\UserProfile\UserInformationPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\UserProfile\SettingsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\UserProfile\Settings\ChangeEmailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\UserProfile\Settings\ChangeUserNamePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\UserProfile\Settings\SupportPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\UserProfile\Authorization\SignUpPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\UserProfile\Authorization\AuthorizationPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\UserProfile\Authorization\LogInPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Common\" />
@@ -124,5 +198,10 @@
     <Folder Include="$(MSBuildThisFileDirectory)Converters\" />
     <Folder Include="$(MSBuildThisFileDirectory)UnitTests\" />
     <Folder Include="$(MSBuildThisFileDirectory)UnitTests\Editor\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\UserProfile\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\User\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\UserProfile\Settings\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\Tests\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\UserProfile\Authorization\" />
   </ItemGroup>
 </Project>

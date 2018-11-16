@@ -105,6 +105,9 @@
     <Reference Include="Xamarin.Forms.Xaml">
       <HintPath>..\packages\Xamarin.Forms.3.2.0.839982\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
+    <Reference Include="ImageCircle.Forms.Plugin">
+      <HintPath>..\packages\Xam.Plugins.Forms.ImageCircle.3.0.0.5\lib\xamarinios10\ImageCircle.Forms.Plugin.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
@@ -120,6 +123,21 @@
     <BundleResource Include="Resources\xamarin_logo.png" />
     <BundleResource Include="Resources\xamarin_logo%402x.png" />
     <BundleResource Include="Resources\xamarin_logo%403x.png" />
+    <BundleResource Include="Resources\grey.png" />
+    <BundleResource Include="Resources\blue.png" />
+    <BundleResource Include="Resources\red.png" />
+    <BundleResource Include="Resources\blue1.png" />
+    <BundleResource Include="Resources\lightblue.png" />
+    <BundleResource Include="Resources\GreyBlue.png" />
+    <BundleResource Include="Resources\Editor.png" />
+    <BundleResource Include="Resources\Editor1.png" />
+    <BundleResource Include="Resources\listIcon.png" />
+    <BundleResource Include="Resources\profileIcon.png" />
+    <BundleResource Include="Resources\welcomeProfile.png" />
+    <BundleResource Include="Resources\Melnick.jpg" />
+    <BundleResource Include="Resources\tempIcon.jpeg" />
+    <BundleResource Include="Resources\tempTests.json" />
+    <BundleResource Include="Resources\DarkThemeEditor.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDelegate.cs" />

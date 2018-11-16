@@ -6,12 +6,12 @@
     <ContentPage.Content>
         <StackLayout Spacing="20" VerticalOptions="Center" Padding="15">
             <Entry 
-                x:Name="QuestionText"
+                x:Name="QuestionTextEntry"
                 Placeholder="Your question here"
                 FontSize="Medium"
             />
             <Entry 
-                x:Name="Points"
+                x:Name="PointsEntry"
                 Keyboard="Numeric"
                 Placeholder="Points for your question"
                 FontSize="Medium"

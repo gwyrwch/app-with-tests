@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage  xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="test132132.Views.PageForDanikTests">
+    <ContentPage.Content>
+    <FlexLayout Direction="Column" JustifyContent="SpaceBetween">
+
+        <!-- Header -->
+        <Label Text="HEADER"
+               FontSize="Large"
+               BackgroundColor="Aqua"
+               HorizontalTextAlignment="Center" />
+
+        <!-- Body -->
+        <FlexLayout Wrap="NoWrap" FlexLayout.Grow="1" AlignContent="SpaceBetween">
+
+            <!-- Content -->
+            <Label Text="CONTENT"
+                   FontSize="Large"
+                   BackgroundColor="Gray"
+                   HorizontalTextAlignment="Center"
+                   />
+
+            <!-- Navigation items-->
+            <BoxView 
+                     Color="Blue"/>
+
+            <!-- Aside items -->
+            <BoxView 
+                     Color="Green" />
+
+        </FlexLayout>
+
+        <!-- Footer -->
+        <Label Text="FOOTER"
+               FontSize="Large"
+               BackgroundColor="Pink"
+               HorizontalTextAlignment="Center" />
+    </FlexLayout>
+
+    </ContentPage.Content>
+</ContentPage>

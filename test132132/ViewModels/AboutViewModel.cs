@@ -9,7 +9,7 @@ namespace test132132
     {
         public AboutViewModel()
         {
-            Title = "About";
+            //Title = "About";
 
             OpenWebCommand = new Command(() => Device.OpenUri(new Uri("https://yandex.ru/collections")));
         }

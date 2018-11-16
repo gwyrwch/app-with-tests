@@ -10,10 +10,11 @@ namespace test132132
         ViewModels.Editor.MatchingQViewModel viewModel;
         public MatchingQEditPage()
         {
-            InitializeComponent();
-            NumberOfAnswersPicker.ItemsSource = Enumerable.Range(1, 10).ToList();
-
             BindingContext = viewModel = new ViewModels.Editor.MatchingQViewModel();
+
+            InitializeComponent();
+
+            NumberOfAnswersPicker.ItemsSource = Enumerable.Range(1, 10).ToList();
         }
 
         void AmountSelected(object sender, EventArgs e)
@@ -34,24 +35,24 @@ namespace test132132
 
         public async void Save_Clicked(object sender, EventArgs e)
         {
-           // await Navigation.PushAsync(new MatchingQRelationPage())
-
-            viewModel.SaveRights();
-            viewModel.SaveLefts();
+            if (!viewModel.Shuffled) {
+                bool responce = await DisplayAlert("You forgot to shuffle answers", "", "Ok", "Cancel");
+                if (responce == false)
+                    return;
+            }
 
             Models.MatchingQuestion question = new Models.MatchingQuestion(
                 QuestionTextEntry.Text,
                 Common.MyInt.Parse(PointsEntry.Text),
-                viewModel.Lefts.ToList(),
-                viewModel.Rights.ToList(),
+                viewModel.LeftsAsList(),
+                viewModel.RightsAsList(),
                 viewModel.Relation.ToList()
             );
 
             try
             {
                 question.Validate();
-            }catch(Exception exc)
-            {
+            } catch(Exception exc) {
                 await DisplayAlert("Question is invalid", exc.Message, "Ok");
                 return;
             }
@@ -70,5 +71,26 @@ namespace test132132
         {
             await Navigation.PushAsync(new QTypeSelectionPage()); // todo
         }
+
+        async void OnShuffle_Clicked(object sender, EventArgs e) 
+        {
+            if (!viewModel.Shuffled) {
+                bool responce = await DisplayAlert(
+                    "Are you sure you want to freeze answers and start shuffling?",
+                    "This option is unrecoverable",
+                    "Ok", "Cancel"
+                );
+                if (responce)
+                {
+                    viewModel.Shuffled = true;
+                    //LeftsListView.InputTransparent = true;
+                    //RightsListView.InputTransparent = true;
+                    NumberOfAnswersPicker.InputTransparent = true;
+                }
+                else return;
+            }
+
+            viewModel.Shuffle();
+         }
     }
 }

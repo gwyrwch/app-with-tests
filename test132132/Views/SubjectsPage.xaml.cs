@@ -8,9 +8,16 @@ namespace test132132
 {
     public partial class SubjectsPage : ContentPage
     {
+        ViewModels.Tests.SubjectsViewModel viewModel;
         public SubjectsPage()
         {
             InitializeComponent();
+
+            BindingContext = viewModel = new ViewModels.Tests.SubjectsViewModel();
+
+
+            //CSharpTableSection.BindingContext = viewModel.subjects; //todo ???
+
             //SubjectsListView.ItemsSource = App.Subjects;
             //SubjectsTableView.Resources = App.Subjects;
 

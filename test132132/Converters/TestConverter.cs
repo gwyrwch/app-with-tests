@@ -54,7 +54,7 @@ namespace test132132.Converters
                 return;
             var test = (Models.Test)value;
 
-            var obj = new TestSchema()
+            var obj = new TestSchema
             {
                 Collection = test.ToList(),
                 Title = test.Title,
