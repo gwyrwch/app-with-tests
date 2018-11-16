@@ -21,7 +21,8 @@ namespace test132132.Views.UserProfile
                 Information.BindingContext = viewModel.CurrentUser;
 
             }
-            MessageCame = false;
+            MessageCame = false; //todo
+
             //BirthDayViewCell.BindingContext = viewModel.currentUser;
             //EducationViewCell.BindingContext = viewModel.currentUser;
 

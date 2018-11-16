@@ -11,7 +11,7 @@
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout x:Name="SettingsLayout">
-        <TableView Intent="Settings" BackgroundColor="#eff0f5">
+        <TableView Intent="Settings" BackgroundColor="#f9f9f9">
             <TableRoot>                 
                  <TableSection Title="Account" >  
                     <ViewCell Tapped="Email_Tapped">

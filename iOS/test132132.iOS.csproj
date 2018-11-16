@@ -135,6 +135,8 @@
     <BundleResource Include="Resources\profileIcon.png" />
     <BundleResource Include="Resources\welcomeProfile.png" />
     <BundleResource Include="Resources\Melnick.jpg" />
+    <BundleResource Include="Resources\tempIcon.jpeg" />
+    <BundleResource Include="Resources\tempTests.json" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDelegate.cs" />

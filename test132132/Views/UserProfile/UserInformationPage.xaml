@@ -32,7 +32,7 @@
                 />
             </StackLayout>   
         </ContentView>
-        <TableView Intent="Form" BackgroundColor="#eff0f5" HeightRequest="100">  
+        <TableView Intent="Form" BackgroundColor="#f9f9f9" HeightRequest="100" >  
             <TableRoot>
                  <TableSection>
                     <ViewCell x:Name="BirthDayViewCell">

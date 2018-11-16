@@ -18,10 +18,12 @@
                              >   
                     <Entry Placeholder="Your name"
                            BackgroundColor="White"
+                           x:Name="NameEntry"
                             
                            />
                     <Entry Placeholder="Your surname"
-                           BackgroundColor="White"                       
+                           BackgroundColor="White"
+                           x:Name="SurnameEntry"
                            />
                 </StackLayout>            
             </StackLayout>
@@ -32,26 +34,32 @@
                 <DatePicker x:Name="BirthdayPicker"
                         TextColor="#8e8e93"
                         WidthRequest="400"
-                        HorizontalOptions="Center"
+                        HorizontalOptions="Center"                        
                         />
             </StackLayout>
             <StackLayout Spacing="5">                
                 <Label Text="Username:"
                        TextColor="#8e8e93"
                        />
-                <Entry Placeholder="guest"/>
+                <Entry Placeholder="guest"
+                       x:Name="UserNameEntry"
+                       />
             </StackLayout>
             <StackLayout>
                 <Label Text="Email:"
                        TextColor="#8e8e93"
                        />
-                <Entry Placeholder="hello@gmail.com"/>
+                <Entry Placeholder="hello@gmail.com"
+                       x:Name="EmailEntry"
+                       />
             </StackLayout> 
             <StackLayout>
                 <Label Text="Education:"
                        TextColor="#8e8e93"
                        />
-                <Entry Placeholder="BSUIR"/>
+                <Entry Placeholder="BSUIR"
+                       x:Name="EducationEntry"
+                       />
             </StackLayout>
             <Button Text="Sign Up"
                     TextColor="#5ac8fa"
@@ -61,6 +69,7 @@
                     BorderWidth="1"
                     BorderRadius="20"
                     WidthRequest="80"
+                    Clicked="SignUp_Clicked"
                     />
         </StackLayout>    
     </ContentPage.Content>

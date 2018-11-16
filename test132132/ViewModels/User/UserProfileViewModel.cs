@@ -13,6 +13,7 @@ namespace test132132.ViewModels.User
             CurrentUser = App.GetCurrentUser();
         }
 
+       
 
     }
 }

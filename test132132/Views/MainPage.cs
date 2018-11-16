@@ -48,19 +48,20 @@ namespace test132132
                         Title = "Profile"
                     };
                     authPage = new NavigationPage(new Views.UserProfile.Authorization.AuthorizationPage());
+                    authPage.Title = "Profile";
+                    // authPage.Icon = "tempIcon.jpeg";
 
-
+                    authPage.Icon = "tab_feed.png";
                     itemsPage.Icon = "tab_feed.png";
-                    subjectsPage.Icon = "listIcon.png";
-                    editorPage.Icon = "tab_about.png";
-                    profilePage.Icon = "profileIcon.png";
+                    subjectsPage.Icon = "tab_feed.png";
+                    editorPage.Icon = "tab_feed.png";
+                    //profilePage.Icon = "tttt.svg";
                     break;
             }
 
             Children.Add(authPage);
             Children.Add(editorPage);
             Children.Add(subjectsPage);
-           // Children.Add(authPage);
 
             Title = Children[0].Title;
            

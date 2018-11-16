@@ -1,0 +1,633 @@
+﻿[
+  {
+    "Collection": [
+      {
+        "Variants": [
+          {
+            "IsTrue": true,
+            "Answer": "Class ArrayList is not strongly-typed"
+          },
+          {
+            "IsTrue": false,
+            "Answer": "Namespace System.Collections.Concurrent contains universal classes and interfaces of collections"
+          },
+          {
+            "IsTrue": false,
+            "Answer": "Interfaces IEnumerable and IEnumerable<T> are declared in System.Collections.Generic"
+          }
+        ],
+        "QType": 1,
+        "Text": "Choose the right answer ",
+        "Points": 1,
+        "TestId": 65176646
+      },
+      {
+        "Answer": "-4",
+        "QType": 3,
+        "Text": "The lower index of array is equal to -3. What will return IndexOf(el) method, if array does not contain el?",
+        "Points": 1,
+        "TestId": 65176646
+      },
+      {
+        "Variants": [
+          {
+            "IsTrue": false,
+            "Answer": "System.Collections"
+          },
+          {
+            "IsTrue": false,
+            "Answer": "System.Collections.Generic"
+          },
+          {
+            "IsTrue": true,
+            "Answer": "System"
+          },
+          {
+            "IsTrue": false,
+            "Answer": "System.Collections.Array"
+          }
+        ],
+        "QType": 1,
+        "Text": "Where Array class is declared?",
+        "Points": 1,
+        "TestId": 65176646
+      },
+      {
+        "Variants": [
+          {
+            "IsTrue": false,
+            "Answer": "Reverse"
+          },
+          {
+            "IsTrue": false,
+            "Answer": "BinarySearch"
+          },
+          {
+            "IsTrue": false,
+            "Answer": "Rank"
+          },
+          {
+            "IsTrue": false,
+            "Answer": "BlockCopy"
+          },
+          {
+            "IsTrue": true,
+            "Answer": "Array contains all of them"
+          }
+        ],
+        "QType": 1,
+        "Text": "What methods doesn’t contain Array class?",
+        "Points": 1,
+        "TestId": 65176646
+      },
+      {
+        "Variants": [
+          {
+            "IsTrue": true,
+            "Answer": "Dictionary<TKey, TValue>"
+          },
+          {
+            "IsTrue": false,
+            "Answer": "SortedArray<TKey, TValue>"
+          },
+          {
+            "IsTrue": true,
+            "Answer": "SortedDictionary<TKey, TValue>"
+          },
+          {
+            "IsTrue": true,
+            "Answer": "SortedList<TKey, TValue>"
+          }
+        ],
+        "QType": 1,
+        "Text": "Which of the following dictionary Collections are present in System.Collections.Generic?",
+        "Points": 1,
+        "TestId": 65176646
+      },
+      {
+        "Lefts": [ "IDictionary<TKey, TValue>", "IList<T>", "ISet<T>" ],
+        "Rights": [ "RemoveAt", "UnionWith", "TryGetValue" ],
+        "Relation": [ 1, 3, 0 ],
+        "QType": 2,
+        "Text": "Match the following:",
+        "Points": 1,
+        "TestId": 65176646
+      },
+      {
+        "Answer": "System.Collections",
+        "QType": 3,
+        "Text": "What namespace declares ArrayList?",
+        "Points": 1,
+        "TestId": 65176646
+      },
+      {
+        "Variants": [
+          {
+            "IsTrue": true,
+            "Answer": "Yield break operator in try block of try...catch"
+          },
+          {
+            "IsTrue": false,
+            "Answer": "Anonymous method cannot contain yield return"
+          },
+          {
+            "IsTrue": true,
+            "Answer": "The method can simultaneously contain return and yield return"
+          },
+          {
+            "IsTrue": false,
+            "Answer": "Iterator declaration must not contain in, ref and out parameters"
+          }
+        ],
+        "QType": 1,
+        "Text": "Choose wrong statements:",
+        "Points": 1,
+        "TestId": 65176646
+      },
+      {
+        "Variants": [
+          {
+            "IsTrue": false,
+            "Answer": "Return type is void"
+          },
+          {
+            "IsTrue": true,
+            "Answer": "Return type is IEnumerable or IEnumerable<T>"
+          },
+          {
+            "IsTrue": false,
+            "Answer": "If method contains yield return and return => runtime error"
+          }
+        ],
+        "QType": 1,
+        "Text": "Select the right about iterators?",
+        "Points": 1,
+        "TestId": 65176646
+      },
+      {
+        "Variants": [
+          {
+            "IsTrue": true,
+            "Answer": "Sets the capacity to the actual number of elements in a SortedList object."
+          },
+          {
+            "IsTrue": false,
+            "Answer": "Takes the value at which to reduce the capacity and reduces it."
+          },
+          {
+            "IsTrue": false,
+            "Answer": "There is no such method in SortedList."
+          }
+        ],
+        "QType": 1,
+        "Text": "What does the TrimToSize method do?(in SortedListClass)",
+        "Points": 1,
+        "TestId": 65176646
+      }
+    ],
+    "Title": "C# Collections",
+    "Subject": "C#",
+    "TimeLimit": "00:10:00",
+    "Mode": 0,
+    "Id": 65176646
+  },
+  {
+    "Collection": [
+      {
+        "Variants": [
+          {
+            "IsTrue": false,
+            "Answer": "C# 7.2"
+          },
+          {
+            "IsTrue": true,
+            "Answer": "C# 7.1"
+          },
+          {
+            "IsTrue": false,
+            "Answer": "C# 7.0"
+          },
+          {
+            "IsTrue": false,
+            "Answer": "Main method cannot be asynchronous"
+          }
+        ],
+        "QType": 1,
+        "Text": "From which version method Main can be asynchronous?",
+        "Points": 1,
+        "TestId": 1837974331
+      },
+      {
+        "Variants": [
+          {
+            "IsTrue": false,
+            "Answer": "Compilation error "
+          },
+          {
+            "IsTrue": true,
+            "Answer": "Compilation warning and method will be executed as usual"
+          },
+          {
+            "IsTrue": false,
+            "Answer": "Runtime error"
+          },
+          {
+            "IsTrue": false,
+            "Answer": "Method will be executed as usual"
+          }
+        ],
+        "QType": 1,
+        "Text": "What happens if method with async modifier doesn’t contain await-expression?",
+        "Points": 1,
+        "TestId": 1837974331
+      },
+      {
+        "Variants": [
+          {
+            "IsTrue": true,
+            "Answer": "void"
+          },
+          {
+            "IsTrue": true,
+            "Answer": "Task, Task<Result>"
+          },
+          {
+            "IsTrue": false,
+            "Answer": "bool"
+          },
+          {
+            "IsTrue": false,
+            "Answer": "All C# types"
+          }
+        ],
+        "QType": 1,
+        "Text": "What types can return method with async modifier?",
+        "Points": 1,
+        "TestId": 1837974331
+      },
+      {
+        "Lefts": [ "ContinueWith", "WaitAll", "WaitAny", "WhenAny<TResult>", "WhenAll<TResult>", "Run<TResult>" ],
+        "Rights": [ "Task<Task<TResult>>", "Task", "Task<TResult>", "int32", "void", "Task<TResult[]>" ],
+        "Relation": [ 3, 0, 5, 2, 1, 4 ],
+        "QType": 2,
+        "Text": "Match methods with return types:",
+        "Points": 1,
+        "TestId": 1837974331
+      },
+      {
+        "Variants": [
+          {
+            "IsTrue": true,
+            "Answer": "-1"
+          },
+          {
+            "IsTrue": false,
+            "Answer": "0"
+          },
+          {
+            "IsTrue": false,
+            "Answer": "1"
+          },
+          {
+            "IsTrue": false,
+            "Answer": "Compilation error"
+          }
+        ],
+        "QType": 1,
+        "Text": "Task1 was started before Task2. What will be printed to the console after Console.WriteLine(Task2.Id - Task1.Id)?",
+        "Points": 1,
+        "TestId": 1837974331
+      },
+      {
+        "Variants": [
+          {
+            "IsTrue": false,
+            "Answer": "Wait(-1)"
+          },
+          {
+            "IsTrue": false,
+            "Answer": "Wait(300)"
+          },
+          {
+            "IsTrue": false,
+            "Answer": "Wait(TimeSpan.FromSeconds(3))"
+          },
+          {
+            "IsTrue": true,
+            "Answer": "Wait(2000, true)"
+          }
+        ],
+        "QType": 1,
+        "Text": "Which of the following calls of method Wait is invalid?",
+        "Points": 1,
+        "TestId": 1837974331
+      },
+      {
+        "Variants": [
+          {
+            "IsTrue": false,
+            "Answer": "Can contain out parameters"
+          },
+          {
+            "IsTrue": false,
+            "Answer": "Can contain in, ref and out parameters"
+          },
+          {
+            "IsTrue": true,
+            "Answer": "Can call methods with in, ref and out parameters"
+          },
+          {
+            "IsTrue": true,
+            "Answer": "Can be an anonymous method"
+          }
+        ],
+        "QType": 1,
+        "Text": "Choose the correct statements about method with async modifier:",
+        "Points": 1,
+        "TestId": 1837974331
+      },
+      {
+        "Variants": [
+          {
+            "IsTrue": true,
+            "Answer": "Can be used only in asynchronous methods"
+          },
+          {
+            "IsTrue": false,
+            "Answer": "There can be at most 1 await in async method"
+          },
+          {
+            "IsTrue": false,
+            "Answer": "If await keyword is used with method, which returns Task, then await expression has type Task"
+          }
+        ],
+        "QType": 1,
+        "Text": "Choose the correct statements about await-operator:",
+        "Points": 1,
+        "TestId": 1837974331
+      }
+    ],
+    "Title": "C# Tasks and asynchronous methods",
+    "Subject": "C#",
+    "TimeLimit": "00:10:00",
+    "Mode": 0,
+    "Id": 1837974331
+  },
+  {
+    "Collection": [
+      {
+        "Variants": [
+          {
+            "IsTrue": false,
+            "Answer": "Eax"
+          },
+          {
+            "IsTrue": false,
+            "Answer": "Bx"
+          },
+          {
+            "IsTrue": true,
+            "Answer": "Dx:Ax"
+          },
+          {
+            "IsTrue": false,
+            "Answer": "Ax"
+          }
+        ],
+        "QType": 1,
+        "Text": "Where will the result of operation “mul bx” be written?",
+        "Points": 1,
+        "TestId": 1175870223
+      },
+      {
+        "Variants": [
+          {
+            "IsTrue": false,
+            "Answer": "16 bit"
+          },
+          {
+            "IsTrue": false,
+            "Answer": "32 bit"
+          },
+          {
+            "IsTrue": false,
+            "Answer": "64 bit"
+          },
+          {
+            "IsTrue": true,
+            "Answer": "80 bit"
+          }
+        ],
+        "QType": 1,
+        "Text": "How large is suprocessor register?",
+        "Points": 1,
+        "TestId": 1175870223
+      },
+      {
+        "Answer": "32",
+        "QType": 3,
+        "Text": "What is the minimum size of the register that can be used to store the result of operation “-32768 / -1”? Answer with number of bits.",
+        "Points": 3,
+        "TestId": 1175870223
+      },
+      {
+        "Variants": [
+          {
+            "IsTrue": false,
+            "Answer": "mov"
+          },
+          {
+            "IsTrue": true,
+            "Answer": "movs"
+          },
+          {
+            "IsTrue": false,
+            "Answer": "movr"
+          },
+          {
+            "IsTrue": false,
+            "Answer": "movp"
+          }
+        ],
+        "QType": 1,
+        "Text": "Which of the following instructions is designed to deal with chains?",
+        "Points": 1,
+        "TestId": 1175870223
+      },
+      {
+        "Variants": [
+          {
+            "IsTrue": false,
+            "Answer": "<"
+          },
+          {
+            "IsTrue": true,
+            "Answer": ">"
+          },
+          {
+            "IsTrue": false,
+            "Answer": "="
+          }
+        ],
+        "QType": 1,
+        "Text": "What will be the result of comparison of signed -1 and unsigned 21228?",
+        "Points": 1,
+        "TestId": 1175870223
+      },
+      {
+        "Lefts": [ "int 21h", "mov ah, 21h", "push 21h" ],
+        "Rights": [ "Call of 21’th function", "Interrupt code 21", "Adding 21 to stack" ],
+        "Relation": [ 1, 0, 2 ],
+        "QType": 2,
+        "Text": "Match the following:",
+        "Points": 1,
+        "TestId": 1175870223
+      },
+      {
+        "Answer": "1",
+        "QType": 3,
+        "Text": "How many processor cycles does operation ADD require?",
+        "Points": 1,
+        "TestId": 1175870223
+      },
+      {
+        "Answer": "$",
+        "QType": 3,
+        "Text": "Which character indicates the end of the string?",
+        "Points": 2,
+        "TestId": 1175870223
+      }
+    ],
+    "Title": "Assembler basics",
+    "Subject": "Assembler",
+    "TimeLimit": "00:08:00",
+    "Mode": 0,
+    "Id": 1175870223
+  },
+  {
+    "Collection": [
+      {
+        "Answer": "goto",
+        "QType": 3,
+        "Text": "Which key word is used to perform unconditional branching?",
+        "Points": 1,
+        "TestId": 947119407
+      },
+      {
+        "Variants": [
+          {
+            "IsTrue": false,
+            "Answer": "string"
+          },
+          {
+            "IsTrue": false,
+            "Answer": "UnicodeString"
+          },
+          {
+            "IsTrue": true,
+            "Answer": "wchar_t"
+          }
+        ],
+        "QType": 1,
+        "Text": "Name the data type which can be used to store wide characters in C++?",
+        "Points": 1,
+        "TestId": 947119407
+      },
+      {
+        "Variants": [
+          {
+            "IsTrue": true,
+            "Answer": "."
+          },
+          {
+            "IsTrue": false,
+            "Answer": "*"
+          },
+          {
+            "IsTrue": false,
+            "Answer": "()"
+          },
+          {
+            "IsTrue": true,
+            "Answer": "->"
+          }
+        ],
+        "QType": 1,
+        "Text": "What are/is the operator/operators used to access the class members?",
+        "Points": 1,
+        "TestId": 947119407
+      },
+      {
+        "Variants": [
+          {
+            "IsTrue": true,
+            "Answer": "cin"
+          },
+          {
+            "IsTrue": false,
+            "Answer": "cok"
+          },
+          {
+            "IsTrue": true,
+            "Answer": "cout"
+          },
+          {
+            "IsTrue": false,
+            "Answer": "cfile"
+          },
+          {
+            "IsTrue": true,
+            "Answer": "clog"
+          },
+          {
+            "IsTrue": true,
+            "Answer": "cerr"
+          }
+        ],
+        "QType": 1,
+        "Text": "Name the default standard streams in C++.",
+        "Points": 1,
+        "TestId": 947119407
+      },
+      {
+        "Answer": "Yes",
+        "QType": 3,
+        "Text": "Can I use malloc function of C in language to allocate dynamic memory in C++?(Yes/No)",
+        "Points": 1,
+        "TestId": 947119407
+      },
+      {
+        "Answer": "No",
+        "QType": 3,
+        "Text": "Can we nest multi line comments in a C++ code?(Yes/No)",
+        "Points": 1,
+        "TestId": 947119407
+      },
+      {
+        "Variants": [
+          {
+            "IsTrue": false,
+            "Answer": "0"
+          },
+          {
+            "IsTrue": false,
+            "Answer": "0.2"
+          },
+          {
+            "IsTrue": true,
+            "Answer": "Compilation error"
+          }
+        ],
+        "QType": 1,
+        "Text": "What will be result of “2.2 % 2”",
+        "Points": 1,
+        "TestId": 947119407
+      }
+    ],
+    "Title": "C++ basics",
+    "Subject": "C++",
+    "TimeLimit": "00:08:00",
+    "Mode": 0,
+    "Id": 947119407
+  }
+]

@@ -66,8 +66,7 @@ namespace test132132
                   ".json"
             );
             string plainText = File.ReadAllText(fileName);
-            return JsonConvert.DeserializeObject<Models.User>(plainText);                           
-           
+            return JsonConvert.DeserializeObject<Models.User>(plainText);                          
         }
 
         public static void UserChanged(Models.User newUser)
@@ -76,14 +75,14 @@ namespace test132132
                  "./",
                  newUser.UserName,
                   ".json"
-                                         );
+            );
             File.WriteAllText(
                 lastUserPath,
                 newUser.UserName
             );
             //string lastUserFromFile = File.ReadAllText(App.lastUserPath);
             //if (lastUserFromFile == string.Empty)
-                //return new Models.User();
+            // return new Models.User();
 
             // ./gwyrwch.json
 

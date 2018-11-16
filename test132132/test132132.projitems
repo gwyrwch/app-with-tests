@@ -113,6 +113,8 @@
       <DependentUpon>LogInPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Common\IPicturePicker.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\UserBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\TestPreview.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml" />

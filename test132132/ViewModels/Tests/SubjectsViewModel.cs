@@ -5,12 +5,17 @@ namespace test132132.ViewModels.Tests
 {
     public class SubjectsViewModel
     {
-        public ObservableCollection<Models.Test> tests;
-        public ObservableCollection<string> subjects;
+        //public ObservableCollection<Models.Test> tests;
+        //public ObservableCollection<string> subjects;
+        Models.TestPreview testPreview;
         public SubjectsViewModel()
         {
-            tests = App.CreateSomeTestsTemp();
-            subjects = App.Subjects;
+            testPreview = new Models.TestPreview();
+            testPreview.LoadAll();
+
+
+            //tests = App.CreateSomeTestsTemp();
+            //subjects = App.Subjects;
         }
     }
 }

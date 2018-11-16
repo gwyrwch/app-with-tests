@@ -38,7 +38,7 @@ namespace test132132.Views.UserProfile.Settings
             App.UserChanged(viewModel.CurrentUser);
 
             Device.BeginInvokeOnMainThread(async () => await Navigation.PopAsync());
-            Device.BeginInvokeOnMainThread(async () => await Navigation.PopAsync()); //todo why 2 times?
+            //Device.BeginInvokeOnMainThread(async () => await Navigation.PopAsync()); //todo why 2 times?
         }
     }
 }
