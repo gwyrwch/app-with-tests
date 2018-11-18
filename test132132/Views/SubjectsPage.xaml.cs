@@ -16,11 +16,16 @@ namespace test132132
             BindingContext = viewModel = new ViewModels.Tests.SubjectsViewModel();
 
 
+
             //CSharpTableSection.BindingContext = viewModel.subjects; //todo ???
 
             //SubjectsListView.ItemsSource = App.Subjects;
             //SubjectsTableView.Resources = App.Subjects;
+        }
 
+        void RenderTableView() {
+            // viewModel.SplitBySubject сейчас возвращает все что нужно отрендерить
+            // создать TableSection-ов и в каждый перебить в ListView его группу
         }
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)

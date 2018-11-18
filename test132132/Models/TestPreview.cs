@@ -3,6 +3,7 @@ using System.Collections.ObjectModel;
 using System.IO;
 using Newtonsoft.Json;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace test132132.Models
 {
@@ -76,6 +77,10 @@ namespace test132132.Models
                     test.TimeLimit.Value.TotalMinutes > left
                 );
             });
+        }
+
+        IEnumerable<IGrouping<string, Test>> SplitBySubject() {
+            return TestsToPreview.GroupBy(test => test.Subject);
         }
     }
 }

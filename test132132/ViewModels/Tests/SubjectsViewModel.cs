@@ -3,11 +3,11 @@ using System.Collections.ObjectModel;
 
 namespace test132132.ViewModels.Tests
 {
-    public class SubjectsViewModel
+    public class SubjectsViewModel : BaseViewModel
     {
         //public ObservableCollection<Models.Test> tests;
         //public ObservableCollection<string> subjects;
-        Models.TestPreview testPreview;
+        public Models.TestPreview testPreview { get; set; };
         public SubjectsViewModel()
         {
             testPreview = new Models.TestPreview();
