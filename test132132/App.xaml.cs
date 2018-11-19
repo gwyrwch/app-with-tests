@@ -18,7 +18,7 @@ namespace test132132
             //"Maths",
             "C#",
             "C++",
-            "C",
+           // "C",
             "Assembler"
             //"Physics"
         };

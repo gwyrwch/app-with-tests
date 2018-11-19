@@ -20,29 +20,40 @@ namespace test132132.Models
             TestsToPreview = JsonConvert.DeserializeObject<ObservableCollection<Test>>(plain_text);
         }
 
-        void SortByCount() 
+        public void SortByCountDescending() 
         {
-            TestsToPreview = (ObservableCollection<Test>)TestsToPreview.OrderBy(test => test.Count);
+            TestsToPreview = new ObservableCollection<Test>(TestsToPreview.OrderByDescending(test => test.Count));
         }
 
-        void SortByAlphabet()
+        public void SortByCount()
         {
-            TestsToPreview = (ObservableCollection<Test>)TestsToPreview.OrderBy(test => test.Title);
+            TestsToPreview = new ObservableCollection<Test>(TestsToPreview.OrderBy(test => test.Count));
         }
 
-        void SearchByTitle(string strToSearch)
+        public void SortByAlphabetDescending()
         {
-            TestsToPreview = (ObservableCollection<Test>)TestsToPreview.Where(test => {
+            TestsToPreview = new ObservableCollection<Test>(TestsToPreview.OrderByDescending(test => test.Title));
+        }
+
+        public void SortByAlphabet()
+        {
+            TestsToPreview = new ObservableCollection<Test>(TestsToPreview.OrderBy(test => test.Title));
+        }
+
+        public void SearchByTitle(string strToSearch) 
+        {
+            TestsToPreview = new ObservableCollection<Test>(TestsToPreview.Where(test =>
+            {
                 return (
                     test.Title.ToLower().Contains(strToSearch.ToLower()) ||
                     test.Any(
                         question => question.Text.ToLower().Contains(strToSearch.ToLower())
                     )
                 );
-            });
+            }));
         }
 
-        int CountRequiredTime()
+        public int CountRequiredTime() 
         {
             return TestsToPreview.Select(test => {
                 if (test.Mode == TimeMode.limitForQuestion)
@@ -51,35 +62,35 @@ namespace test132132.Models
             }).Sum();
         }
 
-        int CountUnansweredQuestions()
+        public int CountUnansweredQuestions() 
         {
             return TestsToPreview.Select(test => {
                 return test.Count;
             }).Sum();
         }
 
-        void SubjectsFilter(string subject)
+        public void SubjectsFilter(string subject) 
         {
-            TestsToPreview = (ObservableCollection<Test>)TestsToPreview.Where(test => test.Subject == subject);
+            TestsToPreview = new ObservableCollection<Test>(TestsToPreview.Where(test => test.Subject == subject));
         }
 
-        void TimeFilter(int left, int right)
+        public void TimeFilter(int left, int right) 
         {
-            TestsToPreview = (ObservableCollection<Test>)TestsToPreview.Where(test => {
+            TestsToPreview = new ObservableCollection<Test>(TestsToPreview.Where(test => {
                 if (test.Mode == TimeMode.limitForQuestion)
                     return (
-                        test.TimeLimit.Value.TotalMinutes * test.Count < right &&
-                        test.TimeLimit.Value.TotalMinutes * test.Count > left
+                        test.TimeLimit.Value.TotalMinutes * test.Count <= right &&
+                        test.TimeLimit.Value.TotalMinutes * test.Count >= left
                     );
 
                 return ( 
-                    test.TimeLimit.Value.TotalMinutes < right && 
-                    test.TimeLimit.Value.TotalMinutes > left
+                    test.TimeLimit.Value.TotalMinutes <= right && 
+                    test.TimeLimit.Value.TotalMinutes >= left
                 );
-            });
+            }));
         }
 
-        IEnumerable<IGrouping<string, Test>> SplitBySubject() {
+        public IEnumerable<IGrouping<string, Test>> SplitBySubject() {
             return TestsToPreview.GroupBy(test => test.Subject);
         }
     }

@@ -7,7 +7,7 @@ namespace test132132.ViewModels.Tests
     {
         //public ObservableCollection<Models.Test> tests;
         //public ObservableCollection<string> subjects;
-        public Models.TestPreview testPreview { get; set; };
+        public Models.TestPreview testPreview { get; set; }
         public SubjectsViewModel()
         {
             testPreview = new Models.TestPreview();

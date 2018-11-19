@@ -115,6 +115,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Common\IPicturePicker.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\UserBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\TestPreview.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\CustomViewCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\CenteredTextCell.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml" />
