@@ -115,6 +115,11 @@
     <Compile Include="$(MSBuildThisFileDirectory)Common\IPicturePicker.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\UserBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\TestPreview.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\CustomViewCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\CenteredTextCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\TestPreview\OpenQuestionPage.xaml.cs">
+      <DependentUpon>OpenQuestionPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml" />
@@ -190,6 +195,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\TestPreview\OpenQuestionPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Common\" />
@@ -203,5 +212,6 @@
     <Folder Include="$(MSBuildThisFileDirectory)Views\UserProfile\Settings\" />
     <Folder Include="$(MSBuildThisFileDirectory)ViewModels\Tests\" />
     <Folder Include="$(MSBuildThisFileDirectory)Views\UserProfile\Authorization\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\TestPreview\" />
   </ItemGroup>
 </Project>

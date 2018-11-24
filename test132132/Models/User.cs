@@ -17,7 +17,7 @@ namespace test132132.Models
         public User()
         {
             name = "aklsd";
-            Surname = "Petrov";
+            Surname = "Melnichenka";
             Education = "BSU";
             UserName = "guest";
             Email = "bla@mail.ru";
