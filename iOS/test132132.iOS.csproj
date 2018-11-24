@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Xamarin.Forms.3.4.0.1008975\build\Xamarin.Forms.props" Condition="Exists('..\packages\Xamarin.Forms.3.4.0.1008975\build\Xamarin.Forms.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -108,6 +107,12 @@
     <Reference Include="Xamarin.Forms.Xaml">
       <HintPath>..\packages\Xamarin.Forms.3.4.0.1008975\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
+    <Reference Include="Plugin.Multilingual.Abstractions">
+      <HintPath>..\packages\Plugin.Multilingual.1.0.2\lib\Xamarin.iOS10\Plugin.Multilingual.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Multilingual">
+      <HintPath>..\packages\Plugin.Multilingual.1.0.2\lib\Xamarin.iOS10\Plugin.Multilingual.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
@@ -120,22 +125,13 @@
     <BundleResource Include="Resources\tab_feed.png" />
     <BundleResource Include="Resources\tab_feed%402x.png" />
     <BundleResource Include="Resources\tab_feed%403x.png" />
-    <BundleResource Include="Resources\xamarin_logo.png" />
-    <BundleResource Include="Resources\xamarin_logo%402x.png" />
-    <BundleResource Include="Resources\xamarin_logo%403x.png" />
-    <BundleResource Include="Resources\grey.png" />
-    <BundleResource Include="Resources\blue.png" />
-    <BundleResource Include="Resources\red.png" />
-    <BundleResource Include="Resources\blue1.png" />
     <BundleResource Include="Resources\lightblue.png" />
     <BundleResource Include="Resources\GreyBlue.png" />
     <BundleResource Include="Resources\Editor.png" />
     <BundleResource Include="Resources\Editor1.png" />
     <BundleResource Include="Resources\listIcon.png" />
-    <BundleResource Include="Resources\profileIcon.png" />
     <BundleResource Include="Resources\welcomeProfile.png" />
     <BundleResource Include="Resources\Melnick.jpg" />
-    <BundleResource Include="Resources\tempIcon.jpeg" />
     <BundleResource Include="Resources\tempTests.json" />
     <BundleResource Include="Resources\DarkThemeEditor.png" />
     <BundleResource Include="Resources\search.png" />
@@ -151,6 +147,7 @@
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <None Include="packages.config" />
+    <None Include="Helpers\TranslateExtension.txt" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />

@@ -4,7 +4,7 @@
              x:Class="test132132.SubjectsPage" 
              Title="Choose subject"
              xmlns:helpers="clr-namespace:test132132.Common"
-             >
+>                <!--fixme-->
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="..." Clicked="Sort_Clicked" />
         <ToolbarItem Text="≡" Clicked="Filter_Clicked"/>
@@ -14,93 +14,18 @@
             <StackLayout Orientation="Horizontal" Padding="3">
                 <Image Source="search.png" HeightRequest="15" WidthRequest="15"/>
                 <helpers:LineEntry x:Name="searchEntry"
-                    Placeholder="Search for tests"
+                    Placeholder="Search for tests" 
                     VerticalOptions="End"
                     HorizontalOptions="FillAndExpand" 
                     BorderColor="Transparent"
                     TextChanged="SearchText_Changed"
-                    
-                />
+                /> <!--fixme-->
             </StackLayout>
             <TableView
                 x:Name="SubjectsTableView" 
                 Intent="Data"
             >
                 <TableRoot>
-                     <!--<TableSection x:Name="CSharpTableSection" Title="C#">  
-                        <ViewCell>  
-                            <StackLayout 
-                                HorizontalOptions="StartAndExpand" 
-                                Padding="20,0,0,0" 
-                                Orientation="Horizontal"
-                                Spacing="50"
-                            >
-                                <StackLayout>
-                                    <Label Text="Test #1"
-                                           TextColor="#007aff"
-                                          
-                                    />
-                                    <Label Text="Xamarin.Forms and Collections"
-                                           TextColor="Silver"
-                                           FontSize="Micro"
-                                           WidthRequest="180"
-                                    />
-                                </StackLayout>
-                                <StackLayout HorizontalOptions="EndAndExpand">
-                                    <Label 
-                                        Text="Questions : 10"
-                                        TextColor="#8e8e93" 
-                                        FontSize="15"
-                                        HorizontalOptions="End"
-                                    />
-                                    <Label 
-                                        Text="time: 30 min" 
-                                        TextColor="#4cd964" 
-                                        FontSize="13" 
-                                        VerticalOptions="EndAndExpand"
-                                        HorizontalOptions="End"
-                                    />
-                                </StackLayout>
-                            </StackLayout> 
-                        </ViewCell>  
-                    </TableSection>
-                    <TableSection Title="C++">
-                        <ViewCell>
-                            <StackLayout 
-                                HorizontalOptions="StartAndExpand" 
-                                Padding="20,0,0,0" 
-                                Orientation="Horizontal"
-                                Spacing="50"
-                            >
-                                <StackLayout HorizontalOptions="FillAndExpand">
-                                    <Label Text="Test #1"
-                                           TextColor="#007aff"
-                                          
-                                    />
-                                    <Label Text="Data structures"
-                                           TextColor="Silver"
-                                           FontSize="Micro"
-                                           WidthRequest="180"
-                                    />
-                                </StackLayout>
-                                <StackLayout HorizontalOptions="EndAndExpand">
-                                    <Label 
-                                        Text="Questions : 10"
-                                        TextColor="#8e8e93" 
-                                        FontSize="15"
-                                        HorizontalOptions="End"
-                                    />
-                                    <Label 
-                                        Text="time: 30 min" 
-                                        TextColor="#4cd964" 
-                                        FontSize="13" 
-                                        VerticalOptions="EndAndExpand"
-                                        HorizontalOptions="End"
-                                    />
-                                </StackLayout>
-                            </StackLayout>
-                        </ViewCell>
-                    </TableSection>-->
                 </TableRoot>
             </TableView>
         </StackLayout>

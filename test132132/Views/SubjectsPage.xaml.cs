@@ -17,15 +17,9 @@ namespace test132132
             BindingContext = viewModel = new ViewModels.Tests.SubjectsViewModel();
 
             RenderTableView();
-            //CSharpTableSection.BindingContext = viewModel.subjects; //todo ???
-
-            //SubjectsListView.ItemsSource = App.Subjects;
-            //SubjectsTableView.Resources = App.Subjects;
         }
 
         void RenderTableView() {
-            // viewModel.SplitBySubject сейчас возвращает все что нужно отрендерить
-            // создать TableSection-ов и в каждый перебить в ListView его группу
             SubjectsTableView.Root.Clear();
             var groups = viewModel.testPreview.SplitBySubject();
             TableSection lastSection = null;
@@ -45,7 +39,7 @@ namespace test132132
             }
 
             if (lastSection != null) {
-                lastSection.Add(new Common.CenteredTextCell(string.Format("Needed time: {0}. Questions to answer: {1}",
+                lastSection.Add(new Common.CenteredTextCell(string.Format("Needed time: {0}. Questions to answer: {1}", // fixme
                         viewModel.testPreview.CountRequiredTime().ToString(),
                         viewModel.testPreview.CountUnansweredQuestions().ToString()),
                         Color.FromHex("#bdc3c7")
@@ -53,7 +47,7 @@ namespace test132132
 
             } else {
                 lastSection = new TableSection();
-                lastSection.Add(new Common.CenteredTextCell("No matches", Color.FromHex("#007aff")));
+                lastSection.Add(new Common.CenteredTextCell("No matches", Color.FromHex("#007aff"))); // fixme
                 SubjectsTableView.Root.Add(lastSection);
             }
         }
@@ -77,48 +71,29 @@ namespace test132132
             RenderTableView();
         }
 
+        readonly string[] options = {"A-Z", "Z-A", "Small first", "Large first"}; // fixme
 
         async void Sort_Clicked(object sender, EventArgs e)
         {
-            var action = await DisplayActionSheet("How to display?", "Cancel", 
-                                                  null, "A-Z", "Z-A", 
-                                                  "Small first", "Large first");
+            var action = await DisplayActionSheet(
+                "How to display?", "Cancel", null, options // fixme 
+            );
 
-            switch (action)
-            {
-                case "A-Z":
-                    {
-                        viewModel.testPreview.LoadAll();
-                        viewModel.testPreview.SortByAlphabet();
-                        RenderTableView();
-                        break;
-                    }
-                case "Z-A":
-                    {
-                        viewModel.testPreview.LoadAll();
-                        viewModel.testPreview.SortByAlphabetDescending();
-                        RenderTableView();
-                        break;
-                    }
-                case "Small first":
-                    {
-                        viewModel.testPreview.LoadAll();
-                        viewModel.testPreview.SortByCount();
-                        RenderTableView();
-                        break;
-                    }
-                case "Large first":
-                    {
-                        viewModel.testPreview.LoadAll();
-                        viewModel.testPreview.SortByCountDescending();
-                        RenderTableView();
-                        break;
-                    }
-                case "Cancel" :
-                    return;
-            }
+            viewModel.testPreview.LoadAll();
+
+            if (action == options[0])
+                viewModel.testPreview.SortByAlphabet();
+            else if (action == options[1])
+                viewModel.testPreview.SortByAlphabetDescending();
+            else if (action == options[2])
+                viewModel.testPreview.SortByCount();
+            else if (action == options[3])
+                viewModel.testPreview.SortByCountDescending();
+            else if (action == "Cancel")
+                return;
+
+            RenderTableView();
         }
-
 
         async void Filter_Clicked(object sender, EventArgs e)
         {
@@ -143,16 +118,16 @@ namespace test132132
             {
                 if(max <= 10) 
                 {
-                    shortTests = string.Format("Short tests {0}-{1} min", min, max);
+                    shortTests = string.Format("Short tests {0}-{1} min", min, max);    //fixme
                     largeTests = null;
                     rightS = max;
                 }
                 else if(max >= 10)
                 {
-                    shortTests = string.Format("Short tests {0}-{1} min",
+                    shortTests = string.Format("Short tests {0}-{1} min",   // fixme
                                                 min, (max + min) / 2
                                     );
-                    largeTests = string.Format("Long tests {0}-{1} min",
+                    largeTests = string.Format("Long tests {0}-{1} min",   // fixme 
                                                (max + min) / 2, max
                                     );
                     rightS = (max + min) / 2;
@@ -167,8 +142,9 @@ namespace test132132
             List<string> list = App.Subjects.ToList();
             list.AddRange(new List<string> { shortTests, largeTests });
 
-            var action = await DisplayActionSheet("What to display?", "Cancel", 
-                                                  null, list.ToArray());
+            var action = await DisplayActionSheet(
+                "What to display?", "Cancel", null, list.ToArray()   // fixme
+            );
 
             if (action == shortTests)
             {
