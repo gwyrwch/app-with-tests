@@ -56,7 +56,7 @@ namespace test132132.Views.UserProfile
         { 
             var s = (string)value;
             if (string.IsNullOrEmpty(s))
-                return App.GetCurrentUser().Email;
+                return "";
             //int lengthOfStars = s.Substring(0, s.IndexOf('@')).Length; //todo emails should have lenght > 3 without @...
             return string.Join("",              //todo this method with needed number of stars :)
                                s.Substring(0, 2),
@@ -67,5 +67,22 @@ namespace test132132.Views.UserProfile
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture) {
             return App.GetCurrentUser().Email;
         } 
+    }
+
+
+    public class UserNameConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            var s = (string)value;
+            return "@" + s;
+        }
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            var s = (string)value;
+            if (string.IsNullOrEmpty(s))
+                throw new Exception("username is null");
+            return s.Substring(1);
+        }
     }
 }

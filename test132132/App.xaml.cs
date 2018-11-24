@@ -61,11 +61,12 @@ namespace test132132
 
             // ./gwyrwch.json
             string fileName = string.Join("",
-                 "./",
+                 "./",  
                   lastUserFromFile,
                   ".json"
             );
             string plainText = File.ReadAllText(fileName);
+            //
             return JsonConvert.DeserializeObject<Models.User>(plainText);                          
         }
 

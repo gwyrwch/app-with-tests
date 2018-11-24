@@ -7,6 +7,7 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <local:EmailConverter x:Key="EmailConvert"/>
+            <local:UserNameConverter x:Key="UserNameConvert"/>
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
@@ -65,11 +66,11 @@
                                     HorizontalOptions="Start"                                    
                             />
                             <Label x:Name="UserNameLabel"
-                                   Text="{Binding UserName, StringFormat='@{0}', Mode=TwoWay}"
+                                   Text="{Binding UserName, Converter={StaticResource UserNameConvert}, Mode=TwoWay}"
                                    TextColor="Silver"
                                    HorizontalOptions="EndAndExpand"
                                    Margin="10"
-                            />
+                            />   
                             <Label Text=">"
                                    TextColor="#007aff"
                                    HorizontalOptions="End"
