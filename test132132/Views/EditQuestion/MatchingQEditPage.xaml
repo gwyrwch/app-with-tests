@@ -1,29 +1,44 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="test132132.MatchingQEditPage" xmlns:helpers="clr-namespace:test132132.Common">
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="test132132.MatchingQEditPage" 
+             xmlns:helpers="clr-namespace:test132132.Common"
+             BackgroundColor="{DynamicResource SomeLightBackgroundColor}"
+         >
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Delete" Clicked="Delete_Clicked"/>
         <ToolbarItem Text="Save" Clicked="Save_Clicked"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout Spacing="10" Padding="15">
+        <StackLayout Spacing="10" Padding="15" BackgroundColor="{DynamicResource SomeLightBackgroundColor}">
             <Label 
                 Text="Question:" 
-                FontSize="18" 
+                FontSize="18"
+                TextColor="{DynamicResource TextColor}"
+                BackgroundColor="{DynamicResource SomeLightBackgroundColor}"
             />
             <Entry 
                 x:Name="QuestionTextEntry" 
                 Placeholder="Your question here" 
                 FontSize="Medium"
+                TextColor="{DynamicResource TextColor}"
+                BackgroundColor="{DynamicResource LightBackgroundColor}"
+                PlaceholderColor="{DynamicResource Silver}"
             />
             <Label 
                 Text="Points:" 
-                FontSize="18" 
+                FontSize="18"
+                TextColor="{DynamicResource TextColor}"
+                BackgroundColor="{DynamicResource SomeLightBackgroundColor}"
             />
             <Entry 
                 x:Name="PointsEntry"
                 Keyboard="Numeric"
                 Placeholder="Points for your question"
                 FontSize="Medium"
+                TextColor="{DynamicResource TextColor}"
+                BackgroundColor="{DynamicResource LightBackgroundColor}"
+                PlaceholderColor="{DynamicResource Silver}"
             >
                 <Entry.Triggers>
                     <EventTrigger Event="TextChanged">
@@ -35,36 +50,54 @@
                 x:Name="NumberOfAnswersPicker"
                 Title="Select the number of answers"
                 SelectedIndexChanged="AmountSelected"
+                BackgroundColor="{DynamicResource LightBackgroundColor}"
+                TextColor="{DynamicResource TextColor}"
             />
-            <StackLayout Padding="20,0,20,0" 
+            <StackLayout 
+                Padding="20,0,20,0" 
                 Orientation="Horizontal"
+                BackgroundColor="{DynamicResource SomeLightBackgroundColor}"
             >
                 <Label
                     Text="First part:"
                     HorizontalOptions="Start"
+                    TextColor="{DynamicResource TextColor}"
+                    BackgroundColor="{DynamicResource SomeLightBackgroundColor}"
                 />
                 <Label
                     Text="Second part:"
                     HorizontalOptions="EndAndExpand"
+                    TextColor="{DynamicResource TextColor}"
+                    BackgroundColor="{DynamicResource SomeLightBackgroundColor}"
                 />              
             </StackLayout>
-            <StackLayout Padding="0,0,0,0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+            <StackLayout Padding="0,0,0,0" 
+                         Orientation="Horizontal" 
+                         HorizontalOptions="FillAndExpand" 
+                         BackgroundColor="{DynamicResource SomeLightBackgroundColor}"
+                     >
                 <ListView
                     x:Name="LeftsListView"
                     ItemsSource="{Binding Lefts}"
                     SeparatorColor="Transparent"
                     ItemSelected="OnLeftsSelected"
+                    BackgroundColor="{DynamicResource SomeLightBackgroundColor}"
                 >
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <StackLayout Padding="0,0,0,20" Orientation="Horizontal">
-                                    <Label Text="suka"/>
+                                <StackLayout Padding="0,0,0,20" 
+                                             Orientation="Horizontal"
+                                             BackgroundColor="{DynamicResource SomeLightBackgroundColor}"
+                                             >
+                                    <Label Text="suka" TextColor="{DynamicResource TextColor}"/>
                                     <helpers:LineEntry
                                         Text="{Binding Text, Mode=TwoWay}"
+                                        TextColor="{DynamicResource TextColor}"
                                         WidthRequest="130"
                                         HorizontalOptions="FillAndExpand" 
                                         BorderColor="{DynamicResource Silver}"
+                                        BackgroundColor="{DynamicResource SomeLightBackgroundColor}"
                                     />
                                 </StackLayout>
                             </ViewCell>
@@ -76,17 +109,24 @@
                     ItemsSource="{Binding Rights}"
                     SeparatorColor="Transparent"
                     ItemSelected="OnRightsSelected"
+                    BackgroundColor="{DynamicResource SomeLightBackgroundColor}"
                 >
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <StackLayout Padding="0,0,0,20" Orientation="Horizontal">
-                                    <Label Text="1. "/>
+                                <StackLayout Padding="0,0,0,20" 
+                                             Orientation="Horizontal"
+                                             BackgroundColor="{DynamicResource SomeLightBackgroundColor}"
+                                             >
+                                    <Label Text="1. " TextColor="{DynamicResource TextColor}"/>
                                     <helpers:LineEntry
                                         Text="{Binding Text, Mode=TwoWay}" 
                                         WidthRequest="130"
                                         HorizontalOptions="FillAndExpand"
-                                        BorderColor="{DynamicResource Silver}"  
+                                        BorderColor="{DynamicResource Silver}"
+                                        TextColor="{DynamicResource TextColor}"
+                                        BackgroundColor="{DynamicResource SomeLightBackgroundColor}"
+                                        PlaceholderColor="{DynamicResource Silver}"
                                     />
                                 </StackLayout>
                             </ViewCell>

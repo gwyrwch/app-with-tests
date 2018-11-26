@@ -20,6 +20,22 @@ namespace test132132.Views
                     viewModel.Add(test);
                 }
             );
+
+            MessagingCenter.Subscribe<UserProfile.SettingsPage>(this, "ChangesAsked",
+                (obj) => {
+                    ChangeBackgroundColor();
+                }
+            );
+
+
+        }
+
+        private void ChangeBackgroundColor()
+        {
+            BackgroundColor = MainStackLayout.BackgroundColor = 
+                    (Color)Application.Current.Resources["SomeLightBackgroundColor"];
+
+
         }
 
         void OnItemSelected(object sender, SelectedItemChangedEventArgs args)

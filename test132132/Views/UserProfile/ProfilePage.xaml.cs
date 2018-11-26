@@ -26,13 +26,13 @@ namespace test132132
 
         }
 
-        void Profile_Clicked(object sender, EventArgs e)
+        void Profile_Tapped(object sender, EventArgs e)
         {
             Detail = new Views.UserProfile.UserInformationPage();
             IsPresented = false;
 
         }
-        void Settings_Clicked(object sender, EventArgs e)
+        void Settings_Tapped(object sender, EventArgs e)
         {
             Detail = new Views.UserProfile.SettingsPage();
             IsPresented = false;

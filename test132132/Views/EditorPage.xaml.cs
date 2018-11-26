@@ -18,39 +18,70 @@ namespace test132132
             MessagingCenter.Subscribe<ContentPage, Models.Question>(
                 this, "CreateNewQuestion", (obj, question) =>
                 {
-                    test.Add(question);
-
-                    StackLayout layout = new StackLayout
-                    { // manually adding question to table
-                        Orientation = StackOrientation.Horizontal,
-                        Padding = new Thickness(15, 15, 0, 15)
-                    };
-                    layout.Children.Add(
-                        new Label
-                        {
-                            Text = string.Join(
-                                "",
-                                AddedQuestionsTableView.Root.Count.ToString(),
-                                "."
-                            ),
-                            TextColor = (Color)Application.Current.Resources["MainColor"]
-                        }
-                    );
-                    layout.Children.Add(
-                        new Label
-                        {
-                            Text = question.Text,
-                            TextColor = (Color)Application.Current.Resources["MainGreyColor"]
-                        }
-                    );
-                    AddedQuestionsTableView.Root.First().Add( // Root.First() -> first table section
-                        new ViewCell
-                        {
-                            View = layout
-                        }
-                    );
+                    AddQuestion(question);
                 }
             );
+
+            EditorImage.Source = App.EditorImagePath;
+
+            MessagingCenter.Subscribe<Views.UserProfile.SettingsPage>(this, "ChangesAsked",
+                (obj) => {
+                    ImagePathChanged();
+                    Render();
+                }
+            );
+        }
+
+        void Render()
+        {
+            var e = test.ToList();
+            test.Clear(); 
+            AddedQuestionsTableView.Root.First().Clear();
+            foreach (var q in e)
+            {
+                AddQuestion(q);
+            }
+        }
+
+        void AddQuestion(Models.Question question)
+        {
+            test.Add(question);
+
+            StackLayout layout = new StackLayout
+            { // manually adding question to table
+                Orientation = StackOrientation.Horizontal,
+                Padding = new Thickness(15, 15, 0, 15)
+            };
+            layout.Children.Add(
+                new Label
+                {
+                    Text = string.Join(
+                        "",
+                        AddedQuestionsTableView.Root.Count.ToString(),
+                        "."
+                    ),
+                    TextColor = (Color)Application.Current.Resources["MainColor"]
+                }
+            );
+            layout.Children.Add(
+                new Label
+                {
+                    Text = question.Text,
+                    TextColor = (Color)Application.Current.Resources["MainGreyColor"]
+                }
+            );
+            AddedQuestionsTableView.Root.First().Add( // Root.First() -> first table section
+                new ViewCell
+                {
+                    View = layout
+                }
+            );
+        }
+
+
+        void ImagePathChanged()
+        {
+            EditorImage.Source = App.EditorImagePath;
         }
 
         void Validate()

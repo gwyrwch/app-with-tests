@@ -1,5 +1,9 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="test132132.Views.UserProfile.Settings.ChangeUserNamePage">
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="test132132.Views.UserProfile.Settings.ChangeUserNamePage"
+             xmlns:local="clr-namespace:test132132.Common"
+             >
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Done" Clicked="Done_Clicked"/>
     </ContentPage.ToolbarItems>
@@ -9,12 +13,19 @@
             <TableRoot>
                 <TableSection Title="Username" >  
                     <ViewCell>
-                        <Entry x:Name="newUserNameEntry"
+                        <StackLayout Padding="5,0,0,0" BackgroundColor="{DynamicResource LightBackgroundColor}">
+                           <local:LineEntry x:Name="newUserNameEntry"
                                HorizontalOptions="FillAndExpand"
                                PlaceholderColor="{DynamicResource Silver}"
                                HorizontalTextAlignment="Start"
-                               Placeholder="{Binding UserName, Mode=TwoWay, StringFormat='{0}'}"                           
-                        />
+                               Placeholder="{Binding UserName, Mode=TwoWay, StringFormat='{0}'}"
+                               BorderColor="Transparent" 
+                               TextColor="{DynamicResource TextColor}"
+                               VerticalOptions="CenterAndExpand"
+                               
+                            /> 
+                        </StackLayout>
+                        
                     </ViewCell>                    
                 </TableSection>
             </TableRoot>            

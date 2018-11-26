@@ -12,6 +12,16 @@ namespace test132132
     {
         public MainPage()
         {
+            BarBackgroundColor = (Color)Application.Current.Resources["BottomBarBackgroundColor"];
+            BarTextColor = (Color)Application.Current.Resources["BarTextColor"];
+
+            MessagingCenter.Subscribe<Views.UserProfile.SettingsPage>(this, "ChangeColorBottomBar",
+                (obj) => {
+                    ChangeBottomBar();
+                }
+            );
+
+
             UnitTests.InitUnitTests.Run();
 
 
@@ -66,6 +76,12 @@ namespace test132132
             Title = Children[0].Title;
            
 
+        }
+
+        void ChangeBottomBar()
+        {
+            BarBackgroundColor = (Color)Application.Current.Resources["BottomBarBackgroundColor"];
+            BarTextColor = (Color)Application.Current.Resources["BarTextColor"];
         }
 
         protected override void OnCurrentPageChanged()

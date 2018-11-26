@@ -56,28 +56,18 @@ namespace test132132.Views.UserProfile
 
         void LightMode_Clicked(object sender, EventArgs e)
         {
-            Application.Current.Resources["Silver"] = Color.Silver;
-            Application.Current.Resources["MainColor"] = Color.FromHex("#007aff");
-            Application.Current.Resources["SomeLightBackgroundColor"] = Color.FromHex("#f9f9f9");
-            Application.Current.Resources["LightBackgroundColor"] = Color.FromHex("ffff");
-            Application.Current.Resources["MainGreyColor"] = Color.FromHex("#8e8e93");
-            App.MainImagePath = "GreyBlue.png";
-
-            MessagingCenter.Send(this, "ChangeImage");
+            App.SetTheme("LightTheme");
+            MessagingCenter.Send(this, "ChangesAsked");
             MessagingCenter.Send(this, "RenderingAsked");
+            MessagingCenter.Send(this, "ChangeColorBottomBar");
         }
 
         void DarkMode_Clicked(object sender, EventArgs e)
         {
-            Application.Current.Resources["Silver"] = Color.FromHex("#ffcc00");
-            Application.Current.Resources["MainColor"] = Color.FromHex("#5ac8fa");
-            Application.Current.Resources["SomeLightBackgroundColor"] = Color.FromHex("#7e7e81");
-            Application.Current.Resources["LightBackgroundColor"] = Color.FromHex("#8e8e93");
-            Application.Current.Resources["MainGreyColor"] = Color.FromHex("#5ac8fa");
-            App.MainImagePath = "lightblue.png";
-
-            MessagingCenter.Send(this, "ChangeImage");
+            App.SetTheme("DarkTheme");
+            MessagingCenter.Send(this, "ChangesAsked");
             MessagingCenter.Send(this, "RenderingAsked");
+            MessagingCenter.Send(this, "ChangeColorBottomBar");
         }
     }
 
@@ -97,7 +87,7 @@ namespace test132132.Views.UserProfile
         } 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture) {
             return App.GetCurrentUser().Email;
-        } 
+       } 
     }
 
 

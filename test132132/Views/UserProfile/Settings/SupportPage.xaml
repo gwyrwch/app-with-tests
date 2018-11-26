@@ -1,11 +1,14 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="test132132.Views.UserProfile.Settings.SupportPage">
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="test132132.Views.UserProfile.Settings.SupportPage" 
+         >
     <ContentPage.Content>
-        <StackLayout Padding="15, 180, 15, 0" HorizontalOptions="Center">
+        <StackLayout Padding="15, 180, 15, 0" HorizontalOptions="Center" BackgroundColor="{DynamicResource LightBackgroundColor}">
             <Label
                 HorizontalOptions="Center"
                 Text="If you have some questions you can contact us at :"
-                TextColor="{DynamicResource MainGreyColor}"
+                TextColor="{DynamicResource Silver}"
                 FontSize="Medium"
             />
             <Label

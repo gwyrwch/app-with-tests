@@ -19,6 +19,7 @@ namespace test132132.iOS
 
             UIApplication.SharedApplication.SetStatusBarStyle(UIStatusBarStyle.BlackOpaque, false);
             UIApplication.SharedApplication.StatusBarStyle = UIStatusBarStyle.BlackOpaque;
+            UITabBar.Appearance.SelectedImageTintColor = UIColor.FromRGB(118,53,235);
             LoadApplication(new App());
 
             return base.FinishedLaunching(uiApplication, launchOptions);

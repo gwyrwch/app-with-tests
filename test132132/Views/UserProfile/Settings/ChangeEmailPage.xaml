@@ -1,5 +1,10 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="test132132.Views.UserProfile.Settings.ChangeEmailPage">
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="test132132.Views.UserProfile.Settings.ChangeEmailPage"
+             xmlns:local="clr-namespace:test132132.Common"
+             Title="Change email"
+             >
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Done" Clicked="Done_Clicked"/>
     </ContentPage.ToolbarItems>
@@ -37,11 +42,14 @@
                                     HorizontalOptions="Start"
                                     WidthRequest="100"
                             />
-                            <Entry x:Name="newEmailEntry"
+                            <local:LineEntry x:Name="newEmailEntry"
                                    HorizontalOptions="FillAndExpand"
                                    PlaceholderColor="{DynamicResource Silver}"
                                    HorizontalTextAlignment="Center"
-                                   Placeholder="hello@world.com"      
+                                   Placeholder="hello@world.com"
+                                   BackgroundColor="{DynamicResource LightBackgroundColor}"
+                                   BorderColor="Transparent"
+                                   TextColor="{DynamicResource TextColor}"
                             />
                         </StackLayout>
                     </ViewCell>

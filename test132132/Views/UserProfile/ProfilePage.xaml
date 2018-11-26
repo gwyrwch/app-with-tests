@@ -1,34 +1,48 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="test132132.ProfilePage" xmlns:local="clr-namespace:test132132" Title="Profile">
+<?xml version="1.0" encoding="UTF-8"?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms" 
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+                  x:Class="test132132.ProfilePage" 
+                  xmlns:local="clr-namespace:test132132.Common"
+                  Title="Profile"
+                  >
     <MasterDetailPage.Master>
         <ContentPage Title="kek">
             <StackLayout Spacing="0" Orientation="Vertical">
-                <TableView
+                <local:ColoredTableView 
                     x:Name="MasterPages" 
                     Intent="Menu"
+                    BackgroundColor="{DynamicResource SomeLightBackgroundColor}"
+                    SeparatorColor="{DynamicResource SeparatorColor}"
                 >
                     <TableRoot>
                          <TableSection Title="Choices">  
-                            <ViewCell>
-                                <Button Text="My Profile" Clicked="Profile_Clicked"/>
+                            <ViewCell Tapped="Profile_Tapped">
+                                <StackLayout Orientation="Horizontal" 
+                                     BackgroundColor="{DynamicResource LightBackgroundColor}" 
+                                     Padding="30,0,5,0"
+                                    >
+                                    <Label Text="My Profile"
+                                           VerticalOptions="Center"                                   
+                                           TextColor="{DynamicResource MainColor}"
+                                           HorizontalOptions="Start"
+                                       />
+                                </StackLayout>
                             </ViewCell>
-                            <ViewCell>
-                                <Button Text="Settings" Clicked="Settings_Clicked"/>
+                            <ViewCell Tapped="Settings_Tapped">
+                                <StackLayout Orientation="Horizontal" 
+                                     BackgroundColor="{DynamicResource LightBackgroundColor}" 
+                                     Padding="30,0,5,0"
+                                    >
+                                    <Label Text="Settings"
+                                           VerticalOptions="Center"                                   
+                                           TextColor="{DynamicResource MainColor}"
+                                           HorizontalOptions="Start"
+                                       />
+                                </StackLayout>
                             </ViewCell>
                          </TableSection>
                     </TableRoot>
-                </TableView>
-               <!-- <Button>
-                    x:Name="ProfileButton"
-                    Text="My Profile"
-                    BackgroundColor="{DynamicResource LightBackgroundColor}"
-                    BorderRadius="6"
-                    BorderWidth="0.6"
-                    BorderColor="{DynamicResource Silver}"
-                    TextColor="{DynamicResource MainGreyColor}"
-                    FontSize="Medium"
-                    Clicked="MultipleChoiceQ_Clicked"
-                </Button>-->
+                </local:ColoredTableView>
             </StackLayout>
         </ContentPage>
     </MasterDetailPage.Master>
