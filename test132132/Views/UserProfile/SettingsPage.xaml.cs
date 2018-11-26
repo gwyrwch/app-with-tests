@@ -48,6 +48,37 @@ namespace test132132.Views.UserProfile
         {
             await Navigation.PushAsync(new Settings.SupportPage());
         }
+
+        async void Language_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Settings.ChangeLanguagePage());
+        }
+
+        void LightMode_Clicked(object sender, EventArgs e)
+        {
+            Application.Current.Resources["Silver"] = Color.Silver;
+            Application.Current.Resources["MainColor"] = Color.FromHex("#007aff");
+            Application.Current.Resources["SomeLightBackgroundColor"] = Color.FromHex("#f9f9f9");
+            Application.Current.Resources["LightBackgroundColor"] = Color.FromHex("ffff");
+            Application.Current.Resources["MainGreyColor"] = Color.FromHex("#8e8e93");
+            App.MainImagePath = "GreyBlue.png";
+
+            MessagingCenter.Send(this, "ChangeImage");
+            MessagingCenter.Send(this, "RenderingAsked");
+        }
+
+        void DarkMode_Clicked(object sender, EventArgs e)
+        {
+            Application.Current.Resources["Silver"] = Color.FromHex("#ffcc00");
+            Application.Current.Resources["MainColor"] = Color.FromHex("#5ac8fa");
+            Application.Current.Resources["SomeLightBackgroundColor"] = Color.FromHex("#7e7e81");
+            Application.Current.Resources["LightBackgroundColor"] = Color.FromHex("#8e8e93");
+            Application.Current.Resources["MainGreyColor"] = Color.FromHex("#5ac8fa");
+            App.MainImagePath = "lightblue.png";
+
+            MessagingCenter.Send(this, "ChangeImage");
+            MessagingCenter.Send(this, "RenderingAsked");
+        }
     }
 
     public class EmailConverter : IValueConverter 

@@ -1,17 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="test132132.Views.UserProfile.Settings.ChangeUserNamePage">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Done" Clicked="Done_Clicked"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout x:Name="ChangeUserNameLayout">
-            <TableView Intent="Settings" BackgroundColor="#eff0f5">
+            <TableView Intent="Settings" BackgroundColor="{DynamicResource SomeLightBackgroundColor}">
             <TableRoot>
                 <TableSection Title="Username" >  
                     <ViewCell>
                         <Entry x:Name="newUserNameEntry"
                                HorizontalOptions="FillAndExpand"
-                               PlaceholderColor="Silver"
+                               PlaceholderColor="{DynamicResource Silver}"
                                HorizontalTextAlignment="Start"
                                Placeholder="{Binding UserName, Mode=TwoWay, StringFormat='{0}'}"                           
                         />

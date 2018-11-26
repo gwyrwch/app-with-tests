@@ -5,7 +5,7 @@
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout Spacing="20" Padding="0,80,0,0">
+            <StackLayout Spacing="20" Padding="0,80,0,0" BackgroundColor="{DynamicResource SomeLightBackgroundColor}">
                 <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="0, 0, 0, 50">
                     <Image Source="Editor.png"
                            WidthRequest="220"
@@ -25,13 +25,13 @@
                     />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal" Spacing="20" Padding="8,0,0,0">
-                    <Label Text="Time limit for test:" FontSize="Medium" TextColor="Silver"/>
+                    <Label Text="Time limit for test:" FontSize="Medium" TextColor="{DynamicResource Silver}"/>
                     <local:TimeCountdownPicker 
                         x:Name="TimeLimitPicker"
                         SelectedTime="{Binding Countdown}" 
                         WidthRequest="85"
                         HorizontalOptions="Center"
-                        TextColor="#007aff"
+                        TextColor="{DynamicResource MainColor}"
                     />
                 </StackLayout>
                 <Picker
@@ -41,18 +41,18 @@
                 />
                 <Button 
                     Text="New question"
-                    BackgroundColor="White"
+                    BackgroundColor="{DynamicResource LightBackgroundColor}"
                     BorderRadius="10"
                     BorderWidth="1"
-                    BorderColor="#007aff"
+                    BorderColor="{DynamicResource MainColor}"
                     Margin="10"
-                    TextColor="#007aff"
+                    TextColor="{DynamicResource MainColor}"
                     Clicked="AddQuestion_Clicked"
                />
                 <StackLayout Padding="0,0,0,0">
                    <local:ColoredTableView 
                         Intent="Data" 
-                        SeparatorColor="Silver" 
+                        SeparatorColor="{DynamicResource Silver}" 
                         x:Name="AddedQuestionsTableView"
                    >
                         <TableSection Title="Your questions"/>

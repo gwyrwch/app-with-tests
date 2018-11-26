@@ -7,37 +7,37 @@
         />      
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout VerticalOptions="Center">
+        <StackLayout VerticalOptions="Center" BackgroundColor="{DynamicResource SomeLightBackgroundColor}">
             <Button
                 x:Name="MultipleChoiceButton"
                 Text="Multiple choice question"
-                BackgroundColor="White"
+                BackgroundColor="{DynamicResource LightBackgroundColor}"
                 BorderRadius="6"
                 BorderWidth="0.6"
-                BorderColor="Silver"
-                TextColor="#8e8e93"
+                BorderColor="{DynamicResource Silver}"
+                TextColor="{DynamicResource MainGreyColor}"
                 FontSize="Medium"
                 Clicked="MultipleChoiceQ_Clicked"
             />
             <Button
                 x:Name="MatchingButton"
                 Text="Matching question"
-                BackgroundColor="White"
+                BackgroundColor="{DynamicResource LightBackgroundColor}"
                 BorderRadius="6"
                 BorderWidth="0.6"
-                BorderColor="Silver"
-                TextColor="#8e8e93"
+                BorderColor="{DynamicResource Silver}"
+                TextColor="{DynamicResource MainGreyColor}"
                 FontSize="Medium"
                 Clicked="MatchingQ_Clicked"
             />
             <Button
                 x:Name="OpenQuestionButton"
                 Text="Open question"
-                BackgroundColor="White"
+                BackgroundColor="{DynamicResource LightBackgroundColor}"
                 BorderRadius="6"
                 BorderWidth="0.6"
-                BorderColor="Silver"
-                TextColor="#8e8e93"
+                BorderColor="{DynamicResource Silver}"
+                TextColor="{DynamicResource MainGreyColor}"
                 FontSize="Medium"
                 Clicked="OpenQ_Clicked"
             />

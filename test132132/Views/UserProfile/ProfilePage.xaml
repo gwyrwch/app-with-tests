@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="test132132.ProfilePage" xmlns:local="clr-namespace:test132132" Title="Profile">
     <MasterDetailPage.Master>
         <ContentPage Title="kek">
@@ -21,11 +21,11 @@
                <!-- <Button>
                     x:Name="ProfileButton"
                     Text="My Profile"
-                    BackgroundColor="White"
+                    BackgroundColor="{DynamicResource LightBackgroundColor}"
                     BorderRadius="6"
                     BorderWidth="0.6"
-                    BorderColor="Silver"
-                    TextColor="#8e8e93"
+                    BorderColor="{DynamicResource Silver}"
+                    TextColor="{DynamicResource MainGreyColor}"
                     FontSize="Medium"
                     Clicked="MultipleChoiceQ_Clicked"
                 </Button>-->
@@ -34,10 +34,10 @@
     </MasterDetailPage.Master>
     
     <MasterDetailPage.Detail>
-        <ContentPage BackgroundColor="White" Padding="15,5,5,5">
+        <ContentPage BackgroundColor="{DynamicResource LightBackgroundColor}" Padding="15,5,5,5">
             <StackLayout Spacing="0">
                 <Label Text="Swipe right to see menu"
-                       TextColor="#8e8e93"
+                       TextColor="{DynamicResource MainGreyColor}"
                        FontSize="Micro"
                        HorizontalOptions="Center"
                        />

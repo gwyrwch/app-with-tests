@@ -29,15 +29,15 @@ namespace test132132
         }
 
         void RecolorButtons(Button selectedButton) { //chaange the color of the selected
-            MultipleChoiceButton.TextColor = 
-            MatchingButton.TextColor       = 
-            OpenQuestionButton.TextColor   = 
-                                              Color.FromHex("#8e8e93");
+            MultipleChoiceButton.TextColor =
+            MatchingButton.TextColor =
+            OpenQuestionButton.TextColor =
+                                             (Color)Application.Current.Resources["MainGreyColor"];
 
             MultipleChoiceButton.BorderColor = 
             MatchingButton.BorderColor       = 
-            OpenQuestionButton.BorderColor   = 
-                                              Color.Silver;
+            OpenQuestionButton.BorderColor   =
+                                               (Color)Application.Current.Resources["Silver"];
                         
             selectedButton.TextColor = Color.FromHex("#5ac8fa");
             selectedButton.BorderColor = Color.FromHex("#5ac8fa");

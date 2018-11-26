@@ -5,14 +5,21 @@
             <Color x:Key="Primary">#2196F3</Color>
             <Color x:Key="PrimaryDark">#1976D2</Color>
             <Color x:Key="Accent">#FF1234</Color>
-            <Color x:Key="LightBackgroundColor">#FAFAFA</Color>
+            <Color x:Key="lSomeLightBackgroundColor">#FAFAFA</Color>
             <Color x:Key="DarkBackgroundColor">#C0C0C0</Color>
             <Color x:Key="MediumGrayTextColor">#4d4d4d</Color>
             <Color x:Key="LightTextColor">#999999</Color>
             <Style TargetType="NavigationPage">
                 <Setter Property="BarBackgroundColor" Value="#ecf0f1" />
-                <Setter Property="BarTextColor" Value="#007aff" />
+                <Setter Property="BarTextColor" Value="{DynamicResource MainColor}" />
             </Style>
+            
+            <Color x:Key="MainGreyColor">#8e8e93</Color>
+            <Color x:Key="Silver">Silver</Color>
+            <Color x:Key="MainColor">#007aff</Color>
+            <Color x:Key="SomeLightBackgroundColor">#f9f9f9</Color>
+            <Color x:Key="LightBackgroundColor">#ffff</Color>
+            <Image x:Key="mainImage"></Image>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

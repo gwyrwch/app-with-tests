@@ -17,9 +17,15 @@ namespace test132132
             BindingContext = viewModel = new ViewModels.Tests.SubjectsViewModel();
 
             RenderTableView();
+
+            MessagingCenter.Subscribe<Views.UserProfile.SettingsPage>(this, "RenderingAsked",
+                (obj) => {
+                   RenderTableView();
+                }
+            );
         }
 
-        void RenderTableView() {
+        public void RenderTableView() {
             SubjectsTableView.Root.Clear();
             var groups = viewModel.testPreview.SplitBySubject();
             TableSection lastSection = null;
@@ -42,12 +48,12 @@ namespace test132132
                 lastSection.Add(new Common.CenteredTextCell(string.Format("Needed time: {0}. Questions to answer: {1}", // fixme
                         viewModel.testPreview.CountRequiredTime().ToString(),
                         viewModel.testPreview.CountUnansweredQuestions().ToString()),
-                        Color.FromHex("#bdc3c7")
+                        (Color)Application.Current.Resources["Silver"]
                 ));
 
             } else {
                 lastSection = new TableSection();
-                lastSection.Add(new Common.CenteredTextCell("No matches", Color.FromHex("#007aff"))); // fixme
+                lastSection.Add(new Common.CenteredTextCell("No matches", (Color)Application.Current.Resources["MainColor"])); // fixme
                 SubjectsTableView.Root.Add(lastSection);
             }
         }
