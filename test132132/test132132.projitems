@@ -10,9 +10,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Models\Item.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\CloudDataStore.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\IDataStore.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\MockDataStore.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AboutViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BaseViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemDetailViewModel.cs" />
@@ -120,6 +117,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\TestPreview\OpenQuestionPage.xaml.cs">
       <DependentUpon>OpenQuestionPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Services\Settings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\UserProfile\Settings\ChangeLanguagePage.xaml.cs">
+      <DependentUpon>ChangeLanguagePage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml" />
@@ -199,6 +200,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\UserProfile\Settings\ChangeLanguagePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Common\" />
@@ -213,5 +218,6 @@
     <Folder Include="$(MSBuildThisFileDirectory)ViewModels\Tests\" />
     <Folder Include="$(MSBuildThisFileDirectory)Views\UserProfile\Authorization\" />
     <Folder Include="$(MSBuildThisFileDirectory)Views\TestPreview\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Services\" />
   </ItemGroup>
 </Project>

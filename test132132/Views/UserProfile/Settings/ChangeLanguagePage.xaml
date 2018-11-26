@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="test132132.Views.UserProfile.Settings.ChangeLanguagePage" Title="Choose language">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Save" Clicked="Save_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <TableView Intent="Settings" BackgroundColor="{DynamicResource SomeLightBackgroundColor}">
+        <TableRoot>
+            <TableSection>                   
+                <ViewCell Tapped="English_Tapped">
+                    <StackLayout Orientation="Horizontal" 
+                                 BackgroundColor="{DynamicResource LightBackgroundColor}" 
+                                 Padding="30,0,10,0"
+                    >
+                        <Label  VerticalOptions="Center"
+                                Text="English"
+                                TextColor="{DynamicResource MainColor}"
+                                HorizontalOptions="Start"
+                                WidthRequest="100"
+                        />
+                        <Label Text="+"
+                               TextColor="{DynamicResource MainColor}"
+                               HorizontalOptions="EndAndExpand"
+                               VerticalOptions="Center"
+                               x:Name="EnglishPlus"
+                        />
+                    </StackLayout>
+                </ViewCell>
+                                   
+                <ViewCell Tapped="Russian_Tapped">
+                    <StackLayout Orientation="Horizontal" 
+                                 BackgroundColor="{DynamicResource LightBackgroundColor}" 
+                                 Padding="30,0,10,0"
+                    >
+                        <Label  VerticalOptions="Center"
+                                Text="Russian"
+                                TextColor="{DynamicResource MainColor}"
+                                HorizontalOptions="Start"
+                                WidthRequest="100"
+                        />
+                        <Label Text="+"
+                               TextColor="{DynamicResource MainColor}"
+                               HorizontalOptions="EndAndExpand"
+                               VerticalOptions="Center"
+                               IsVisible="false"
+                               x:Name="RussianPlus"
+                        />
+                    </StackLayout>
+                </ViewCell>
+            </TableSection>
+        </TableRoot>
+        </TableView>
+    </ContentPage.Content>
+</ContentPage>

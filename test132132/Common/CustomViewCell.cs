@@ -8,14 +8,14 @@ namespace test132132.Common
         public CustomViewCell(Models.Test test, int index)
         {
             var testIndexLabel = new Label {
-                TextColor = Color.FromHex("#007aff"),
+                TextColor = (Color)Application.Current.Resources["MainColor"],
                 Text = String.Format("Test #{0}", index)
             };
             Grid.SetColumn(testIndexLabel, 0);
             Grid.SetRow(testIndexLabel, 0);
 
             var testTitleLabel = new Label {
-                TextColor = Color.Silver,
+                TextColor = (Color)Application.Current.Resources["Silver"],
                 FontSize = Device.GetNamedSize(NamedSize.Micro, typeof(Label)),
                 WidthRequest = 180,
                 Text = test.Title
@@ -25,7 +25,7 @@ namespace test132132.Common
 
             var qCountLabel = new Label {
                 Text = String.Format("Questions: {0}", test.Count),
-                TextColor = Color.FromHex("#8e8e93"),
+                TextColor = (Color)Application.Current.Resources["MainGreyColor"],
                 FontSize = 15,
                 HorizontalOptions = LayoutOptions.End
             };

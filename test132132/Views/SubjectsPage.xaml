@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="test132132.SubjectsPage" 
+             xmlns:i18n="clr-namespace:test132132.iOS.Helpers"  
              Title="Choose subject"
              xmlns:helpers="clr-namespace:test132132.Common"
 >                <!--fixme-->
@@ -10,24 +11,25 @@
         <ToolbarItem Text="≡" Clicked="Filter_Clicked"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout>
-            <StackLayout Orientation="Horizontal" Padding="3">
+        <StackLayout Spacing="0" BackgroundColor="{DynamicResource LightBackgroundColor}">
+            <StackLayout Orientation="Horizontal" Padding="3" BackgroundColor="{DynamicResource LightBackgroundColor}">
                 <Image Source="search.png" HeightRequest="15" WidthRequest="15"/>
                 <helpers:LineEntry x:Name="searchEntry"
-                    Placeholder="Search for tests" 
+                    Placeholder="{i18n:Translate Search}" 
                     VerticalOptions="End"
                     HorizontalOptions="FillAndExpand" 
                     BorderColor="Transparent"
                     TextChanged="SearchText_Changed"
                 /> <!--fixme-->
             </StackLayout>
-            <TableView
+            <helpers:ColoredTableView
                 x:Name="SubjectsTableView" 
                 Intent="Data"
+                BackgroundColor="{DynamicResource SomeLightBackgroundColor}"
             >
                 <TableRoot>
                 </TableRoot>
-            </TableView>
+            </helpers:ColoredTableView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

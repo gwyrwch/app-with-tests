@@ -9,8 +9,20 @@ namespace test132132.Views.UserProfile.Authorization
     {
         public AuthorizationPage()
         {
-            InitializeComponent();                  
+            InitializeComponent();
+            MainImage.Source = App.MainImagePath;
 
+            MessagingCenter.Subscribe<Views.UserProfile.SettingsPage>(this, "ChangeImage",
+                (obj) => {
+                    ImagePathChanged();
+                }
+            );
+
+        }
+
+        public void ImagePathChanged()
+        {
+            MainImage.Source = App.MainImagePath;
         }
 
         public async void SignUp_Clicked(object sender, EventArgs e)

@@ -5,10 +5,10 @@
              xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              >
     <ContentPage.Content>
-        <StackLayout x:Name="Information">
+        <StackLayout x:Name="Information" Spacing="0">
         <ContentView>
              <StackLayout Orientation="Horizontal" 
-                    BackgroundColor="#ffff" 
+                    BackgroundColor="{DynamicResource LightBackgroundColor}" 
                     Padding="30,10,10,10"
                     VerticalOptions="FillAndExpand"
                     HorizontalOptions="FillAndExpand"
@@ -23,33 +23,33 @@
                 </controls:CircleImage>  
                 <Label  VerticalOptions="Center"
                     Text="{Binding Name}"
-                    TextColor="#007aff"
+                    TextColor="{DynamicResource MainColor}"
                     HorizontalOptions="Start"
                 />
                 <Label VerticalOptions="Center"
                     Text="{Binding Surname}"
-                    TextColor="#007aff"
+                    TextColor="{DynamicResource MainColor}"
                 />
             </StackLayout>   
         </ContentView>
-        <TableView Intent="Form" BackgroundColor="#f9f9f9" HeightRequest="100" >  
+        <TableView Intent="Form" BackgroundColor="{DynamicResource SomeLightBackgroundColor}" HeightRequest="100" >  
             <TableRoot>
                  <TableSection>
                     <ViewCell x:Name="BirthDayViewCell">
                         <StackLayout  
                              Orientation="Vertical" 
-                             BackgroundColor="#ffff"
+                             BackgroundColor="{DynamicResource LightBackgroundColor}"
                              Padding="30,0,0,0"
                         >
                             <Label VerticalOptions="Center" 
                                     Text="Birthday"
-                                    TextColor="#8e8e93"
+                                    TextColor="{DynamicResource MainGreyColor}"
                                     FontSize="Micro"
                                     HorizontalOptions="Start" 
                             />
                             <Label VerticalOptions="Center" 
                                     Text="{Binding Birth, StringFormat='{0:MMMM d, yyyy}'}"
-                                    TextColor="#007aff"
+                                    TextColor="{DynamicResource MainColor}"
                                     HorizontalOptions="Start" 
                             />
                         </StackLayout>  
@@ -59,18 +59,18 @@
                     <ViewCell x:Name="EducationViewCell">
                         <StackLayout  
                              Orientation="Vertical" 
-                             BackgroundColor="#ffff"
+                             BackgroundColor="{DynamicResource LightBackgroundColor}"
                              Padding="30,0,0,0"
                         >
                              <Label VerticalOptions="Center" 
                                     Text="Studied at"
-                                    TextColor="#8e8e93"
+                                    TextColor="{DynamicResource MainGreyColor}"
                                     FontSize="Micro"
                                     HorizontalOptions="Start" 
                             />
                             <Label VerticalOptions="Center" 
                                     Text="{Binding Education}"
-                                    TextColor="#007aff"
+                                    TextColor="{DynamicResource MainColor}"
                                     HorizontalOptions="Start" 
                             />
                         </StackLayout>  
@@ -80,19 +80,19 @@
                     <ViewCell x:Name="EmailViewCell">
                         <StackLayout  
                              Orientation="Vertical" 
-                             BackgroundColor="#ffff"
+                             BackgroundColor="{DynamicResource LightBackgroundColor}"
                              Padding="30,0,0,0"
                         >
                              <Label VerticalOptions="Center" 
                                     Text="Contacts"
-                                    TextColor="#8e8e93"
+                                    TextColor="{DynamicResource MainGreyColor}"
                                     FontSize="Micro"
                                     HorizontalOptions="Start" 
                             />
                             <Label  x:Name="EmailLabel"
                                     VerticalOptions="Center" 
                                     Text="{Binding Email}"
-                                    TextColor="#007aff"
+                                    TextColor="{DynamicResource MainColor}"
                                     HorizontalOptions="Start" 
                             />
                         </StackLayout>  
@@ -101,16 +101,16 @@
                  <TableSection Title="Career">
                     <ViewCell>
                         <StackLayout Orientation="Horizontal" 
-                                     BackgroundColor="#ffff"
+                                     BackgroundColor="{DynamicResource LightBackgroundColor}"
                                      Padding="30,0,5,0"
                         >
                             <Label VerticalOptions="Center" 
                                     Text="Statistics"
-                                    TextColor="#007aff"
+                                    TextColor="{DynamicResource MainColor}"
                                     HorizontalOptions="Start" 
                             />
                             <Label Text=">"
-                                   TextColor="#007aff"
+                                   TextColor="{DynamicResource MainColor}"
                                    HorizontalOptions="EndAndExpand"
                                    VerticalOptions="Center"
                             />
@@ -118,16 +118,16 @@
                     </ViewCell>
                     <ViewCell>
                         <StackLayout Orientation="Horizontal" 
-                                     BackgroundColor="#ffff"
+                                     BackgroundColor="{DynamicResource LightBackgroundColor}"
                                      Padding="30,0,5,0"
                         >
                             <Label VerticalOptions="Center" 
                                     Text="Achievements"
-                                    TextColor="#007aff"
+                                    TextColor="{DynamicResource MainColor}"
                                     HorizontalOptions="Start" 
                             />
                             <Label Text=">"
-                                   TextColor="#007aff"
+                                   TextColor="{DynamicResource MainColor}"
                                    HorizontalOptions="EndAndExpand"
                                    VerticalOptions="Center"
                             />
@@ -135,16 +135,16 @@
                     </ViewCell>
                     <ViewCell>
                         <StackLayout Orientation="Horizontal" 
-                                     BackgroundColor="#ffff"
+                                     BackgroundColor="{DynamicResource LightBackgroundColor}"
                                      Padding="30,0,5,0"
                         >
                             <Label VerticalOptions="Center" 
                                     Text="Rating"
-                                    TextColor="#007aff"
+                                    TextColor="{DynamicResource MainColor}"
                                     HorizontalOptions="Start" 
                             />
                             <Label Text=">"
-                                   TextColor="#007aff"
+                                   TextColor="{DynamicResource MainColor}"
                                    HorizontalOptions="EndAndExpand"
                                    VerticalOptions="Center"
                             />

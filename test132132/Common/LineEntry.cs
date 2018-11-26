@@ -9,7 +9,7 @@ namespace test132132.Common
 #pragma warning disable CS0108 // Член скрывает унаследованный член: отсутствует новое ключевое слово
             BindableProperty.Create<LineEntry, Color>(
                 p => p.BorderColor, 
-                Color.Silver
+                (Color)Application.Current.Resources["Silver"]
             );
 
         public Color BorderColor {

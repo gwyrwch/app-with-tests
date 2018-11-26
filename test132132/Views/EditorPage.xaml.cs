@@ -33,14 +33,14 @@ namespace test132132
                                 AddedQuestionsTableView.Root.Count.ToString(),
                                 "."
                             ),
-                            TextColor = Color.FromHex("#007aff")
+                            TextColor = (Color)Application.Current.Resources["MainColor"]
                         }
                     );
                     layout.Children.Add(
                         new Label
                         {
                             Text = question.Text,
-                            TextColor = Color.FromHex("#8e8e93")
+                            TextColor = (Color)Application.Current.Resources["MainGreyColor"]
                         }
                     );
                     AddedQuestionsTableView.Root.First().Add( // Root.First() -> first table section
