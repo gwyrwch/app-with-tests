@@ -36,7 +36,12 @@ namespace test132132
         public async void Save_Clicked(object sender, EventArgs e)
         {
             if (!viewModel.Shuffled) {
-                bool responce = await DisplayAlert("You forgot to shuffle answers", "", "Ok", "Cancel");
+                bool responce = await DisplayAlert(
+                    iOS.AppResources.MatchingQEditPageForgotToShuffle, 
+                    "", 
+                    iOS.AppResources.CommonOk,
+                    iOS.AppResources.CommonCancel
+                );
                 if (responce == false)
                     return;
             }
@@ -53,7 +58,11 @@ namespace test132132
             {
                 question.Validate();
             } catch(Exception exc) {
-                await DisplayAlert("Question is invalid", exc.Message, "Ok");
+                await DisplayAlert(
+                    iOS.AppResources.MatchingQEditPageInvalidQuestion, 
+                    exc.Message, 
+                    iOS.AppResources.CommonOk
+                );
                 return;
             }
 
@@ -76,9 +85,9 @@ namespace test132132
         {
             if (!viewModel.Shuffled) {
                 bool responce = await DisplayAlert(
-                    "Are you sure you want to freeze answers and start shuffling?",
-                    "This option is unrecoverable",
-                    "Ok", "Cancel"
+                    iOS.AppResources.MatchingQEditPageStartShuffling,
+                    iOS.AppResources.MatchingQEditPageOptionIsUnrecoverable,
+                    iOS.AppResources.CommonOk, iOS.AppResources.CommonCancel
                 );
                 if (responce)
                 {

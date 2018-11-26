@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
@@ -18,7 +17,6 @@ namespace test132132
         public static ObservableCollection<string> Subjects = new ObservableCollection<string> {
             "C#",
             "C++",
-           // "C",
             "Assembler"
         };
 
@@ -110,7 +108,7 @@ namespace test132132
         static void DefaultSettings()
         {
             Services.Settings defaultSettings = new Services.Settings { 
-                Language = "English", 
+                Language = "Russian",  // fixme
                 Theme = new Services.Theme { 
                     BackgroundColor = Color.Red 
                 } 

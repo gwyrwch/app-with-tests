@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="test132132.QTypeSelectionPage">
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="test132132.QTypeSelectionPage"
+    xmlns:i18n="clr-namespace:test132132.iOS.Helpers"  
+    Title="{i18n:Translate QTypeSelectionPageTitle}"
+>
     <ContentPage.ToolbarItems>
         <ToolbarItem 
-            Text="Next" 
+            Text="{i18n:Translate CommonNext}"
             Clicked="QEditPage_Clicked"
         />      
     </ContentPage.ToolbarItems>
@@ -10,7 +16,7 @@
         <StackLayout VerticalOptions="Center" BackgroundColor="{DynamicResource SomeLightBackgroundColor}">
             <Button
                 x:Name="MultipleChoiceButton"
-                Text="Multiple choice question"
+                Text="{i18n:Translate QTypeSelectionPageMultipleChoiceQuestion}"
                 BackgroundColor="{DynamicResource LightBackgroundColor}"
                 BorderRadius="6"
                 BorderWidth="0.6"
@@ -21,7 +27,7 @@
             />
             <Button
                 x:Name="MatchingButton"
-                Text="Matching question"
+                Text="{i18n:Translate QTypeSelectionPageMatchingQuestion}"
                 BackgroundColor="{DynamicResource LightBackgroundColor}"
                 BorderRadius="6"
                 BorderWidth="0.6"
@@ -32,7 +38,7 @@
             />
             <Button
                 x:Name="OpenQuestionButton"
-                Text="Open question"
+                Text="{i18n:Translate QTypeSelectionPageOpenQuestion}"
                 BackgroundColor="{DynamicResource LightBackgroundColor}"
                 BorderRadius="6"
                 BorderWidth="0.6"
