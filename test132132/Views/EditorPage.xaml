@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="test132132.EditorPage" xmlns:local="clr-namespace:test132132.Common" Title="Editor">
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="test132132.EditorPage" 
+    xmlns:local="clr-namespace:test132132.Common" 
+    xmlns:i18n="clr-namespace:test132132.iOS.Helpers" 
+    Title="{i18n:Translate MainPageEditor}"
+>
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Save" Clicked="Save_Clicked" />
+        <ToolbarItem Text="{i18n:Translate CommonSave}" Clicked="Save_Clicked" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <ScrollView>
@@ -14,18 +21,18 @@
                 <StackLayout Spacing="0">
                     <Entry 
                         x:Name="TitleEntry" 
-                        Placeholder="Enter the title of the test"
+                        Placeholder="{i18n:Translate EditorPageTitlePlaceholder}"
                         Keyboard="Text"
                         HeightRequest="30"
                     />
                     <Picker
                         x:Name="SubjectPicker" 
-                        Title="Choose subject"
+                        Title="{i18n:Translate EditorPageSubjectPickerPlaceholder}"
                         HeightRequest="30"
                     />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal" Spacing="20" Padding="8,0,0,0">
-                    <Label Text="Time limit for test:" FontSize="Medium" TextColor="{DynamicResource Silver}"/>
+                    <Label Text="{i18n:Translate EditorPageTimeLimit}" FontSize="Medium" TextColor="{DynamicResource Silver}"/>
                     <local:TimeCountdownPicker 
                         x:Name="TimeLimitPicker"
                         SelectedTime="{Binding Countdown}" 
@@ -36,11 +43,11 @@
                 </StackLayout>
                 <Picker
                     x:Name="TimeModePicker"
-                    Title="Choose time mode for the test"
+                    Title="{i18n:Translate EditorPageTimeMode}"
                     HeightRequest="30"
                 />
                 <Button 
-                    Text="New question"
+                    Text="{i18n:Translate EditorPageNewQuestion}"
                     BackgroundColor="{DynamicResource LightBackgroundColor}"
                     BorderRadius="10"
                     BorderWidth="1"
@@ -55,7 +62,7 @@
                         SeparatorColor="{DynamicResource Silver}" 
                         x:Name="AddedQuestionsTableView"
                    >
-                        <TableSection Title="Your questions"/>
+                        <TableSection Title="{i18n:Translate EditorPageYourQuestions}"/>
                    </local:ColoredTableView>
                </StackLayout>
             </StackLayout>

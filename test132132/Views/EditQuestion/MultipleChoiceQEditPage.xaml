@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="test132132.MultipleChoiceQEditPage" xmlns:helpers="clr-namespace:test132132.Common">
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="test132132.MultipleChoiceQEditPage" 
+    xmlns:i18n="clr-namespace:test132132.iOS.Helpers"
+    xmlns:helpers="clr-namespace:test132132.Common"
+>
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Save" Clicked="Save_Clicked" />
+        <ToolbarItem Text="{i18n:Translate CommonSave}" Clicked="Save_Clicked" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout Spacing="20" VerticalOptions="Center" Padding="15">
             <Entry 
                 x:Name="QuestionTextEntry"
-                Placeholder="Your question here"
+                Placeholder="{i18n:Translate MatchingQEditPageQuestionPlaceholder}"
                 FontSize="Medium"
             />
             <Entry 
                 x:Name="PointsEntry"
                 Keyboard="Numeric"
-                Placeholder="Points for your question"
+                Placeholder="{i18n:Translate MatchingQEditPagePointsPlaceholder}"
                 FontSize="Medium"
             >
                 <Entry.Triggers>
@@ -24,7 +30,7 @@
             </Entry>
             <Picker
                x:Name="AmountOfVariansPicker"
-               Title="Select the number of variants"
+               Title="{i18n:Translate MultipleChoiceQEditPageNumberOfVariants}"
                SelectedIndexChanged="AmountSelected" 
             />
             <ListView 

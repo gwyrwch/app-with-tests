@@ -1,28 +1,34 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="test132132.MatchingQEditPage" xmlns:helpers="clr-namespace:test132132.Common">
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="test132132.MatchingQEditPage" 
+    xmlns:i18n="clr-namespace:test132132.iOS.Helpers"
+    xmlns:helpers="clr-namespace:test132132.Common"
+>
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Delete" Clicked="Delete_Clicked"/>
-        <ToolbarItem Text="Save" Clicked="Save_Clicked"/>
+        <ToolbarItem Text="{i18n:Translate CommonDelete}" Clicked="Delete_Clicked"/>
+        <ToolbarItem Text="{i18n:Translate CommonSave}" Clicked="Save_Clicked"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout Spacing="10" Padding="15">
             <Label 
-                Text="Question:" 
+                Text="{i18n:Translate MatchingQEditPageQuestion}" 
                 FontSize="18" 
             />
             <Entry 
                 x:Name="QuestionTextEntry" 
-                Placeholder="Your question here" 
+                Placeholder="{i18n:Translate MatchingQEditPageQuestionPlaceholder}" 
                 FontSize="Medium"
             />
             <Label 
-                Text="Points:" 
+                Text="{i18n:Translate MatchingQEditPagePoints}" 
                 FontSize="18" 
             />
             <Entry 
                 x:Name="PointsEntry"
                 Keyboard="Numeric"
-                Placeholder="Points for your question"
+                Placeholder="{i18n:Translate MatchingQEditPagePointsPlaceholder}"
                 FontSize="Medium"
             >
                 <Entry.Triggers>
@@ -33,18 +39,18 @@
             </Entry>
             <Picker
                 x:Name="NumberOfAnswersPicker"
-                Title="Select the number of answers"
+                Title="{i18n:Translate MatchingQEditPageNumberOfAnswers}"
                 SelectedIndexChanged="AmountSelected"
             />
             <StackLayout Padding="20,0,20,0" 
                 Orientation="Horizontal"
             >
                 <Label
-                    Text="First part:"
+                    Text="{i18n:Translate MatchingQEditPageFirstPart}"
                     HorizontalOptions="Start"
                 />
                 <Label
-                    Text="Second part:"
+                    Text="{i18n:Translate MatchingQEditPageSecondPart}"
                     HorizontalOptions="EndAndExpand"
                 />              
             </StackLayout>
@@ -59,7 +65,7 @@
                         <DataTemplate>
                             <ViewCell>
                                 <StackLayout Padding="0,0,0,20" Orientation="Horizontal">
-                                    <Label Text="suka"/>
+                                    <Label Text="suka"/> <!--fixme-->
                                     <helpers:LineEntry
                                         Text="{Binding Text, Mode=TwoWay}"
                                         WidthRequest="130"
@@ -95,7 +101,7 @@
                 </ListView>
             </StackLayout>
             <Button 
-                Text="Shuffle"
+                Text="{i18n:Translate MatchingQEditPageShuffle}"
                 BackgroundColor="{DynamicResource LightBackgroundColor}"
                 BorderRadius="10"
                 BorderWidth="1"

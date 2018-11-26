@@ -45,7 +45,7 @@ namespace test132132
             }
 
             if (lastSection != null) {
-                lastSection.Add(new Common.CenteredTextCell(string.Format("Needed time: {0}. Questions to answer: {1}", // fixme
+                lastSection.Add(new Common.CenteredTextCell(string.Format(iOS.AppResources.SubjectsSummaryTemplate,
                         viewModel.testPreview.CountRequiredTime().ToString(),
                         viewModel.testPreview.CountUnansweredQuestions().ToString()),
                         (Color)Application.Current.Resources["Silver"]
@@ -53,7 +53,7 @@ namespace test132132
 
             } else {
                 lastSection = new TableSection();
-                lastSection.Add(new Common.CenteredTextCell("No matches", (Color)Application.Current.Resources["MainColor"])); // fixme
+                lastSection.Add(new Common.CenteredTextCell(iOS.AppResources.SubjectsNoMatches, (Color)Application.Current.Resources["MainColor"]));
                 SubjectsTableView.Root.Add(lastSection);
             }
         }
@@ -77,12 +77,17 @@ namespace test132132
             RenderTableView();
         }
 
-        readonly string[] options = {"A-Z", "Z-A", "Small first", "Large first"}; // fixme
+        readonly string[] options = {
+            iOS.AppResources.SubjectsAZ,
+            iOS.AppResources.SubjectsZA,
+            iOS.AppResources.SubjectsSmallFirst,
+            iOS.AppResources.SubjectsLargeFirst
+        };
 
         async void Sort_Clicked(object sender, EventArgs e)
         {
             var action = await DisplayActionSheet(
-                "How to display?", "Cancel", null, options // fixme 
+                iOS.AppResources.SubjectsHowToDisplay, iOS.AppResources.CommonCancel, null, options
             );
 
             viewModel.testPreview.LoadAll();
@@ -95,7 +100,7 @@ namespace test132132
                 viewModel.testPreview.SortByCount();
             else if (action == options[3])
                 viewModel.testPreview.SortByCountDescending();
-            else if (action == "Cancel")
+            else if (action == iOS.AppResources.CommonCancel)
                 return;
 
             RenderTableView();
@@ -122,20 +127,21 @@ namespace test132132
 
             if (max != min)
             {
-                if(max <= 10) 
+                if (max <= 10) 
                 {
-                    shortTests = string.Format("Short tests {0}-{1} min", min, max);    //fixme
+                    shortTests = string.Format(iOS.AppResources.SubjectsShortTestsTemplate, min, max);   
                     largeTests = null;
                     rightS = max;
-                }
-                else if(max >= 10)
+                } else if (max >= 10)
                 {
-                    shortTests = string.Format("Short tests {0}-{1} min",   // fixme
-                                                min, (max + min) / 2
-                                    );
-                    largeTests = string.Format("Long tests {0}-{1} min",   // fixme 
-                                               (max + min) / 2, max
-                                    );
+                    shortTests = string.Format(
+                        iOS.AppResources.SubjectsShortTestsTemplate,  
+                        min, (max + min) / 2
+                    );
+                    largeTests = string.Format(
+                        iOS.AppResources.SubjectsLongTestsTemplate,  
+                        (max + min) / 2, max
+                    );
                     rightS = (max + min) / 2;
                     leftL = (max + min) / 2 + 1;
                     rightL = max;
@@ -149,7 +155,8 @@ namespace test132132
             list.AddRange(new List<string> { shortTests, largeTests });
 
             var action = await DisplayActionSheet(
-                "What to display?", "Cancel", null, list.ToArray()   // fixme
+                iOS.AppResources.SubjectsWhatToDisplay, iOS.AppResources.CommonCancel, 
+                null, list.ToArray()
             );
 
             if (action == shortTests)
@@ -170,7 +177,7 @@ namespace test132132
                 viewModel.testPreview.SubjectsFilter(action);
                 RenderTableView();
             }
-            else if (action == "Cancel")
+            else if (action == iOS.AppResources.CommonCancel)
                 return;
         }
     }

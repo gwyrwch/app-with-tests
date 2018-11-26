@@ -47,9 +47,303 @@ namespace test132132.iOS {
             }
         }
         
-        internal static string Search {
+        internal static string CommonCancel {
             get {
-                return ResourceManager.GetString("Search", resourceCulture);
+                return ResourceManager.GetString("CommonCancel", resourceCulture);
+            }
+        }
+        
+        internal static string CommonTryAgain {
+            get {
+                return ResourceManager.GetString("CommonTryAgain", resourceCulture);
+            }
+        }
+        
+        internal static string CommonOk {
+            get {
+                return ResourceManager.GetString("CommonOk", resourceCulture);
+            }
+        }
+        
+        internal static string CommonNext {
+            get {
+                return ResourceManager.GetString("CommonNext", resourceCulture);
+            }
+        }
+        
+        internal static string CommonSave {
+            get {
+                return ResourceManager.GetString("CommonSave", resourceCulture);
+            }
+        }
+        
+        internal static string CommonDelete {
+            get {
+                return ResourceManager.GetString("CommonDelete", resourceCulture);
+            }
+        }
+        
+        internal static string SubjectsPageTitle {
+            get {
+                return ResourceManager.GetString("SubjectsPageTitle", resourceCulture);
+            }
+        }
+        
+        internal static string SubjectsSearch {
+            get {
+                return ResourceManager.GetString("SubjectsSearch", resourceCulture);
+            }
+        }
+        
+        internal static string SubjectsSummaryTemplate {
+            get {
+                return ResourceManager.GetString("SubjectsSummaryTemplate", resourceCulture);
+            }
+        }
+        
+        internal static string SubjectsNoMatches {
+            get {
+                return ResourceManager.GetString("SubjectsNoMatches", resourceCulture);
+            }
+        }
+        
+        internal static string SubjectsAZ {
+            get {
+                return ResourceManager.GetString("SubjectsAZ", resourceCulture);
+            }
+        }
+        
+        internal static string SubjectsZA {
+            get {
+                return ResourceManager.GetString("SubjectsZA", resourceCulture);
+            }
+        }
+        
+        internal static string SubjectsSmallFirst {
+            get {
+                return ResourceManager.GetString("SubjectsSmallFirst", resourceCulture);
+            }
+        }
+        
+        internal static string SubjectsLargeFirst {
+            get {
+                return ResourceManager.GetString("SubjectsLargeFirst", resourceCulture);
+            }
+        }
+        
+        internal static string SubjectsHowToDisplay {
+            get {
+                return ResourceManager.GetString("SubjectsHowToDisplay", resourceCulture);
+            }
+        }
+        
+        internal static string SubjectsShortTestsTemplate {
+            get {
+                return ResourceManager.GetString("SubjectsShortTestsTemplate", resourceCulture);
+            }
+        }
+        
+        internal static string SubjectsLongTestsTemplate {
+            get {
+                return ResourceManager.GetString("SubjectsLongTestsTemplate", resourceCulture);
+            }
+        }
+        
+        internal static string SubjectsWhatToDisplay {
+            get {
+                return ResourceManager.GetString("SubjectsWhatToDisplay", resourceCulture);
+            }
+        }
+        
+        internal static string TestViewCellTestTemplate {
+            get {
+                return ResourceManager.GetString("TestViewCellTestTemplate", resourceCulture);
+            }
+        }
+        
+        internal static string TestViewCellQuestionTemplate {
+            get {
+                return ResourceManager.GetString("TestViewCellQuestionTemplate", resourceCulture);
+            }
+        }
+        
+        internal static string TestViewCellTimeTemplate {
+            get {
+                return ResourceManager.GetString("TestViewCellTimeTemplate", resourceCulture);
+            }
+        }
+        
+        internal static string QTypeSelectionPageSelectAlert {
+            get {
+                return ResourceManager.GetString("QTypeSelectionPageSelectAlert", resourceCulture);
+            }
+        }
+        
+        internal static string QTypeSelectionPageMultipleChoiceQuestion {
+            get {
+                return ResourceManager.GetString("QTypeSelectionPageMultipleChoiceQuestion", resourceCulture);
+            }
+        }
+        
+        internal static string QTypeSelectionPageMatchingQuestion {
+            get {
+                return ResourceManager.GetString("QTypeSelectionPageMatchingQuestion", resourceCulture);
+            }
+        }
+        
+        internal static string QTypeSelectionPageOpenQuestion {
+            get {
+                return ResourceManager.GetString("QTypeSelectionPageOpenQuestion", resourceCulture);
+            }
+        }
+        
+        internal static string QTypeSelectionPageTitle {
+            get {
+                return ResourceManager.GetString("QTypeSelectionPageTitle", resourceCulture);
+            }
+        }
+        
+        internal static string MainPageTests {
+            get {
+                return ResourceManager.GetString("MainPageTests", resourceCulture);
+            }
+        }
+        
+        internal static string MainPageEditor {
+            get {
+                return ResourceManager.GetString("MainPageEditor", resourceCulture);
+            }
+        }
+        
+        internal static string MainPageProfile {
+            get {
+                return ResourceManager.GetString("MainPageProfile", resourceCulture);
+            }
+        }
+        
+        internal static string EditorTestsPageAdd {
+            get {
+                return ResourceManager.GetString("EditorTestsPageAdd", resourceCulture);
+            }
+        }
+        
+        internal static string EditorTestsPageYourTests {
+            get {
+                return ResourceManager.GetString("EditorTestsPageYourTests", resourceCulture);
+            }
+        }
+        
+        internal static string EditorPageTitlePlaceholder {
+            get {
+                return ResourceManager.GetString("EditorPageTitlePlaceholder", resourceCulture);
+            }
+        }
+        
+        internal static string EditorPageSubjectPickerPlaceholder {
+            get {
+                return ResourceManager.GetString("EditorPageSubjectPickerPlaceholder", resourceCulture);
+            }
+        }
+        
+        internal static string EditorPageTimeLimit {
+            get {
+                return ResourceManager.GetString("EditorPageTimeLimit", resourceCulture);
+            }
+        }
+        
+        internal static string EditorPageTimeMode {
+            get {
+                return ResourceManager.GetString("EditorPageTimeMode", resourceCulture);
+            }
+        }
+        
+        internal static string EditorPageNewQuestion {
+            get {
+                return ResourceManager.GetString("EditorPageNewQuestion", resourceCulture);
+            }
+        }
+        
+        internal static string EditorPageYourQuestions {
+            get {
+                return ResourceManager.GetString("EditorPageYourQuestions", resourceCulture);
+            }
+        }
+        
+        internal static string MatchingQEditPageQuestion {
+            get {
+                return ResourceManager.GetString("MatchingQEditPageQuestion", resourceCulture);
+            }
+        }
+        
+        internal static string MatchingQEditPageQuestionPlaceholder {
+            get {
+                return ResourceManager.GetString("MatchingQEditPageQuestionPlaceholder", resourceCulture);
+            }
+        }
+        
+        internal static string MatchingQEditPagePoints {
+            get {
+                return ResourceManager.GetString("MatchingQEditPagePoints", resourceCulture);
+            }
+        }
+        
+        internal static string MatchingQEditPagePointsPlaceholder {
+            get {
+                return ResourceManager.GetString("MatchingQEditPagePointsPlaceholder", resourceCulture);
+            }
+        }
+        
+        internal static string MatchingQEditPageNumberOfAnswers {
+            get {
+                return ResourceManager.GetString("MatchingQEditPageNumberOfAnswers", resourceCulture);
+            }
+        }
+        
+        internal static string MatchingQEditPageFirstPart {
+            get {
+                return ResourceManager.GetString("MatchingQEditPageFirstPart", resourceCulture);
+            }
+        }
+        
+        internal static string MatchingQEditPageSecondPart {
+            get {
+                return ResourceManager.GetString("MatchingQEditPageSecondPart", resourceCulture);
+            }
+        }
+        
+        internal static string MatchingQEditPageShuffle {
+            get {
+                return ResourceManager.GetString("MatchingQEditPageShuffle", resourceCulture);
+            }
+        }
+        
+        internal static string MatchingQEditPageForgotToShuffle {
+            get {
+                return ResourceManager.GetString("MatchingQEditPageForgotToShuffle", resourceCulture);
+            }
+        }
+        
+        internal static string MatchingQEditPageInvalidQuestion {
+            get {
+                return ResourceManager.GetString("MatchingQEditPageInvalidQuestion", resourceCulture);
+            }
+        }
+        
+        internal static string MatchingQEditPageStartShuffling {
+            get {
+                return ResourceManager.GetString("MatchingQEditPageStartShuffling", resourceCulture);
+            }
+        }
+        
+        internal static string MatchingQEditPageOptionIsUnrecoverable {
+            get {
+                return ResourceManager.GetString("MatchingQEditPageOptionIsUnrecoverable", resourceCulture);
+            }
+        }
+        
+        internal static string MultipleChoiceQEditPageNumberOfVariants {
+            get {
+                return ResourceManager.GetString("MultipleChoiceQEditPageNumberOfVariants", resourceCulture);
             }
         }
     }
