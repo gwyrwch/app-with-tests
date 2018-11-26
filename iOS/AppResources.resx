@@ -12,7 +12,175 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-    <data name="Search">
+    <!-- Common words like yes/no/etc -->
+    <data name="CommonCancel">
+        <value>Cancel</value>  
+    </data>  
+    <data name="CommonTryAgain">
+        <value>Try again.</value>  
+    </data>  
+    <data name="CommonOk">
+        <value>Ok</value>  
+    </data>  
+    <data name="CommonNext">
+        <value>Next</value>  
+    </data>  
+    <data name="CommonSave">
+        <value>Save</value>  
+    </data>  
+    <data name="CommonDelete">
+        <value>Delete</value>  
+    </data>  
+    
+    
+    <!-- SubjectsPage -->
+    <data name="SubjectsPageTitle">
+        <value>Choose test</value>  
+    </data>  
+    <data name="SubjectsSearch">
         <value>Search for tests</value>  
     </data>  
+    <data name="SubjectsSummaryTemplate">
+        <value>Needed time: {0}. Questions to answer: {1}</value>
+    </data>
+    <data name="SubjectsNoMatches">
+        <value>No matches</value>
+    </data>
+    <data name="SubjectsAZ">
+        <value>A-Z</value>
+    </data>
+    <data name="SubjectsZA">
+        <value>Z-A</value>
+    </data>
+    <data name="SubjectsSmallFirst">
+        <value>Small first</value>
+    </data>
+    <data name="SubjectsLargeFirst">
+        <value>Large first</value>
+    </data>
+    <data name="SubjectsHowToDisplay">
+        <value>How to display?</value>
+    </data>
+    <data name="SubjectsShortTestsTemplate">
+        <value>Short tests {0}-{1} min</value>
+    </data>
+    <data name="SubjectsLongTestsTemplate">
+        <value>Long tests {0}-{1} min</value>
+    </data>
+    <data name="SubjectsWhatToDisplay">
+        <value>What to display?</value>
+    </data>
+    
+    <!--Test ViewCell-->
+    <data name="TestViewCellTestTemplate">
+        <value>Test #{0}</value>
+    </data>
+    <data name="TestViewCellQuestionTemplate">
+        <value>Questions: {0}</value>
+    </data>
+    <data name="TestViewCellTimeTemplate">
+        <value>time: {0} min</value>
+    </data>
+    
+    <!--QTypeSelectionPage-->
+    
+    <data name="QTypeSelectionPageSelectAlert">
+        <value>Please, select the type</value>
+    </data>
+    
+    <data name="QTypeSelectionPageMultipleChoiceQuestion">
+        <value>Multiple choice question</value>
+    </data>
+    <data name="QTypeSelectionPageMatchingQuestion">
+        <value>Multiple choice question</value>
+    </data>
+    <data name="QTypeSelectionPageOpenQuestion">
+        <value>Open question</value>
+    </data>
+    <data name="QTypeSelectionPageTitle">
+        <value>Question type</value>
+    </data>
+    
+    
+    <!--MainPage-->
+    <data name="MainPageTests">
+        <value>Tests</value>
+    </data>
+    <data name="MainPageEditor">
+        <value>Editor</value>
+    </data>
+    <data name="MainPageProfile">
+        <value>Profile</value>
+    </data>
+    
+    <!--EditorTestsPage-->
+    <data name="EditorTestsPageAdd">
+        <value>Add</value>
+    </data>
+    <data name="EditorTestsPageYourTests">
+        <value>Your tests</value>
+    </data>
+    
+    <!--EditorPage-->
+    <data name="EditorPageTitlePlaceholder">
+        <value>Enter the title of the test</value>
+    </data>
+    <data name="EditorPageSubjectPickerPlaceholder">
+        <value>Choose subject</value>
+    </data>
+    <data name="EditorPageTimeLimit">
+        <value>Time limit for test:</value>
+    </data>
+    <data name="EditorPageTimeMode">
+        <value>Choose time mode for the test</value>
+    </data>
+    <data name="EditorPageNewQuestion">
+        <value>New question</value>
+    </data>
+    <data name="EditorPageYourQuestions">
+        <value>Your questions</value>
+    </data>
+    
+    <!--MatchingQEditPage-->
+    <data name="MatchingQEditPageQuestion">
+        <value>Question:</value>
+    </data>
+    <data name="MatchingQEditPageQuestionPlaceholder">
+        <value>Your question here</value>
+    </data>
+    <data name="MatchingQEditPagePoints">
+        <value>Points:</value>
+    </data>
+    <data name="MatchingQEditPagePointsPlaceholder">
+        <value>Points for your question</value>
+    </data>
+    <data name="MatchingQEditPageNumberOfAnswers">
+        <value>Select the number of answers</value>
+    </data>
+    <data name="MatchingQEditPageFirstPart">
+        <value>First part:</value>
+    </data>
+    <data name="MatchingQEditPageSecondPart">
+        <value>Second part:</value>
+    </data>
+    <data name="MatchingQEditPageShuffle">
+        <value>Shuffle</value>
+    </data>
+    <data name="MatchingQEditPageForgotToShuffle">
+        <value>You forgot to shuffle answers</value>
+    </data>
+    <data name="MatchingQEditPageInvalidQuestion">
+        <value>Question is invalid</value>
+    </data>
+    <data name="MatchingQEditPageStartShuffling">
+        <value>Are you sure you want to freeze answers and start shuffling?</value>
+    </data>
+    <data name="MatchingQEditPageOptionIsUnrecoverable">
+        <value>This option is unrecoverable</value>
+    </data>
+    
+    
+    <data name="MultipleChoiceQEditPageNumberOfVariants">
+        <value>Select the number of variants</value>
+    </data>
 </root>

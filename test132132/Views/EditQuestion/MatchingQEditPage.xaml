@@ -2,31 +2,32 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="test132132.MatchingQEditPage" 
+             xmlns:i18n="clr-namespace:test132132.iOS.Helpers"
              xmlns:helpers="clr-namespace:test132132.Common"
              BackgroundColor="{DynamicResource SomeLightBackgroundColor}"
          >
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Delete" Clicked="Delete_Clicked"/>
-        <ToolbarItem Text="Save" Clicked="Save_Clicked"/>
+        <ToolbarItem Text="{i18n:Translate CommonDelete}" Clicked="Delete_Clicked"/>
+        <ToolbarItem Text="{i18n:Translate CommonSave}" Clicked="Save_Clicked"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout Spacing="10" Padding="15" BackgroundColor="{DynamicResource SomeLightBackgroundColor}">
-            <Label 
-                Text="Question:" 
+            <Label
+                Text="{i18n:Translate MatchingQEditPageQuestion}" 
                 FontSize="18"
                 TextColor="{DynamicResource TextColor}"
                 BackgroundColor="{DynamicResource SomeLightBackgroundColor}"
             />
             <Entry 
                 x:Name="QuestionTextEntry" 
-                Placeholder="Your question here" 
+                Placeholder="{i18n:Translate MatchingQEditPageQuestionPlaceholder}" 
                 FontSize="Medium"
                 TextColor="{DynamicResource TextColor}"
                 BackgroundColor="{DynamicResource LightBackgroundColor}"
                 PlaceholderColor="{DynamicResource Silver}"
             />
             <Label 
-                Text="Points:" 
+                Text="{i18n:Translate MatchingQEditPagePoints}" 
                 FontSize="18"
                 TextColor="{DynamicResource TextColor}"
                 BackgroundColor="{DynamicResource SomeLightBackgroundColor}"
@@ -34,7 +35,7 @@
             <Entry 
                 x:Name="PointsEntry"
                 Keyboard="Numeric"
-                Placeholder="Points for your question"
+                Placeholder="{i18n:Translate MatchingQEditPagePointsPlaceholder}"
                 FontSize="Medium"
                 TextColor="{DynamicResource TextColor}"
                 BackgroundColor="{DynamicResource LightBackgroundColor}"
@@ -48,7 +49,7 @@
             </Entry>
             <Picker
                 x:Name="NumberOfAnswersPicker"
-                Title="Select the number of answers"
+                Title="{i18n:Translate MatchingQEditPageNumberOfAnswers}"
                 SelectedIndexChanged="AmountSelected"
                 BackgroundColor="{DynamicResource LightBackgroundColor}"
                 TextColor="{DynamicResource TextColor}"
@@ -59,13 +60,13 @@
                 BackgroundColor="{DynamicResource SomeLightBackgroundColor}"
             >
                 <Label
-                    Text="First part:"
+                    Text="{i18n:Translate MatchingQEditPageFirstPart}"
                     HorizontalOptions="Start"
                     TextColor="{DynamicResource TextColor}"
                     BackgroundColor="{DynamicResource SomeLightBackgroundColor}"
                 />
                 <Label
-                    Text="Second part:"
+                    Text="{i18n:Translate MatchingQEditPageSecondPart}"
                     HorizontalOptions="EndAndExpand"
                     TextColor="{DynamicResource TextColor}"
                     BackgroundColor="{DynamicResource SomeLightBackgroundColor}"
@@ -90,7 +91,7 @@
                                              Orientation="Horizontal"
                                              BackgroundColor="{DynamicResource SomeLightBackgroundColor}"
                                              >
-                                    <Label Text="suka" TextColor="{DynamicResource TextColor}"/>
+                                    <Label Text="suka" TextColor="{DynamicResource TextColor}"/> <!--fixme-->
                                     <helpers:LineEntry
                                         Text="{Binding Text, Mode=TwoWay}"
                                         TextColor="{DynamicResource TextColor}"
@@ -135,7 +136,7 @@
                 </ListView>
             </StackLayout>
             <Button 
-                Text="Shuffle"
+                Text="{i18n:Translate MatchingQEditPageShuffle}"
                 BackgroundColor="{DynamicResource LightBackgroundColor}"
                 BorderRadius="10"
                 BorderWidth="1"

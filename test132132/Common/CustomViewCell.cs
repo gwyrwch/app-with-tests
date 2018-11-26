@@ -9,7 +9,7 @@ namespace test132132.Common
         {
             var testIndexLabel = new Label {
                 TextColor = (Color)Application.Current.Resources["MainColor"],
-                Text = String.Format("Test #{0}", index)
+                Text = String.Format(iOS.AppResources.TestViewCellTestTemplate, index)
             };
             Grid.SetColumn(testIndexLabel, 0);
             Grid.SetRow(testIndexLabel, 0);
@@ -24,7 +24,7 @@ namespace test132132.Common
             Grid.SetRow(testTitleLabel, 1);
 
             var qCountLabel = new Label {
-                Text = String.Format("Questions: {0}", test.Count),
+                Text = String.Format(iOS.AppResources.TestViewCellQuestionTemplate, test.Count),
                 TextColor = (Color)Application.Current.Resources["MainGreyColor"],
                 FontSize = 15,
                 HorizontalOptions = LayoutOptions.End
@@ -33,7 +33,7 @@ namespace test132132.Common
             Grid.SetRow(qCountLabel, 0);
 
             var timeCountLabel = new Label {
-                Text = String.Format("time: {0} min", test.TimeLimit.Value.Minutes),
+                Text = String.Format(iOS.AppResources.TestViewCellTimeTemplate, test.TimeLimit.Value.Minutes),
                 TextColor = Color.FromHex("#4cd964"),
                 FontSize = 13,
                 VerticalOptions = LayoutOptions.EndAndExpand,
@@ -63,10 +63,6 @@ namespace test132132.Common
                     timeCountLabel
                 }
             };
-                //new ColumnDefinition() { Width = new GridLength(1, GridUnitType.Star) },
-                //new ColumnDefinition() { Width = new GridLength(1, GridUnitType.Auto) },
-                //new ColumnDefinition() { Width = new GridLength(20) }
-          
 
             View = grid;
         }

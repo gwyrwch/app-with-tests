@@ -38,7 +38,11 @@ namespace test132132
             }
             catch (Exception exc)
             {
-                await DisplayAlert("Question is invalid", exc.Message, "Ok");
+                await DisplayAlert(
+                    iOS.AppResources.MatchingQEditPageInvalidQuestion, 
+                    exc.Message, 
+                    iOS.AppResources.CommonOk
+                );
                 return;
             }
 
@@ -58,7 +62,7 @@ namespace test132132
 
         async void Delete_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PopToRootAsync(); //todo
+            await Navigation.PopToRootAsync();
         }
     }
 }

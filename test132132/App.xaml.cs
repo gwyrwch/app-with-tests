@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
@@ -19,7 +18,6 @@ namespace test132132
         public static ObservableCollection<string> Subjects = new ObservableCollection<string> {
             "C#",
             "C++",
-           // "C",
             "Assembler"
         };
 

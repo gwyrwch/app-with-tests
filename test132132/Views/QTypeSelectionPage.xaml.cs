@@ -22,7 +22,11 @@ namespace test132132
         async void QEditPage_Clicked(object sender, EventArgs e) //next clicked 
         {
             if (nextPage == null) {
-                await DisplayAlert("Try again.", "Please, select the type.", "Ok");
+                await DisplayAlert(
+                    iOS.AppResources.CommonTryAgain,
+                    iOS.AppResources.QTypeSelectionPageSelectAlert, 
+                    iOS.AppResources.CommonOk
+                );
                 return;
             }
             await Navigation.PushAsync(nextPage);

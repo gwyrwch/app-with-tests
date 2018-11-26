@@ -2,10 +2,11 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="test132132.Views.EditorTestsPage" 
+             xmlns:i18n="clr-namespace:test132132.iOS.Helpers" 
              BackgroundColor="{DynamicResource SomeLightBackgroundColor}"
-             Title="Your tests">
+             Title="{i18n:Translate EditorTestsPageYourTests}">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add" Clicked="Add_Clicked"/>
+        <ToolbarItem Text="{i18n:Translate EditorTestsPageAdd}" Clicked="Add_Clicked"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout x:Name="MainStackLayout" BackgroundColor="{DynamicResource SomeLightBackgroundColor}">

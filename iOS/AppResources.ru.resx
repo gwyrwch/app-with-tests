@@ -11,8 +11,176 @@
     </resheader>
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-    </resheader>    
-    <data name="Search">
-        <value>найти тесты</value>  
+    </resheader>        
+    <!-- Common words like yes/no/etc -->
+    <data name="CommonCancel">
+        <value>Отменить</value>  
     </data>  
+    <data name="CommonTryAgain">
+        <value>Попробуйте еще раз.</value>  
+    </data>  
+    <data name="CommonOk">
+        <value>Ок</value>  
+    </data>  
+    <data name="CommonNext">
+        <value>Дальше</value>  
+    </data>  
+    <data name="CommonSave">
+        <value>Сохранить</value>  
+    </data>  
+    <data name="CommonDelete">
+        <value>Удалить</value>  
+    </data>  
+    
+    
+    <!-- SubjectsPage -->
+    
+    <data name="SubjectsPageTitle">
+        <value>Выберите тест</value>  
+    </data>  
+    <data name="SubjectsSearch">
+        <value>Найти тесты</value>  
+    </data>  
+    <data name="SubjectsSummaryTemplate">
+        <value>Необходимое время: {0}. Вопросов осталось: {1}</value>
+    </data>
+    <data name="SubjectsNoMatches">
+        <value>Ничего не найдено</value>
+    </data>
+    <data name="SubjectsAZ">
+        <value>А-Я</value>
+    </data>
+    <data name="SubjectsZA">
+        <value>Я-А</value>
+    </data>
+    <data name="SubjectsSmallFirst">
+        <value>Короткие вперед</value>
+    </data>
+    <data name="SubjectsLargeFirst">
+        <value>Длинные вперед</value>
+    </data>
+    <data name="SubjectsHowToDisplay">
+        <value>Как упорядочить тесты?</value>
+    </data>
+    <data name="SubjectsShortTestsTemplate">
+        <value>Короткие тесты {0}-{1} мин.</value>
+    </data>
+    <data name="SubjectsLongTestsTemplate">
+        <value>Длинные тесты {0}-{1} мин.</value>
+    </data>
+    <data name="SubjectsWhatToDisplay">
+        <value>Какие тесты показать?</value>
+    </data>
+    
+    <!--Test ViewCell-->
+    
+    <data name="TestViewCellTestTemplate">
+        <value>Тест #{0}</value>
+    </data>
+    <data name="TestViewCellQuestionTemplate">
+        <value>Вопросов: {0}</value>
+    </data>
+    <data name="TestViewCellTimeTemplate">
+        <value>время: {0} мин.</value>
+    </data>
+    
+    <!--QTypeSelectionPage-->
+    <data name="QTypeSelectionPageSelectAlert">
+        <value>Пожалуйста, выберите тип</value>
+    </data>
+    <data name="QTypeSelectionPageMultipleChoiceQuestion">
+        <value>Вопрос с несколькими вариантами ответа</value>
+    </data>
+    <data name="QTypeSelectionPageMatchingQuestion">
+        <value>Вопрос на соответсвие</value>
+    </data>
+    <data name="QTypeSelectionPageOpenQuestion">
+        <value>Открытый вопрос</value>
+    </data>
+    <data name="QTypeSelectionPageTitle">
+        <value>Тип вопроса</value>
+    </data>
+    
+    <!--MainPage-->
+    <data name="MainPageTests">
+        <value>Тесты</value>
+    </data>
+    <data name="MainPageEditor">
+        <value>Редактор</value>
+    </data>
+    <data name="MainPageProfile">
+        <value>Профиль</value>
+    </data>
+    
+    <!--EditorTestsPage-->
+    <data name="EditorTestsPageAdd">
+        <value>Добавить</value>
+    </data>
+    <data name="EditorTestsPageYourTests">
+        <value>Ваши тесты</value>
+    </data>
+        
+    <!--EditorPage-->
+    <data name="EditorPageTitlePlaceholder">
+        <value>Введите название теста</value>
+    </data>
+    <data name="EditorPageSubjectPickerPlaceholder">
+        <value>Выберите тему теста</value>
+    </data>
+    <data name="EditorPageTimeLimit">
+        <value>Ограничение по времени на тест:</value>
+    </data>
+    <data name="EditorPageTimeMode">
+        <value>Выберите вид ограничения по времени</value>
+    </data>
+    <data name="EditorPageNewQuestion">
+        <value>Новый вопрос</value>
+    </data>
+    <data name="EditorPageYourQuestions">
+        <value>Ваши вопросы</value>
+    </data>
+    
+    <!--MatchingQEditPage-->
+    <data name="MatchingQEditPageQuestion">
+        <value>Вопрос:</value>
+    </data>
+    <data name="MatchingQEditPageQuestionPlaceholder">
+        <value>Ваш вопрос здесь</value>
+    </data>
+    <data name="MatchingQEditPagePoints">
+        <value>Баллы:</value>
+    </data>
+    <data name="MatchingQEditPagePointsPlaceholder">
+        <value>Баллы за ваш вопрос:</value>
+    </data>
+    <data name="MatchingQEditPageNumberOfAnswers">
+        <value>Выберите количество ответов</value>
+    </data>
+    <data name="MatchingQEditPageFirstPart">
+        <value>Первая часть:</value>
+    </data>
+    <data name="MatchingQEditPageSecondPart">
+        <value>Вторая часть:</value>
+    </data>
+    <data name="MatchingQEditPageShuffle">
+        <value>Перемешать</value>
+    </data>
+    <data name="MatchingQEditPageForgotToShuffle">
+        <value>Вы забыли перемешать ответы</value>
+    </data>
+    <data name="MatchingQEditPageInvalidQuestion">
+        <value>Вопрос не подходит</value>
+    </data>
+    <data name="MatchingQEditPageStartShuffling">
+        <value>Вы уверены, что хотите заморозить ответы и начать перемешивание?</value>
+    </data>
+    <data name="MatchingQEditPageOptionIsUnrecoverable">
+        <value>Эта необратимая опция</value>
+    </data>
+    
+    
+    <data name="MultipleChoiceQEditPageNumberOfVariants">
+        <value>Выберите количество вариантов</value>
+    </data>
+  
 </root>
