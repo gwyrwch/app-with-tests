@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage 
-    xmlns="http://xamarin.com/schemas/2014/forms" 
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-    x:Class="test132132.QTypeSelectionPage"
-    xmlns:i18n="clr-namespace:test132132.iOS.Helpers"  
-    Title="{i18n:Translate QTypeSelectionPageTitle}"
->
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="test132132.QTypeSelectionPage"
+             xmlns:i18n="clr-namespace:test132132.iOS.Helpers"  
+             BackgroundColor="{DynamicResource SomeLightBackgroundColor}"
+             Title="{i18n:Translate QTypeSelectionPageTitle}"
+             >
     <ContentPage.ToolbarItems>
         <ToolbarItem 
             Text="{i18n:Translate CommonNext}"

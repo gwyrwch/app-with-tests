@@ -10,10 +10,15 @@
             <Color x:Key="MediumGrayTextColor">#4d4d4d</Color>
             <Color x:Key="LightTextColor">#999999</Color>
             <Style TargetType="NavigationPage">
-                <Setter Property="BarBackgroundColor" Value="#ecf0f1" />
+                <Setter Property="BarBackgroundColor" Value="{DynamicResource BarBackgroundColor}" />
                 <Setter Property="BarTextColor" Value="{DynamicResource MainColor}" />
             </Style>
             
+            <Color x:Key="BarTextColor">Default</Color>
+            <Color x:Key="BottomBarBackgroundColor">Default</Color>
+            <Color x:Key="SeparatorColor">Silver</Color>
+            <Color x:Key="BarBackgroundColor">#ecf0f1</Color>
+            <Color x:Key="TextColor">Black</Color>
             <Color x:Key="MainGreyColor">#8e8e93</Color>
             <Color x:Key="Silver">Silver</Color>
             <Color x:Key="MainColor">#007aff</Color>

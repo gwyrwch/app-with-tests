@@ -1,45 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="test132132.OpenQEditPage" xmlns:helpers="clr-namespace:test132132.Common">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="test132132.OpenQEditPage" 
+             xmlns:helpers="clr-namespace:test132132.Common"
+             BackgroundColor="{DynamicResource SomeLightBackgroundColor}"
+             >
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Delete" Clicked="Delete_Clicked"/>
         <ToolbarItem Text="Save" Clicked="Save_Clicked"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout Spacing="20" VerticalOptions="Center" Padding="15">
-            <Label 
-                Text="Question: " 
-                FontSize="18" 
-            />
-            <Entry 
-                x:Name="QuestionTextEntry" 
-                Placeholder="Your question here" 
-                FontSize="Small"
-            />
-            <Label 
-                Text="Answer:" 
-                FontSize="18"
-            />
-            <Entry 
-                x:Name="QuestionAnswerEntry" 
-                Placeholder="Your answer here" 
-                FontSize="Small" 
-            />
-            <Label
-                Text="Points:"
-                FontSize="18"
-            />
-            <Entry 
-                x:Name="PointsEntry"
-                Keyboard="Numeric"
-                Placeholder="Points for your question"
-                FontSize="Small"
-            >
-                <Entry.Triggers>
-                    <EventTrigger Event="TextChanged">
-                        <helpers:IntegerEntryTrigger />
-                    </EventTrigger>
-                </Entry.Triggers>
-            </Entry>
+        <StackLayout Spacing="25" 
+                     VerticalOptions="Center" 
+                     Padding="15"
+                     BackgroundColor="{DynamicResource SomeLightBackgroundColor}"
+                 >
+            <StackLayout Spacing="5">
+                <Label 
+                    Text="Question: " 
+                    FontSize="18"
+                    TextColor="{DynamicResource TextColor}"
+                />
+                <Entry 
+                    x:Name="QuestionTextEntry" 
+                    Placeholder="Your question here" 
+                    FontSize="Small"                
+                    BackgroundColor="{DynamicResource LightBackgroundColor}"
+                    PlaceholderColor="{DynamicResource Silver}"
+                    TextColor="{DynamicResource TextColor}"
+                />    
+            </StackLayout>
+            <StackLayout Spacing="5">
+                <Label 
+                    Text="Answer:" 
+                    FontSize="18"
+                    TextColor="{DynamicResource TextColor}"
+                />
+                <Entry 
+                    x:Name="QuestionAnswerEntry" 
+                    Placeholder="Your answer here" 
+                    FontSize="Small"                
+                    BackgroundColor="{DynamicResource LightBackgroundColor}"
+                    PlaceholderColor="{DynamicResource Silver}"
+                    TextColor="{DynamicResource TextColor}"
+                />
+            </StackLayout>
+            <StackLayout Spacing="5">
+                <Label
+                    Text="Points:"
+                    FontSize="18"
+                    TextColor="{DynamicResource TextColor}"
+                />
+                <Entry 
+                    x:Name="PointsEntry"
+                    Keyboard="Numeric"
+                    Placeholder="Points for your question"
+                    FontSize="Small"
+                    BackgroundColor="{DynamicResource LightBackgroundColor}"
+                    PlaceholderColor="{DynamicResource Silver}"
+                    TextColor="{DynamicResource TextColor}"
+                >
+            
+                    <Entry.Triggers>
+                        <EventTrigger Event="TextChanged">
+                            <helpers:IntegerEntryTrigger />
+                        </EventTrigger>
+                    </Entry.Triggers>
+             </Entry>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

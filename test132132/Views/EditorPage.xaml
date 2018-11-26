@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage 
-    xmlns="http://xamarin.com/schemas/2014/forms" 
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-    x:Class="test132132.EditorPage" 
-    xmlns:local="clr-namespace:test132132.Common" 
-    xmlns:i18n="clr-namespace:test132132.iOS.Helpers" 
-    Title="{i18n:Translate MainPageEditor}"
->
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="test132132.EditorPage" xmlns:local="clr-namespace:test132132.Common"
+             xmlns:local="clr-namespace:test132132.Common" 
+             xmlns:i18n="clr-namespace:test132132.iOS.Helpers" 
+             BackgroundColor="{DynamicResource SomeLightBackgroundColor}"
+             Title="{i18n:Translate MainPageEditor}">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="{i18n:Translate CommonSave}" Clicked="Save_Clicked" />
     </ContentPage.ToolbarItems>
@@ -14,7 +13,7 @@
         <ScrollView>
             <StackLayout Spacing="20" Padding="0,80,0,0" BackgroundColor="{DynamicResource SomeLightBackgroundColor}">
                 <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="0, 0, 0, 50">
-                    <Image Source="Editor.png"
+                    <Image x:Name="EditorImage"
                            WidthRequest="220"
                            />
                 </StackLayout>
@@ -24,11 +23,16 @@
                         Placeholder="{i18n:Translate EditorPageTitlePlaceholder}"
                         Keyboard="Text"
                         HeightRequest="30"
+                        BackgroundColor="{DynamicResource LightBackgroundColor}"
+                        PlaceholderColor="{DynamicResource Silver}"
+                        TextColor="{DynamicResource TextColor}"
                     />
                     <Picker
                         x:Name="SubjectPicker" 
                         Title="{i18n:Translate EditorPageSubjectPickerPlaceholder}"
                         HeightRequest="30"
+                        BackgroundColor="{DynamicResource LightBackgroundColor}"
+                        TextColor="{DynamicResource TextColor}"
                     />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal" Spacing="20" Padding="8,0,0,0">
@@ -39,12 +43,15 @@
                         WidthRequest="85"
                         HorizontalOptions="Center"
                         TextColor="{DynamicResource MainColor}"
+                        BackgroundColor="{DynamicResource SomeLightBackgroundColor}"
                     />
                 </StackLayout>
                 <Picker
                     x:Name="TimeModePicker"
                     Title="{i18n:Translate EditorPageTimeMode}"
                     HeightRequest="30"
+                    BackgroundColor="{DynamicResource LightBackgroundColor}"
+                    TextColor="{DynamicResource TextColor}"
                 />
                 <Button 
                     Text="{i18n:Translate EditorPageNewQuestion}"
@@ -61,6 +68,7 @@
                         Intent="Data" 
                         SeparatorColor="{DynamicResource Silver}" 
                         x:Name="AddedQuestionsTableView"
+                        BackgroundColor="{DynamicResource LightBackgroundColor}"
                    >
                         <TableSection Title="{i18n:Translate EditorPageYourQuestions}"/>
                    </local:ColoredTableView>

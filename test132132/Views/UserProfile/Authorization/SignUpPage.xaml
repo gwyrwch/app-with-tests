@@ -29,12 +29,14 @@
             </StackLayout>
             <StackLayout>
                 <Label Text="Date of birth:"
-                       TextColor="{DynamicResource MainGreyColor}"
+                       TextColor="{DynamicResource MainGreyColor}"                       
                        />
                 <DatePicker x:Name="BirthdayPicker"
                         TextColor="{DynamicResource MainGreyColor}"
                         WidthRequest="400"
-                        HorizontalOptions="Center"                        
+                        HorizontalOptions="Center"  
+                        BackgroundColor="{DynamicResource LightBackgroundColor}"
+
                         />
             </StackLayout>
             <StackLayout Spacing="5">                
@@ -43,6 +45,7 @@
                        />
                 <Entry Placeholder="guest"
                        x:Name="UserNameEntry"
+                       BackgroundColor="{DynamicResource LightBackgroundColor}"
                        />
             </StackLayout>
             <StackLayout>
@@ -51,6 +54,7 @@
                        />
                 <Entry Placeholder="hello@gmail.com"
                        x:Name="EmailEntry"
+                       BackgroundColor="{DynamicResource LightBackgroundColor}"
                        />
             </StackLayout> 
             <StackLayout>
@@ -59,6 +63,7 @@
                        />
                 <Entry Placeholder="BSUIR"
                        x:Name="EducationEntry"
+                       BackgroundColor="{DynamicResource LightBackgroundColor}"
                        />
             </StackLayout>
             <Button Text="Sign Up"

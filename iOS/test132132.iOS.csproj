@@ -135,6 +135,7 @@
     <BundleResource Include="Resources\tempTests.json" />
     <BundleResource Include="Resources\DarkThemeEditor.png" />
     <BundleResource Include="Resources\search.png" />
+    <BundleResource Include="Resources\welcomeProfileDark.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDelegate.cs" />

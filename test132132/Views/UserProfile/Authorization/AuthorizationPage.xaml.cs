@@ -12,7 +12,7 @@ namespace test132132.Views.UserProfile.Authorization
             InitializeComponent();
             MainImage.Source = App.MainImagePath;
 
-            MessagingCenter.Subscribe<Views.UserProfile.SettingsPage>(this, "ChangeImage",
+            MessagingCenter.Subscribe<SettingsPage>(this, "ChangesAsked",
                 (obj) => {
                     ImagePathChanged();
                 }
@@ -20,7 +20,7 @@ namespace test132132.Views.UserProfile.Authorization
 
         }
 
-        public void ImagePathChanged()
+        void ImagePathChanged()
         {
             MainImage.Source = App.MainImagePath;
         }

@@ -3,36 +3,45 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="test132132.Views.UserProfile.UserInformationPage" 
              xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             xmlns:local="clr-namespace:test132132.Common"
              >
     <ContentPage.Content>
         <StackLayout x:Name="Information" Spacing="0">
-        <ContentView>
+        <ContentView HeightRequest="100">
              <StackLayout Orientation="Horizontal" 
                     BackgroundColor="{DynamicResource LightBackgroundColor}" 
                     Padding="30,10,10,10"
                     VerticalOptions="FillAndExpand"
                     HorizontalOptions="FillAndExpand"
+                    Spacing="20"
              > 
                
                 <controls:CircleImage   
-                    HeightRequest="50"   
-                    WidthRequest="50"   
+                    HeightRequest="80"   
+                    WidthRequest="80"   
                     Source="Melnick.jpg"
                     Aspect="AspectFill">  
   
                 </controls:CircleImage>  
-                <Label  VerticalOptions="Center"
-                    Text="{Binding Name}"
-                    TextColor="{DynamicResource MainColor}"
-                    HorizontalOptions="Start"
-                />
-                <Label VerticalOptions="Center"
-                    Text="{Binding Surname}"
-                    TextColor="{DynamicResource MainColor}"
-                />
+                <StackLayout Orientation="Horizontal" Spacing="5">
+                    <Label  VerticalOptions="Center"
+                        Text="{Binding Name}"
+                        TextColor="{DynamicResource MainColor}"
+                        HorizontalOptions="Start"
+                    />
+                    <Label VerticalOptions="Center"
+                        Text="{Binding Surname}"
+                        TextColor="{DynamicResource MainColor}"
+                    />       
+                </StackLayout>
+                
             </StackLayout>   
         </ContentView>
-        <TableView Intent="Form" BackgroundColor="{DynamicResource SomeLightBackgroundColor}" HeightRequest="100" >  
+        <local:ColoredTableView Intent="Form" 
+                                BackgroundColor="{DynamicResource SomeLightBackgroundColor}" 
+                                HeightRequest="100"  
+                                SeparatorColor="{DynamicResource SeparatorColor}"
+                                >  
             <TableRoot>
                  <TableSection>
                     <ViewCell x:Name="BirthDayViewCell">
@@ -43,7 +52,7 @@
                         >
                             <Label VerticalOptions="Center" 
                                     Text="Birthday"
-                                    TextColor="{DynamicResource MainGreyColor}"
+                                    TextColor="{DynamicResource Silver}"
                                     FontSize="Micro"
                                     HorizontalOptions="Start" 
                             />
@@ -64,7 +73,7 @@
                         >
                              <Label VerticalOptions="Center" 
                                     Text="Studied at"
-                                    TextColor="{DynamicResource MainGreyColor}"
+                                    TextColor="{DynamicResource Silver}"
                                     FontSize="Micro"
                                     HorizontalOptions="Start" 
                             />
@@ -85,7 +94,7 @@
                         >
                              <Label VerticalOptions="Center" 
                                     Text="Contacts"
-                                    TextColor="{DynamicResource MainGreyColor}"
+                                    TextColor="{DynamicResource Silver}"
                                     FontSize="Micro"
                                     HorizontalOptions="Start" 
                             />
@@ -152,7 +161,7 @@
                     </ViewCell>    
                  </TableSection>
                </TableRoot>            
-        </TableView>
+        </local:ColoredTableView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

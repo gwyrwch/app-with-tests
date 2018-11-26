@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage 
-    xmlns="http://xamarin.com/schemas/2014/forms" 
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-    x:Class="test132132.Views.EditorTestsPage" 
-    xmlns:i18n="clr-namespace:test132132.iOS.Helpers" 
-    Title="{i18n:Translate EditorTestsPageYourTests}"
->
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="test132132.Views.EditorTestsPage" 
+             xmlns:i18n="clr-namespace:test132132.iOS.Helpers" 
+             BackgroundColor="{DynamicResource SomeLightBackgroundColor}"
+             Title="{i18n:Translate EditorTestsPageYourTests}">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="{i18n:Translate EditorTestsPageAdd}" Clicked="Add_Clicked"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout x:Name="MainStackLayout" BackgroundColor="{DynamicResource SomeLightBackgroundColor}">
             <ListView 
                 x:Name="UserTestsListView" 
                 ItemsSource="{Binding UserTests}" 
                 SeparatorColor="Transparent"
                 ItemSelected="OnItemSelected"
+                BackgroundColor="{DynamicResource LightBackgroundColor}"
             >
                 <ListView.ItemTemplate>
                     <DataTemplate>

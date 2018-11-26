@@ -1,15 +1,36 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="test132132.Views.UserProfile.Authorization.LogInPage">
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="test132132.Views.UserProfile.Authorization.LogInPage"
+             xmlns:local="clr-namespace:test132132.Common"
+             >
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Log In" Clicked="LogIn_Clicked" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout BackgroundColor="{DynamicResource SomeLightBackgroundColor}" Spacing="2">
-            <StackLayout VerticalOptions="CenterAndExpand" Spacing="0">
-                <Entry Placeholder="Email or Username"/>
-                <Entry Placeholder="Password" IsPassword="true"/>
+            <StackLayout VerticalOptions="CenterAndExpand" 
+                         Spacing="5" 
+                         HorizontalOptions="Center" 
+                         WidthRequest="250">
+                <local:LineEntry Placeholder="Email or Username"
+                                 PlaceholderColor="{DynamicResource Silver}"
+                                 TextColor="{DynamicResource TextColor}"
+                                 MinimumWidthRequest="300"
+                                 HeightRequest="50"                                 
+                                 BorderColor="Transparent"
+                                 />
+                <local:LineEntry Placeholder="Password" 
+                                 IsPassword="true"
+                                 PlaceholderColor="{DynamicResource Silver}"
+                                 TextColor="{DynamicResource TextColor}"                                
+                                 MinimumWidthRequest="300"
+                                 HeightRequest="50"
+                                 BorderColor="Transparent"
+                                 />
                 <Button Text="Forgot your password?"
                         HorizontalOptions="Center"
+                        TextColor="{DynamicResource MainColor}"
                         />
             </StackLayout>              
         </StackLayout>
