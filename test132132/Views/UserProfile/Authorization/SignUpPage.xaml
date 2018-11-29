@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="test132132.Views.UserProfile.Authorization.SignUpPage" Title="Sign Up">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="test132132.Views.UserProfile.Authorization.SignUpPage" 
+             xmlns:i18n="clr-namespace:test132132.iOS.Helpers"
+             Title="{i18n:Translate SignUpPageSignUp}"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+>
     <ContentPage.Content>
-        <StackLayout BackgroundColor="{DynamicResource SomeLightBackgroundColor}" Spacing="30">
+        <StackLayout BackgroundColor="{DynamicResource SomeLightBackgroundColor}" Spacing="20">
             <StackLayout Orientation="Horizontal" Padding="10, 20, 0, 0" Spacing="15">
-                <Button Text="PHOTO"
+       <!--         <Button Text="{i18n:Translate SignUpPagePhoto}"
                         TextColor="#5ac8fa"
                         BackgroundColor="{DynamicResource LightBackgroundColor}"
                         BorderRadius="40"
@@ -11,24 +17,38 @@
                         BorderWidth="1"
                         WidthRequest="80"
                         HeightRequest="80"
-                        />
+                        Clicked="Photo_Clicked"
+                />-->
+               
+                <controls:CircleImage   
+                    HeightRequest="80"   
+                    WidthRequest="80"   
+                    Source="{Binding ProfileImagePath}"
+                    Aspect="AspectFill"
+                    x:Name="ProfileImage"
+                >  
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Photo_Clicked" />
+                    </Image.GestureRecognizers>
+                 </controls:CircleImage>
+                
                 <StackLayout HorizontalOptions="FillAndExpand" 
                              Spacing="0" 
                              VerticalOptions="Center"
-                             >   
-                    <Entry Placeholder="Your name"
+                >   
+                    <Entry Placeholder="{i18n:Translate SignUpPageYourName}"
                            BackgroundColor="{DynamicResource LightBackgroundColor}"
                            x:Name="NameEntry"
                             
-                           />
-                    <Entry Placeholder="Your surname"
+                    />
+                    <Entry Placeholder="{i18n:Translate SignUpPageYourSurname}"
                            BackgroundColor="{DynamicResource LightBackgroundColor}"
                            x:Name="SurnameEntry"
                            />
                 </StackLayout>            
             </StackLayout>
             <StackLayout>
-                <Label Text="Date of birth:"
+                <Label Text="{i18n:Translate SignUpPageDateOfBirth}"
                        TextColor="{DynamicResource MainGreyColor}"                       
                        />
                 <DatePicker x:Name="BirthdayPicker"
@@ -40,7 +60,7 @@
                         />
             </StackLayout>
             <StackLayout Spacing="5">                
-                <Label Text="Username:"
+                <Label Text="{i18n:Translate SignUpPageUsername}"
                        TextColor="{DynamicResource MainGreyColor}"
                        />
                 <Entry Placeholder="guest"
@@ -48,8 +68,17 @@
                        BackgroundColor="{DynamicResource LightBackgroundColor}"
                        />
             </StackLayout>
+            <StackLayout Spacing="5">                
+                <Label Text="{i18n:Translate SignUpPagePassword}"
+                       TextColor="{DynamicResource MainGreyColor}"
+                />
+                <Entry IsPassword="true"
+                       x:Name="PasswordEntry"
+                       BackgroundColor="{DynamicResource LightBackgroundColor}"
+                 />
+            </StackLayout>
             <StackLayout>
-                <Label Text="Email:"
+                <Label Text="{i18n:Translate SignUpPageEmail}"
                        TextColor="{DynamicResource MainGreyColor}"
                        />
                 <Entry Placeholder="hello@gmail.com"
@@ -58,15 +87,15 @@
                        />
             </StackLayout> 
             <StackLayout>
-                <Label Text="Education:"
+                <Label Text="{i18n:Translate SignUpPageEducation}"
                        TextColor="{DynamicResource MainGreyColor}"
                        />
-                <Entry Placeholder="BSUIR"
+                <Entry Placeholder="{i18n:Translate SignUpPageBSUIR}"
                        x:Name="EducationEntry"
                        BackgroundColor="{DynamicResource LightBackgroundColor}"
                        />
             </StackLayout>
-            <Button Text="Sign Up"
+            <Button Text="{i18n:Translate AuthorizaiontPageSignUp}"
                     TextColor="#5ac8fa"
                     BackgroundColor="{DynamicResource LightBackgroundColor}"
                     Margin="5"

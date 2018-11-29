@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="test132132.Views.UserProfile.SettingsPage"
              xmlns:local="clr-namespace:test132132.Views.UserProfile"
-             >
+             xmlns:i18n="clr-namespace:test132132.iOS.Helpers"
+>
     <ContentPage.Resources>
         <ResourceDictionary>
             <local:EmailConverter x:Key="EmailConvert"/>
@@ -14,14 +15,14 @@
         <StackLayout x:Name="SettingsLayout">
         <TableView Intent="Settings" BackgroundColor="{DynamicResource SomeLightBackgroundColor}">
             <TableRoot>                 
-                 <TableSection Title="Account">  
+                 <TableSection Title="{i18n:Translate SettingsPageAccount}">  
                     <ViewCell Tapped="Email_Tapped">
                         <StackLayout Orientation="Horizontal" 
                                      BackgroundColor="{DynamicResource LightBackgroundColor}" 
                                      Padding="30,0,5,0"
                         >
                             <Label  VerticalOptions="Center"
-                                    Text="Email"
+                                    Text="{i18n:Translate SettingsPageEmail}"
                                     TextColor="{DynamicResource MainColor}"
                                     HorizontalOptions="Start"
                             />
@@ -44,7 +45,7 @@
                                      Padding="30,0,5,0"
                         >
                             <Label  VerticalOptions="Center" 
-                                    Text="Password"
+                                    Text="{i18n:Translate SettingsPagePassword}"
                                     TextColor="{DynamicResource MainColor}"
                                     HorizontalOptions="Start" 
                             />
@@ -61,7 +62,7 @@
                                      Padding="30,0,5,0"
                         >
                             <Label  VerticalOptions="Center" 
-                                    Text="Username"
+                                    Text="{i18n:Translate SettingsPageUsername}"
                                     TextColor="{DynamicResource MainColor}"
                                     HorizontalOptions="Start"                                    
                             />
@@ -79,20 +80,20 @@
                         </StackLayout>
                     </ViewCell>                    
                  </TableSection>
-                 <TableSection Title="Appearence">
+                 <TableSection Title="{i18n:Translate SettingsPageAppearence}">
                     <ViewCell>
                         <StackLayout Orientation="Horizontal" 
                                      BackgroundColor="{DynamicResource LightBackgroundColor}"
                                      Padding="0,0,0,0"
                         >
                             <Button Padding="30, 20, 60, 20" 
-                                    Text="LightMode"
+                                    Text="{i18n:Translate SettingsPageLightMode}"
                                     TextColor="{DynamicResource MainColor}"
                                     HorizontalOptions="StartAndExpand"
                                     Clicked="LightMode_Clicked"
                             />
                             <Button Padding="60, 20, 30,20" 
-                                    Text="DarkMode"
+                                    Text="{i18n:Translate SettingsPageDarkMode}"
                                     TextColor="{DynamicResource MainColor}"
                                     HorizontalOptions="EndAndExpand"
                                     Clicked="DarkMode_Clicked"
@@ -100,14 +101,14 @@
                         </StackLayout>  
                     </ViewCell>                    
                  </TableSection>
-                 <TableSection Title="General">
+                 <TableSection Title="{i18n:Translate SettingsPageGeneral}">
                     <ViewCell Tapped="Language_Tapped">
                         <StackLayout Orientation="Horizontal" 
                                      BackgroundColor="{DynamicResource LightBackgroundColor}"
                                      Padding="30,0,5,0"
                         >
                             <Label VerticalOptions="Center" 
-                                    Text="Language"
+                                    Text="{i18n:Translate SettingsPageLanguage}"
                                     TextColor="{DynamicResource MainColor}"
                                     HorizontalOptions="Start" 
                             />
@@ -124,7 +125,7 @@
                                      Padding="30,0,5,0"
                         >
                             <Label VerticalOptions="Center" 
-                                    Text="About"
+                                    Text="{i18n:Translate SettingsPageAbout}"
                                     TextColor="{DynamicResource MainColor}"
                                     HorizontalOptions="Start" 
                             />
@@ -141,7 +142,7 @@
                                      Padding="30,0,5,0"
                         >
                             <Label VerticalOptions="Center" 
-                                    Text="Ask a question"
+                                    Text="{i18n:Translate SettingsPageAskAQuestion}"
                                     TextColor="{DynamicResource MainColor}"
                                     HorizontalOptions="Start" 
                             />
@@ -155,7 +156,7 @@
                  </TableSection>
                  <TableSection>
                     <ViewCell>   
-                        <Button Text="Log Out"
+                        <Button Text="{i18n:Translate SettingsPageLogOut}"
                                TextColor="#ff3b30"
                                BackgroundColor="{DynamicResource LightBackgroundColor}"
                                HorizontalOptions="FillAndExpand"

@@ -2,12 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="test132132.OpenQEditPage" 
+             xmlns:i18n="clr-namespace:test132132.iOS.Helpers"
              xmlns:helpers="clr-namespace:test132132.Common"
              BackgroundColor="{DynamicResource SomeLightBackgroundColor}"
              >
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Delete" Clicked="Delete_Clicked"/>
-        <ToolbarItem Text="Save" Clicked="Save_Clicked"/>
+        <ToolbarItem Text="{i18n:Translate CommonDelete}" Clicked="Delete_Clicked"/>
+        <ToolbarItem Text="{i18n:Translate CommonSave}" Clicked="Save_Clicked"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout Spacing="25" 
@@ -17,13 +18,13 @@
                  >
             <StackLayout Spacing="5">
                 <Label 
-                    Text="Question: " 
+                    Text="{i18n:Translate MatchingQEditPageQuestion}" 
                     FontSize="18"
                     TextColor="{DynamicResource TextColor}"
                 />
                 <Entry 
                     x:Name="QuestionTextEntry" 
-                    Placeholder="Your question here" 
+                    Placeholder="{i18n:Translate MatchingQEditPageQuestionPlaceholder}" 
                     FontSize="Small"                
                     BackgroundColor="{DynamicResource LightBackgroundColor}"
                     PlaceholderColor="{DynamicResource Silver}"
@@ -32,13 +33,13 @@
             </StackLayout>
             <StackLayout Spacing="5">
                 <Label 
-                    Text="Answer:" 
+                    Text="{i18n:Translate OpenQEditPageAnswer}" 
                     FontSize="18"
                     TextColor="{DynamicResource TextColor}"
                 />
                 <Entry 
                     x:Name="QuestionAnswerEntry" 
-                    Placeholder="Your answer here" 
+                    Placeholder="{i18n:Translate OpenQEditPageYourAnswerHere}" 
                     FontSize="Small"                
                     BackgroundColor="{DynamicResource LightBackgroundColor}"
                     PlaceholderColor="{DynamicResource Silver}"
@@ -47,14 +48,14 @@
             </StackLayout>
             <StackLayout Spacing="5">
                 <Label
-                    Text="Points:"
+                    Text="{i18n:Translate MatchingQEditPagePoints}"
                     FontSize="18"
                     TextColor="{DynamicResource TextColor}"
                 />
                 <Entry 
                     x:Name="PointsEntry"
                     Keyboard="Numeric"
-                    Placeholder="Points for your question"
+                    Placeholder="{i18n:Translate MatchingQEditPagePointsPlaceholder}"
                     FontSize="Small"
                     BackgroundColor="{DynamicResource LightBackgroundColor}"
                     PlaceholderColor="{DynamicResource Silver}"

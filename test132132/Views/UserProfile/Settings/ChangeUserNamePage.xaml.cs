@@ -18,22 +18,26 @@ namespace test132132.Views.UserProfile.Settings
 
         async void Done_Clicked(object sender, EventArgs e)
         {
+            return;
             try
             {
                 viewModel.CurrentUser.UserName = newUserNameEntry.Text;
             }
             catch (Exception exc)
             {
-                await DisplayAlert("Invalid username", exc.Message, "Ok"); //todo set userName 
+                await DisplayAlert(
+                    iOS.AppResources.SignUpPageInvalidUsername, 
+                    exc.Message, 
+                    iOS.AppResources.CommonOk
+                ); //todo set userName 
                 return;
             }
 
             MessagingCenter.Send(
                 (ContentPage)this,
                 "UserNameChanged",
-                viewModel.CurrentUser
+                viewModel.CurrentUser.UserName
             );
-            App.UserChanged(viewModel.CurrentUser);
             Device.BeginInvokeOnMainThread(async () => await Navigation.PopAsync());
             //Device.BeginInvokeOnMainThread(async () => await Navigation.PopAsync());
         }

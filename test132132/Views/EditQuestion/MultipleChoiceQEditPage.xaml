@@ -16,7 +16,7 @@
                      BackgroundColor="{DynamicResource SomeLightBackgroundColor}">
             <StackLayout Spacing="5">
                 <Label 
-                    Text="Question: " 
+                    Text="{i18n:Translate MatchingQEditPageQuestion}" 
                     FontSize="18"
                     TextColor="{DynamicResource TextColor}"
                 />
@@ -31,7 +31,7 @@
             </StackLayout>
             <StackLayout Spacing="5">
                 <Label 
-                    Text="Points: " 
+                    Text="{i18n:Translate MatchingQEditPagePoints}" 
                     FontSize="18"
                     TextColor="{DynamicResource TextColor}"
                 />
@@ -53,7 +53,7 @@
             </StackLayout>
             <StackLayout Spacing="5">
                 <Label 
-                    Text="Number of variants: " 
+                    Text="{i18n:Translate MultipleChoiceQEditPageNumberOfVariants}"
                     FontSize="18"
                     TextColor="{DynamicResource TextColor}"
                 />

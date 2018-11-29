@@ -27,4 +27,5 @@
             <Image x:Key="mainImage"></Image>
         </ResourceDictionary>
     </Application.Resources>
+   
 </Application>

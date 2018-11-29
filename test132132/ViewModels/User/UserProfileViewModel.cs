@@ -10,10 +10,7 @@ namespace test132132.ViewModels.User
         public Models.User CurrentUser { get; set; }
         public UserProfileViewModel()
         {
-            CurrentUser = App.GetCurrentUser();
+            CurrentUser = App.CurrentUser;
         }
-
-       
-
     }
 }

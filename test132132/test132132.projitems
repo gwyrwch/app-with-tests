@@ -105,7 +105,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\UserProfile\Authorization\AuthorizationPage.xaml.cs">
       <DependentUpon>AuthorizationPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\User\AuthrizationViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\UserProfile\Authorization\LogInPage.xaml.cs">
       <DependentUpon>LogInPage.xaml</DependentUpon>
     </Compile>

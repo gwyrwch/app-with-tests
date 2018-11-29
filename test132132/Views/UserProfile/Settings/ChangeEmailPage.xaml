@@ -2,24 +2,26 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="test132132.Views.UserProfile.Settings.ChangeEmailPage"
-             xmlns:local="clr-namespace:test132132.Common"
-             Title="Change email"
+             xmlns:local="clr-namespace:test132132.Common"            
+             xmlns:i18n="clr-namespace:test132132.iOS.Helpers"
+
+             Title="{i18n:Translate ChangeEmailPageTitle}"
              >
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Done" Clicked="Done_Clicked"/>
+        <ToolbarItem Text="{i18n:Translate CommonDone}" Clicked="Done_Clicked"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout x:Name="ChangeEmailLayout">
             <TableView Intent="Settings" BackgroundColor="{DynamicResource SomeLightBackgroundColor}">
             <TableRoot>                 
-                 <TableSection Title="Account" >  
+                 <TableSection Title="{i18n:Translate SettingsPageAccount}" >  
                     <ViewCell>
                         <StackLayout Orientation="Horizontal" 
                                      BackgroundColor="{DynamicResource LightBackgroundColor}" 
                                      Padding="30,0,5,0"
                         >
                             <Label  VerticalOptions="Center"
-                                    Text="Current"
+                                    Text="{i18n:Translate ChangeEmailPageCurrent}"
                                     TextColor="{DynamicResource MainColor}"
                                     HorizontalOptions="Start"
                                     WidthRequest="100"
@@ -37,7 +39,7 @@
                                      Padding="30,0,0,0"
                         >
                             <Label  VerticalOptions="Center"
-                                    Text="New Email"                                    
+                                    Text="{i18n:Translate ChangeEmailPageNewEmail}"                                    
                                     TextColor="{DynamicResource MainColor}"
                                     HorizontalOptions="Start"
                                     WidthRequest="100"

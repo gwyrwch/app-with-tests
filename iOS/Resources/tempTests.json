@@ -59,7 +59,7 @@
             "Answer": "Reverse"
           },
           {
-            "IsTrue": false,
+            "IsTrue":   false,
             "Answer": "BinarySearch"
           },
           {
@@ -180,7 +180,7 @@
           }
         ],
         "QType": 1,
-        "Text": "What does the TrimToSize method do?(in SortedListClass)",
+        "Text": "What does the TrimToSize method do?(in SortedList class)",
         "Points": 1,
         "TestId": 65176646
       }

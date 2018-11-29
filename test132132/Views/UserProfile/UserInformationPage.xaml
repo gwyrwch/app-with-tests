@@ -4,7 +4,8 @@
              x:Class="test132132.Views.UserProfile.UserInformationPage" 
              xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              xmlns:local="clr-namespace:test132132.Common"
-             >
+             xmlns:i18n="clr-namespace:test132132.iOS.Helpers"
+>
     <ContentPage.Content>
         <StackLayout x:Name="Information" Spacing="0">
         <ContentView HeightRequest="100">
@@ -19,10 +20,10 @@
                 <controls:CircleImage   
                     HeightRequest="80"   
                     WidthRequest="80"   
-                    Source="Melnick.jpg"
-                    Aspect="AspectFill">  
+                    Source="{Binding ProfileImagePath}"
+                    Aspect="AspectFill"
+                />  
   
-                </controls:CircleImage>  
                 <StackLayout Orientation="Horizontal" Spacing="5">
                     <Label  VerticalOptions="Center"
                         Text="{Binding Name}"
@@ -51,7 +52,7 @@
                              Padding="30,0,0,0"
                         >
                             <Label VerticalOptions="Center" 
-                                    Text="Birthday"
+                                    Text="{i18n:Translate UserInformationPageBirthday}"
                                     TextColor="{DynamicResource Silver}"
                                     FontSize="Micro"
                                     HorizontalOptions="Start" 
@@ -72,7 +73,7 @@
                              Padding="30,0,0,0"
                         >
                              <Label VerticalOptions="Center" 
-                                    Text="Studied at"
+                                    Text="{i18n:Translate UserInformationPageStudiedAt}"
                                     TextColor="{DynamicResource Silver}"
                                     FontSize="Micro"
                                     HorizontalOptions="Start" 
@@ -93,7 +94,7 @@
                              Padding="30,0,0,0"
                         >
                              <Label VerticalOptions="Center" 
-                                    Text="Contacts"
+                                    Text="{i18n:Translate UserInformationPageContacts}"
                                     TextColor="{DynamicResource Silver}"
                                     FontSize="Micro"
                                     HorizontalOptions="Start" 
@@ -107,14 +108,14 @@
                         </StackLayout>  
                     </ViewCell>                    
                  </TableSection>
-                 <TableSection Title="Career">
+                 <TableSection Title="{i18n:Translate UserInformationPageCareer}">
                     <ViewCell>
                         <StackLayout Orientation="Horizontal" 
                                      BackgroundColor="{DynamicResource LightBackgroundColor}"
                                      Padding="30,0,5,0"
                         >
                             <Label VerticalOptions="Center" 
-                                    Text="Statistics"
+                                    Text="{i18n:Translate UserInformationPageStatistics}"
                                     TextColor="{DynamicResource MainColor}"
                                     HorizontalOptions="Start" 
                             />
@@ -131,7 +132,7 @@
                                      Padding="30,0,5,0"
                         >
                             <Label VerticalOptions="Center" 
-                                    Text="Achievements"
+                                    Text="{i18n:Translate UserInformationPageAchievements}"
                                     TextColor="{DynamicResource MainColor}"
                                     HorizontalOptions="Start" 
                             />
@@ -148,7 +149,7 @@
                                      Padding="30,0,5,0"
                         >
                             <Label VerticalOptions="Center" 
-                                    Text="Rating"
+                                    Text="{i18n:Translate UserInformationPageRating}"
                                     TextColor="{DynamicResource MainColor}"
                                     HorizontalOptions="Start" 
                             />

@@ -3,15 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="test132132.Views.UserProfile.Settings.ChangeUserNamePage"
              xmlns:local="clr-namespace:test132132.Common"
-             >
+             xmlns:i18n="clr-namespace:test132132.iOS.Helpers"
+>
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Done" Clicked="Done_Clicked"/>
+        <ToolbarItem Text="{i18n:Translate CommonDone}" Clicked="Done_Clicked"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout x:Name="ChangeUserNameLayout">
             <TableView Intent="Settings" BackgroundColor="{DynamicResource SomeLightBackgroundColor}">
             <TableRoot>
-                <TableSection Title="Username" >  
+                <TableSection Title="{i18n:Translate SettingsPageUsername}" >  
                     <ViewCell>
                         <StackLayout Padding="5,0,0,0" BackgroundColor="{DynamicResource LightBackgroundColor}">
                            <local:LineEntry x:Name="newUserNameEntry"

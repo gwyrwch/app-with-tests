@@ -4,6 +4,7 @@ using System.IO;
 using Newtonsoft.Json;
 using System.Linq;
 using System.Collections.Generic;
+using Xamarin.Forms;
 
 namespace test132132.Models
 {
@@ -12,11 +13,16 @@ namespace test132132.Models
         public ObservableCollection<Test> TestsToPreview {
             get; set;
         }
-
+        
         public void LoadAll()
         {
-            //string plain_text = File.ReadAllText(App.userTestsPath); // todo
-            string plain_text = File.ReadAllText("tempTests.json");
+            string testsPath;
+            if (App.settings.Language == "English") {
+                testsPath = "tempTests.json";
+            } else {
+                testsPath = "tempTestsRU.json";
+            }
+            string plain_text = File.ReadAllText(testsPath);
             TestsToPreview = JsonConvert.DeserializeObject<ObservableCollection<Test>>(plain_text);
         }
 

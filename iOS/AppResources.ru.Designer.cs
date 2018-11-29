@@ -83,6 +83,12 @@ namespace test132132.iOS {
             }
         }
         
+        internal static string CommonDone {
+            get {
+                return ResourceManager.GetString("CommonDone", resourceCulture);
+            }
+        }
+        
         internal static string SubjectsPageTitle {
             get {
                 return ResourceManager.GetString("SubjectsPageTitle", resourceCulture);
@@ -344,6 +350,306 @@ namespace test132132.iOS {
         internal static string MultipleChoiceQEditPageNumberOfVariants {
             get {
                 return ResourceManager.GetString("MultipleChoiceQEditPageNumberOfVariants", resourceCulture);
+            }
+        }
+        
+        internal static string OpenQEditPageAnswer {
+            get {
+                return ResourceManager.GetString("OpenQEditPageAnswer", resourceCulture);
+            }
+        }
+        
+        internal static string OpenQEditPageYourAnswerHere {
+            get {
+                return ResourceManager.GetString("OpenQEditPageYourAnswerHere", resourceCulture);
+            }
+        }
+        
+        internal static string AuthorizaiontPageSignUp {
+            get {
+                return ResourceManager.GetString("AuthorizaiontPageSignUp", resourceCulture);
+            }
+        }
+        
+        internal static string AuthorizaiontPageLogIn {
+            get {
+                return ResourceManager.GetString("AuthorizaiontPageLogIn", resourceCulture);
+            }
+        }
+        
+        internal static string AuthorizaiontPageAlreadyHaveAnAccount {
+            get {
+                return ResourceManager.GetString("AuthorizaiontPageAlreadyHaveAnAccount", resourceCulture);
+            }
+        }
+        
+        internal static string LogInPageEmailOrUsername {
+            get {
+                return ResourceManager.GetString("LogInPageEmailOrUsername", resourceCulture);
+            }
+        }
+        
+        internal static string LogInPagePassword {
+            get {
+                return ResourceManager.GetString("LogInPagePassword", resourceCulture);
+            }
+        }
+        
+        internal static string LogInPageForgotyYourPassword {
+            get {
+                return ResourceManager.GetString("LogInPageForgotyYourPassword", resourceCulture);
+            }
+        }
+        
+        internal static string SignUpPagePhoto {
+            get {
+                return ResourceManager.GetString("SignUpPagePhoto", resourceCulture);
+            }
+        }
+        
+        internal static string SignUpPageYourName {
+            get {
+                return ResourceManager.GetString("SignUpPageYourName", resourceCulture);
+            }
+        }
+        
+        internal static string SignUpPageYourSurname {
+            get {
+                return ResourceManager.GetString("SignUpPageYourSurname", resourceCulture);
+            }
+        }
+        
+        internal static string SignUpPageDateOfBirth {
+            get {
+                return ResourceManager.GetString("SignUpPageDateOfBirth", resourceCulture);
+            }
+        }
+        
+        internal static string SignUpPageUsername {
+            get {
+                return ResourceManager.GetString("SignUpPageUsername", resourceCulture);
+            }
+        }
+        
+        internal static string SignUpPagePassword {
+            get {
+                return ResourceManager.GetString("SignUpPagePassword", resourceCulture);
+            }
+        }
+        
+        internal static string SignUpPageEmail {
+            get {
+                return ResourceManager.GetString("SignUpPageEmail", resourceCulture);
+            }
+        }
+        
+        internal static string SignUpPageEducation {
+            get {
+                return ResourceManager.GetString("SignUpPageEducation", resourceCulture);
+            }
+        }
+        
+        internal static string SignUpPageBSUIR {
+            get {
+                return ResourceManager.GetString("SignUpPageBSUIR", resourceCulture);
+            }
+        }
+        
+        internal static string SignUpPageSignUp {
+            get {
+                return ResourceManager.GetString("SignUpPageSignUp", resourceCulture);
+            }
+        }
+        
+        internal static string SignUpPageInvalidUsername {
+            get {
+                return ResourceManager.GetString("SignUpPageInvalidUsername", resourceCulture);
+            }
+        }
+        
+        internal static string ProfilePageMyProfile {
+            get {
+                return ResourceManager.GetString("ProfilePageMyProfile", resourceCulture);
+            }
+        }
+        
+        internal static string ProfilePageSettings {
+            get {
+                return ResourceManager.GetString("ProfilePageSettings", resourceCulture);
+            }
+        }
+        
+        internal static string ProfilePageSwipeRight {
+            get {
+                return ResourceManager.GetString("ProfilePageSwipeRight", resourceCulture);
+            }
+        }
+        
+        internal static string UserInformationPageInformation {
+            get {
+                return ResourceManager.GetString("UserInformationPageInformation", resourceCulture);
+            }
+        }
+        
+        internal static string UserInformationPageBirthday {
+            get {
+                return ResourceManager.GetString("UserInformationPageBirthday", resourceCulture);
+            }
+        }
+        
+        internal static string UserInformationPageStudiedAt {
+            get {
+                return ResourceManager.GetString("UserInformationPageStudiedAt", resourceCulture);
+            }
+        }
+        
+        internal static string UserInformationPageContacts {
+            get {
+                return ResourceManager.GetString("UserInformationPageContacts", resourceCulture);
+            }
+        }
+        
+        internal static string UserInformationPageCareer {
+            get {
+                return ResourceManager.GetString("UserInformationPageCareer", resourceCulture);
+            }
+        }
+        
+        internal static string UserInformationPageStatistics {
+            get {
+                return ResourceManager.GetString("UserInformationPageStatistics", resourceCulture);
+            }
+        }
+        
+        internal static string UserInformationPageAchievements {
+            get {
+                return ResourceManager.GetString("UserInformationPageAchievements", resourceCulture);
+            }
+        }
+        
+        internal static string UserInformationPageRating {
+            get {
+                return ResourceManager.GetString("UserInformationPageRating", resourceCulture);
+            }
+        }
+        
+        internal static string SettingsPageEmail {
+            get {
+                return ResourceManager.GetString("SettingsPageEmail", resourceCulture);
+            }
+        }
+        
+        internal static string SettingsPagePassword {
+            get {
+                return ResourceManager.GetString("SettingsPagePassword", resourceCulture);
+            }
+        }
+        
+        internal static string SettingsPageUsername {
+            get {
+                return ResourceManager.GetString("SettingsPageUsername", resourceCulture);
+            }
+        }
+        
+        internal static string SettingsPageLightMode {
+            get {
+                return ResourceManager.GetString("SettingsPageLightMode", resourceCulture);
+            }
+        }
+        
+        internal static string SettingsPageDarkMode {
+            get {
+                return ResourceManager.GetString("SettingsPageDarkMode", resourceCulture);
+            }
+        }
+        
+        internal static string SettingsPageAbout {
+            get {
+                return ResourceManager.GetString("SettingsPageAbout", resourceCulture);
+            }
+        }
+        
+        internal static string SettingsPageAskAQuestion {
+            get {
+                return ResourceManager.GetString("SettingsPageAskAQuestion", resourceCulture);
+            }
+        }
+        
+        internal static string SettingsPageLogOut {
+            get {
+                return ResourceManager.GetString("SettingsPageLogOut", resourceCulture);
+            }
+        }
+        
+        internal static string SettingsPageLanguage {
+            get {
+                return ResourceManager.GetString("SettingsPageLanguage", resourceCulture);
+            }
+        }
+        
+        internal static string SettingsPageGeneral {
+            get {
+                return ResourceManager.GetString("SettingsPageGeneral", resourceCulture);
+            }
+        }
+        
+        internal static string SettingsPageAppearence {
+            get {
+                return ResourceManager.GetString("SettingsPageAppearence", resourceCulture);
+            }
+        }
+        
+        internal static string SettingsPageAccount {
+            get {
+                return ResourceManager.GetString("SettingsPageAccount", resourceCulture);
+            }
+        }
+        
+        internal static string ChangeEmailPageTitle {
+            get {
+                return ResourceManager.GetString("ChangeEmailPageTitle", resourceCulture);
+            }
+        }
+        
+        internal static string ChangeEmailPageCurrent {
+            get {
+                return ResourceManager.GetString("ChangeEmailPageCurrent", resourceCulture);
+            }
+        }
+        
+        internal static string ChangeEmailPageNewEmail {
+            get {
+                return ResourceManager.GetString("ChangeEmailPageNewEmail", resourceCulture);
+            }
+        }
+        
+        internal static string ChangeEmailPageInvalidEmail {
+            get {
+                return ResourceManager.GetString("ChangeEmailPageInvalidEmail", resourceCulture);
+            }
+        }
+        
+        internal static string ChangeLanguagePageChooseLanguage {
+            get {
+                return ResourceManager.GetString("ChangeLanguagePageChooseLanguage", resourceCulture);
+            }
+        }
+        
+        internal static string ChangeLanguagePageChanged {
+            get {
+                return ResourceManager.GetString("ChangeLanguagePageChanged", resourceCulture);
+            }
+        }
+        
+        internal static string ChangeLanguagePageReload {
+            get {
+                return ResourceManager.GetString("ChangeLanguagePageReload", resourceCulture);
+            }
+        }
+        
+        internal static string SupportPageText {
+            get {
+                return ResourceManager.GetString("SupportPageText", resourceCulture);
             }
         }
     }

@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="test132132.Views.UserProfile.Authorization.AuthorizationPage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="test132132.Views.UserProfile.Authorization.AuthorizationPage"
+             xmlns:i18n="clr-namespace:test132132.iOS.Helpers"
+ >
     <ContentPage.Content>
         <StackLayout BackgroundColor="{DynamicResource SomeLightBackgroundColor}" Padding="3, 120, 3, 0" Spacing="10"> 
             <StackLayout Spacing="80">
@@ -7,9 +11,9 @@
                        WidthRequest="50"
                        HeightRequest="150"
                        VerticalOptions="Center"
-                    /> 
+                /> 
                 <Button Clicked="SignUp_Clicked"
-                        Text="Sign Up"
+                        Text="{i18n:Translate AuthorizaiontPageSignUp}"
                         BackgroundColor="#ecf0f0"
                         BorderRadius="15"
                         BorderWidth="1"
@@ -17,16 +21,15 @@
                         TextColor="{DynamicResource MainGreyColor}"
                         VerticalOptions="End"
                 />    
-            </StackLayout>
-            
+            </StackLayout>            
             <StackLayout VerticalOptions="Start" Padding="0, 40, 0, 0">
-                <Label Text="Already have an account?"
+                <Label Text="{i18n:Translate AuthorizaiontPageAlreadyHaveAnAccount}"
                     HorizontalOptions="Center"
                     TextColor="{DynamicResource MainGreyColor}"
                     VerticalOptions="Center"
                 /> 
                 <Button Clicked="LogIn_Clicked" 
-                        Text="Log In"
+                        Text="{i18n:Translate AuthorizaiontPageLogIn}"
                         BackgroundColor="{DynamicResource MainGreyColor}"
                         BorderRadius="15"
                         BorderWidth="2"

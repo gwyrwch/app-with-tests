@@ -5,7 +5,7 @@ using Xamarin.Forms;
 using test132132.Views;
 using System.Collections.ObjectModel;
 using Newtonsoft.Json;
-
+using UIKit;
 
 namespace test132132
 {
@@ -27,9 +27,6 @@ namespace test132132
 
             if (!File.Exists(App.userTestsPath))
                 File.WriteAllText(App.userTestsPath, "[]");
-
-            if (!File.Exists(App.lastUserPath))
-                File.WriteAllText(App.lastUserPath, "");
 
             Page itemsPage, subjectsPage = null, editorPage = null;
 
@@ -69,6 +66,11 @@ namespace test132132
             Children.Add(subjectsPage);
 
             Title = Children[0].Title;
+        }
+
+        public void UpdateChildren(Page p, int index)
+        {
+            Children[0] = p;
         }
 
         void ChangeBottomBar()

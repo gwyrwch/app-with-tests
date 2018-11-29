@@ -21,87 +21,30 @@ namespace test132132
             "Assembler"
         };
 
+        private static ObservableCollection<string> Subjects_Ru = new ObservableCollection<string> {
+            "C#",
+            "C++",
+            "Ассемблер"
+        };
+
         public const string userTestsPath = "./userTests.json";
-        public const string lastUserPath = "./lastUser.txt";
         public const string settingsPath = "./settings.json";
 
-        public static void TempUser()
-        {
-            Models.User currentUser = new Models.User();
-            currentUser.Name = "Danik";
-            currentUser.Surname = "Melnichenka";
-            currentUser.UserName = "melnick";
-            currentUser.Birth = new DateTime(1999, 12, 24);
-            currentUser.Education = "BSU";
-            currentUser.Email = "melnick@gmail.com";
-
-            string fileName = string.Join("",
-                 "./",
-                 currentUser.UserName,
-                  ".json"
-            );
-
-            File.WriteAllText(
-                fileName,
-                JsonConvert.SerializeObject(currentUser)
-            );
-
-            File.WriteAllText(
-                lastUserPath,
-                currentUser.UserName
-            );
-        }
-
-        public static Models.User GetCurrentUser() 
-        {
-            string lastUserFromFile = File.ReadAllText(App.lastUserPath);
-            if (lastUserFromFile == string.Empty)
-                return new Models.User();
-
-            string fileName = string.Join("",
-                 "./",  
-                  lastUserFromFile,
-                  ".json"
-            );
-            string plainText = File.ReadAllText(fileName);
-            return JsonConvert.DeserializeObject<Models.User>(plainText);                          
-        }
-
-        public static void UserChanged(Models.User newUser)
-        {
-            string fileName = string.Join("",
-                 "./",
-                 newUser.UserName,
-                  ".json"
-            );
-            File.WriteAllText(
-                lastUserPath,
-                newUser.UserName
-            );
-            File.WriteAllText(
-                fileName,
-                JsonConvert.SerializeObject(newUser)
-            );
-        }
+        public static Models.User CurrentUser { get; set; }
 
         protected override void OnSleep()
         {
-            Models.User currentUser = GetCurrentUser();
-
-            File.WriteAllText(lastUserPath, currentUser.UserName);
-            File.WriteAllText(
-                string.Join(
-                    "", 
-                    "./", 
-                    currentUser.UserName, 
-                    ".json"
-                ),
-                JsonConvert.SerializeObject(currentUser)
-            );
+            if (CurrentUser != null)
+            {
+                Common.UserBase.UpdateUser(CurrentUser);
+            }
         }
 
         public static void SetLanguage(string language)
         {
+            if (language == "Russian") {
+                Subjects = Subjects_Ru;
+            }
             CrossMultilingual.Current.CurrentCultureInfo = CrossMultilingual.Current.NeutralCultureInfoList.ToList().First(element => element.EnglishName.Contains(language));
             iOS.AppResources.Culture = CrossMultilingual.Current.CurrentCultureInfo;
         }
@@ -109,8 +52,8 @@ namespace test132132
         static void DefaultSettings()
         {
             Services.Settings defaultSettings = new Services.Settings { 
-                Language = "English", 
-                Theme = "DarkTheme"
+                Language = "Russian", 
+                Theme = "LightTheme"
             };
 
             File.WriteAllText(
@@ -155,6 +98,7 @@ namespace test132132
             else 
                 throw new NotImplementedException();
             settings.Theme = theme;
+
             SaveSettings();
         }
 
@@ -173,7 +117,6 @@ namespace test132132
             }
             settings = JsonConvert.DeserializeObject<Services.Settings>(plainText);
             SetLanguage(settings.Language);
-            SetTheme(settings.Theme);
         }
 
         public static void SaveSettings()
@@ -191,13 +134,17 @@ namespace test132132
 
             ApplySettings();
             InitializeComponent();
+            SetTheme(settings.Theme);
 
-            TempUser();
+            Common.UserBase.CreateDanik();
+            // dont know about current user at all
+            CurrentUser = null;
 
             if (Device.RuntimePlatform == Device.iOS)
                 MainPage = new MainPage();
             else
                 MainPage = new NavigationPage(new MainPage());
+
         }
     }
 }

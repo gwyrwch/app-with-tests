@@ -3,10 +3,11 @@
                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
                   x:Class="test132132.ProfilePage" 
                   xmlns:local="clr-namespace:test132132.Common"
-                  Title="Profile"
+                  xmlns:i18n="clr-namespace:test132132.iOS.Helpers"
+                  Title="{i18n:Translate ProfilePageMyProfile}"
                   >
     <MasterDetailPage.Master>
-        <ContentPage Title="kek">
+        <ContentPage Title="super extremely important line"> <!--kek ow exception-->
             <StackLayout Spacing="0" Orientation="Vertical">
                 <local:ColoredTableView 
                     x:Name="MasterPages" 
@@ -21,7 +22,7 @@
                                      BackgroundColor="{DynamicResource LightBackgroundColor}" 
                                      Padding="30,0,5,0"
                                     >
-                                    <Label Text="My Profile"
+                                    <Label Text="{i18n:Translate ProfilePageMyProfile}"
                                            VerticalOptions="Center"                                   
                                            TextColor="{DynamicResource MainColor}"
                                            HorizontalOptions="Start"
@@ -33,7 +34,7 @@
                                      BackgroundColor="{DynamicResource LightBackgroundColor}" 
                                      Padding="30,0,5,0"
                                     >
-                                    <Label Text="Settings"
+                                    <Label Text="{i18n:Translate ProfilePageSettings}"
                                            VerticalOptions="Center"                                   
                                            TextColor="{DynamicResource MainColor}"
                                            HorizontalOptions="Start"
@@ -50,7 +51,7 @@
     <MasterDetailPage.Detail>
         <ContentPage BackgroundColor="{DynamicResource LightBackgroundColor}" Padding="15,5,5,5">
             <StackLayout Spacing="0">
-                <Label Text="Swipe right to see menu"
+                <Label Text="{i18n:Translate ProfilePageSwipeRight}"
                        TextColor="{DynamicResource MainGreyColor}"
                        FontSize="Micro"
                        HorizontalOptions="Center"

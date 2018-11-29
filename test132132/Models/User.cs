@@ -26,36 +26,14 @@ namespace test132132.Models
             Stats = new UserStatistics();
         }
 
-        //public User(
-        //        string name,
-        //        string surname,
-        //        DateTime birth,
-        //        string education,
-        //        string userName,
-        //        string email,
-        //        string profileImagePath,
-        //        UserStatistics stats = null
-        //) {
-        //    Name = name;
-        //    Surname = surname;
-        //    Birth = birth;
-        //    Education = education;
-        //    UserName = userName;
-        //    Email = email;
-        //    ProfileImagePath = profileImagePath;
-
-        //    //todo stats
-        //}
-
         string name;
         public string Name 
         {
             get => name;
             set
             {
-                if (!nameRegex.IsMatch(name))
+                if (!nameRegex.IsMatch(value))
                     throw new Exception("Invalid Name");
-
                 name = value;
             }
         }
@@ -65,7 +43,7 @@ namespace test132132.Models
             get => surname;
             set
             {
-                if (!nameRegex.IsMatch(name))
+                if (!nameRegex.IsMatch(value))
                     throw new Exception("Invalid Surname");
                 surname = value;
             }

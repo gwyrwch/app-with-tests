@@ -11,17 +11,14 @@ namespace test132132.Views.UserProfile
     public partial class UserInformationPage : ContentPage
     {
         ViewModels.User.UserProfileViewModel viewModel;
-        bool MessageCame = false;
+
         public UserInformationPage()
         {
             InitializeComponent();
-            if (!MessageCame)
-            {
-                BindingContext = viewModel = new ViewModels.User.UserProfileViewModel();
-                Information.BindingContext = viewModel.CurrentUser;
+        
+            viewModel = new ViewModels.User.UserProfileViewModel();
+            Information.BindingContext = viewModel.CurrentUser;
 
-            }
-            MessageCame = false; //todo
 
             //BirthDayViewCell.BindingContext = viewModel.currentUser;
             //EducationViewCell.BindingContext = viewModel.currentUser;

@@ -2,12 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="test132132.Views.UserProfile.Settings.SupportPage" 
-         >
+             xmlns:i18n="clr-namespace:test132132.iOS.Helpers"
+>
     <ContentPage.Content>
         <StackLayout Padding="15, 180, 15, 0" HorizontalOptions="Center" BackgroundColor="{DynamicResource LightBackgroundColor}">
             <Label
                 HorizontalOptions="Center"
-                Text="If you have some questions you can contact us at :"
+                Text="{i18n:Translate SupportPageText}"
                 TextColor="{DynamicResource Silver}"
                 FontSize="Medium"
             />
@@ -16,9 +17,7 @@
                 Text="gwyrwch@gmail.com"
                 TextColor="{DynamicResource MainColor}"
                 HorizontalOptions="Center"
-                
             />
-            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -27,7 +27,7 @@ namespace test132132
             }
             catch (Exception exc)
             {
-                await DisplayAlert("Question is invalid", exc.Message, "Ok");
+                await DisplayAlert(iOS.AppResources.MatchingQEditPageInvalidQuestion, exc.Message, iOS.AppResources.CommonOk);
                 return;
             }
 

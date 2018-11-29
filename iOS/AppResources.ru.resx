@@ -31,6 +31,9 @@
     <data name="CommonDelete">
         <value>Удалить</value>  
     </data>  
+    <data name="CommonDone">
+        <value>Готово</value>  
+    </data>  
     
     
     <!-- SubjectsPage -->
@@ -178,9 +181,178 @@
         <value>Эта необратимая опция</value>
     </data>
     
-    
+    <!--MultipleChoiceQEditPage-->
     <data name="MultipleChoiceQEditPageNumberOfVariants">
         <value>Выберите количество вариантов</value>
     </data>
+    
+     <!--OpenQEditPage-->
+    <data name="OpenQEditPageAnswer">
+        <value>Ответ:</value>
+    </data>
+    <data name="OpenQEditPageYourAnswerHere">
+        <value>Ваш ответ:</value>
+    </data>
+    
+    <!--AuthorizaiontPage-->
+    <data name="AuthorizaiontPageSignUp">
+        <value>Зарегистрироваться</value>
+    </data>
+    <data name="AuthorizaiontPageLogIn">
+        <value>Войти</value>
+    </data>
+    <data name="AuthorizaiontPageAlreadyHaveAnAccount">
+        <value>Уже есть аккаунт?</value>
+    </data>
+    
+    <!--LogInPage-->
+    <data name="LogInPageEmailOrUsername">
+        <value>Почта или имя пользователя</value>
+    </data>
+    <data name="LogInPagePassword">
+        <value>Пароль</value>
+    </data>
+    <data name="LogInPageForgotyYourPassword">
+        <value>Забыли пароль?</value>
+    </data>
+    
+    <!--SignUpPage-->
+    <data name="SignUpPagePhoto">
+        <value>ФОТО</value>
+    </data>
+    <data name="SignUpPageYourName">
+        <value>Ваше имя</value>
+    </data>
+    <data name="SignUpPageYourSurname">
+        <value>Ваша фамилия</value>
+    </data>
+    <data name="SignUpPageDateOfBirth">
+        <value>Дата рождения:</value>
+    </data>
+    <data name="SignUpPageUsername">
+        <value>Имя пользователя:</value>
+    </data>
+    <data name="SignUpPagePassword">
+        <value>Пароль:</value>
+    </data>
+    <data name="SignUpPageEmail">
+        <value>Почта:</value>
+    </data>
+    <data name="SignUpPageEducation">
+        <value>Образование:</value>
+    </data>
+    <data name="SignUpPageBSUIR">
+        <value>БГУИР</value>
+    </data>
+    <data name="SignUpPageSignUp">
+        <value>Регистрация</value>
+    </data>
+    <data name="SignUpPageInvalidUsername">
+        <value>Неверное имя пользователя</value>
+    </data>
+    
+    <!--ProfilePage-->
+    <data name="ProfilePageMyProfile">
+        <value>Профиль</value>
+    </data>
+    <data name="ProfilePageSettings">
+        <value>Настройки</value>
+    </data>
+    <data name="ProfilePageSwipeRight">
+        <value>Проведите вправо, чтобы увидеть меню</value>
+    </data>
+    
+    <!--UserInformationPage-->
+    <data name="UserInformationPageInformation">
+        <value>Информация</value>
+    </data>
+    <data name="UserInformationPageBirthday">
+        <value>День рождения</value>
+    </data>
+    <data name="UserInformationPageStudiedAt">
+        <value>Образование</value>
+    </data>
+    <data name="UserInformationPageContacts">
+        <value>Контакты</value>
+    </data>
+    <data name="UserInformationPageCareer">
+        <value>Карьера</value>
+    </data>
+    <data name="UserInformationPageStatistics">
+        <value>Статистика</value>
+    </data>
+    <data name="UserInformationPageAchievements">
+        <value>Достижения</value>
+    </data>
+    <data name="UserInformationPageRating">
+        <value>Рейтинг</value>
+    </data>
+    
+    <!--SettingsPage-->
+    <data name="SettingsPageEmail">
+        <value>Почта</value>
+    </data>
+    <data name="SettingsPagePassword">
+        <value>Пароль</value>
+    </data>
+    <data name="SettingsPageUsername">
+        <value>Имя пользователя</value>
+    </data>
+    <data name="SettingsPageLightMode">
+        <value>Светлый стиль</value>
+    </data>
+    <data name="SettingsPageDarkMode">
+        <value>Темный стиль</value>
+    </data>
+    <data name="SettingsPageAbout">
+        <value>Сведения</value>
+    </data>
+    <data name="SettingsPageAskAQuestion">
+        <value>Задайте вопрос</value>
+    </data>
+    <data name="SettingsPageLogOut">
+        <value>Выйти</value>
+    </data>
+    <data name="SettingsPageLanguage">
+        <value>Язык</value>
+    </data>
+    <data name="SettingsPageGeneral">
+        <value>Общее</value>
+    </data>
+    <data name="SettingsPageAppearence">
+        <value>Внешний вид</value>
+    </data>
+    <data name="SettingsPageAccount">
+        <value>Учетная запись</value>
+    </data>
   
+     <!--ChangeEmailPage-->
+    <data name="ChangeEmailPageTitle">
+        <value>Изменить почту</value>
+    </data>
+    <data name="ChangeEmailPageCurrent">
+        <value>Текущий</value>
+    </data>
+    <data name="ChangeEmailPageNewEmail">
+        <value>Новая почта</value>
+    </data>
+    <data name="ChangeEmailPageInvalidEmail">
+        <value>Некорректная почта</value>
+    </data>
+   
+    
+     <!--ChangeLanguagePage-->
+    <data name="ChangeLanguagePageChooseLanguage">
+        <value>Выберите язык</value>
+    </data>
+    <data name="ChangeLanguagePageChanged">
+        <value>Язык был изменен</value>
+    </data>
+    <data name="ChangeLanguagePageReload">
+        <value>Перезагрузите приложение, чтобы увидеть изменения</value>
+    </data>
+    
+    <data name="SupportPageText">
+        <value>Если у вас возникли вопросы пишите нам:</value>
+    </data>
 </root>

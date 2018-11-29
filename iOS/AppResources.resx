@@ -31,6 +31,9 @@
     <data name="CommonDelete">
         <value>Delete</value>  
     </data>  
+    <data name="CommonDone">
+        <value>Done</value>  
+    </data>  
     
     
     <!-- SubjectsPage -->
@@ -143,7 +146,7 @@
     
     <!--MatchingQEditPage-->
     <data name="MatchingQEditPageQuestion">
-        <value>Question:</value>
+        <value>Question: </value>
     </data>
     <data name="MatchingQEditPageQuestionPlaceholder">
         <value>Your question here</value>
@@ -179,8 +182,183 @@
         <value>This option is unrecoverable</value>
     </data>
     
-    
+    <!--MultipleChoiceQEditPage-->
     <data name="MultipleChoiceQEditPageNumberOfVariants">
         <value>Select the number of variants</value>
     </data>
+    
+    <!--OpenQEditPage-->
+    <data name="OpenQEditPageAnswer">
+        <value>Answer:</value>
+    </data> 
+    <data name="OpenQEditPageYourAnswerHere">
+        <value>Your answer here:</value>
+    </data>
+    
+    <!--AuthorizaiontPage-->
+    <data name="AuthorizaiontPageSignUp">
+        <value>Sign Up</value>
+    </data>
+    <data name="AuthorizaiontPageLogIn">
+        <value>Log In</value>
+    </data>
+    <data name="AuthorizaiontPageAlreadyHaveAnAccount">
+        <value>Already have an account?</value>
+    </data>
+    
+    <!--LogInPage-->
+    <data name="LogInPageEmailOrUsername">
+        <value>Email or Username</value>
+    </data>
+    <data name="LogInPagePassword">
+        <value>Password</value>
+    </data>
+    <data name="LogInPageForgotyYourPassword">
+        <value>Forgot your password?</value>
+    </data>
+    
+    <!--SignUpPage-->
+    <data name="SignUpPagePhoto">
+        <value>PHOTO</value>
+    </data>
+    <data name="SignUpPageYourName">
+        <value>Your name</value>
+    </data>
+    <data name="SignUpPageYourSurname">
+        <value>Your surname</value>
+    </data>
+    <data name="SignUpPageDateOfBirth">
+        <value>Date of birth:</value>
+    </data>
+    <data name="SignUpPageUsername">
+        <value>Username:</value>
+    </data>
+    <data name="SignUpPagePassword">
+        <value>Password:</value>
+    </data>
+    <data name="SignUpPageEmail">
+        <value>Email:</value>
+    </data>
+    <data name="SignUpPageEducation">
+        <value>Education:</value>
+    </data>
+    <data name="SignUpPageBSUIR">
+        <value>BSUIR</value>
+    </data>
+    <data name="SignUpPageSignUp">
+        <value>Sign Up</value>
+    </data>
+    <data name="SignUpPageInvalidUsername">
+        <value>Invalid username</value>
+    </data>
+    
+    <!--ProfilePage-->
+    <data name="ProfilePageMyProfile">
+        <value>My Profile</value>
+    </data>
+    <data name="ProfilePageSettings">
+        <value>Settings</value>
+    </data>
+    <data name="ProfilePageSwipeRight">
+        <value>Swipe right to see menu</value>
+    </data>
+    
+    
+    <!--UserInformationPage-->
+    <data name="UserInformationPageInformation">
+        <value>Information</value>
+    </data>
+    <data name="UserInformationPageBirthday">
+        <value>Birthday</value>
+    </data>
+    <data name="UserInformationPageStudiedAt">
+        <value>Studied at</value>
+    </data>
+    <data name="UserInformationPageContacts">
+        <value>Contacts</value>
+    </data>
+    <data name="UserInformationPageCareer">
+        <value>Career</value>
+    </data>
+    <data name="UserInformationPageStatistics">
+        <value>Statistics</value>
+    </data>
+    <data name="UserInformationPageAchievements">
+        <value>Achievements</value>
+    </data>
+    <data name="UserInformationPageRating">
+        <value>Rating</value>
+    </data>
+    
+     <!--SettingsPage-->
+    <data name="SettingsPageEmail">
+        <value>Email</value>
+    </data>
+    <data name="SettingsPagePassword">
+        <value>Password</value>
+    </data>
+    <data name="SettingsPageUsername">
+        <value>Username</value>
+    </data>
+    <data name="SettingsPageLightMode">
+        <value>LightMode</value>
+    </data>
+    <data name="SettingsPageDarkMode">
+        <value>DarkMode</value>
+    </data>
+    <data name="SettingsPageAbout">
+        <value>About</value>
+    </data>
+    <data name="SettingsPageAskAQuestion">
+        <value>Ask a question</value>
+    </data>
+    <data name="SettingsPageLogOut">
+        <value>Log Out</value>
+    </data>
+    <data name="SettingsPageLanguage">
+        <value>Language</value>
+    </data>
+    <data name="SettingsPageGeneral">
+        <value>General</value>
+    </data>
+    <data name="SettingsPageAppearence">
+        <value>Appearence</value>
+    </data>
+    <data name="SettingsPageAccount">
+        <value>Account</value>
+    </data>
+    
+    
+     <!--ChangeEmailPage-->
+    <data name="ChangeEmailPageTitle">
+        <value>Change email</value>
+    </data>
+    <data name="ChangeEmailPageCurrent">
+        <value>Current</value>
+    </data>
+    <data name="ChangeEmailPageNewEmail">
+        <value>New Email</value>
+    </data>
+    <data name="ChangeEmailPageInvalidEmail">
+        <value>Invalid Email</value>
+    </data>
+   
+   
+     <!--ChangeLanguagePage-->
+    <data name="ChangeLanguagePageChooseLanguage">
+        <value>Choose language</value>
+    </data>
+    <data name="ChangeLanguagePageChanged">
+        <value>Language was changed</value>
+    </data>
+    <data name="ChangeLanguagePageReload">
+        <value>Reload the application to see the changes</value>
+    </data>
+    
+    <data name="SupportPageText">
+        <value>If you have some questions you can contact us at:</value>
+    </data>
+    
+    
+    
 </root>

@@ -16,22 +16,24 @@ namespace test132132.Views.UserProfile
 
             SettingsLayout.BindingContext = viewModel.CurrentUser;
 
-            MessagingCenter.Subscribe<ContentPage, Models.User>(
-                this, "EmailChanged", (obj, userWithNewEmail) =>
+            MessagingCenter.Subscribe<ContentPage, string>(
+                this, "EmailChanged", (obj, email) =>
                 {
-                    viewModel.CurrentUser.Email = userWithNewEmail.Email;
-                    App.UserChanged(viewModel.CurrentUser);
-                    EmailLabel.BindingContext = App.GetCurrentUser();   
+                    App.CurrentUser.Email = email;
+                    Common.UserBase.UpdateUser(App.CurrentUser);
+                    viewModel.CurrentUser = App.CurrentUser;
+                    EmailLabel.BindingContext = viewModel.CurrentUser;
                 });
 
-            MessagingCenter.Subscribe<ContentPage, Models.User>(
-                this, "UserNameChanged", (obj, newUser) =>
+            MessagingCenter.Subscribe<ContentPage, string>(
+                this, "UserNameChanged", (obj, username) =>
                 {
-                    viewModel.CurrentUser.UserName = newUser.UserName;
-                    App.UserChanged(viewModel.CurrentUser);
-                    UserNameLabel.BindingContext = App.GetCurrentUser();
+                    // UserBase.NewUserName(App.CurrentUser.UserName, username)
+                    App.CurrentUser.UserName = username;
+                    Common.UserBase.UpdateUser(App.CurrentUser);
+                    viewModel.CurrentUser = App.CurrentUser;
+                    UserNameLabel.BindingContext = viewModel.CurrentUser;
                 });
-           // EmailLabel.BindingContext = App.GetCurrentUser();
         }
 
         async void Email_Tapped(object sender, EventArgs e)
@@ -86,7 +88,8 @@ namespace test132132.Views.UserProfile
                    ); 
         } 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture) {
-            return App.GetCurrentUser().Email;
+            //return App.GetCurrentUser().Email;
+            return App.CurrentUser.Email;
        } 
     }
 

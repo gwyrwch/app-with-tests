@@ -113,6 +113,12 @@
     <Reference Include="Plugin.Multilingual">
       <HintPath>..\packages\Plugin.Multilingual.1.0.2\lib\Xamarin.iOS10\Plugin.Multilingual.dll</HintPath>
     </Reference>
+    <Reference Include="Plugin.Permissions">
+      <HintPath>..\packages\Plugin.Permissions.3.0.0.12\lib\xamarinios10\Plugin.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Media">
+      <HintPath>..\packages\Xam.Plugin.Media.4.0.1.5\lib\xamarinios10\Plugin.Media.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
@@ -136,6 +142,7 @@
     <BundleResource Include="Resources\DarkThemeEditor.png" />
     <BundleResource Include="Resources\search.png" />
     <BundleResource Include="Resources\welcomeProfileDark.png" />
+    <BundleResource Include="Resources\tempTestsRU.json" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDelegate.cs" />

@@ -17,7 +17,6 @@ namespace test132132.Views.UserProfile.Authorization
                     ImagePathChanged();
                 }
             );
-
         }
 
         void ImagePathChanged()

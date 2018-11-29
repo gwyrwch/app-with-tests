@@ -37,7 +37,7 @@ namespace test132132.Views.UserProfile.Settings
             App.settings.Language = newLanguage;
             App.SaveSettings();
 
-            await DisplayAlert("Language was changed", "Reload the application to see the changes", "OK");
+            await DisplayAlert(iOS.AppResources.ChangeLanguagePageChanged, iOS.AppResources.ChangeLanguagePageReload, iOS.AppResources.CommonOk);
             await Navigation.PopAsync();
         }
     }

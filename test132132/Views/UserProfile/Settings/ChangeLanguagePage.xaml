@@ -1,7 +1,13 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="test132132.Views.UserProfile.Settings.ChangeLanguagePage" Title="Choose language">
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="test132132.Views.UserProfile.Settings.ChangeLanguagePage" 
+    xmlns:i18n="clr-namespace:test132132.iOS.Helpers"
+    Title="{i18n:Translate ChangeLanguagePageChooseLanguage}"
+>
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Save" Clicked="Save_Clicked"/>
+        <ToolbarItem Text="{i18n:Translate CommonSave}" Clicked="Save_Clicked"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <TableView Intent="Settings" BackgroundColor="{DynamicResource SomeLightBackgroundColor}">
@@ -33,7 +39,7 @@
                                  Padding="30,0,10,0"
                     >
                         <Label  VerticalOptions="Center"
-                                Text="Russian"
+                                Text="Русский"
                                 TextColor="{DynamicResource MainColor}"
                                 HorizontalOptions="Start"
                                 WidthRequest="100"
