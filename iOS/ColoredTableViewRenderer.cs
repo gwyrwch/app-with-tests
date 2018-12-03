@@ -32,6 +32,7 @@ namespace test132132.iOS
                 var coloredTableView = Element as ColoredTableView;
 
                 tableView.SeparatorColor = coloredTableView.SeparatorColor.ToUIColor();
+
             }
         }
     }

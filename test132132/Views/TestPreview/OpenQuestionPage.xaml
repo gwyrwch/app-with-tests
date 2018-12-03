@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="test132132.Views.TestPreview.OpenQuestionPage">
     <ContentPage.Content>
-        <StackLayout></StackLayout>
+        <StackLayout>
+            <StackLayout HorizontalOptions="FillAndExpand" 
+                         VerticalOptions="FillAndExpand"
+                         Spacing="10"
+            >
+                <Label x:Name="valueLabel" 
+                       Text="perhaps a much, much, much, much, much, much, much, much, much longer text" 
+                       LineBreakMode="WordWrap" 
+                />
+                <Entry Placeholder="Your answer here"/>
+            </StackLayout>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

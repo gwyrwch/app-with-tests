@@ -6,6 +6,7 @@ using test132132.Views;
 using System.Collections.ObjectModel;
 using Newtonsoft.Json;
 using UIKit;
+using test132132.Views.TestPreview;
 
 namespace test132132
 {
@@ -35,10 +36,6 @@ namespace test132132
             switch (Device.RuntimePlatform)
             {
                 case Device.iOS:
-                    itemsPage = new NavigationPage(new ItemsPage())
-                    {
-                        Title = ""
-                    };
                     subjectsPage = new NavigationPage(new SubjectsPage())
                     {
                         Title = iOS.AppResources.MainPageTests
@@ -54,7 +51,8 @@ namespace test132132
                         Title = iOS.AppResources.MainPageProfile,
                         Icon = "tab_feed.png"
                     };
-                    itemsPage.Icon = "tab_feed.png";
+                    //subjectsPage.Icon = "tab_feed.png";
+                    //editorPage.Icon = "tab_feed.png";
                     subjectsPage.Icon = "tab_feed.png";
                     editorPage.Icon = "tab_feed.png";
                     //profilePage.Icon = "tttt.svg";
@@ -64,6 +62,7 @@ namespace test132132
             Children.Add(authPage);
             Children.Add(editorPage);
             Children.Add(subjectsPage);
+            Children.Add(new OpenQuestionPage());
 
             Title = Children[0].Title;
         }

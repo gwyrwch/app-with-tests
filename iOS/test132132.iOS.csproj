@@ -143,6 +143,16 @@
     <BundleResource Include="Resources\search.png" />
     <BundleResource Include="Resources\welcomeProfileDark.png" />
     <BundleResource Include="Resources\tempTestsRU.json" />
+    <BundleResource Include="Resources\edit1.png" />
+    <BundleResource Include="Resources\edit2.png" />
+    <BundleResource Include="Resources\edit3.png" />
+    <BundleResource Include="Resources\test1.png" />
+    <BundleResource Include="Resources\test2.png" />
+    <BundleResource Include="Resources\test3.png" />
+    <BundleResource Include="Resources\user1.png" />
+    <BundleResource Include="Resources\user2.png" />
+    <BundleResource Include="Resources\40.png" />
+    <BundleResource Include="Resources\kek.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDelegate.cs" />

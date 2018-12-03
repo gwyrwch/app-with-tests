@@ -14,6 +14,7 @@ namespace test132132
             InitializeComponent();
             SubjectPicker.ItemsSource = App.Subjects;
             TimeModePicker.ItemsSource = Common.Mappers.AvaliableTimeModes();
+           // NavigationPage.SetBackButtonTitle(this, "kkek"); //this work fixme
 
             MessagingCenter.Subscribe<ContentPage, Models.Question>(
                 this, "CreateNewQuestion", (obj, question) =>
