@@ -652,5 +652,29 @@ namespace test132132.iOS {
                 return ResourceManager.GetString("SupportPageText", resourceCulture);
             }
         }
+        
+        internal static string OpenQuestionPageAnswerPlaceholder {
+            get {
+                return ResourceManager.GetString("OpenQuestionPageAnswerPlaceholder", resourceCulture);
+            }
+        }
+        
+        internal static string OpenQuestionPageAnswer {
+            get {
+                return ResourceManager.GetString("OpenQuestionPageAnswer", resourceCulture);
+            }
+        }
+        
+        internal static string OpenQuestionPageEmptyEntry {
+            get {
+                return ResourceManager.GetString("OpenQuestionPageEmptyEntry", resourceCulture);
+            }
+        }
+        
+        internal static string OpenQuestionPageEmptyEntryType {
+            get {
+                return ResourceManager.GetString("OpenQuestionPageEmptyEntryType", resourceCulture);
+            }
+        }
     }
 }

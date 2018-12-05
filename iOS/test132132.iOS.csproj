@@ -153,6 +153,7 @@
     <BundleResource Include="Resources\user2.png" />
     <BundleResource Include="Resources\40.png" />
     <BundleResource Include="Resources\kek.png" />
+    <BundleResource Include="Resources\launchscreen\spscreen.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDelegate.cs" />
@@ -186,6 +187,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>AppResources.ru.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\launchscreen\" />
   </ItemGroup>
   <Import Project="..\test132132\test132132.projitems" Label="Shared" Condition="Exists('..\test132132\test132132.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

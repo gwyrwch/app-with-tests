@@ -9,18 +9,14 @@ namespace test132132.Views.TestPreview
     {
         private Test test;
         private int v;
-        private int numCorrectAns;
 
-        public MatchingQuestionPage()
-        {
-            InitializeComponent();
-        }
-
-        public MatchingQuestionPage(Test test, int v, int numCorrectAns)
+        public MatchingQuestionPage(Test test, int v, Models.TestSolving.TestResults testResults)
         {
             this.test = test;
             this.v = v;
-            this.numCorrectAns = numCorrectAns;
+
+
+            InitializeComponent();
         }
     }
 }

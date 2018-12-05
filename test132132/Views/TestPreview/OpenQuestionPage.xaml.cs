@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using Xamarin.Forms;
 
 namespace test132132.Views.TestPreview
@@ -8,14 +6,67 @@ namespace test132132.Views.TestPreview
     public partial class OpenQuestionPage : ContentPage
     {
         Models.Test test;
-        int curQ, numCorrectAns;
-        public OpenQuestionPage(Models.Test test, int currentQuestion, int numberOfCorrectAnswers)
+        int curQ;
+        Models.TestSolving.TestResults testResults;
+        DateTime startTime;
+        TimeSpan limit;
+        bool answered;
+
+        public OpenQuestionPage(Models.Test test, int currentQuestion, Models.TestSolving.TestResults testResults)
         {
+            this.testResults = testResults;
+            this.test = test;
+            this.curQ = currentQuestion;
+            startTime = DateTime.Now;
+            answered = false;
+
             InitializeComponent();
 
-            this.test = test;
-            curQ = currentQuestion;
-            numCorrectAns = numberOfCorrectAnswers;
+            limit = test.TimeLimit.Value;
+            if (test.Mode == Models.TimeMode.limitForQuestion)
+            {
+                TimeLeftSlider.Minimum = 0;
+                TimeLeftSlider.Maximum = limit.TotalSeconds;
+                TimeLeftSlider.Value = limit.TotalSeconds;
+
+                Device.StartTimer(
+                    TimeSpan.FromSeconds(0.1),
+                    () => {
+                        if (answered)
+                            return false;
+                        if (PassedTime() >= limit)
+                        {
+                            TimeExpired();
+                            return false;
+                        }
+
+                        TimeLeftSlider.Value = (limit - PassedTime()).TotalSeconds;
+                        return true;
+                    }
+                );
+            } else {
+                TimeLeftSlider.Minimum = 0;
+                TimeLeftSlider.Maximum = limit.TotalSeconds;
+                TimeLeftSlider.Value = (limit - testResults.UsedTime).TotalSeconds;
+
+                Device.StartTimer(
+                    TimeSpan.FromSeconds(0.1),
+                    () =>
+                    {
+                        if (answered)
+                            return false;
+                        if (PassedTime() + testResults.UsedTime >= limit)
+                        {
+                            TestTimeExpired();
+                            return false;
+                        }
+
+                        TimeLeftSlider.Value = (limit - testResults.UsedTime - PassedTime()).TotalSeconds;
+                        return true;
+                    }
+                );
+            }
+
             QuestionLabel.Text = string.Join("", 
                 (currentQuestion + 1).ToString(), 
                 ". ",
@@ -23,33 +74,52 @@ namespace test132132.Views.TestPreview
             );
         }
 
-        public async void Answer_Clicked(object sender, EventArgs e)
+        TimeSpan PassedTime()
+        {
+            return DateTime.Now - startTime;
+        }
+
+        void TimeExpired()
+        {
+            testResults.Update(test[curQ], limit, false);
+            NextQuestion();
+        }
+
+        async void TestTimeExpired()
+        {
+            testResults.UsedTime = limit;
+            Page nextPage = new ResultsPage(
+                test, testResults
+            );
+            NavigationPage.SetHasBackButton(nextPage, false);
+            await Navigation.PushAsync(nextPage);
+        }
+
+        public void Answer_Clicked(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(AnswerEntry.Text))
-            {
-                await DisplayAlert("", "", "ok");
                 return;
-            }
+
+            answered = true;
 
             if (AnswerEntry.Text.ToLower() == ((Models.OpenQuestion)test[curQ]).Answer.ToLower())
-                numCorrectAns += 1;
+            {
+                testResults.Update(test[curQ], PassedTime(), true);
+            } else {
+                testResults.Update(test[curQ], PassedTime(), false);
+            }
 
-            if (test.Count == curQ)
-                return;
-            //await Navigation.PushAsync(new NewItemPage(test, numCorrectAns)); //todo
-            else if (test[curQ + 1].QType == 3)
-                await Navigation.PushAsync(new OpenQuestionPage(test, curQ + 1, numCorrectAns));
-            else if (test[curQ + 1].QType == 2)
-                await Navigation.PushAsync(new MatchingQuestionPage(test, curQ + 1, numCorrectAns));
-            else if (test[curQ + 1].QType == 1)
-                await Navigation.PushAsync(new MultipleChoiceQuestionPage(test, curQ + 1, numCorrectAns));
+            NextQuestion();
+        }
+
+        async void NextQuestion()
+        {
+            Page nextPage = Models.TestSolving.TestKeeper.NextPage(test, curQ, testResults);
+            NavigationPage.SetHasBackButton(nextPage, false);
+            await Navigation.PushAsync(nextPage);
         }
     }
 }
-
-
-
-
 
 //lw.ItemsSource = new[]
 //{

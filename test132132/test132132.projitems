@@ -130,6 +130,11 @@
       <DependentUpon>MatchingQuestionPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Common\ListViewWithoutScroll.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\TestPreview\ResultsPage.xaml.cs">
+      <DependentUpon>ResultsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\TestSolving\TestResults.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\TestSolving\TestKeeper.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml" />
@@ -225,6 +230,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\TestPreview\ResultsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Common\" />
@@ -241,5 +250,6 @@
     <Folder Include="$(MSBuildThisFileDirectory)Views\TestPreview\" />
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />
     <Folder Include="$(MSBuildThisFileDirectory)Views\ContentViews\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Models\TestSolving\" />
   </ItemGroup>
 </Project>

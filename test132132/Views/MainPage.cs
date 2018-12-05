@@ -63,18 +63,35 @@ namespace test132132
             Children.Add(authPage);
             Children.Add(editorPage);
             Children.Add(subjectsPage);
-            Children.Add(new NavigationPage(new MultipleChoiceQuestionPage(
-                new Models.Test { 
-                    new Models.MultipleChoiceQuestion(
-                        "123", 123, new
-                        List<Models.Variant> { 
-                            new Models.Variant("1", true), new Models.Variant("2", false) 
-                        } )
-                },
-                0
-                ,
-                0
+            //Children.Add(new NavigationPage(new MultipleChoiceQuestionPage(
+            //    new Models.Test("kek", "mda", TimeSpan.FromSeconds(10), Models.TimeMode.limitForQuestion) { 
+            //        new Models.MultipleChoiceQuestion(
+            //            "123", 123, new
+            //            List<Models.Variant> { 
+            //                new Models.Variant("1", true), new Models.Variant("2", false) 
+            //            } )
+            //    },
+            //    0
+            //    ,
+            //    new Models.TestSolving.TestResults
+            //    {
+            //        CorrectAnswers = 0, TotalPoints = 0, UsedTime = TimeSpan.FromSeconds(0)
+            //    }
 
+            //)));
+
+            Children.Add(new NavigationPage(new OpenQuestionPage(
+                new Models.Test("kek", "mda", TimeSpan.FromSeconds(30), Models.TimeMode.limitForTest) {
+                    new Models.OpenQuestion("Blaa?", 12, "bla"),
+                    new Models.OpenQuestion("Keks?", 12, "kek")
+                },
+                0,
+                new Models.TestSolving.TestResults
+                {
+                    CorrectAnswers = 0,
+                    TotalPoints = 0,
+                    UsedTime = TimeSpan.FromSeconds(0)
+                }
             )));
 
             Title = Children[0].Title;

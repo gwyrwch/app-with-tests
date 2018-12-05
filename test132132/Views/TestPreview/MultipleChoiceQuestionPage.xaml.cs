@@ -10,15 +10,14 @@ namespace test132132.Views.TestPreview
     {
         private Test test;
         private int curQ;
-        private int numCorrectAns;
 
         ObservableCollection<Variant> Variants;
 
-        public MultipleChoiceQuestionPage(Test test, int currentQuestion, int numCorrectAns)
+        public MultipleChoiceQuestionPage(Test test, int currentQuestion, Models.TestSolving.TestResults testResults)
         {
             this.test = test;
             this.curQ = currentQuestion;
-            this.numCorrectAns = numCorrectAns;
+
             Variants = new ObservableCollection<Variant>(((MultipleChoiceQuestion)test[curQ]).Variants);
 
             InitializeComponent();

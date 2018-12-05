@@ -7,6 +7,12 @@
     <ContentPage.Content>
         <StackLayout BackgroundColor="{DynamicResource LightBackgroundColor}">
             <StackLayout Padding="5,0,0,0" BackgroundColor="{DynamicResource LightBackgroundColor}">
+                <Slider 
+                    x:Name="TimeLeftSlider"
+                    MinimumTrackColor="#ff3b30"
+                    MaximumTrackColor="#4cd964"
+                    IsEnabled="false"
+                />
                 <Label x:Name="QuestionLabel" 
                        LineBreakMode="WordWrap" 
                 />
