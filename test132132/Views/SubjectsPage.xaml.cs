@@ -24,7 +24,15 @@ namespace test132132
             );
         }
 
-        public void RenderTableView() {
+        public void RenderListView() 
+        {
+            var groups = viewModel.testPreview.SplitBySubject();    //todo
+
+
+        }
+
+        public void RenderTableView() 
+        {
             SubjectsTableView.Root.Clear();
             var groups = viewModel.testPreview.SplitBySubject();
             TableSection lastSection = null;

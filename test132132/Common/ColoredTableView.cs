@@ -18,6 +18,19 @@ namespace test132132.Common
             }
         }
 
+        //public static BindableProperty SectionBackgroundColorProperty = BindableProperty.Create("BackgroundColor", typeof(Color), typeof(ColoredTableView), Color.DarkRed);
+        //public Color SectionBackgroundColor
+        //{
+        //    get
+        //    {
+        //        return (Color)GetValue(SectionBackgroundColorProperty);
+        //    }
+        //    set
+        //    {
+        //        SetValue(SectionBackgroundColorProperty, value);
+        //    }
+        //}
+
 
     }
 }

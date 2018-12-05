@@ -167,6 +167,7 @@
     <Compile Include="AppResources.ru.Designer.cs">
       <DependentUpon>AppResources.ru.resx</DependentUpon>
     </Compile>
+    <Compile Include="ListViewWithoutScrollRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Entitlements.plist" />

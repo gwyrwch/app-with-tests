@@ -21,6 +21,8 @@ namespace test132132.iOS
             var tableView = Control as UITableView;
             var coloredTableView = Element as ColoredTableView;
             tableView.SeparatorColor = coloredTableView.SeparatorColor.ToUIColor();
+            tableView.SectionIndexBackgroundColor = UIColor.Red;
+            tableView.TintColor = tableView.SectionIndexColor  = UIColor.Red;
         }
 
         protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
@@ -35,5 +37,7 @@ namespace test132132.iOS
 
             }
         }
+
     }
+
 }

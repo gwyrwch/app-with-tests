@@ -89,7 +89,7 @@
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
-            </ListView>            
+            </ListView>  
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

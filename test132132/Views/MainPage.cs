@@ -7,6 +7,7 @@ using System.Collections.ObjectModel;
 using Newtonsoft.Json;
 using UIKit;
 using test132132.Views.TestPreview;
+using System.Collections.Generic;
 
 namespace test132132
 {
@@ -62,7 +63,19 @@ namespace test132132
             Children.Add(authPage);
             Children.Add(editorPage);
             Children.Add(subjectsPage);
-            Children.Add(new OpenQuestionPage());
+            Children.Add(new NavigationPage(new MultipleChoiceQuestionPage(
+                new Models.Test { 
+                    new Models.MultipleChoiceQuestion(
+                        "123", 123, new
+                        List<Models.Variant> { 
+                            new Models.Variant("1", true), new Models.Variant("2", false) 
+                        } )
+                },
+                0
+                ,
+                0
+
+            )));
 
             Title = Children[0].Title;
         }

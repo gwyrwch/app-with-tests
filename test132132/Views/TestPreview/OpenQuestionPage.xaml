@@ -1,16 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="test132132.Views.TestPreview.OpenQuestionPage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="test132132.Views.TestPreview.OpenQuestionPage" 
+             xmlns:kek="clr-namespace:test132132.Views.ContentViews"
+             BackgroundColor="{DynamicResource LightBackgroundColor}"
+             xmlns:local="clr-namespace:test132132.Common"
+             >
     <ContentPage.Content>
-        <StackLayout>
-            <StackLayout HorizontalOptions="FillAndExpand" 
-                         VerticalOptions="FillAndExpand"
-                         Spacing="10"
-            >
-                <Label x:Name="valueLabel" 
-                       Text="perhaps a much, much, much, much, much, much, much, much, much longer text" 
+        <StackLayout BackgroundColor="{DynamicResource LightBackgroundColor}">
+            <StackLayout Padding="5,0,0,0" BackgroundColor="{DynamicResource LightBackgroundColor}">
+                <Label x:Name="QuestionLabel" 
                        LineBreakMode="WordWrap" 
                 />
-                <Entry Placeholder="Your answer here"/>
+                <local:LineEntry x:Name="AnswerEntry"
+                   HorizontalOptions="FillAndExpand"
+                   PlaceholderColor="{DynamicResource Silver}"
+                   HorizontalTextAlignment="Start"
+                   Placeholder="Your answer here"
+                   BorderColor="Transparent" 
+                   TextColor="{DynamicResource TextColor}"
+                   VerticalOptions="CenterAndExpand"                   
+                /> 
+                <Button 
+                    Text="Answer"
+                    BackgroundColor="{DynamicResource LightBackgroundColor}"
+                    BorderRadius="10"
+                    BorderWidth="1"
+                    BorderColor="{DynamicResource MainColor}"
+                    Margin="10"
+                    TextColor="{DynamicResource MainColor}"
+                    Clicked="Answer_Clicked"
+               />
+              <!-- <ListView x:Name="lw" 
+                         IsGroupingEnabled="true" 
+                         BackgroundColor="{DynamicResource LightBackgroundColor}" 
+                         RowHeight="45" 
+                         HasUnevenRows="true"
+                         SeparatorVisibility="None"
+                         SeparatorColor="Transparent"                          
+               >
+                    <ListView.GroupHeaderTemplate>
+                        <DataTemplate>
+                            <ViewCell>                                
+                                <ViewCell.Height>
+                                    <OnPlatform x:TypeArguments="x:Double" iOS="28"/>
+                                </ViewCell.Height>
+                                <local:EvolveGroupHeaderView BackgroundColor="{DynamicResource SomeLightBackgroundColor}"/>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.GroupHeaderTemplate>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell Height="45">
+                                <StackLayout HeightRequest="5" BackgroundColor="Red"/>
+                                <Label Text="suk" />
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>    
+               </ListView>-->
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

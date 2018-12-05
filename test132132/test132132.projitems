@@ -120,6 +120,16 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\UserProfile\Settings\ChangeLanguagePage.xaml.cs">
       <DependentUpon>ChangeLanguagePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ContentViews\EvolveGroupHeader.xaml.cs">
+      <DependentUpon>EvolveGroupHeader.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\TestPreview\MultipleChoiceQuestionPage.xaml.cs">
+      <DependentUpon>MultipleChoiceQuestionPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\TestPreview\MatchingQuestionPage.xaml.cs">
+      <DependentUpon>MatchingQuestionPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Common\ListViewWithoutScroll.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml" />
@@ -203,6 +213,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ContentViews\EvolveGroupHeader.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\TestPreview\MultipleChoiceQuestionPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\TestPreview\MatchingQuestionPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Common\" />
@@ -218,5 +240,6 @@
     <Folder Include="$(MSBuildThisFileDirectory)Views\UserProfile\Authorization\" />
     <Folder Include="$(MSBuildThisFileDirectory)Views\TestPreview\" />
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\ContentViews\" />
   </ItemGroup>
 </Project>

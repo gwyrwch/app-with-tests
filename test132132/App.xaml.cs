@@ -53,7 +53,7 @@ namespace test132132
         {
             Services.Settings defaultSettings = new Services.Settings { 
                 Language = "Russian", 
-                Theme = "LightTheme"
+                Theme = "DarkTheme"
             };
 
             File.WriteAllText(
@@ -75,7 +75,7 @@ namespace test132132
                 Current.Resources["TextColor"] = Color.Black;
                 Current.Resources["SeparatorColor"] = Color.Silver;
                 Current.Resources["BottomBarBackgroundColor"] = Color.Default;
-                Current.Resources["BarTextColor"] = Color.Gray;
+                Current.Resources["BarTextColor"] = Color.Default;
 
                 MainImagePath = "GreyBlue.png";
                 EditorImagePath = "Editor.png";

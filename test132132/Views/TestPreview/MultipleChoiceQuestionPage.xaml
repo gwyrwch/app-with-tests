@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="test132132.Views.TestPreview.MultipleChoiceQuestionPage"
+             xmlns:helpers="clr-namespace:test132132.Common"
+>
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="{DynamicResource LightBackgroundColor}">
+            <StackLayout Padding="5,0,0,0" BackgroundColor="{DynamicResource LightBackgroundColor}">
+                <Label x:Name="QuestionLabel" 
+                       LineBreakMode="WordWrap" 
+                />
+                <helpers:ListViewWithoutScroll x:Name="AnswersListView" 
+                          BackgroundColor="{DynamicResource LightBackgroundColor}"
+                          SeparatorColor="{DynamicResource SeparatorColor}"
+                          
+                >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Label Text="{Binding Answer}"/>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </helpers:ListViewWithoutScroll>
+            </StackLayout>
+       </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
