@@ -25,8 +25,8 @@ namespace test132132.Views.TestPreview
 
             EvaluateResultQuality(
                 usedTime / totalTime, 
-                userPoints / totalPoints.Value,
-                testResults.CorrectAnswers / test.Count
+                (double)userPoints / totalPoints.Value,
+                (double)testResults.CorrectAnswers / test.Count
             );
 
             PointsAmountLabel.Text = string.Format(

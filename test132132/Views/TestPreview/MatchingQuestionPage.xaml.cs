@@ -182,9 +182,8 @@ namespace test132132.Views.TestPreview
         async void NextQuestion()
         {
             Page nextPage = Models.TestSolving.TestKeeper.NextPage(test, curQ, testResults);
-            NavigationPage.SetHasBackButton(nextPage, false);
             await Navigation.PushAsync(nextPage);
-            Navigation.RemovePage(Navigation.NavigationStack[0]);
+            Navigation.RemovePage(Navigation.NavigationStack[Navigation.NavigationStack.Count - 2]);
         }
 
     }

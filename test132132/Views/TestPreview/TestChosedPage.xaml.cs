@@ -23,7 +23,10 @@ namespace test132132.Views.TestPreview
             TestTitleLabel.Text = test.Title;
             QuestionsNumberLabel.Text = test.Count.ToString();
 
-            var totalTimeInSeconds = (test.Mode == Models.TimeMode.limitForTest ? 1 : test.Count) * test.TimeLimit.Value.TotalSeconds;
+            var totalTimeInSeconds = (
+                test.Mode == Models.TimeMode.limitForTest ? 1 : test.Count
+            ) * test.TimeLimit.Value.TotalSeconds;
+
             int hours = (int)totalTimeInSeconds / 3600;
             int minutes = (int)(totalTimeInSeconds - hours * 3600) / 60;
             int seconds = (int)(totalTimeInSeconds - minutes * 60 - hours * 3600);
@@ -37,12 +40,16 @@ namespace test132132.Views.TestPreview
             string secondsStr = makeString(seconds, "sec");
 
             RequiredTimeLabel.Text = string.Join("", hoursStr, minutesStr, secondsStr);
-
         }
 
         async void Solve_Clicked(object sender, EventArgs e)
         {
-            await DisplayAlert("", "", "");
+            Page nextPage = Models.TestSolving.TestKeeper.NextPage(
+                test, -1, 
+                new Models.TestSolving.TestResults()
+            );
+            await Navigation.PushAsync(nextPage);
+            Navigation.RemovePage(Navigation.NavigationStack[Navigation.NavigationStack.Count - 2]);
         }
     }
 }

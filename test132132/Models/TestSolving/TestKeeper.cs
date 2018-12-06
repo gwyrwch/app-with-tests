@@ -10,13 +10,18 @@ namespace test132132.Models.TestSolving
         { 
             if (test.Count == curQ + 1)
                 return new ResultsPage(test, testResults);
-            else if (test[curQ + 1].QType == 3)
-                return new OpenQuestionPage(test, curQ + 1, testResults);
-            else if (test[curQ + 1].QType == 2)
-                return new MatchingQuestionPage(test, curQ + 1, testResults);
-            else if (test[curQ + 1].QType == 1)
-                return new MultipleChoiceQuestionPage(test, curQ + 1, testResults);
-            return null;
+
+            Page nextPage = null; 
+
+            if (test[curQ + 1].QType == 3)
+                nextPage = new OpenQuestionPage(test, curQ + 1, testResults);
+            if (test[curQ + 1].QType == 2)
+                nextPage = new MatchingQuestionPage(test, curQ + 1, testResults);
+            if (test[curQ + 1].QType == 1)
+                nextPage = new MultipleChoiceQuestionPage(test, curQ + 1, testResults);
+
+            NavigationPage.SetHasBackButton(nextPage, false);
+            return nextPage;
         }
     }
 }

@@ -29,7 +29,6 @@ namespace test132132.Models
             Id = new Random(Seed: (int)DateTime.UtcNow.Ticks).Next();
         }
 
-
         protected override void InsertItem(int index, Question item)
         {
             item.TestId = Id;

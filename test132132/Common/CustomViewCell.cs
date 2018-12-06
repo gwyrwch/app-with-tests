@@ -5,8 +5,11 @@ namespace test132132.Common
 {
     public class CustomViewCell : ViewCell
     {
+        public Models.Test test;
         public CustomViewCell(Models.Test test, int index)
         {
+            this.test = test;
+
             var testIndexLabel = new Label {
                 TextColor = (Color)Application.Current.Resources["MainColor"],
                 Text = String.Format(iOS.AppResources.TestViewCellTestTemplate, index)

@@ -1,13 +1,7 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 
 using Xamarin.Forms;
 using test132132.Views;
-using System.Collections.ObjectModel;
-using Newtonsoft.Json;
-using UIKit;
-using test132132.Views.TestPreview;
-using System.Collections.Generic;
 
 namespace test132132
 {
@@ -68,67 +62,6 @@ namespace test132132
             Children.Add(authPage);
             Children.Add(editorPage);
             Children.Add(subjectsPage);
-            //Children.Add(new NavigationPage(new MultipleChoiceQuestionPage(
-            //    new Models.Test("kek", "mda", TimeSpan.FromSeconds(10), Models.TimeMode.limitForQuestion) { 
-            //        new Models.MultipleChoiceQuestion(
-            //            "123", 123, new
-            //            List<Models.Variant> { 
-            //                new Models.Variant("1", true), new Models.Variant("2", false) 
-            //            } )
-            //    },
-            //    0
-            //    ,
-            //    new Models.TestSolving.TestResults
-            //    {
-            //        CorrectAnswers = 0, TotalPoints = 0, UsedTime = TimeSpan.FromSeconds(0)
-            //    }
-
-            //)));
-
-
-
-            Children.Add(new NavigationPage(new MatchingQuestionPage(
-                new Models.Test("kek", "mda", TimeSpan.FromSeconds(60), Models.TimeMode.limitForQuestion) {
-                    new Models.MatchingQuestion("123", 12,
-                        new List<string> {"1", "2", "3"},
-                        new List<string> {"c", "a", "b"},
-                        new List<int?> {1, 2, 0}
-                    )
-                },
-                0,
-                new Models.TestSolving.TestResults
-                {
-                    CorrectAnswers = 0,
-                    TotalPoints = 0,
-                    UsedTime = TimeSpan.FromSeconds(0)
-                }
-
-            )));
-
-            Children.Add(new NavigationPage(new TestChosedPage(
-                new Models.Test("kek", "mda", TimeSpan.FromSeconds(4005), Models.TimeMode.limitForQuestion) {
-                    new Models.MatchingQuestion("123", 12,
-                        new List<string> {"1", "2", "3"},
-                        new List<string> {"c", "a", "b"},
-                        new List<int?> {1, 2, 0}
-                    )
-                }
-            )));
-
-
-            //Children.Add(new NavigationPage(new OpenQuestionPage(
-            //    new Models.Test("kek", "mda", TimeSpan.FromSeconds(30), Models.TimeMode.limitForTest) {
-            //        new Models.OpenQuestion("Blaa?", 12, "bla"),
-            //        new Models.OpenQuestion("Keks?", 12, "kek")
-            //    },
-            //    0,
-            //    new Models.TestSolving.TestResults
-            //    {
-            //        CorrectAnswers = 0,
-            //        TotalPoints = 0,
-            //        UsedTime = TimeSpan.FromSeconds(0)
-            //    }
-            //)));
 
             Title = Children[0].Title;
         }
@@ -138,7 +71,6 @@ namespace test132132
             Children.Clear();
 
             Page subjectsPage = null, editorPage = null;
-
             Page profilePage = null;
 
             switch (Device.RuntimePlatform)
