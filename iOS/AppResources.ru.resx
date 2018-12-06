@@ -370,6 +370,10 @@
         <value>Не оставляйте поле пустым</value>
     </data> 
     
+    <!--TestChoosedPage-->
+    <data name="TestChoosedPageSolve">
+        <value>Решить тест</value>
+    </data>
     
     
 </root>

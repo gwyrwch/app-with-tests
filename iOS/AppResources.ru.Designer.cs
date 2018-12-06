@@ -676,5 +676,11 @@ namespace test132132.iOS {
                 return ResourceManager.GetString("OpenQuestionPageEmptyEntryType", resourceCulture);
             }
         }
+        
+        internal static string TestChoosedPageSolve {
+            get {
+                return ResourceManager.GetString("TestChoosedPageSolve", resourceCulture);
+            }
+        }
     }
 }

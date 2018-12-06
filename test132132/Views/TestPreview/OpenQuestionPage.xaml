@@ -8,7 +8,7 @@
              xmlns:i18n="clr-namespace:test132132.iOS.Helpers"
 >
     <ContentPage.Content>
-        <StackLayout Padding="5,0,0,0" VerticalOptions="FillAndExpand">
+        <StackLayout Padding="5,30"  VerticalOptions="FillAndExpand">
             <Slider 
                 x:Name="TimeLeftSlider"
                 MinimumTrackColor="#4cd964"

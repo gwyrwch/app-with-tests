@@ -120,9 +120,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\UserProfile\Settings\ChangeLanguagePage.xaml.cs">
       <DependentUpon>ChangeLanguagePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Views\ContentViews\EvolveGroupHeader.xaml.cs">
-      <DependentUpon>EvolveGroupHeader.xaml</DependentUpon>
-    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\TestPreview\MultipleChoiceQuestionPage.xaml.cs">
       <DependentUpon>MultipleChoiceQuestionPage.xaml</DependentUpon>
     </Compile>
@@ -135,6 +132,10 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Models\TestSolving\TestResults.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\TestSolving\TestKeeper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TestSolving\MatchingQSolveViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\TestPreview\TestChosedPage.xaml.cs">
+      <DependentUpon>TestChosedPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml" />
@@ -218,10 +219,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ContentViews\EvolveGroupHeader.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\TestPreview\MultipleChoiceQuestionPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
@@ -231,6 +228,10 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\TestPreview\ResultsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\TestPreview\TestChosedPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -249,7 +250,7 @@
     <Folder Include="$(MSBuildThisFileDirectory)Views\UserProfile\Authorization\" />
     <Folder Include="$(MSBuildThisFileDirectory)Views\TestPreview\" />
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Views\ContentViews\" />
     <Folder Include="$(MSBuildThisFileDirectory)Models\TestSolving\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\TestSolving\" />
   </ItemGroup>
 </Project>

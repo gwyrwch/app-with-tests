@@ -11,7 +11,10 @@
         <ToolbarItem Text="{i18n:Translate CommonSave}" Clicked="Save_Clicked"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout Spacing="10" Padding="15" BackgroundColor="{DynamicResource SomeLightBackgroundColor}">
+        <StackLayout Spacing="10" 
+             Padding="20" 
+             BackgroundColor="{DynamicResource SomeLightBackgroundColor}"
+        >
             <Label
                 Text="{i18n:Translate MatchingQEditPageQuestion}" 
                 FontSize="18"

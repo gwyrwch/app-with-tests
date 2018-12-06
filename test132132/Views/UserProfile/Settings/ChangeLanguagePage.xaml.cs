@@ -25,7 +25,7 @@ namespace test132132.Views.UserProfile.Settings
             EnglishPlus.IsVisible = false;
         }
 
-        async void Save_Clicked(object sender, EventArgs eventArgs)
+        void Save_Clicked(object sender, EventArgs eventArgs)
         {
             string newLanguage;
             if (RussianPlus.IsVisible)
@@ -34,11 +34,15 @@ namespace test132132.Views.UserProfile.Settings
             } else {
                 newLanguage = "English";
             }
+
             App.settings.Language = newLanguage;
             App.SaveSettings();
 
-            await DisplayAlert(iOS.AppResources.ChangeLanguagePageChanged, iOS.AppResources.ChangeLanguagePageReload, iOS.AppResources.CommonOk);
-            await Navigation.PopAsync();
+            App.SetLanguage(newLanguage);
+            MessagingCenter.Send<SettingsPage>(new SettingsPage(), "RenderingAsked");
+
+            //await DisplayAlert(iOS.AppResources.ChangeLanguagePageChanged, iOS.AppResources.ChangeLanguagePageReload, iOS.AppResources.CommonOk);
+            //await Navigation.PopAsync();
         }
     }
 }

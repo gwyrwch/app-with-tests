@@ -23,6 +23,11 @@ namespace test132132
                     ChangeBottomBar();
                 }
             );
+            MessagingCenter.Subscribe<Views.UserProfile.SettingsPage>(this, "RenderingAsked",
+                (obj) => {
+                    UpdateAllChildren();
+                }
+            );
 
 
             UnitTests.InitUnitTests.Run();
@@ -30,7 +35,7 @@ namespace test132132
             if (!File.Exists(App.userTestsPath))
                 File.WriteAllText(App.userTestsPath, "[]");
 
-            Page itemsPage, subjectsPage = null, editorPage = null;
+            Page subjectsPage = null, editorPage = null;
 
             Page authPage = null;
 
@@ -80,10 +85,15 @@ namespace test132132
 
             //)));
 
-            Children.Add(new NavigationPage(new OpenQuestionPage(
-                new Models.Test("kek", "mda", TimeSpan.FromSeconds(30), Models.TimeMode.limitForTest) {
-                    new Models.OpenQuestion("Blaa?", 12, "bla"),
-                    new Models.OpenQuestion("Keks?", 12, "kek")
+
+
+            Children.Add(new NavigationPage(new MatchingQuestionPage(
+                new Models.Test("kek", "mda", TimeSpan.FromSeconds(60), Models.TimeMode.limitForQuestion) {
+                    new Models.MatchingQuestion("123", 12,
+                        new List<string> {"1", "2", "3"},
+                        new List<string> {"c", "a", "b"},
+                        new List<int?> {1, 2, 0}
+                    )
                 },
                 0,
                 new Models.TestSolving.TestResults
@@ -92,14 +102,71 @@ namespace test132132
                     TotalPoints = 0,
                     UsedTime = TimeSpan.FromSeconds(0)
                 }
+
             )));
+
+            Children.Add(new NavigationPage(new TestChosedPage(
+                new Models.Test("kek", "mda", TimeSpan.FromSeconds(4005), Models.TimeMode.limitForQuestion) {
+                    new Models.MatchingQuestion("123", 12,
+                        new List<string> {"1", "2", "3"},
+                        new List<string> {"c", "a", "b"},
+                        new List<int?> {1, 2, 0}
+                    )
+                }
+            )));
+
+
+            //Children.Add(new NavigationPage(new OpenQuestionPage(
+            //    new Models.Test("kek", "mda", TimeSpan.FromSeconds(30), Models.TimeMode.limitForTest) {
+            //        new Models.OpenQuestion("Blaa?", 12, "bla"),
+            //        new Models.OpenQuestion("Keks?", 12, "kek")
+            //    },
+            //    0,
+            //    new Models.TestSolving.TestResults
+            //    {
+            //        CorrectAnswers = 0,
+            //        TotalPoints = 0,
+            //        UsedTime = TimeSpan.FromSeconds(0)
+            //    }
+            //)));
 
             Title = Children[0].Title;
         }
 
-        public void UpdateChildren(Page p, int index)
+        void UpdateAllChildren()
         {
-            Children[0] = p;
+            Children.Clear();
+
+            Page subjectsPage = null, editorPage = null;
+
+            Page profilePage = null;
+
+            switch (Device.RuntimePlatform)
+            {
+                case Device.iOS:
+                    subjectsPage = new NavigationPage(new SubjectsPage())
+                    {
+                        Title = iOS.AppResources.MainPageTests
+                    };
+                    editorPage = new NavigationPage(new EditorTestsPage())
+                    {
+                        Title = iOS.AppResources.MainPageEditor
+                    };
+                    profilePage = new NavigationPage(
+                        new ProfilePage() { Detail = new Views.UserProfile.SettingsPage() }
+                    )
+                    {
+                        Title = iOS.AppResources.MainPageProfile,
+                        Icon = "tab_feed.png"
+                    };
+                    subjectsPage.Icon = "tab_feed.png";
+                    editorPage.Icon = "tab_feed.png";
+                    break;
+            }
+
+            Children.Add(profilePage);
+            Children.Add(editorPage);
+            Children.Add(subjectsPage);
         }
 
         void ChangeBottomBar()

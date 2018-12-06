@@ -13,7 +13,7 @@
     <ContentPage.Content>
         <StackLayout Spacing="25" 
                      VerticalOptions="Center" 
-                     Padding="15"
+                     Padding="20"
                      BackgroundColor="{DynamicResource SomeLightBackgroundColor}"
                  >
             <StackLayout Spacing="5">

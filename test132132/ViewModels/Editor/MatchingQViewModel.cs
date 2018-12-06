@@ -55,24 +55,14 @@ namespace test132132.ViewModels.Editor
             );
         }
 
-        // todo refactor ->
         public List<string> LeftsAsList() 
         {
-            List<string> result = new List<string>();
-            foreach (var a in Lefts) {
-                result.Add(a.Text);
-            }
-            return result;
+            return Lefts.Select((text) => text.Text).ToList();
         }
 
         public List<string> RightsAsList()
         {
-            List<string> result = new List<string>();
-            foreach (var a in Rights)
-            {
-                result.Add(a.Text);
-            }
-            return result;
+            return Rights.Select((text) => text.Text).ToList();
         }
     }
 }

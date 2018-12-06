@@ -372,5 +372,9 @@
     <data name="OpenQuestionPageEmptyEntryType">
         <value>Type something</value>
     </data> 
-
+    
+    <!--TestChoosedPage-->
+    <data name="TestChoosedPageSolve">
+        <value>Solve test</value>
+    </data>
 </root>

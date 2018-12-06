@@ -41,16 +41,5 @@ namespace test132132.Models
             Items[index].TestId = null;
             base.RemoveItem(index);
         }
-
-        public List<Question> SearchByType(Type type)
-        {
-            List<Question> list = new List<Question>();
-
-            for (int i = 0; i < Count; i++)
-                if (type == Items[i].GetType())
-                    list.Add(Items[i]);
-
-            return list;
-        }
     }
 }

@@ -2,13 +2,34 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="test132132.Views.TestPreview.ResultsPage"
+             BackgroundColor="{DynamicResource LightBackgroundColor}"
 >
     <ContentPage.Content>
-        <StackLayout>
-            <Label x:Name="PointsAmountLabel"/>
-            <Label x:Name="TimeLabel"/>
-            <Label x:Name="CorrectQLabel"/>
-            <Label x:Name="IncorrectQLabel"/>
+        <StackLayout VerticalOptions="Center" Spacing="30">
+            <Image x:Name="ResultQualityImage"
+                   WidthRequest="100"
+                   HeightRequest="100"
+            />
+            <StackLayout Padding="0" Spacing="30">
+                <StackLayout Padding="5">
+                    <Label x:Name="PointsAmountLabel"
+                        TextColor="{DynamicResource TextColor}"       
+                    />
+                    <ProgressBar x:Name="PointsProgressBar"/>    
+                </StackLayout>
+                <StackLayout Padding="5">
+                    <Label x:Name="TimeLabel"
+                        TextColor="{DynamicResource TextColor}"
+                    />
+                    <ProgressBar x:Name="TimeProgressBar"/>    
+                </StackLayout>
+                <StackLayout Padding="5">
+                    <Label x:Name="CorrectQLabel"
+                        TextColor="{DynamicResource TextColor}"
+                    />
+                    <ProgressBar x:Name="CorrectQProgressBar"/>  
+                </StackLayout>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

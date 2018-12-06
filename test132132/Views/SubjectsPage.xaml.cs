@@ -17,18 +17,11 @@ namespace test132132
 
             RenderTableView();
 
-            MessagingCenter.Subscribe<Views.UserProfile.SettingsPage>(this, "RenderingAsked",
-                (obj) => {
-                   RenderTableView();
-                }
-            );
-        }
-
-        public void RenderListView() 
-        {
-            var groups = viewModel.testPreview.SplitBySubject();    //todo
-
-
+            //MessagingCenter.Subscribe<Views.UserProfile.SettingsPage>(this, "RenderingAsked",
+            //    (obj) => {
+            //       RenderTableView();
+            //    }
+            //);
         }
 
         public void RenderTableView() 
@@ -57,24 +50,11 @@ namespace test132132
                         viewModel.testPreview.CountUnansweredQuestions().ToString()),
                         (Color)Application.Current.Resources["Silver"]
                 ));
-
             } else {
                 lastSection = new TableSection();
                 lastSection.Add(new Common.CenteredTextCell(iOS.AppResources.SubjectsNoMatches, (Color)Application.Current.Resources["MainColor"]));
                 SubjectsTableView.Root.Add(lastSection);
             }
-        }
-
-        async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
-        {
-            // todo
-            //var item = args.SelectedItem as string;
-            //if (item == null)
-            //  return;
-
-            await Navigation.PushAsync(new AboutPage());
-
-           // SubjectsListView.SelectedItem = null;
         }
 
         void SearchText_Changed(object sender, EventArgs e)

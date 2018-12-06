@@ -33,7 +33,7 @@ namespace test132132.Common
                 (arg) =>
                 {
                     var pair = arg.Split(' ');
-                    return new Tuple<string, string>(pair[0], pair[1]);
+                    return (pair[0], pair[1]).ToTuple();
                 }
             ).ToList();
         }
@@ -58,7 +58,7 @@ namespace test132132.Common
             WriteUser(newUser);
 
             var allUsers = AllUserNames();
-            allUsers.Add(new Tuple<string, string>(newUser.UserName, CreateMD5(password)));
+            allUsers.Add((newUser.UserName, CreateMD5(password)).ToTuple());
 
             string fileContent = "";
             foreach (var userInfo in allUsers)
@@ -86,7 +86,7 @@ namespace test132132.Common
             if (string.IsNullOrEmpty(password))
                 return false;
 
-            var thisUser = new Tuple<string, string>(username, CreateMD5(password));
+            var thisUser = (username, CreateMD5(password)).ToTuple();
             if (AllUserNames().Contains(thisUser))
             {
                 string fileName = string.Join("",
@@ -127,7 +127,7 @@ namespace test132132.Common
             {
                 Name = "Danik",
                 Surname = "Melnichenka",
-                UserName = "melnick",
+                UserName = "M",
                 Birth = new DateTime(1999, 12, 24),
                 Education = "BSU",
                 Email = "melnick@gmail.com",
@@ -137,7 +137,7 @@ namespace test132132.Common
             if (Exists(danik.UserName))
                 return;
 
-            NewUser(danik, "12345");
+            NewUser(danik, "1");
         }
     }
 }

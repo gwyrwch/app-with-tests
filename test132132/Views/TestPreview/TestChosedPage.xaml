@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="test132132.Views.TestPreview.TestChosedPage"
+             xmlns:i18n="clr-namespace:test132132.iOS.Helpers"               
+             BackgroundColor="{DynamicResource LightBackgroundColor}"
+>
+    <ContentPage.Content>
+        <StackLayout Padding="20, 40, 10, 10" Spacing="40">
+            <StackLayout Spacing="5">
+            <StackLayout Orientation="Horizontal" Spacing="5">
+                <Label Text="Subject:"
+                    TextColor="{DynamicResource TextColor}"       
+                />
+                <Label x:Name="SubjectLabel" 
+                    TextColor="{DynamicResource TextColor}"
+                    FontAttributes="Bold"
+                />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Spacing="5">
+                <Label Text="Theme:"
+                    TextColor="{DynamicResource TextColor}"       
+                />
+                <Label x:Name="TestTitleLabel" 
+                    TextColor="{DynamicResource TextColor}"
+                    FontAttributes="Bold"
+                />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Spacing="5">
+                <Label Text="Questions:"
+                    TextColor="{DynamicResource TextColor}"       
+                />
+                <Label x:Name="QuestionsNumberLabel" 
+                    TextColor="{DynamicResource TextColor}"
+                    FontAttributes="Bold"
+                />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Spacing="5">
+                <Label Text="Required time:"
+                    TextColor="{DynamicResource TextColor}"       
+                />
+                <Label x:Name="RequiredTimeLabel" 
+                    TextColor="{DynamicResource TextColor}"
+                    FontAttributes="Bold"
+                />
+            </StackLayout>
+            </StackLayout>
+            <Button 
+                Text="{i18n:Translate TestChoosedPageSolve}"
+                BackgroundColor="{DynamicResource LightBackgroundColor}"
+                BorderRadius="10"
+                BorderWidth="1"
+                BorderColor="{DynamicResource MainColor}"
+                Margin="10"
+                TextColor="{DynamicResource MainColor}"
+                Clicked="Solve_Clicked"
+            />    
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
