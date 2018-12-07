@@ -25,6 +25,28 @@
             <Color x:Key="SomeLightBackgroundColor">#f9f9f9</Color>
             <Color x:Key="LightBackgroundColor">#ffff</Color>
             <Image x:Key="mainImage"></Image>
+            
+            <Style x:Key="TimeLeftProgressBar" TargetType="ProgressBar">
+                <Setter Property="BackgroundColor" Value="#ff3b30"/>
+                <Setter Property="ProgressColor" Value="#4cd964"/> 
+            </Style>
+            
+            <Style x:Key="AnswerButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{DynamicResource LightBackgroundColor}"/>
+                <Setter Property="VerticalOptions" Value="End"/> 
+                <Setter Property="BorderRadius" Value="10"/>
+                <Setter Property="BorderWidth" Value="1"/>
+                <Setter Property="BorderColor" Value="{DynamicResource MainColor}"/>
+                <Setter Property="Margin" Value="10"/>
+                <Setter Property="TextColor" Value="{DynamicResource MainColor}"/>    
+            </Style>
+            
+            <Style x:Key="EndLabel" TargetType="Label">
+                <Setter Property="Text" Value=">"/>
+                <Setter Property="TextColor" Value="{DynamicResource MainColor}"/>
+                <Setter Property="HorizontalOptions" Value="End"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
    

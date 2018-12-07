@@ -7,7 +7,7 @@
                   Title="{i18n:Translate ProfilePageMyProfile}"
                   >
     <MasterDetailPage.Master>
-        <ContentPage Title="super extremely important line"> <!--kek ow exception-->
+        <ContentPage Title="super extremely important line">
             <StackLayout Spacing="0" Orientation="Vertical">
                 <local:ColoredTableView 
                     x:Name="MasterPages" 
@@ -47,19 +47,4 @@
             </StackLayout>
         </ContentPage>
     </MasterDetailPage.Master>
-    
-    <MasterDetailPage.Detail>
-        <ContentPage BackgroundColor="{DynamicResource LightBackgroundColor}" Padding="15,5,5,5">
-            <StackLayout Spacing="0">
-                <Label Text="{i18n:Translate ProfilePageSwipeRight}"
-                       TextColor="{DynamicResource MainGreyColor}"
-                       FontSize="Micro"
-                       HorizontalOptions="Center"
-                       />
-                <Image Source="welcomeProfile.png" 
-                       VerticalOptions="CenterAndExpand"
-                       />                
-            </StackLayout>            
-        </ContentPage>
-    </MasterDetailPage.Detail>
 </MasterDetailPage>

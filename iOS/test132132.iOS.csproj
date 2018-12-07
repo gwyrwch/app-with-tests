@@ -119,6 +119,39 @@
     <Reference Include="Plugin.Media">
       <HintPath>..\packages\Xam.Plugin.Media.4.0.1.5\lib\xamarinios10\Plugin.Media.dll</HintPath>
     </Reference>
+    <Reference Include="ExifLib">
+      <HintPath>..\packages\ExifLib.PCL.1.0.1\lib\portable-net45+sl50+win+WindowsPhoneApp81+wp80+Xamarin.iOS10+MonoAndroid10+MonoTouch10\ExifLib.dll</HintPath>
+    </Reference>
+    <Reference Include="XLabs.Core">
+      <HintPath>..\packages\XLabs.Core.2.0.5782\lib\Xamarin.iOS10\XLabs.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="XLabs.Ioc">
+      <HintPath>..\packages\XLabs.IoC.2.0.5782\lib\portable-net45+netcore45+wp8+MonoAndroid1+MonoTouch1\XLabs.Ioc.dll</HintPath>
+    </Reference>
+    <Reference Include="XLabs.Platform">
+      <HintPath>..\packages\XLabs.Platform.2.0.5782\lib\Xamarin.iOS10\XLabs.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="XLabs.Platform.iOS">
+      <HintPath>..\packages\XLabs.Platform.2.0.5782\lib\Xamarin.iOS10\XLabs.Platform.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="XLabs.Serialization">
+      <HintPath>..\packages\XLabs.Serialization.2.0.5782\lib\Xamarin.iOS10\XLabs.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="XLabs.Forms">
+      <HintPath>..\packages\XLabs.Forms.2.0.5782\lib\Xamarin.iOS10\XLabs.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="XLabs.Forms.iOS">
+      <HintPath>..\packages\XLabs.Forms.2.0.5782\lib\Xamarin.iOS10\XLabs.Forms.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="SkiaSharp">
+      <HintPath>..\packages\SkiaSharp.1.68.0\lib\Xamarin.iOS\SkiaSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="SkiaSharp.Views.iOS">
+      <HintPath>..\packages\SkiaSharp.Views.1.68.0\lib\Xamarin.iOS\SkiaSharp.Views.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="SkiaSharp.Views.Forms">
+      <HintPath>..\packages\SkiaSharp.Views.Forms.1.68.0\lib\Xamarin.iOS\SkiaSharp.Views.Forms.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
@@ -153,6 +186,27 @@
     <BundleResource Include="Resources\user2.png" />
     <BundleResource Include="Resources\40.png" />
     <BundleResource Include="Resources\kek.png" />
+    <BundleResource Include="Resources\launchscreen\spscreen.png" />
+    <BundleResource Include="Images\Calendar\datecell.png" />
+    <BundleResource Include="Images\Calendar\datecellmarked.png" />
+    <BundleResource Include="Images\Calendar\datecellselected.png" />
+    <BundleResource Include="Images\Calendar\leftarrow.png" />
+    <BundleResource Include="Images\Calendar\rightarrow.png" />
+    <BundleResource Include="Images\Calendar\shadow.png" />
+    <BundleResource Include="Images\Calendar\today.png" />
+    <BundleResource Include="Images\Calendar\todayselected.png" />
+    <BundleResource Include="Images\Calendar\topbar.png" />
+    <BundleResource Include="Images\Checkbox\checked_checkbox.png" />
+    <BundleResource Include="Images\Checkbox\checked_checkbox%402x.png" />
+    <BundleResource Include="Images\Checkbox\unchecked_checkbox.png" />
+    <BundleResource Include="Images\Checkbox\unchecked_checkbox%402x.png" />
+    <BundleResource Include="Images\RadioButton\checked.png" />
+    <BundleResource Include="Images\RadioButton\checked%402x.png" />
+    <BundleResource Include="Images\RadioButton\unchecked.png" />
+    <BundleResource Include="Images\RadioButton\unchecked%402x.png" />
+    <BundleResource Include="Resources\QualityImages\excelent.png" />
+    <BundleResource Include="Resources\QualityImages\failed.png" />
+    <BundleResource Include="Resources\QualityImages\good.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDelegate.cs" />
@@ -186,6 +240,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>AppResources.ru.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\launchscreen\" />
+    <Folder Include="Resources\QualityImages\" />
   </ItemGroup>
   <Import Project="..\test132132\test132132.projitems" Label="Shared" Condition="Exists('..\test132132\test132132.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

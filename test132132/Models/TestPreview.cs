@@ -22,8 +22,12 @@ namespace test132132.Models
             } else {
                 testsPath = "tempTestsRU.json";
             }
-            string plain_text = File.ReadAllText(testsPath);
-            TestsToPreview = JsonConvert.DeserializeObject<ObservableCollection<Test>>(plain_text);
+            if (File.Exists(testsPath)) {
+                string plain_text = File.ReadAllText(testsPath);
+                TestsToPreview = JsonConvert.DeserializeObject<ObservableCollection<Test>>(plain_text);
+            } else
+                TestsToPreview = new ObservableCollection<Test>();
+            
         }
 
         public void SortByCountDescending() 

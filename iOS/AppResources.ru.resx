@@ -355,4 +355,25 @@
     <data name="SupportPageText">
         <value>Если у вас возникли вопросы пишите нам:</value>
     </data>
+    
+    <!--OpenQuestionPage-->
+    <data name="OpenQuestionPageAnswerPlaceholder">
+        <value>Ваш ответ</value>
+    </data>
+    <data name="OpenQuestionPageAnswer">
+        <value>Ответить</value>
+    </data> 
+    <data name="OpenQuestionPageEmptyEntry">
+        <value>Вы ничего не ответили</value>
+    </data>
+    <data name="OpenQuestionPageEmptyEntryType">
+        <value>Не оставляйте поле пустым</value>
+    </data> 
+    
+    <!--TestChoosedPage-->
+    <data name="TestChoosedPageSolve">
+        <value>Решить тест</value>
+    </data>
+    
+    
 </root>

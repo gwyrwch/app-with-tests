@@ -5,6 +5,7 @@
              xmlns:i18n="clr-namespace:test132132.iOS.Helpers"  
              Title="{i18n:Translate SubjectsPageTitle}"
              xmlns:helpers="clr-namespace:test132132.Common"
+             xmlns:ContentViews="clr-namespace:test132132.Views.ContentViews"
 >               
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="..." Clicked="Sort_Clicked" />
@@ -22,15 +23,14 @@
                     TextChanged="SearchText_Changed"
                 /> 
             </StackLayout>
-            <helpers:ColoredTableView
+            <TableView
                 x:Name="SubjectsTableView" 
                 Intent="Data"
                 BackgroundColor="{DynamicResource SomeLightBackgroundColor}"
-                SeparatorColor="{DynamicResource SeparatorColor}"
             >
                 <TableRoot>
                 </TableRoot>
-            </helpers:ColoredTableView>
+            </TableView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

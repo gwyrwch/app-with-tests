@@ -1,13 +1,7 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 
 using Xamarin.Forms;
 using test132132.Views;
-using System.Collections.ObjectModel;
-using Newtonsoft.Json;
-using UIKit;
-using test132132.Views.TestPreview;
-using System.Collections.Generic;
 
 namespace test132132
 {
@@ -23,6 +17,11 @@ namespace test132132
                     ChangeBottomBar();
                 }
             );
+            MessagingCenter.Subscribe<Views.UserProfile.SettingsPage>(this, "RenderingAsked",
+                (obj) => {
+                    UpdateAllChildren();
+                }
+            );
 
 
             UnitTests.InitUnitTests.Run();
@@ -30,7 +29,7 @@ namespace test132132
             if (!File.Exists(App.userTestsPath))
                 File.WriteAllText(App.userTestsPath, "[]");
 
-            Page itemsPage, subjectsPage = null, editorPage = null;
+            Page subjectsPage = null, editorPage = null;
 
             Page authPage = null;
 
@@ -63,26 +62,43 @@ namespace test132132
             Children.Add(authPage);
             Children.Add(editorPage);
             Children.Add(subjectsPage);
-            Children.Add(new NavigationPage(new MultipleChoiceQuestionPage(
-                new Models.Test { 
-                    new Models.MultipleChoiceQuestion(
-                        "123", 123, new
-                        List<Models.Variant> { 
-                            new Models.Variant("1", true), new Models.Variant("2", false) 
-                        } )
-                },
-                0
-                ,
-                0
-
-            )));
 
             Title = Children[0].Title;
         }
 
-        public void UpdateChildren(Page p, int index)
+        void UpdateAllChildren()
         {
-            Children[0] = p;
+            Children.Clear();
+
+            Page subjectsPage = null, editorPage = null;
+            Page profilePage = null;
+
+            switch (Device.RuntimePlatform)
+            {
+                case Device.iOS:
+                    subjectsPage = new NavigationPage(new SubjectsPage())
+                    {
+                        Title = iOS.AppResources.MainPageTests
+                    };
+                    editorPage = new NavigationPage(new EditorTestsPage())
+                    {
+                        Title = iOS.AppResources.MainPageEditor
+                    };
+                    profilePage = new NavigationPage(
+                        new ProfilePage() { Detail = new Views.UserProfile.SettingsPage() }
+                    )
+                    {
+                        Title = iOS.AppResources.MainPageProfile,
+                        Icon = "tab_feed.png"
+                    };
+                    subjectsPage.Icon = "tab_feed.png";
+                    editorPage.Icon = "tab_feed.png";
+                    break;
+            }
+
+            Children.Add(profilePage);
+            Children.Add(editorPage);
+            Children.Add(subjectsPage);
         }
 
         void ChangeBottomBar()

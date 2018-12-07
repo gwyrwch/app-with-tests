@@ -9,17 +9,6 @@
     <ContentPage.Content>
         <StackLayout BackgroundColor="{DynamicResource SomeLightBackgroundColor}" Spacing="20">
             <StackLayout Orientation="Horizontal" Padding="10, 20, 0, 0" Spacing="15">
-       <!--         <Button Text="{i18n:Translate SignUpPagePhoto}"
-                        TextColor="#5ac8fa"
-                        BackgroundColor="{DynamicResource LightBackgroundColor}"
-                        BorderRadius="40"
-                        BorderColor="#5ac8fa"
-                        BorderWidth="1"
-                        WidthRequest="80"
-                        HeightRequest="80"
-                        Clicked="Photo_Clicked"
-                />-->
-               
                 <controls:CircleImage   
                     HeightRequest="80"   
                     WidthRequest="80"   

@@ -29,7 +29,6 @@ namespace test132132.Models
             Id = new Random(Seed: (int)DateTime.UtcNow.Ticks).Next();
         }
 
-
         protected override void InsertItem(int index, Question item)
         {
             item.TestId = Id;
@@ -40,17 +39,6 @@ namespace test132132.Models
         {
             Items[index].TestId = null;
             base.RemoveItem(index);
-        }
-
-        public List<Question> SearchByType(Type type)
-        {
-            List<Question> list = new List<Question>();
-
-            for (int i = 0; i < Count; i++)
-                if (type == Items[i].GetType())
-                    list.Add(Items[i]);
-
-            return list;
         }
     }
 }

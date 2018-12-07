@@ -6,6 +6,18 @@
              BackgroundColor="{DynamicResource SomeLightBackgroundColor}"
              Title="{i18n:Translate QTypeSelectionPageTitle}"
              >
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button">
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="TextColor" Value="{DynamicResource MainGreyColor}"/>
+                <Setter Property="BackgroundColor" Value="{DynamicResource LightBackgroundColor}"/>
+                <Setter Property="BorderRadius" Value="6" />
+                <Setter Property="BorderWidth" Value="0.6" />
+                <Setter Property="BorderColor" Value="{DynamicResource Silver}" />                
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.ToolbarItems>
         <ToolbarItem 
             Text="{i18n:Translate CommonNext}"
@@ -17,38 +29,18 @@
             <Button
                 x:Name="MultipleChoiceButton"
                 Text="{i18n:Translate QTypeSelectionPageMultipleChoiceQuestion}"
-                BackgroundColor="{DynamicResource LightBackgroundColor}"
-                BorderRadius="6"
-                BorderWidth="0.6"
-                BorderColor="{DynamicResource Silver}"
-                TextColor="{DynamicResource MainGreyColor}"
-                FontSize="Medium"
                 Clicked="MultipleChoiceQ_Clicked"
             />
             <Button
                 x:Name="MatchingButton"
                 Text="{i18n:Translate QTypeSelectionPageMatchingQuestion}"
-                BackgroundColor="{DynamicResource LightBackgroundColor}"
-                BorderRadius="6"
-                BorderWidth="0.6"
-                BorderColor="{DynamicResource Silver}"
-                TextColor="{DynamicResource MainGreyColor}"
-                FontSize="Medium"
                 Clicked="MatchingQ_Clicked"
             />
             <Button
                 x:Name="OpenQuestionButton"
                 Text="{i18n:Translate QTypeSelectionPageOpenQuestion}"
-                BackgroundColor="{DynamicResource LightBackgroundColor}"
-                BorderRadius="6"
-                BorderWidth="0.6"
-                BorderColor="{DynamicResource Silver}"
-                TextColor="{DynamicResource MainGreyColor}"
-                FontSize="Medium"
                 Clicked="OpenQ_Clicked"
             />
-            <!--http://0xrgb.com/-->
-            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

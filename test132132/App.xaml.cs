@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
@@ -15,13 +16,15 @@ namespace test132132
 
         public static Services.Settings settings;
 
-        public static ObservableCollection<string> Subjects = new ObservableCollection<string> {
+        public static ObservableCollection<string> Subjects;
+
+        static ObservableCollection<string> Subjects_En = new ObservableCollection<string> {
             "C#",
             "C++",
             "Assembler"
         };
 
-        private static ObservableCollection<string> Subjects_Ru = new ObservableCollection<string> {
+        static ObservableCollection<string> Subjects_Ru = new ObservableCollection<string> {
             "C#",
             "C++",
             "Ассемблер"
@@ -42,10 +45,16 @@ namespace test132132
 
         public static void SetLanguage(string language)
         {
-            if (language == "Russian") {
+            if (language == "Russian")
                 Subjects = Subjects_Ru;
-            }
-            CrossMultilingual.Current.CurrentCultureInfo = CrossMultilingual.Current.NeutralCultureInfoList.ToList().First(element => element.EnglishName.Contains(language));
+            else
+                Subjects = Subjects_En;
+
+            CrossMultilingual.Current.CurrentCultureInfo = CrossMultilingual.Current.NeutralCultureInfoList.ToList(
+            ).First(
+                element => element.EnglishName.Contains(language)
+            );
+
             iOS.AppResources.Culture = CrossMultilingual.Current.CurrentCultureInfo;
         }
 
@@ -53,7 +62,7 @@ namespace test132132
         {
             Services.Settings defaultSettings = new Services.Settings { 
                 Language = "Russian", 
-                Theme = "DarkTheme"
+                Theme = "LightTheme"
             };
 
             File.WriteAllText(
@@ -97,8 +106,8 @@ namespace test132132
             }
             else 
                 throw new NotImplementedException();
-            settings.Theme = theme;
 
+            settings.Theme = theme;
             SaveSettings();
         }
 

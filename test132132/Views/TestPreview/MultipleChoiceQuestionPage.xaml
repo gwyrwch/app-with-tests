@@ -3,26 +3,71 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="test132132.Views.TestPreview.MultipleChoiceQuestionPage"
              xmlns:helpers="clr-namespace:test132132.Common"
+             xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+             xmlns:i18n="clr-namespace:test132132.iOS.Helpers"
+
 >
     <ContentPage.Content>
         <StackLayout BackgroundColor="{DynamicResource LightBackgroundColor}">
-            <StackLayout Padding="5,0,0,0" BackgroundColor="{DynamicResource LightBackgroundColor}">
-                <Label x:Name="QuestionLabel" 
-                       LineBreakMode="WordWrap" 
+            <StackLayout Padding="5,30" 
+                         Spacing="15"
+            >
+                <Slider 
+                    x:Name="TimeLeftSlider"
+                    MinimumTrackColor="#4cd964"
+                    MaximumTrackColor="#ff3b30"
+                    IsEnabled="false"
                 />
-                <helpers:ListViewWithoutScroll x:Name="AnswersListView" 
-                          BackgroundColor="{DynamicResource LightBackgroundColor}"
-                          SeparatorColor="{DynamicResource SeparatorColor}"
-                          
-                >
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <Label Text="{Binding Answer}"/>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </helpers:ListViewWithoutScroll>
+                <ProgressBar 
+                    x:Name="TimeLeftBar"
+                    Style="{StaticResource TimeLeftProgressBar}"
+                />
+                <StackLayout>
+                    <Label x:Name="QuestionLabel" 
+                           TextColor="{DynamicResource TextColor}"
+                           LineBreakMode="WordWrap" 
+                    />
+                    <helpers:ListViewWithoutScroll x:Name="AnswersListView" 
+                              BackgroundColor="{DynamicResource LightBackgroundColor}"
+                              SeparatorColor="Transparent"
+                              ItemSelected="OnItemSelected"
+                              ItemsSource="{Binding Variants}"  
+                              RowHeight="60"
+                              HasUnevenRows="true"
+                    >
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal" Padding="10,0">
+                                        <Label 
+                                            Text="{Binding Answer}"
+                                            VerticalOptions="Center"
+                                            TextColor="{DynamicResource TextColor}"
+                                            LineBreakMode="WordWrap"
+                                            FontSize="{Binding FontSize}"
+                                        />
+                                        <controls:CheckBox 
+                                            BackgroundColor="Transparent" 
+                                            WidthRequest="45" 
+                                            HeightRequest="45" 
+                                            IsVisible="True" 
+                                            HorizontalOptions="EndAndExpand"
+                                            VerticalOptions="Center"
+                                            Checked="{Binding IsTrue, Mode=TwoWay}"
+                                
+                                       />                                
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </helpers:ListViewWithoutScroll>
+                </StackLayout>
+                <Button 
+                    Text="{i18n:Translate OpenQuestionPageAnswer}"
+                    Style="{StaticResource AnswerButton}"
+                    VerticalOptions="EndAndExpand"
+                    Clicked="Answer_Clicked"
+               />
             </StackLayout>
        </StackLayout>
     </ContentPage.Content>

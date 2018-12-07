@@ -16,19 +16,6 @@ namespace test132132
             BindingContext = viewModel = new ViewModels.Tests.SubjectsViewModel();
 
             RenderTableView();
-
-            MessagingCenter.Subscribe<Views.UserProfile.SettingsPage>(this, "RenderingAsked",
-                (obj) => {
-                   RenderTableView();
-                }
-            );
-        }
-
-        public void RenderListView() 
-        {
-            var groups = viewModel.testPreview.SplitBySubject();    //todo
-
-
         }
 
         public void RenderTableView() 
@@ -46,18 +33,21 @@ namespace test132132
                 int count = 0;
                 foreach (var test in unpacked) {
                     count += 1;
-                    section.Add(new Common.CustomViewCell(test, count));
+                    var viewCell = new Common.CustomViewCell(test, count);
+                    viewCell.Tapped += ViewCell_Tapped;
+
+                    section.Add(viewCell);
                 }
                 SubjectsTableView.Root.Add(section);
             }
 
             if (lastSection != null) {
-                lastSection.Add(new Common.CenteredTextCell(string.Format(iOS.AppResources.SubjectsSummaryTemplate,
-                        viewModel.testPreview.CountRequiredTime().ToString(),
-                        viewModel.testPreview.CountUnansweredQuestions().ToString()),
-                        (Color)Application.Current.Resources["Silver"]
+                lastSection.Add(new Common.CenteredTextCell(
+                    string.Format(iOS.AppResources.SubjectsSummaryTemplate,
+                    viewModel.testPreview.CountRequiredTime().ToString(),
+                    viewModel.testPreview.CountUnansweredQuestions().ToString()),
+                    (Color)Application.Current.Resources["Silver"]
                 ));
-
             } else {
                 lastSection = new TableSection();
                 lastSection.Add(new Common.CenteredTextCell(iOS.AppResources.SubjectsNoMatches, (Color)Application.Current.Resources["MainColor"]));
@@ -65,16 +55,10 @@ namespace test132132
             }
         }
 
-        async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
+        async void ViewCell_Tapped(object sender, EventArgs e)
         {
-            // todo
-            //var item = args.SelectedItem as string;
-            //if (item == null)
-            //  return;
-
-            await Navigation.PushAsync(new AboutPage());
-
-           // SubjectsListView.SelectedItem = null;
+            var viewCell = (Common.CustomViewCell)sender;
+            await Navigation.PushAsync(new Views.TestPreview.TestChosedPage(viewCell.test));
         }
 
         void SearchText_Changed(object sender, EventArgs e)

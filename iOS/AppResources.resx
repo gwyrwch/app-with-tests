@@ -359,6 +359,22 @@
         <value>If you have some questions you can contact us at:</value>
     </data>
     
+    <!--OpenQuestionPage-->
+    <data name="OpenQuestionPageAnswerPlaceholder">
+        <value>Your answer here</value>
+    </data>
+    <data name="OpenQuestionPageAnswer">
+        <value>Answer</value>
+    </data>
+    <data name="OpenQuestionPageEmptyEntry">
+        <value>You didn't answer anything</value>
+    </data>
+    <data name="OpenQuestionPageEmptyEntryType">
+        <value>Type something</value>
+    </data> 
     
-    
+    <!--TestChoosedPage-->
+    <data name="TestChoosedPageSolve">
+        <value>Solve test</value>
+    </data>
 </root>

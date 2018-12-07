@@ -1,5 +1,88 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="test132132.Views.TestPreview.MatchingQuestionPage">
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="test132132.Views.TestPreview.MatchingQuestionPage"
+    xmlns:helpers="clr-namespace:test132132.Common"
+    xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+    xmlns:i18n="clr-namespace:test132132.iOS.Helpers"
+    xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+>
     <ContentPage.Content>
+        <StackLayout BackgroundColor="{DynamicResource LightBackgroundColor}">
+            <StackLayout Padding="5,30" 
+                         Spacing="15"
+            >
+                <Slider 
+                    x:Name="TimeLeftSlider"
+                    MinimumTrackColor="#4cd964"
+                    MaximumTrackColor="#ff3b30"
+                    IsEnabled="false"
+                />
+                <ProgressBar 
+                    x:Name="TimeLeftBar"
+                    Style="{StaticResource TimeLeftProgressBar}"
+                />
+                <StackLayout>
+                    <Label x:Name="QuestionLabel" 
+                           TextColor="{DynamicResource TextColor}"
+                           LineBreakMode="WordWrap" 
+                    />
+                    <StackLayout Orientation="Horizontal">
+                        <helpers:ListViewWithoutScroll x:Name="LeftPartListView" 
+                              BackgroundColor="{DynamicResource LightBackgroundColor}"
+                              SeparatorColor="Transparent"
+                              ItemSelected="OnItemSelected"
+                              ItemsSource="{Binding Lefts}"
+                              RowHeight="60" 
+                              HasUnevenRows="true"  
+                        >
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell Height="60">
+                                        <Label 
+                                            Text="{Binding Text}"
+                                            VerticalOptions="Center"
+                                            TextColor="{DynamicResource TextColor}"
+                                            LineBreakMode="WordWrap"
+                                        />        
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </helpers:ListViewWithoutScroll>
+                        
+                        <skia:SKCanvasView x:Name="CanvasView" PaintSurface="OnCanvasViewPaintSurface" />
+                        
+                        <helpers:ListViewWithoutScroll x:Name="RightPartListView" 
+                              BackgroundColor="{DynamicResource LightBackgroundColor}"
+                              SeparatorColor="Transparent"
+                              ItemSelected="OnItemSelected"
+                              ItemsSource="{Binding Rights}"
+                              RowHeight="60" 
+                              HasUnevenRows="true"
+                        >
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell Height="60">
+                                        <Label 
+                                            Text="{Binding Text}"
+                                            VerticalOptions="Center"
+                                            TextColor="{DynamicResource TextColor}"
+                                            LineBreakMode="WordWrap"
+                                        />        
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </helpers:ListViewWithoutScroll>
+
+                    </StackLayout>
+                </StackLayout>
+                <Button 
+                    Text="{i18n:Translate OpenQuestionPageAnswer}"
+                    Clicked="Answer_Clicked"
+                    Style="{StaticResource AnswerButton}"
+                />
+            </StackLayout>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
