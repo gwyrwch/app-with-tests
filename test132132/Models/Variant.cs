@@ -1,4 +1,5 @@
 ﻿using System;
+using Xamarin.Forms;
 
 namespace test132132.Models
 {
@@ -31,5 +32,16 @@ namespace test132132.Models
             return Answer;
         }
 
+        public double FontSize
+        {
+            get
+            {
+                if (Answer.Length >= 72)
+                    return Device.GetNamedSize(NamedSize.Micro, typeof(Label));
+                if (Answer.Length >= 42)
+                    return Device.GetNamedSize(NamedSize.Small, typeof(Label));
+                return Device.GetNamedSize(NamedSize.Default, typeof(Label));
+            }
+        }
     }
 }

@@ -6,6 +6,15 @@
              xmlns:helpers="clr-namespace:test132132.Common"
              BackgroundColor="{DynamicResource SomeLightBackgroundColor}"
          >
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="MatchingQEditPageLabel" TargetType="Label">
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="TextColor" Value="{DynamicResource TexColor}"/>
+                <Setter Property="BackgroundColor" Value="{DynamicResource SomeLightBackgroundColor}"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="{i18n:Translate CommonDelete}" Clicked="Delete_Clicked"/>
         <ToolbarItem Text="{i18n:Translate CommonSave}" Clicked="Save_Clicked"/>
@@ -17,9 +26,7 @@
         >
             <Label
                 Text="{i18n:Translate MatchingQEditPageQuestion}" 
-                FontSize="18"
-                TextColor="{DynamicResource TextColor}"
-                BackgroundColor="{DynamicResource SomeLightBackgroundColor}"
+                Style="{StaticResource MatchingQEditPageLabel}"
             />
             <Entry 
                 x:Name="QuestionTextEntry" 
@@ -31,9 +38,7 @@
             />
             <Label 
                 Text="{i18n:Translate MatchingQEditPagePoints}" 
-                FontSize="18"
-                TextColor="{DynamicResource TextColor}"
-                BackgroundColor="{DynamicResource SomeLightBackgroundColor}"
+                Style="{StaticResource MatchingQEditPageLabel}"
             />
             <Entry 
                 x:Name="PointsEntry"
@@ -65,14 +70,14 @@
                 <Label
                     Text="{i18n:Translate MatchingQEditPageFirstPart}"
                     HorizontalOptions="Start"
-                    TextColor="{DynamicResource TextColor}"
-                    BackgroundColor="{DynamicResource SomeLightBackgroundColor}"
+                    Style="{StaticResource MatchingQEditPageLabel}"
+                    FontSize="Default"
                 />
                 <Label
                     Text="{i18n:Translate MatchingQEditPageSecondPart}"
                     HorizontalOptions="EndAndExpand"
-                    TextColor="{DynamicResource TextColor}"
-                    BackgroundColor="{DynamicResource SomeLightBackgroundColor}"
+                    Style="{StaticResource MatchingQEditPageLabel}"
+                    FontSize="Default"
                 />              
             </StackLayout>
             <StackLayout Padding="0,0,0,0" 

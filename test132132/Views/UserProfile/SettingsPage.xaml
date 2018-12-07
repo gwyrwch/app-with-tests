@@ -32,11 +32,7 @@
                                    HorizontalOptions="EndAndExpand"
                                    Margin="10"
                             />
-                            <Label Text=">"
-                                   TextColor="{DynamicResource MainColor}"
-                                   HorizontalOptions="End"
-                                   VerticalOptions="Center"
-                            />
+                            <Label Style="{StaticResource EndLabel}" />
                         </StackLayout>
                     </ViewCell>
                     <ViewCell>
@@ -49,10 +45,8 @@
                                     TextColor="{DynamicResource MainColor}"
                                     HorizontalOptions="Start" 
                             />
-                            <Label Text=">"
-                                   TextColor="{DynamicResource MainColor}"
+                            <Label Style="{StaticResource EndLabel}"
                                    HorizontalOptions="EndAndExpand"
-                                   VerticalOptions="Center"
                             />
                         </StackLayout>
                     </ViewCell>
@@ -72,11 +66,7 @@
                                    HorizontalOptions="EndAndExpand"
                                    Margin="10"
                             />   
-                            <Label Text=">"
-                                   TextColor="{DynamicResource MainColor}"
-                                   HorizontalOptions="End"
-                                   VerticalOptions="Center"
-                            />
+                            <Label Style="{StaticResource EndLabel}" />
                         </StackLayout>
                     </ViewCell>                    
                  </TableSection>
@@ -112,10 +102,8 @@
                                     TextColor="{DynamicResource MainColor}"
                                     HorizontalOptions="Start" 
                             />
-                            <Label Text=">"
-                                   TextColor="{DynamicResource MainColor}"
+                            <Label Style="{StaticResource EndLabel}"
                                    HorizontalOptions="EndAndExpand"
-                                   VerticalOptions="Center"
                             />
                         </StackLayout>            
                     </ViewCell>
@@ -129,10 +117,8 @@
                                     TextColor="{DynamicResource MainColor}"
                                     HorizontalOptions="Start" 
                             />
-                            <Label Text=">"
-                                   TextColor="{DynamicResource MainColor}"
+                            <Label Style="{StaticResource EndLabel}"
                                    HorizontalOptions="EndAndExpand"
-                                   VerticalOptions="Center"
                             />
                         </StackLayout>            
                     </ViewCell>
@@ -146,10 +132,8 @@
                                     TextColor="{DynamicResource MainColor}"
                                     HorizontalOptions="Start" 
                             />
-                            <Label Text=">"
-                                   TextColor="{DynamicResource MainColor}"
+                            <Label Style="{StaticResource EndLabel}"
                                    HorizontalOptions="EndAndExpand"
-                                   VerticalOptions="Center"
                             />
                         </StackLayout>            
                     </ViewCell>                    

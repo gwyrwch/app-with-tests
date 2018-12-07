@@ -29,6 +29,8 @@ namespace test132132.Views.TestPreview
                 TimeLeftSlider.Maximum = limit.TotalSeconds;
                 TimeLeftSlider.Value = limit.TotalSeconds;
 
+                TimeLeftBar.Progress = 1;
+
                 Device.StartTimer(
                     TimeSpan.FromSeconds(0.1),
                     () => {
@@ -41,6 +43,8 @@ namespace test132132.Views.TestPreview
                         }
 
                         TimeLeftSlider.Value = (limit - PassedTime()).TotalSeconds;
+
+                        TimeLeftBar.Progress = (limit - PassedTime()).TotalSeconds / limit.TotalSeconds;
                         return true;
                     }
                 );
@@ -48,6 +52,8 @@ namespace test132132.Views.TestPreview
                 TimeLeftSlider.Minimum = 0;
                 TimeLeftSlider.Maximum = limit.TotalSeconds;
                 TimeLeftSlider.Value = (limit - testResults.UsedTime).TotalSeconds;
+
+                TimeLeftBar.Progress = (limit - testResults.UsedTime).TotalSeconds / limit.TotalSeconds;
 
                 Device.StartTimer(
                     TimeSpan.FromSeconds(0.1),
@@ -62,6 +68,9 @@ namespace test132132.Views.TestPreview
                         }
 
                         TimeLeftSlider.Value = (limit - testResults.UsedTime - PassedTime()).TotalSeconds;
+
+                        TimeLeftBar.Progress = (limit - testResults.UsedTime - PassedTime()).TotalSeconds /
+                            limit.TotalSeconds;
                         return true;
                     }
                 );
@@ -120,10 +129,3 @@ namespace test132132.Views.TestPreview
         }
     }
 }
-
-//lw.ItemsSource = new[]
-//{
-
-//    new ObservableCollection<string> {"a", "b", "c"},
-//    new ObservableCollection<string> {"a", "b", "c"}
-//};

@@ -6,6 +6,16 @@
              xmlns:helpers="clr-namespace:test132132.Common"
              BackgroundColor="{DynamicResource SomeLightBackgroundColor}"
          >
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="MatchingQEditPageEntry" TargetType="Entry">
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="BackgroundColor" Value="{DynamicResource LightBackgroundColor}"/>
+                <Setter Property="PlaceholderColor" Value="{DynamicResource Silver}"/>
+                <Setter Property="TextColor" Value="{DynamicResource TextColor}"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="{i18n:Translate CommonSave}" Clicked="Save_Clicked" />
     </ContentPage.ToolbarItems>
@@ -23,10 +33,7 @@
                 <Entry 
                     x:Name="QuestionTextEntry"
                     Placeholder="{i18n:Translate MatchingQEditPageQuestionPlaceholder}"
-                    FontSize="Medium"
-                    TextColor="{DynamicResource TextColor}"
-                    BackgroundColor="{DynamicResource LightBackgroundColor}"
-                    PlaceholderColor="{DynamicResource Silver}"
+                    Style="{StaticResource MatchingQEditPageEntry}"
                     />  
             </StackLayout>
             <StackLayout Spacing="5">
@@ -39,10 +46,7 @@
                     x:Name="PointsEntry"
                     Keyboard="Numeric"
                     Placeholder="{i18n:Translate MatchingQEditPagePointsPlaceholder}"
-                    FontSize="Medium"
-                    TextColor="{DynamicResource TextColor}"
-                    BackgroundColor="{DynamicResource LightBackgroundColor}"
-                    PlaceholderColor="{DynamicResource Silver}"
+                    Style="{StaticResource MatchingQEditPageEntry}"
                 >
                     <Entry.Triggers>
                         <EventTrigger Event="TextChanged">
@@ -80,9 +84,8 @@
                                     Text="{Binding Answer, Mode=TwoWay}" 
                                     WidthRequest="270" 
                                     HorizontalOptions="StartAndExpand"
-                                    TextColor="{DynamicResource TextColor}"
-                                    BackgroundColor="{DynamicResource LightBackgroundColor}"
-                                    PlaceholderColor="{DynamicResource Silver}"
+                                    Style="{StaticResource MatchingQEditPageEntry}"
+                                    FontSize="Default"
                                 />
                                 <Switch IsToggled="{Binding IsTrue, Mode=TwoWay}"/>
                             </StackLayout>

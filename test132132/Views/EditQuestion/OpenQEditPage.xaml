@@ -10,6 +10,16 @@
         <ToolbarItem Text="{i18n:Translate CommonDelete}" Clicked="Delete_Clicked"/>
         <ToolbarItem Text="{i18n:Translate CommonSave}" Clicked="Save_Clicked"/>
     </ContentPage.ToolbarItems>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="OpenQEditPageEntry" TargetType="Entry">
+                <Setter Property="FontSize" Value="Small"/>
+                <Setter Property="BackgroundColor" Value="{DynamicResource LightBackgroundColor}"/>
+                <Setter Property="PlaceholderColor" Value="{DynamicResource Silver}"/>
+                <Setter Property="TextColor" Value="{DynamicResource TextColor}"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout Spacing="25" 
                      VerticalOptions="Center" 
@@ -25,10 +35,7 @@
                 <Entry 
                     x:Name="QuestionTextEntry" 
                     Placeholder="{i18n:Translate MatchingQEditPageQuestionPlaceholder}" 
-                    FontSize="Small"                
-                    BackgroundColor="{DynamicResource LightBackgroundColor}"
-                    PlaceholderColor="{DynamicResource Silver}"
-                    TextColor="{DynamicResource TextColor}"
+                    Style="{StaticResource OpenQEditPageEntry}"
                 />    
             </StackLayout>
             <StackLayout Spacing="5">
@@ -40,10 +47,7 @@
                 <Entry 
                     x:Name="QuestionAnswerEntry" 
                     Placeholder="{i18n:Translate OpenQEditPageYourAnswerHere}" 
-                    FontSize="Small"                
-                    BackgroundColor="{DynamicResource LightBackgroundColor}"
-                    PlaceholderColor="{DynamicResource Silver}"
-                    TextColor="{DynamicResource TextColor}"
+                    Style="{StaticResource OpenQEditPageEntry}"
                 />
             </StackLayout>
             <StackLayout Spacing="5">
@@ -56,12 +60,8 @@
                     x:Name="PointsEntry"
                     Keyboard="Numeric"
                     Placeholder="{i18n:Translate MatchingQEditPagePointsPlaceholder}"
-                    FontSize="Small"
-                    BackgroundColor="{DynamicResource LightBackgroundColor}"
-                    PlaceholderColor="{DynamicResource Silver}"
-                    TextColor="{DynamicResource TextColor}"
+                    Style="{StaticResource OpenQEditPageEntry}"
                 >
-            
                     <Entry.Triggers>
                         <EventTrigger Event="TextChanged">
                             <helpers:IntegerEntryTrigger />

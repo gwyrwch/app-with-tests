@@ -15,6 +15,10 @@
                 MaximumTrackColor="#ff3b30"
                 IsEnabled="false"
             />
+            <ProgressBar 
+                x:Name="TimeLeftBar"
+                Style="{StaticResource TimeLeftProgressBar}"
+            />
             <StackLayout VerticalOptions="CenterAndExpand" Padding="5,0,0,0">
                 <Label x:Name="QuestionLabel" 
                        LineBreakMode="WordWrap"
@@ -30,43 +34,10 @@
                 /> 
             </StackLayout>
             <Button 
-                VerticalOptions="End"
                 Text="{i18n:Translate OpenQuestionPageAnswer}"
-                BackgroundColor="{DynamicResource LightBackgroundColor}"
-                BorderRadius="10"
-                BorderWidth="1"
-                BorderColor="{DynamicResource MainColor}"
-                Margin="10"
-                TextColor="{DynamicResource MainColor}"
                 Clicked="Answer_Clicked"
+                Style="{StaticResource AnswerButton}"
            />
-          <!-- <ListView x:Name="lw" 
-                     IsGroupingEnabled="true" 
-                     BackgroundColor="{DynamicResource LightBackgroundColor}" 
-                     RowHeight="45" 
-                     HasUnevenRows="true"
-                     SeparatorVisibility="None"
-                     SeparatorColor="Transparent"                          
-           >
-                <ListView.GroupHeaderTemplate>
-                    <DataTemplate>
-                        <ViewCell>                                
-                            <ViewCell.Height>
-                                <OnPlatform x:TypeArguments="x:Double" iOS="28"/>
-                            </ViewCell.Height>
-                            <local:EvolveGroupHeaderView BackgroundColor="{DynamicResource SomeLightBackgroundColor}"/>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.GroupHeaderTemplate>
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell Height="45">
-                            <StackLayout HeightRequest="5" BackgroundColor="Red"/>
-                            <Label Text="suk" />
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>    
-           </ListView>-->
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

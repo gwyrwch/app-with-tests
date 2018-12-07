@@ -18,6 +18,10 @@
                     MaximumTrackColor="#ff3b30"
                     IsEnabled="false"
                 />
+                <ProgressBar 
+                    x:Name="TimeLeftBar"
+                    Style="{StaticResource TimeLeftProgressBar}"
+                />
                 <StackLayout>
                     <Label x:Name="QuestionLabel" 
                            TextColor="{DynamicResource TextColor}"
@@ -28,15 +32,19 @@
                               SeparatorColor="Transparent"
                               ItemSelected="OnItemSelected"
                               ItemsSource="{Binding Variants}"  
+                              RowHeight="60"
+                              HasUnevenRows="true"
                     >
                         <ListView.ItemTemplate>
                             <DataTemplate>
-                                <ViewCell >
+                                <ViewCell>
                                     <StackLayout Orientation="Horizontal" Padding="10,0">
                                         <Label 
                                             Text="{Binding Answer}"
                                             VerticalOptions="Center"
                                             TextColor="{DynamicResource TextColor}"
+                                            LineBreakMode="WordWrap"
+                                            FontSize="{Binding FontSize}"
                                         />
                                         <controls:CheckBox 
                                             BackgroundColor="Transparent" 
@@ -55,14 +63,9 @@
                     </helpers:ListViewWithoutScroll>
                 </StackLayout>
                 <Button 
-                    VerticalOptions="End"
                     Text="{i18n:Translate OpenQuestionPageAnswer}"
-                    BackgroundColor="{DynamicResource LightBackgroundColor}"
-                    BorderRadius="10"
-                    BorderWidth="1"
-                    BorderColor="{DynamicResource MainColor}"
-                    Margin="10"
-                    TextColor="{DynamicResource MainColor}"
+                    Style="{StaticResource AnswerButton}"
+                    VerticalOptions="EndAndExpand"
                     Clicked="Answer_Clicked"
                />
             </StackLayout>

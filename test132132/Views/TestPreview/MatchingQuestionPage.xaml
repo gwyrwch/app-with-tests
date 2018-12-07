@@ -19,7 +19,10 @@
                     MaximumTrackColor="#ff3b30"
                     IsEnabled="false"
                 />
-                
+                <ProgressBar 
+                    x:Name="TimeLeftBar"
+                    Style="{StaticResource TimeLeftProgressBar}"
+                />
                 <StackLayout>
                     <Label x:Name="QuestionLabel" 
                            TextColor="{DynamicResource TextColor}"
@@ -31,16 +34,17 @@
                               SeparatorColor="Transparent"
                               ItemSelected="OnItemSelected"
                               ItemsSource="{Binding Lefts}"
-                              RowHeight="45" 
+                              RowHeight="60" 
                               HasUnevenRows="true"  
                         >
                             <ListView.ItemTemplate>
                                 <DataTemplate>
-                                    <ViewCell Height="45">
+                                    <ViewCell Height="60">
                                         <Label 
                                             Text="{Binding Text}"
                                             VerticalOptions="Center"
                                             TextColor="{DynamicResource TextColor}"
+                                            LineBreakMode="WordWrap"
                                         />        
                                     </ViewCell>
                                 </DataTemplate>
@@ -54,16 +58,17 @@
                               SeparatorColor="Transparent"
                               ItemSelected="OnItemSelected"
                               ItemsSource="{Binding Rights}"
-                              RowHeight="45" 
+                              RowHeight="60" 
                               HasUnevenRows="true"
                         >
                             <ListView.ItemTemplate>
                                 <DataTemplate>
-                                    <ViewCell Height="45">
+                                    <ViewCell Height="60">
                                         <Label 
                                             Text="{Binding Text}"
                                             VerticalOptions="Center"
                                             TextColor="{DynamicResource TextColor}"
+                                            LineBreakMode="WordWrap"
                                         />        
                                     </ViewCell>
                                 </DataTemplate>
@@ -73,15 +78,9 @@
                     </StackLayout>
                 </StackLayout>
                 <Button 
-                    VerticalOptions="End"
                     Text="{i18n:Translate OpenQuestionPageAnswer}"
-                    BackgroundColor="{DynamicResource LightBackgroundColor}"
-                    BorderRadius="10"
-                    BorderWidth="1"
-                    BorderColor="{DynamicResource MainColor}"
-                    Margin="10"
-                    TextColor="{DynamicResource MainColor}"
                     Clicked="Answer_Clicked"
+                    Style="{StaticResource AnswerButton}"
                 />
             </StackLayout>
         </StackLayout>
