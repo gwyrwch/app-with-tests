@@ -22,7 +22,7 @@ namespace test132132.Models
             UserName = "guest";
             Email = "bla@mail.ru";
             Birth = new DateTime(1990, 12, 31);
-            ProfileImagePath = "tab_about.png";
+            ProfileImagePath = "signUpUser.png";
             Stats = new UserStatistics();
         }
 

@@ -31,14 +31,15 @@ namespace test132132.Views.UserProfile.Authorization
             if (!Common.UserBase.GoodPassword(password))
             {
                 await DisplayAlert(
-                    "Bad password", 
-                    "Password should be at least 5 characters long", 
+                    "Bad password",
+                    "Password should be at least 5 characters long",
                     iOS.AppResources.CommonOk
                 );
                 return;
             }
 
-            try {
+            try
+            {
                 signUppingUser.Name = NameEntry.Text;
                 signUppingUser.Surname = SurnameEntry.Text;
                 signUppingUser.Email = EmailEntry.Text;
@@ -47,15 +48,18 @@ namespace test132132.Views.UserProfile.Authorization
                 signUppingUser.UserName = UserNameEntry.Text;
                 signUppingUser.Stats = new Models.UserStatistics();
             }
-            catch(Exception exc)
+            catch (Exception exc)
             {
                 await DisplayAlert(
-                    iOS.AppResources.SignUpPageInvalidUsername, 
-                    exc.Message, 
+                    iOS.AppResources.SignUpPageInvalidUsername,
+                    exc.Message,
                     iOS.AppResources.CommonOk
-                );  
+                );
                 return;
             }
+
+            if (signUppingUser.ProfileImagePath == "signUpUser.png")
+                signUppingUser.ProfileImagePath = "defaultUser.png";
 
             Common.UserBase.NewUser(signUppingUser, password);
             MessagingCenter.Send(new SettingsPage(), "RenderingAsked");

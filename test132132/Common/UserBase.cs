@@ -1,4 +1,6 @@
-﻿using System;
+﻿//UserBase
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,7 +24,7 @@ namespace test132132.Common
             );
         }
 
-        static List<Tuple<string, string> > AllUserNames() // name + hash
+        static List<Tuple<string, string>> AllUserNames() // name + hash
         {
             if (!File.Exists(allUsersPath))
             {
@@ -99,7 +101,7 @@ namespace test132132.Common
                 App.CurrentUser = JsonConvert.DeserializeObject<Models.User>(plainText);
 
                 return true;
-            } 
+            }
 
             return false;
         }
@@ -158,7 +160,7 @@ namespace test132132.Common
                 Name = "Danik",
                 Surname = "Melnichenka",
                 UserName = "M",
-                Birth = new DateTime(1999, 12, 24),
+                Birth = new DateTime(1999, 12, 8),
                 Education = "BSU",
                 Email = "melnick@gmail.com",
                 ProfileImagePath = "Melnick.jpg"
