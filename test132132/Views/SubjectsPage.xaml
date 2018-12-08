@@ -23,6 +23,7 @@
                     TextChanged="SearchText_Changed"
                 /> 
             </StackLayout>
+            <SearchBar />
             <helpers:CustomTableView
                 x:Name="SubjectsTableView" 
                 Intent="Data"

@@ -8,155 +8,169 @@
 >
     <ContentPage.Content>
         <StackLayout x:Name="Information" Spacing="0">
-        <ContentView HeightRequest="100">
-             <StackLayout Orientation="Horizontal" 
-                    BackgroundColor="{DynamicResource LightBackgroundColor}" 
-                    Padding="30,10,10,10"
-                    VerticalOptions="FillAndExpand"
-                    HorizontalOptions="FillAndExpand"
-                    Spacing="20"
-             > 
-               
-                <controls:CircleImage   
-                    HeightRequest="80"   
-                    WidthRequest="80"   
-                    Source="{Binding ProfileImagePath}"
-                    Aspect="AspectFill"
-                />  
-  
-                <StackLayout Orientation="Horizontal" Spacing="5">
-                    <Label  VerticalOptions="Center"
-                        Text="{Binding Name}"
-                        TextColor="{DynamicResource MainColor}"
-                        HorizontalOptions="Start"
-                    />
-                    <Label VerticalOptions="Center"
-                        Text="{Binding Surname}"
-                        TextColor="{DynamicResource MainColor}"
-                    />       
-                </StackLayout>
-                
-            </StackLayout>   
-        </ContentView>
-        <local:ColoredTableView Intent="Form" 
-                                BackgroundColor="{DynamicResource SomeLightBackgroundColor}" 
-                                HeightRequest="100"  
-                                SeparatorColor="{DynamicResource SeparatorColor}"
-                                >  
-            <TableRoot>
-                 <TableSection>
-                    <ViewCell x:Name="BirthDayViewCell">
-                        <StackLayout  
-                             Orientation="Vertical" 
-                             BackgroundColor="{DynamicResource LightBackgroundColor}"
-                             Padding="30,0,0,0"
-                        >
-                            <Label VerticalOptions="Center" 
-                                    Text="{i18n:Translate UserInformationPageBirthday}"
-                                    TextColor="{DynamicResource Silver}"
-                                    FontSize="Micro"
-                                    HorizontalOptions="Start" 
+            <Label HeightRequest="0.4" 
+               BackgroundColor="{DynamicResource SeparatorColor}"
+               WidthRequest="200"
+            />
+            <ContentView HeightRequest="100">
+                 <StackLayout Orientation="Horizontal" 
+                        BackgroundColor="{DynamicResource LightBackgroundColor}" 
+                        Padding="30,10,10,10"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        Spacing="20"
+                 > 
+                   
+                    <controls:CircleImage   
+                        HeightRequest="80"   
+                        WidthRequest="80"   
+                        Source="{Binding ProfileImagePath}"
+                        Aspect="AspectFill"
+                    />  
+                    <StackLayout Spacing="1">
+                        <StackLayout Orientation="Horizontal" Spacing="5">
+                            <Label  VerticalOptions="Center"
+                                Text="{Binding Name}"
+                                TextColor="{DynamicResource MainColor}"
+                                HorizontalOptions="Start"
+                                FontSize="Medium"
                             />
-                            <Label VerticalOptions="Center" 
-                                    Text="{Binding Birth, StringFormat='{0:MMMM d, yyyy}'}"
-                                    TextColor="{DynamicResource MainColor}"
-                                    HorizontalOptions="Start" 
+                            <Label VerticalOptions="Center"
+                                Text="{Binding Surname}"
+                                TextColor="{DynamicResource MainColor}"
+                                FontSize="Medium"
                             />
-                        </StackLayout>  
-                    </ViewCell>                    
-                 </TableSection>
-                 <TableSection>
-                    <ViewCell x:Name="EducationViewCell">
-                        <StackLayout  
-                             Orientation="Vertical" 
-                             BackgroundColor="{DynamicResource LightBackgroundColor}"
-                             Padding="30,0,0,0"
-                        >
-                             <Label VerticalOptions="Center" 
-                                    Text="{i18n:Translate UserInformationPageStudiedAt}"
-                                    TextColor="{DynamicResource Silver}"
-                                    FontSize="Micro"
-                                    HorizontalOptions="Start" 
-                            />
-                            <Label VerticalOptions="Center" 
-                                    Text="{Binding Education}"
-                                    TextColor="{DynamicResource MainColor}"
-                                    HorizontalOptions="Start" 
-                            />
-                        </StackLayout>  
-                    </ViewCell>                    
-                 </TableSection>
-                 <TableSection>
-                    <ViewCell x:Name="EmailViewCell">
-                        <StackLayout  
-                             Orientation="Vertical" 
-                             BackgroundColor="{DynamicResource LightBackgroundColor}"
-                             Padding="30,0,0,0"
-                        >
-                             <Label VerticalOptions="Center" 
-                                    Text="{i18n:Translate UserInformationPageContacts}"
-                                    TextColor="{DynamicResource Silver}"
-                                    FontSize="Micro"
-                                    HorizontalOptions="Start" 
-                            />
-                            <Label  x:Name="EmailLabel"
-                                    VerticalOptions="Center" 
-                                    Text="{Binding Email}"
-                                    TextColor="{DynamicResource MainColor}"
-                                    HorizontalOptions="Start" 
-                            />
-                        </StackLayout>  
-                    </ViewCell>                    
-                 </TableSection>
-                 <TableSection Title="{i18n:Translate UserInformationPageCareer}">
-                    <ViewCell Tapped="Statistics_Tapped">
-                        <StackLayout Orientation="Horizontal" 
-                                     BackgroundColor="{DynamicResource LightBackgroundColor}"
-                                     Padding="30,0,5,0"
-                        >
-                            <Label VerticalOptions="Center" 
-                                    Text="{i18n:Translate UserInformationPageStatistics}"
-                                    TextColor="{DynamicResource MainColor}"
-                                    HorizontalOptions="Start" 
-                            />
-                            <Label Style="{StaticResource EndLabel}"
-                                   HorizontalOptions="EndAndExpand"
-                            />
-                        </StackLayout>  
-                    </ViewCell>
-                    <ViewCell>
-                        <StackLayout Orientation="Horizontal" 
-                                     BackgroundColor="{DynamicResource LightBackgroundColor}"
-                                     Padding="30,0,5,0"
-                        >
-                            <Label VerticalOptions="Center" 
-                                    Text="{i18n:Translate UserInformationPageAchievements}"
-                                    TextColor="{DynamicResource MainColor}"
-                                    HorizontalOptions="Start" 
-                            />
-                            <Label Style="{StaticResource EndLabel}"
-                                   HorizontalOptions="EndAndExpand"
-                            />
-                        </StackLayout>  
-                    </ViewCell>
-                    <ViewCell Tapped="Rating_Tapped">
-                        <StackLayout Orientation="Horizontal" 
-                                     BackgroundColor="{DynamicResource LightBackgroundColor}"
-                                     Padding="30,0,5,0"
-                        >
-                            <Label VerticalOptions="Center" 
-                                    Text="{i18n:Translate UserInformationPageRating}"
-                                    TextColor="{DynamicResource MainColor}"
-                                    HorizontalOptions="Start" 
-                            />
-                            <Label Style="{StaticResource EndLabel}"
-                                    HorizontalOptions="EndAndExpand"
-                            />
-                        </StackLayout> 
-                    </ViewCell>    
-                 </TableSection>
-               </TableRoot>            
-        </local:ColoredTableView>
+                        </StackLayout>
+                        <Label x:Name="BirthLabel"
+                            TextColor="Silver"
+                            FontSize="Small"
+                        />
+                    </StackLayout>
+                </StackLayout>   
+            </ContentView>
+            <Label HeightRequest="0.4" 
+                   BackgroundColor="{DynamicResource SeparatorColor}"
+                   WidthRequest="200"
+            />
+            <local:ColoredTableView Intent="Form" 
+                                    BackgroundColor="{DynamicResource SomeLightBackgroundColor}" 
+                                    HeightRequest="100"  
+                                    SeparatorColor="{DynamicResource SeparatorColor}"
+                                    >  
+                <TableRoot>
+                     <TableSection>
+                        <ViewCell x:Name="BirthDayViewCell">
+                            <StackLayout  
+                                 Orientation="Vertical" 
+                                 BackgroundColor="{DynamicResource LightBackgroundColor}"
+                                 Padding="30,0,0,0"
+                            >
+                                <Label VerticalOptions="Center" 
+                                        Text="{i18n:Translate UserInformationPageBirthday}"
+                                        TextColor="{DynamicResource Silver}"
+                                        FontSize="Micro"
+                                        HorizontalOptions="Start" 
+                                />
+                                <Label VerticalOptions="Center" 
+                                        Text="{Binding Birth, StringFormat='{0:MMMM d, yyyy}'}"
+                                        TextColor="{DynamicResource MainColor}"
+                                        HorizontalOptions="Start" 
+                                />
+                            </StackLayout>  
+                        </ViewCell>                    
+                     </TableSection>
+                     <TableSection>
+                        <ViewCell x:Name="EducationViewCell">
+                            <StackLayout  
+                                 Orientation="Vertical" 
+                                 BackgroundColor="{DynamicResource LightBackgroundColor}"
+                                 Padding="30,0,0,0"
+                            >
+                                 <Label VerticalOptions="Center" 
+                                        Text="{i18n:Translate UserInformationPageStudiedAt}"
+                                        TextColor="{DynamicResource Silver}"
+                                        FontSize="Micro"
+                                        HorizontalOptions="Start" 
+                                />
+                                <Label VerticalOptions="Center" 
+                                        Text="{Binding Education}"
+                                        TextColor="{DynamicResource MainColor}"
+                                        HorizontalOptions="Start" 
+                                />
+                            </StackLayout>  
+                        </ViewCell>                    
+                     </TableSection>
+                     <TableSection>
+                        <ViewCell x:Name="EmailViewCell">
+                            <StackLayout  
+                                 Orientation="Vertical" 
+                                 BackgroundColor="{DynamicResource LightBackgroundColor}"
+                                 Padding="30,0,0,0"
+                            >
+                                 <Label VerticalOptions="Center" 
+                                        Text="{i18n:Translate UserInformationPageContacts}"
+                                        TextColor="{DynamicResource Silver}"
+                                        FontSize="Micro"
+                                        HorizontalOptions="Start" 
+                                />
+                                <Label  x:Name="EmailLabel"
+                                        VerticalOptions="Center" 
+                                        Text="{Binding Email}"
+                                        TextColor="{DynamicResource MainColor}"
+                                        HorizontalOptions="Start" 
+                                />
+                            </StackLayout>  
+                        </ViewCell>                    
+                     </TableSection>
+                     <TableSection Title="{i18n:Translate UserInformationPageCareer}">
+                        <ViewCell Tapped="Statistics_Tapped">
+                            <StackLayout Orientation="Horizontal" 
+                                         BackgroundColor="{DynamicResource LightBackgroundColor}"
+                                         Padding="30,0,5,0"
+                            >
+                                <Label VerticalOptions="Center" 
+                                        Text="{i18n:Translate UserInformationPageStatistics}"
+                                        TextColor="{DynamicResource MainColor}"
+                                        HorizontalOptions="Start" 
+                                />
+                                <Label Style="{StaticResource EndLabel}"
+                                       HorizontalOptions="EndAndExpand"
+                                />
+                            </StackLayout>  
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" 
+                                         BackgroundColor="{DynamicResource LightBackgroundColor}"
+                                         Padding="30,0,5,0"
+                            >
+                                <Label VerticalOptions="Center" 
+                                        Text="{i18n:Translate UserInformationPageAchievements}"
+                                        TextColor="{DynamicResource MainColor}"
+                                        HorizontalOptions="Start" 
+                                />
+                                <Label Style="{StaticResource EndLabel}"
+                                       HorizontalOptions="EndAndExpand"
+                                />
+                            </StackLayout>  
+                        </ViewCell>
+                        <ViewCell Tapped="Rating_Tapped">
+                            <StackLayout Orientation="Horizontal" 
+                                         BackgroundColor="{DynamicResource LightBackgroundColor}"
+                                         Padding="30,0,5,0"
+                            >
+                                <Label VerticalOptions="Center" 
+                                        Text="{i18n:Translate UserInformationPageRating}"
+                                        TextColor="{DynamicResource MainColor}"
+                                        HorizontalOptions="Start" 
+                                />
+                                <Label Style="{StaticResource EndLabel}"
+                                        HorizontalOptions="EndAndExpand"
+                                />
+                            </StackLayout> 
+                        </ViewCell>    
+                     </TableSection>
+                   </TableRoot>            
+            </local:ColoredTableView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

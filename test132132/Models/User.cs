@@ -83,5 +83,13 @@ namespace test132132.Models
         }     
         public string ProfileImagePath { get; set; }    //todo??
         public UserStatistics Stats { get; set; }
+
+        public int GetUserAge()
+        {
+            var years = DateTime.Now.Year - this.Birth.Year;
+            var birthdayThisYearPassed = this.Birth.AddYears(years) <= DateTime.Now;
+
+            return birthdayThisYearPassed ? years : years - 1;
+        }
     }
 }

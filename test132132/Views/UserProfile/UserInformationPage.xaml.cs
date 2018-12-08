@@ -18,6 +18,8 @@ namespace test132132.Views.UserProfile
         
             viewModel = new ViewModels.User.UserProfileViewModel();
             Information.BindingContext = viewModel.CurrentUser;
+
+            BirthLabel.Text = string.Join(" ", viewModel.CurrentUser.GetUserAge().ToString(), "years old"); //todo translate
         }
 
         async void Statistics_Tapped(object s, EventArgs e)
