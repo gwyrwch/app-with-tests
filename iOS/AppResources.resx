@@ -377,4 +377,9 @@
     <data name="TestChoosedPageSolve">
         <value>Solve test</value>
     </data>
+    
+    <!--RatingPage-->
+    <data name="RatingPageUser">
+        <value>User</value>
+    </data>
 </root>

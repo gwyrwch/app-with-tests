@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    BackgroundColor="{DynamicResource SomeLightBackgroundColor}" 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:local="clr-namespace:test132132.Common" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="test132132.Views.UserProfile.RatingPage"
+    xmlns:i18n="clr-namespace:test132132.iOS.Helpers"
+
+>
+    <ContentPage.Content>
+        <StackLayout x:Name="layoutForGrid" Spacing="0">
+            <Label HorizontalOptions="Center"
+                Text="{i18n:Translate UserInformationPageRating}"
+                TextColor="{DynamicResource MainColor}"
+                FontAttributes="Bold"
+                FontSize="Large"  
+            />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

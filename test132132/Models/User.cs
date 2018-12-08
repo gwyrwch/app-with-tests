@@ -53,7 +53,6 @@ namespace test132132.Models
         public DateTime Birth {
             get => birth;
             set {
-                //DateTime.Now - DateTime.
                 DateTime today = DateTime.Today;
                 DateTime fiveYearsAgo = today.AddYears(-5);
                 if (value > fiveYearsAgo)

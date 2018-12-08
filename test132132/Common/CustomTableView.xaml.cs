@@ -5,7 +5,13 @@ namespace test132132.Common
 {
     public partial class CustomTableView : TableView
     {
-        public static BindableProperty GroupHeaderColorProperty = BindableProperty.Create("GroupHeaderColor", typeof(Color), typeof(CustomTableView), Color.White);
+        public static BindableProperty GroupHeaderColorProperty = 
+            BindableProperty.Create(
+                "GroupHeaderColor", 
+                typeof(Color), 
+                typeof(CustomTableView), 
+                Color.White
+            );
         public Color GroupHeaderColor
         {
             get

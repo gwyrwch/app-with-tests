@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage 
-    BackgroundColor="{DynamicResource SomeLightBackgroundColor}" 
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     x:Class="test132132.Views.UserProfile.StatisticsPage"
+    BackgroundColor="{DynamicResource SomeLightBackgroundColor}" 
     xmlns:local="clr-namespace:test132132.Common"
     xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
 >

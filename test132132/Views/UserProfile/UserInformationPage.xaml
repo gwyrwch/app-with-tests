@@ -139,7 +139,7 @@
                             />
                         </StackLayout>  
                     </ViewCell>
-                    <ViewCell>
+                    <ViewCell Tapped="Rating_Tapped">
                         <StackLayout Orientation="Horizontal" 
                                      BackgroundColor="{DynamicResource LightBackgroundColor}"
                                      Padding="30,0,5,0"

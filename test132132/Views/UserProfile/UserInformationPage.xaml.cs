@@ -24,5 +24,11 @@ namespace test132132.Views.UserProfile
         {
             await Navigation.PushAsync(new StatisticsPage(viewModel.CurrentUser.Stats));
         }
+
+
+        async void Rating_Tapped(object s, EventArgs e)
+        {
+            await Navigation.PushAsync(new RatingPage());
+        }
     }
 }
