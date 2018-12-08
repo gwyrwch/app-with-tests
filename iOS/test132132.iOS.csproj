@@ -222,6 +222,7 @@
       <DependentUpon>AppResources.ru.resx</DependentUpon>
     </Compile>
     <Compile Include="ListViewWithoutScrollRenderer.cs" />
+    <Compile Include="CustomTableViewRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Entitlements.plist" />

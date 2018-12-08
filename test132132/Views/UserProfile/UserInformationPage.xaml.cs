@@ -18,19 +18,11 @@ namespace test132132.Views.UserProfile
         
             viewModel = new ViewModels.User.UserProfileViewModel();
             Information.BindingContext = viewModel.CurrentUser;
+        }
 
-
-            //BirthDayViewCell.BindingContext = viewModel.currentUser;
-            //EducationViewCell.BindingContext = viewModel.currentUser;
-
-            //MessagingCenter.Subscribe<ContentPage, Models.User>(
-               //this, "EmailChanged", (obj, userWithNewEmail) =>
-               //{
-               //    viewModel = new ViewModels.User.UserProfileViewModel();
-               //    viewModel.currentUser.Email = userWithNewEmail.Email;
-               //    EmailLabel.BindingContext = viewModel.currentUser;
-               //    //MessageCame = true; //todo doesn't work
-               //});
+        async void Statistics_Tapped(object s, EventArgs e)
+        {
+            await Navigation.PushAsync(new StatisticsPage(viewModel.CurrentUser.Stats));
         }
     }
 }

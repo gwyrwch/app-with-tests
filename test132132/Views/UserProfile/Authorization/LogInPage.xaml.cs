@@ -19,11 +19,12 @@ namespace test132132.Views.UserProfile.Authorization
 
             if (Common.UserBase.TryToLogin(emailOrUsername, password))
             {
+                MessagingCenter.Send(new SettingsPage(), "RenderingAsked");
                 //await Navigation.PushAsync(new ProfilePage());
-                Page p = new ProfilePage();
-                NavigationPage.SetHasBackButton(p, false);
+                //Page p = new ProfilePage();
+                //NavigationPage.SetHasBackButton(p, false);
 
-                await Navigation.PushAsync(p);
+                //await Navigation.PushAsync(p);
             }
             else
             {

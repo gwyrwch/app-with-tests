@@ -3,19 +3,23 @@ using System.Collections.Generic;
 
 namespace test132132.Models
 {
-    public class TestResults
-    {
-        public int SolvedQ { get; set; }
-        public int TotalQ { get; set; }
-        public string TestSubject { get; set; }
-    }
     public class UserStatistics
     {
-        public UserStatistics() 
+        public List<int> SolvedTests { get; set; }
+        public List<int> Points { get; set; }
+        public int CorrectAnswers { get; set; }
+
+        public UserStatistics()
         {
-            SolvedTests = new List<TestResults>();
+            SolvedTests = new List<int>();
+            Points = new List<int>();
         }
-        public List<TestResults> SolvedTests { get; set; }
-        public int SummaryPoints { get; set; }
+
+        public void UpdateWith(Test test, TestSolving.TestResults testResults)
+        {
+            SolvedTests.Add(test.Id);
+            Points.Add(testResults.TotalPoints);
+            CorrectAnswers += testResults.CorrectAnswers;
+        }
     }
 }

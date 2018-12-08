@@ -45,7 +45,7 @@ namespace test132132.Views.UserProfile.Authorization
                 signUppingUser.Birth = BirthdayPicker.Date;
                 signUppingUser.Education = EducationEntry.Text;
                 signUppingUser.UserName = UserNameEntry.Text;
-                signUppingUser.Stats = null;
+                signUppingUser.Stats = new Models.UserStatistics();
             }
             catch(Exception exc)
             {
@@ -58,8 +58,7 @@ namespace test132132.Views.UserProfile.Authorization
             }
 
             Common.UserBase.NewUser(signUppingUser, password);
-
-            await Navigation.PushAsync(new ProfilePage());
+            MessagingCenter.Send(new SettingsPage(), "RenderingAsked");
         }
     }
 }

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    BackgroundColor="{DynamicResource SomeLightBackgroundColor}" 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="test132132.Views.UserProfile.StatisticsPage"
+    xmlns:local="clr-namespace:test132132.Common"
+    xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+>
+    <ContentPage.Content>
+        <StackLayout Padding="10,25" Spacing="50">
+            <Label 
+                Text="Your statistics"
+                FontSize="Large" 
+                TextColor="{DynamicResource TextColor}" 
+                HorizontalOptions="Center"
+            />
+            
+            <StackLayout Spacing="25">
+                <StackLayout Orientation="Horizontal">
+                    <Label VerticalOptions="Center" Text="Solved tests" FontAttributes="Bold" TextColor="{DynamicResource TextColor}"/>
+                    <Label HorizontalOptions="EndAndExpand" VerticalOptions="Center" x:Name="SolvedTestsLabel" FontSize="Small" TextColor="{DynamicResource Silver}" FontAttributes="Bold"/>
+                </StackLayout>
+                
+                <StackLayout Orientation="Horizontal">
+                    <Label VerticalOptions="Center" Text="Total points" FontAttributes="Bold" TextColor="{DynamicResource TextColor}"/>
+                    <Label HorizontalOptions="EndAndExpand" VerticalOptions="Center" x:Name="TotalPointsLabel" FontSize="Small" TextColor="{DynamicResource Silver}" FontAttributes="Bold"/>
+                </StackLayout>
+            </StackLayout>
+            
+            <StackLayout Spacing="25">
+                <Label Text="Your results graph" TextColor="{DynamicResource TextColor}" FontSize="Large" HorizontalOptions="Center"/>
+                
+                <StackLayout>
+                    <skia:SKCanvasView 
+                        x:Name="PlotView" 
+                        PaintSurface="OnPlotViewPaintSurface" 
+                        
+                    />
+                    <!--HeightRequest="250"-->
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

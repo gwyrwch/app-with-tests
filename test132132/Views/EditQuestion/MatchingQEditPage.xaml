@@ -10,7 +10,7 @@
         <ResourceDictionary>
             <Style x:Key="MatchingQEditPageLabel" TargetType="Label">
                 <Setter Property="FontSize" Value="18"/>
-                <Setter Property="TextColor" Value="{DynamicResource TexColor}"/>
+                <Setter Property="TextColor" Value="{DynamicResource TextColor}"/>
                 <Setter Property="BackgroundColor" Value="{DynamicResource SomeLightBackgroundColor}"/>
             </Style>
         </ResourceDictionary>

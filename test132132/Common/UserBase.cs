@@ -99,8 +99,18 @@ namespace test132132.Common
                 App.CurrentUser = JsonConvert.DeserializeObject<Models.User>(plainText);
 
                 return true;
-            } else
-                return false;
+            } 
+
+            return false;
+        }
+
+        public static void UpdateStats(Models.TestSolving.TestResults testResults, Models.Test test)
+        {
+            if (App.CurrentUser != null)
+            {
+                App.CurrentUser.Stats.UpdateWith(test, testResults);
+                UpdateUser(App.CurrentUser);
+            }
         }
 
         public static string CreateMD5(string input)

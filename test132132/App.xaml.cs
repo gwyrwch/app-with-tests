@@ -62,7 +62,7 @@ namespace test132132
         {
             Services.Settings defaultSettings = new Services.Settings { 
                 Language = "Russian", 
-                Theme = "LightTheme"
+                Theme = "DarkTheme"
             };
 
             File.WriteAllText(
@@ -85,21 +85,23 @@ namespace test132132
                 Current.Resources["SeparatorColor"] = Color.Silver;
                 Current.Resources["BottomBarBackgroundColor"] = Color.Default;
                 Current.Resources["BarTextColor"] = Color.Default;
+                Current.Resources["TableSectionColor"] = Color.FromHex("#ededed");
 
                 MainImagePath = "GreyBlue.png";
                 EditorImagePath = "Editor.png";
             } else if (theme == "DarkTheme")
             {
-                Current.Resources["Silver"] = Color.FromHex("#f0a5b3");
+                Current.Resources["Silver"] = Color.FromHex("#fff2f5");
                 Current.Resources["MainColor"] = Color.FromHex("#5ac8fa");
-                Current.Resources["SomeLightBackgroundColor"] = Color.FromHex("#7e7e81");
-                Current.Resources["LightBackgroundColor"] = Color.FromHex("#8e8e93");
+                Current.Resources["SomeLightBackgroundColor"] = Color.FromHex("#120D36");
+                Current.Resources["LightBackgroundColor"] = Color.FromHex("#100b33");
                 Current.Resources["MainGreyColor"] = Color.FromHex("#5ac8fa");
-                Current.Resources["BarBackgroundColor"] = Color.FromHex("#78787e");
+                Current.Resources["BarBackgroundColor"] = Color.FromHex("#131124");
                 Current.Resources["TextColor"] = Color.WhiteSmoke;
                 Current.Resources["SeparatorColor"] = Color.WhiteSmoke;
-                Current.Resources["BottomBarBackgroundColor"] = Color.FromHex("#78787e");
+                Current.Resources["BottomBarBackgroundColor"] = Color.FromHex("#040026");
                 Current.Resources["BarTextColor"] = Color.WhiteSmoke;
+                Current.Resources["TableSectionColor"] = Color.FromHex("#131124");
 
                 MainImagePath = "lightblue.png";
                 EditorImagePath = "DarkThemeEditor.png";

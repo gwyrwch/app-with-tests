@@ -16,6 +16,9 @@ namespace test132132.Views.TestPreview
         {
             this.test = test;
             this.testResults = testResults;
+
+            Common.UserBase.UpdateStats(testResults, test);
+
             InitializeComponent();
 
             var totalTime = (test.Mode == TimeMode.limitForTest ? 1 : test.Count) * test.TimeLimit.Value.TotalSeconds;
@@ -52,13 +55,13 @@ namespace test132132.Views.TestPreview
             double percent = (double)testResults.CorrectAnswers / test.Count * 100;
             Color progressColor;
 
-            if (percent >= 90)
+            if (percent >= 80)
             {
                 ResultQualityImage.Source = "QualityImages/excelent.png";
                 progressColor = Color.FromHex("#4cd964");
             }
 
-            else if (percent >= 50)
+            else if (percent >= 40)
             {
                 ResultQualityImage.Source = "QualityImages/good.png";
                 progressColor = Color.FromHex("#ffcc00");
@@ -71,6 +74,7 @@ namespace test132132.Views.TestPreview
 
             TimeProgressBar.ProgressColor = PointsProgressBar.ProgressColor =
                 CorrectQProgressBar.ProgressColor = progressColor;
+
             Task.Run(async () => await TimeProgressBar.ProgressTo(timeStep, 1000, Easing.SinOut));
             Task.Run(async () => await PointsProgressBar.ProgressTo(pointsStep, 1000, Easing.SinOut));
             Task.Run(async () => await CorrectQProgressBar.ProgressTo(qStep, 1000, Easing.SinOut));

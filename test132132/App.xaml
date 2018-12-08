@@ -24,6 +24,7 @@
             <Color x:Key="MainColor">#007aff</Color>
             <Color x:Key="SomeLightBackgroundColor">#f9f9f9</Color>
             <Color x:Key="LightBackgroundColor">#ffff</Color>
+            <Color x:Key="TableSectionColor">#ededed</Color>
             <Image x:Key="mainImage"></Image>
             
             <Style x:Key="TimeLeftProgressBar" TargetType="ProgressBar">

@@ -66,8 +66,9 @@ namespace test132132
             Title = Children[0].Title;
         }
 
-        void UpdateAllChildren()
+        async void UpdateAllChildren()
         {
+            await Navigation.PushModalAsync(new LoadingPage());
             Children.Clear();
 
             Page subjectsPage = null, editorPage = null;
@@ -85,7 +86,7 @@ namespace test132132
                         Title = iOS.AppResources.MainPageEditor
                     };
                     profilePage = new NavigationPage(
-                        new ProfilePage() { Detail = new Views.UserProfile.SettingsPage() }
+                        new ProfilePage { Detail = new Views.UserProfile.SettingsPage() }
                     )
                     {
                         Title = iOS.AppResources.MainPageProfile,
@@ -99,6 +100,8 @@ namespace test132132
             Children.Add(profilePage);
             Children.Add(editorPage);
             Children.Add(subjectsPage);
+
+            await Navigation.PopModalAsync();
         }
 
         void ChangeBottomBar()
