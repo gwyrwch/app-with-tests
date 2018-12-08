@@ -72,7 +72,7 @@ namespace test132132.Views.UserProfile
                         new RowDefinition { Height = new GridLength(Application.Current.MainPage.Height / 30) }
                     );
                 grid.Children.Add(
-                    CreateCell((j).ToString()), 0, j
+                    CreateCell(j.ToString()), 0, j
                 );
                 grid.Children.Add(
                     CreateCell(usersList[j - 1].Item1), 1, j

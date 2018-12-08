@@ -25,10 +25,6 @@ namespace test132132.Views.TestPreview
             limit = test.TimeLimit.Value;
             if (test.Mode == Models.TimeMode.limitForQuestion)
             {
-                TimeLeftSlider.Minimum = 0;
-                TimeLeftSlider.Maximum = limit.TotalSeconds;
-                TimeLeftSlider.Value = limit.TotalSeconds;
-
                 TimeLeftBar.Progress = 1;
 
                 Device.StartTimer(
@@ -42,17 +38,11 @@ namespace test132132.Views.TestPreview
                             return false;
                         }
 
-                        TimeLeftSlider.Value = (limit - PassedTime()).TotalSeconds;
-
                         TimeLeftBar.Progress = (limit - PassedTime()).TotalSeconds / limit.TotalSeconds;
                         return true;
                     }
                 );
             } else {
-                TimeLeftSlider.Minimum = 0;
-                TimeLeftSlider.Maximum = limit.TotalSeconds;
-                TimeLeftSlider.Value = (limit - testResults.UsedTime).TotalSeconds;
-
                 TimeLeftBar.Progress = (limit - testResults.UsedTime).TotalSeconds / limit.TotalSeconds;
 
                 Device.StartTimer(
@@ -66,8 +56,6 @@ namespace test132132.Views.TestPreview
                             TestTimeExpired();
                             return false;
                         }
-
-                        TimeLeftSlider.Value = (limit - testResults.UsedTime - PassedTime()).TotalSeconds;
 
                         TimeLeftBar.Progress = (limit - testResults.UsedTime - PassedTime()).TotalSeconds /
                             limit.TotalSeconds;
