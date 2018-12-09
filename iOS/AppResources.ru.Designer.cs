@@ -682,5 +682,11 @@ namespace test132132.iOS {
                 return ResourceManager.GetString("TestChoosedPageSolve", resourceCulture);
             }
         }
+        
+        internal static string RatingPageUser {
+            get {
+                return ResourceManager.GetString("RatingPageUser", resourceCulture);
+            }
+        }
     }
 }

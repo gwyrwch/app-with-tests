@@ -375,5 +375,10 @@
         <value>Решить тест</value>
     </data>
     
+    <!--RatingPage-->
+    <data name="RatingPageUser">
+        <value>Пользователь</value>
+    </data>
+    
     
 </root>

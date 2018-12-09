@@ -13,7 +13,7 @@
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout Spacing="0" BackgroundColor="{DynamicResource LightBackgroundColor}">
-            <StackLayout Orientation="Horizontal" Padding="3" BackgroundColor="{DynamicResource LightBackgroundColor}">
+            <StackLayout Orientation="Horizontal" Padding="3">
                 <Image Source="search.png" HeightRequest="15" WidthRequest="15"/>
                 <helpers:LineEntry x:Name="searchEntry"
                     Placeholder="{i18n:Translate SubjectsSearch}" 
@@ -23,14 +23,16 @@
                     TextChanged="SearchText_Changed"
                 /> 
             </StackLayout>
-            <TableView
+            <SearchBar />
+            <helpers:CustomTableView
                 x:Name="SubjectsTableView" 
                 Intent="Data"
                 BackgroundColor="{DynamicResource SomeLightBackgroundColor}"
+                GroupHeaderColor="{DynamicResource TextColor}"
             >
                 <TableRoot>
                 </TableRoot>
-            </TableView>
+            </helpers:CustomTableView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

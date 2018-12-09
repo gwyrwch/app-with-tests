@@ -3,9 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="test132132.Views.UserProfile.Settings.SupportPage" 
              xmlns:i18n="clr-namespace:test132132.iOS.Helpers"
+             BackgroundColor="{DynamicResource LightBackgroundColor}"
 >
     <ContentPage.Content>
-        <StackLayout Padding="15, 180, 15, 0" HorizontalOptions="Center" BackgroundColor="{DynamicResource LightBackgroundColor}">
+        <StackLayout Padding="15, 180, 15, 0" HorizontalOptions="Center">
             <Label
                 HorizontalOptions="Center"
                 Text="{i18n:Translate SupportPageText}"

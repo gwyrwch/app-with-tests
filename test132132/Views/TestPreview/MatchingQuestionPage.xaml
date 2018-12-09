@@ -13,12 +13,6 @@
             <StackLayout Padding="5,30" 
                          Spacing="15"
             >
-                <Slider 
-                    x:Name="TimeLeftSlider"
-                    MinimumTrackColor="#4cd964"
-                    MaximumTrackColor="#ff3b30"
-                    IsEnabled="false"
-                />
                 <ProgressBar 
                     x:Name="TimeLeftBar"
                     Style="{StaticResource TimeLeftProgressBar}"

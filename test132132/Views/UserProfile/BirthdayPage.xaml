@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="test132132.Views.UserProfile.BirthdayPage"
+             BackgroundColor="{DynamicResource LightBackgroundColor}"
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+ >
+    <forms:AnimationView x:Name="BirthAnimation"
+                         Animation="balloons.json"
+                         Loop="True"
+                         AutoPlay="true"
+                         IsPlaying="true"
+                         VerticalOptions="FillAndExpand"
+                         HorizontalOptions="FillAndExpand"
+                         BackgroundColor="{DynamicResource LightBackgroundColor}"
+    />
+    <ContentPage.Content>
+    </ContentPage.Content>
+</ContentPage>

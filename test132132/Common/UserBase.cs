@@ -1,4 +1,6 @@
-﻿using System;
+﻿//UserBase
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,7 +24,7 @@ namespace test132132.Common
             );
         }
 
-        static List<Tuple<string, string> > AllUserNames() // name + hash
+        static List<Tuple<string, string>> AllUserNames() // name + hash
         {
             if (!File.Exists(allUsersPath))
             {
@@ -99,8 +101,38 @@ namespace test132132.Common
                 App.CurrentUser = JsonConvert.DeserializeObject<Models.User>(plainText);
 
                 return true;
-            } else
-                return false;
+            }
+
+            return false;
+        }
+
+        public static List<Tuple<string, int>> GetSortedUsersWithPoints()
+        {
+            var usernamesList = AllUserNames().Select((tuple) => tuple.Item1);
+            List<Tuple<string, int>> list = new List<Tuple<string, int>>();
+
+            foreach (var username in usernamesList)
+            {
+                string fileName = string.Join("",
+                     "./",
+                     username,
+                     ".json"
+                );
+                string plainText = File.ReadAllText(fileName);
+                var tempUser = JsonConvert.DeserializeObject<Models.User>(plainText);
+
+                list.Add((username, tempUser.Stats.Points.Sum()).ToTuple());
+            }
+            return list.OrderByDescending((tuple) => tuple.Item2).ToList();
+        }
+
+        public static void UpdateStats(Models.TestSolving.TestResults testResults, Models.Test test)
+        {
+            if (App.CurrentUser != null)
+            {
+                App.CurrentUser.Stats.UpdateWith(test, testResults);
+                UpdateUser(App.CurrentUser);
+            }
         }
 
         public static string CreateMD5(string input)
@@ -128,7 +160,7 @@ namespace test132132.Common
                 Name = "Danik",
                 Surname = "Melnichenka",
                 UserName = "M",
-                Birth = new DateTime(1999, 12, 24),
+                Birth = new DateTime(1999, 12, 9),
                 Education = "BSU",
                 Email = "melnick@gmail.com",
                 ProfileImagePath = "Melnick.jpg"

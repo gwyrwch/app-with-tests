@@ -3,6 +3,7 @@ using UIKit;
 using Xamarin.Forms;
 using ImageCircle.Forms.Plugin.iOS;
 using XLabs.Forms;
+using Lottie.Forms.iOS.Renderers;
 
 namespace test132132.iOS
 {
@@ -13,6 +14,7 @@ namespace test132132.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             ImageCircleRenderer.Init();
+            AnimationViewRenderer.Init();
 
             UIApplication.SharedApplication.SetStatusBarStyle(UIStatusBarStyle.BlackOpaque, false);
             UIApplication.SharedApplication.StatusBarStyle = UIStatusBarStyle.BlackOpaque;

@@ -10,6 +10,11 @@ namespace test132132.Views.UserProfile.Settings
         public ChangeLanguagePage()
         {
             InitializeComponent();
+
+            if (App.settings.Language == "English")
+                EnglishPlus.IsVisible = true;
+            else
+                RussianPlus.IsVisible = true;
         }
 
         void English_Tapped(object sender, EventArgs e)

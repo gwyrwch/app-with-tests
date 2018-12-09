@@ -29,6 +29,7 @@
                                HorizontalOptions="EndAndExpand"
                                VerticalOptions="Center"
                                x:Name="EnglishPlus"
+                               IsVisible="false"
                         />
                     </StackLayout>
                 </ViewCell>

@@ -9,12 +9,6 @@
 >
     <ContentPage.Content>
         <StackLayout Padding="5,30"  VerticalOptions="FillAndExpand">
-            <Slider 
-                x:Name="TimeLeftSlider"
-                MinimumTrackColor="#4cd964"
-                MaximumTrackColor="#ff3b30"
-                IsEnabled="false"
-            />
             <ProgressBar 
                 x:Name="TimeLeftBar"
                 Style="{StaticResource TimeLeftProgressBar}"

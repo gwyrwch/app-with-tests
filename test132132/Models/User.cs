@@ -22,7 +22,7 @@ namespace test132132.Models
             UserName = "guest";
             Email = "bla@mail.ru";
             Birth = new DateTime(1990, 12, 31);
-            ProfileImagePath = "tab_about.png";
+            ProfileImagePath = "signUpUser.png";
             Stats = new UserStatistics();
         }
 
@@ -53,7 +53,6 @@ namespace test132132.Models
         public DateTime Birth {
             get => birth;
             set {
-                //DateTime.Now - DateTime.
                 DateTime today = DateTime.Today;
                 DateTime fiveYearsAgo = today.AddYears(-5);
                 if (value > fiveYearsAgo)
@@ -84,5 +83,13 @@ namespace test132132.Models
         }     
         public string ProfileImagePath { get; set; }    //todo??
         public UserStatistics Stats { get; set; }
+
+        public int GetUserAge()
+        {
+            var years = DateTime.Now.Year - this.Birth.Year;
+            var birthdayThisYearPassed = this.Birth.AddYears(years) <= DateTime.Now;
+
+            return birthdayThisYearPassed ? years : years - 1;
+        }
     }
 }

@@ -14,7 +14,7 @@
                 /> 
                 <Button Clicked="SignUp_Clicked"
                         Text="{i18n:Translate AuthorizaiontPageSignUp}"
-                        BackgroundColor="#ecf0f0"
+                        BackgroundColor="White"
                         BorderRadius="15"
                         BorderWidth="1"
                         BorderColor="{DynamicResource MainGreyColor}"

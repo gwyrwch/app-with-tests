@@ -28,11 +28,13 @@
                     <Entry Placeholder="{i18n:Translate SignUpPageYourName}"
                            BackgroundColor="{DynamicResource LightBackgroundColor}"
                            x:Name="NameEntry"
+                           TextColor="{DynamicResource TextColor}"
                             
                     />
                     <Entry Placeholder="{i18n:Translate SignUpPageYourSurname}"
                            BackgroundColor="{DynamicResource LightBackgroundColor}"
                            x:Name="SurnameEntry"
+                           TextColor="{DynamicResource TextColor}"
                            />
                 </StackLayout>            
             </StackLayout>
@@ -51,11 +53,12 @@
             <StackLayout Spacing="5">                
                 <Label Text="{i18n:Translate SignUpPageUsername}"
                        TextColor="{DynamicResource MainGreyColor}"
-                       />
+                />
                 <Entry Placeholder="guest"
                        x:Name="UserNameEntry"
                        BackgroundColor="{DynamicResource LightBackgroundColor}"
-                       />
+                       TextColor="{DynamicResource TextColor}"
+                />
             </StackLayout>
             <StackLayout Spacing="5">                
                 <Label Text="{i18n:Translate SignUpPagePassword}"
@@ -64,6 +67,7 @@
                 <Entry IsPassword="true"
                        x:Name="PasswordEntry"
                        BackgroundColor="{DynamicResource LightBackgroundColor}"
+                       TextColor="{DynamicResource TextColor}"
                  />
             </StackLayout>
             <StackLayout>
@@ -73,6 +77,7 @@
                 <Entry Placeholder="hello@gmail.com"
                        x:Name="EmailEntry"
                        BackgroundColor="{DynamicResource LightBackgroundColor}"
+                       TextColor="{DynamicResource TextColor}"
                        />
             </StackLayout> 
             <StackLayout>
@@ -82,6 +87,7 @@
                 <Entry Placeholder="{i18n:Translate SignUpPageBSUIR}"
                        x:Name="EducationEntry"
                        BackgroundColor="{DynamicResource LightBackgroundColor}"
+                       TextColor="{DynamicResource TextColor}"
                        />
             </StackLayout>
             <Button Text="{i18n:Translate AuthorizaiontPageSignUp}"
