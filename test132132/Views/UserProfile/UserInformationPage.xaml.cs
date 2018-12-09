@@ -12,7 +12,7 @@ namespace test132132.Views.UserProfile
     public partial class UserInformationPage : ContentPage
     {
         ViewModels.User.UserProfileViewModel viewModel;
-
+        bool appearedOnce = false;
         public UserInformationPage()
         {
             InitializeComponent();
@@ -24,15 +24,15 @@ namespace test132132.Views.UserProfile
 
         }
 
-        //async void StartBirthAnimation(object s, EventArgs e)
-        //{
-        //  //  await Navigation.PushModalAsync(new Views.UserProfile.BirthdayPage());
-
-        //    for (int i = 0; i < int.MaxValue / 2; i++) { }  Appearing="StartBirthAnimation"
-
-        //   // await Navigation.PopModalAsync();
-        //}
-
+        async void StartBirthAnimation(object s, EventArgs e)
+        {
+            if(viewModel.BirthdayToday() && !appearedOnce)
+            {
+                await Navigation.PushModalAsync(new Views.UserProfile.BirthdayPage());  //todo long animation
+                appearedOnce = true;
+                await Navigation.PopModalAsync();
+            }
+        }
 
         async void Statistics_Tapped(object s, EventArgs e)
         {

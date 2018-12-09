@@ -215,6 +215,7 @@
     <BundleResource Include="Resources\QualityImages\good.png" />
     <BundleResource Include="Resources\defaultUser.png" />
     <BundleResource Include="Resources\signUpUser.png" />
+    <BundleResource Include="Resources\balloons.json" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDelegate.cs" />

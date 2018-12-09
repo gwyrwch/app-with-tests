@@ -13,7 +13,7 @@ namespace test132132.ViewModels.User
             CurrentUser = App.CurrentUser;
         }
 
-        public bool BirtdayToday()
+        public bool BirthdayToday()
         {
             if (CurrentUser.Birth.Day == DateTime.Today.Day &&
                  CurrentUser.Birth.Month == DateTime.Today.Month)
