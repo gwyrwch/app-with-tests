@@ -12,24 +12,29 @@ namespace test132132.Views.UserProfile
     public partial class UserInformationPage : ContentPage
     {
         ViewModels.User.UserProfileViewModel viewModel;
-        bool appearedOnce = false;
+        static bool appearedOnce = false;
         public UserInformationPage()
         {
             InitializeComponent();
 
             viewModel = new ViewModels.User.UserProfileViewModel();
             Information.BindingContext = viewModel.CurrentUser;
-
+            
             BirthLabel.Text = string.Join(" ", viewModel.CurrentUser.GetUserAge().ToString(), "years old"); //todo translate
-
         }
 
         async void StartBirthAnimation(object s, EventArgs e)
         {
             if(viewModel.BirthdayToday() && !appearedOnce)
             {
-                await Navigation.PushModalAsync(new Views.UserProfile.BirthdayPage());  //todo long animation
+                await Navigation.PushModalAsync(new Views.UserProfile.BirthdayPage());  //todo long d,aoas;ldklaksjdlkajsdwqpokdlaksndl#include <iostream>
+                
                 appearedOnce = true;
+
+                await Task.Run(
+                    () => Thread.Sleep(3000)
+                );
+
                 await Navigation.PopModalAsync();
             }
         }

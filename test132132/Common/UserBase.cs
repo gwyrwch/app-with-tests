@@ -160,7 +160,7 @@ namespace test132132.Common
                 Name = "Danik",
                 Surname = "Melnichenka",
                 UserName = "M",
-                Birth = new DateTime(1999, 12, 8),
+                Birth = new DateTime(1999, 12, 9),
                 Education = "BSU",
                 Email = "melnick@gmail.com",
                 ProfileImagePath = "Melnick.jpg"

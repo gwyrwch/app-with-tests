@@ -100,6 +100,7 @@ namespace test132132
             Children.Add(profilePage);
             Children.Add(editorPage);
             Children.Add(subjectsPage);
+            Children.Add(new NavigationPage(new Views.UserProfile.BirthdayPage()));
 
             await Navigation.PopModalAsync();
         }
